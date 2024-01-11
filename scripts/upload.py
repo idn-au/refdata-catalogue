@@ -23,7 +23,7 @@ def upload_background():
     sparql_update_query(f"DROP GRAPH <{BACKGROUND_GRAPH_IRI}>")
     # upload everything in _background/
     project_root = Path(__file__).parent
-    for file in project_root.glob(f"{project_root}/_background/*.ttl"):
+    for file in project_root.glob("_background/*.ttl"):
         upload_named_graph(file, BACKGROUND_GRAPH_IRI, False)
     print("Upload complete")
 
@@ -33,7 +33,7 @@ def upload_vocabs():
     print("Uploading vocabularies...")
     # upload vocabs in data/vocabularies/
     project_root = Path(__file__).parent
-    for file in project_root.glob(f"{project_root}/vocabs/*.ttl"):
+    for file in project_root.glob("vocabs/*.ttl"):
         iri = find_named_graph(file, SKOS.ConceptScheme)
         upload_named_graph(file, iri)
     print("Upload complete")
