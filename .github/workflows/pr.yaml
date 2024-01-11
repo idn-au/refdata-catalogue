@@ -34,4 +34,4 @@ jobs:
       # validate data if changed
       - name: Validate vocabs
         if: steps.changes.outputs.vocabs == 'true'
-        run: poetry run python scripts/validate.py --data
+        run: poetry run python scripts/validate.py
