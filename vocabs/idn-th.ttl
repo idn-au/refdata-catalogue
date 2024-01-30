@@ -818,6 +818,6 @@ cs:
     skos:prefLabel "IDN Themes"@en ;
     prov:qualifiedDerivation [
             prov:entity <https://vocabularyserver.com/apais/> ;
-            prov:hadRole <https://linked.data.gov.au/def/vocab-derivation-modes/subsetting-and-extension>
+            prov:hadRole <https://linked.data.gov.au/def/vocdermods/subsetting-and-extension>
         ] ;
 .

@@ -1,6 +1,7 @@
 PREFIX : <https://data.idnau.org/pid/vocab/indigeneity/>
 PREFIX cs: <https://data.idnau.org/pid/vocab/indigeneity>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
@@ -58,4 +59,8 @@ cs:
         :by-indigenous-people ;
     skos:prefLabel "Data Indigeneity"@en ;
     skos:scopeNote "The IDN uses this vocabulary to indicate how, if at all, data is related to indigenous people. This is a simple vocabulary that is expected to be extended in later versions."@en ;
+    prov:qualifiedDerivation [
+        prov:entity cs: ;
+        prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
+    ] ;
 .

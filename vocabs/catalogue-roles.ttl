@@ -1,6 +1,7 @@
 PREFIX : <https://data.idnau.org/pid/vocab/cat-roles/>
 PREFIX cs: <https://data.idnau.org/pid/vocab/cat-roles>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
@@ -77,5 +78,9 @@ cs:
         dcat:hadRole :home ;
         prov:entity {CATALOG} ;
     ] ;
-    """
+    """ ;
+    prov:qualifiedDerivation [
+        prov:entity cs: ;
+        prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
+    ] ;
 .

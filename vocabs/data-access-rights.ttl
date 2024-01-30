@@ -2,6 +2,7 @@ PREFIX cs: <https://linked.data.gov.au/def/data-access-rights>
 PREFIX : <https://linked.data.gov.au/def/data-access-rights/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
@@ -131,4 +132,8 @@ cs:
     skos:hasTopConcept
         :open ,
         :restricted ;
+    prov:qualifiedDerivation [
+        prov:entity cs: ;
+        prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
+    ] ;
 .

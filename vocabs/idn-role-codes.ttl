@@ -3,6 +3,7 @@ PREFIX cs: <https://data.idnau.org/pid/vocab/idn-role-codes>
 PREFIX iso: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
 PREFIX isocs: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
@@ -48,6 +49,10 @@ cs:
         :subjectAgent ,
         :subjectAgentRepresentative ;
     skos:prefLabel "IDN Role Codes"@en ;
+    prov:qualifiedDerivation [
+        prov:entity cs: ;
+        prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
+    ] ;
 .
 
 <https://linked.data.gov.au/org/idn>
