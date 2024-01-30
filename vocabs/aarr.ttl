@@ -3,6 +3,7 @@ PREFIX cs: <https://data.idnau.org/pid/vocab/aarr>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -316,6 +317,7 @@ cs:
     dcterms:rights "(c) Indigenous Data Network, 2022" ;
     owl:versionIRI :0.0.2 ;
     owl:versionInfo "0.0.2" ;
+    reg:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     skos:definition "Provides a vocabulary of roles that exist between Agents, that is Persons and Organisations"@en ;
     skos:hasTopConcept
         :affiliate ,

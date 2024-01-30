@@ -3,13 +3,17 @@ PREFIX cs: <https://data.idnau.org/pid/vocab/idn-th>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :apais-vocabulary
     a skos:Collection ;
     dcterms:source "https://vocabularyserver.com/apais/"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from the APAIS vocabulary" ;
+    skos:inScheme cs: ;
     skos:member
         <https://vocabularyserver.com/apais/xml.php?skosTema=10> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=1004> ,
@@ -70,7 +74,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :indigeneity-concepts
     a skos:Collection ;
     dcterms:provenance "Determined for this Concept Scheme" ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "Concepts that indicate indigeneity" ;
+    skos:inScheme cs: ;
     skos:member
         <https://vocabularyserver.com/apais/xml.php?skosTema=10> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=1096> ,
@@ -767,6 +773,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:label "APAIS Thesaurus" ;
 .
 
+<https://linked.data.gov.au/org/idn>
+    a sdo:Organization ;
+    sdo:name "Indigenous Data Network" ;
+    sdo:url "https://www.idnau.org"^^xsd:anyURI ;
+.
+
 cs:
     a skos:ConceptScheme ;
     dcterms:created "2022-07-15"^^xsd:date ;
@@ -776,6 +788,7 @@ cs:
     dcterms:provenance "This vocabulary was established with a few, broad, themes early in the IDN's 2022 project and will be expanded to incorporate indigenous terms from other data holders, acting as an overarching vocabulary"@en ;
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;
     dcterms:rights "(c) Indigenous Data Network, 2022" ;
+    reg:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     skos:definition "The Indigenous Data Network's general-purpose vocabulary of thematic terms for indigenous data."@en ;
     skos:hasTopConcept
         <https://vocabularyserver.com/apais/xml.php?skosTema=1004> ,

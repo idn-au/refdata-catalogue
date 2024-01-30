@@ -22,6 +22,7 @@ cs:
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;
     dcterms:rights "(c) Indigenous Data Network, 2022" ;
     dcterms:source "http://iso.kurrawong.net/vocab/CI_RoleCode"^^xsd:anyURI ;
+    reg:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
     skos:definition "The Indigenous Data Network's vocabulary of the types of roles Agents - People and Organisations - play in relation to data."@en ;
     skos:hasTopConcept
         iso:author ,
@@ -305,7 +306,9 @@ iso:user
 :iso-roles
     a skos:Collection ;
     dcterms:provenance "The list of Concepts from the original ISO CI Role Code vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "Codes from the original ISO CI Role Code codelist"@en ;
+    skos:inScheme cs: ;
     skos:prefLabel "ISO CI Role Code codes"@en ;
     skos:member 
         iso:author ,

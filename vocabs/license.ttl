@@ -5,6 +5,7 @@ PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsibl
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -127,6 +128,7 @@ cs:
         ] ;
     owl:versionIRI <https://linked.data.gov.au/def/license/1> ;
     owl:versionInfo "1" ;
+    reg:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
     skos:definition "Licenses used in the description of data assets being catalogued so that data users are aware of the permissions they are obligated to uphold when reusing the data."@en ;
     skos:hasTopConcept
         <http://purl.org/NET/rdflicense/allrightsreserved> ,

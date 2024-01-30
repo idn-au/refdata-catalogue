@@ -2,6 +2,7 @@ PREFIX : <https://data.idnau.org/pid/vocab/indigeneity/>
 PREFIX cs: <https://data.idnau.org/pid/vocab/indigeneity>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -49,6 +50,7 @@ cs:
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;
     dcterms:rights "(c) Indigenous Data Network, 2022" ;
     dcterms:source "https://www.data.govt.nz/assets/Uploads/Presentation-Tahu-Kukutai.pdf"^^xsd:anyURI ;
+    reg:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     skos:definition "The ways in which data may have a connection to indigenous people"@en ;
     skos:hasTopConcept
         :about-indigenous-people ,
