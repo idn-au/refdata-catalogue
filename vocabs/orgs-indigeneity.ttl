@@ -1,7 +1,9 @@
 PREFIX : <https://data.idnau.org/pid/vocab/org-indigeneity/>
 PREFIX cs: <https://data.idnau.org/pid/vocab/org-indigeneity>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -66,6 +68,7 @@ cs:
     dcterms:modified "2022-09-24"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;
     dcterms:rights "(c) Indigenous Data Network, 2022" ;
+    reg:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
     dcterms:provenance "Created during the generation of the IDN's Data Agents Catalogue, based on IDN staff's perceptions of categories of organisation indigeneity" ;
     skos:definition "The ways in which organisations may be related to indigenous peoples"@en ;
     skos:hasTopConcept
@@ -75,4 +78,8 @@ cs:
         :indigeneity-unknown ,
         :non-indigenous ;
     skos:prefLabel "Organisations Indigeneity"@en ;
+    prov:qualifiedDerivation [
+        prov:entity cs: ;
+        prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
+    ] ;
 .
