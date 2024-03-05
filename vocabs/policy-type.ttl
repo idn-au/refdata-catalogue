@@ -1,0 +1,137 @@
+PREFIX cs: <https://data.idnau.org/pid/vocab/policy-type>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://data.idnau.org/pid/vocab/policy-type/data-governance>
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The process of setting and enforcing policies for managing and using data as a strategic asset. This is achieved through the definition of roles and responsibilities for the governance of data acquired, used and released."@en ;
+    skos:inScheme cs: ;
+    skos:narrower <https://data.idnau.org/pid/vocab/policy-type/indigenous-data-governance> ;
+    skos:prefLabel "data governance"@en ;
+    schema:citation "https://resources.data.gov/assets/documents/fds-data-governance-playbook.pdf"^^xsd:anyURI ;
+.
+
+<https://data.idnau.org/pid/vocab/policy-type/data-management>
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The process of setting, controlling, administering and monitoring in conformance with data policy."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "data management"@en ;
+    schema:citation "https://resources.data.gov/assets/documents/fds-data-governance-playbook.pdf"^^xsd:anyURI ;
+.
+
+<https://data.idnau.org/pid/vocab/policy-type/data-policy>
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Short statements of management intent and fundamental rules governing the creation, acquisition, integrity, security, quality and use of data and information."@en ;
+    skos:historyNote "DAMA-DMBOK Guide, 1st edition, pg.47" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "data policy"@en ;
+.
+
+<https://data.idnau.org/pid/vocab/policy-type/governance>
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The exercise of authority and control over a process, organisation or geopolitical area."@en ;
+    skos:historyNote "DAMA Dictionary of Data Management ed.2" ;
+    skos:inScheme cs: ;
+    skos:narrower
+        <https://data.idnau.org/pid/vocab/policy-type/data-governance> ,
+        <https://data.idnau.org/pid/vocab/policy-type/data-management> ;
+    skos:prefLabel "governance"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://data.idnau.org/pid/vocab/policy-type/indigenous-data-governance>
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Refers to the right of Indigenous peoples to autonomously decide what, how and why Indigenous Data are collected, accessed and used. It ensures that data on or about Indigenous peoples reflects our priorities, values, cultures, worldviews and diversity."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "indigenous data governance"@en ;
+    schema:citation "https://www.maiamnayriwingara.org/definitions"^^xsd:anyURI ;
+.
+
+<https://data.idnau.org/pid/vocab/policy-type/policy>
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A strategic directive and high-level description of desired behaviour developed by an organisation to help govern how it functions. It is usually principle based. A policy is operationalised through procedures that give instructions and set out processes to implement a policy."@en ;
+    skos:inScheme cs: ;
+    skos:narrower <https://data.idnau.org/pid/vocab/policy-type/data-policy> ;
+    skos:prefLabel "policy"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://policy.usq.edu.au/documents/14266PL"^^xsd:anyURI ;
+.
+
+<https://data.idnau.org/pid/vocab/policy-type/principle>
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "In an organisation this is an accepted or professed rule of action or conduct. A fundamental or general statement from which policies are derived."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "principle"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://www.dictionary.com/browse/principles"^^xsd:anyURI ;
+.
+
+<https://data.idnau.org/pid/vocab/policy-type/procedure>
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "guidance"@en ;
+    skos:definition "A detailed series of low-level steps that explains all the tasks that need to be completed in a workplace in a defined and repeatable order. These tasks may be stand alone or may be a part of a process. A procedure can operationalise a policy."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "procedure"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation
+        "https://policy.usq.edu.au/documents/14274PL"^^xsd:anyURI ,
+        "https://www.business.qld.gov.au/running-business/planning/processes-procedures"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    reg:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
+    owl:versionIRI <https://data.idnau.org/pid/vocab/policy-type/0.1> ;
+    skos:definition "The types of principles, policies and procedures held by an organisation for the governance of that organisation."@en ;
+    skos:hasTopConcept
+        <https://data.idnau.org/pid/vocab/policy-type/governance> ,
+        <https://data.idnau.org/pid/vocab/policy-type/policy> ,
+        <https://data.idnau.org/pid/vocab/policy-type/principle> ,
+        <https://data.idnau.org/pid/vocab/policy-type/procedure> ;
+    skos:historyNote "This vocab is for characterising policy documentation to improve the ability to apply FAIR and CARE scores."@en ;
+    skos:prefLabel "Policy Type"@en ;
+    prov:qualifiedAttribution
+        [
+            dcat:hadRole isoroles:custodian ;
+            prov:agent
+                [
+                    a schema:Organization ;
+                    schema:name "M Smith" ;
+                    schema:url ""^^xsd:anyURI ;
+                ] ;
+        ] ;
+    schema:creator
+        [
+            a schema:Organization ;
+            schema:name "Kurrawong Ai" ;
+            schema:url ""^^xsd:anyURI ;
+        ] ;
+    schema:dateCreated "2024-02-23"^^xsd:date ;
+    schema:dateModified "2024-02-23"^^xsd:date ;
+    schema:keywords
+        "data governance" ,
+        "data management" ,
+        "policy" ;
+    schema:publisher
+        [
+            a schema:Organization ;
+            schema:name "Idn" ;
+            schema:url ""^^xsd:anyURI ;
+        ] ;
+    schema:version "0.1" ;
+.
