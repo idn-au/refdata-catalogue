@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: dorny/paths-filter@v2
-      id: changes
+      id: filter
       with:
         filters: |
           data:
@@ -30,7 +30,7 @@ jobs:
   # Upload files if data has changed
   upload:
     needs: changes
-    if: ${{ needs.changes.outputs.data == 'true' }}
+    # if: ${{ needs.changes.outputs.data == 'true' }}
     runs-on: ubuntu-latest
     env:
       TRIPLESTORE_URL: ${{ secrets.MRC_TRIPLESTORE_URL }}
@@ -50,9 +50,9 @@ jobs:
         run: poetry install --no-interaction --no-root
       # upload background data if changed
       - name: Upload background
-        if: ${{ needs.changes.outputs.background == 'true' }}
+        # if: ${{ needs.changes.outputs.background == 'true' }}
         run: poetry run python scripts/upload.py --background
       # upload vocabulary data if changed
       - name: Upload vocabs
-        if: ${{ needs.changes.outputs.vocabs == 'true' }}
+        # if: ${{ needs.changes.outputs.vocabs == 'true' }}
         run: poetry run python scripts/upload.py
