@@ -1,4 +1,5 @@
-PREFIX cs: <https://data.idnau.org/pid/vocab/oric/>
+PREFIX : <https://data.idnau.org/pid/vocab/oric/>
+PREFIX cs: <https://data.idnau.org/pid/vocab/oric>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -7,7 +8,7 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-cs:agricultureAquacultureForestryFishing
+:agricultureAquacultureForestryFishing
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -16,7 +17,7 @@ cs:agricultureAquacultureForestryFishing
     skos:prefLabel "Agriculture, aquaculture, forestry, fishing" ;
 .
 
-cs:arts
+:arts
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -25,7 +26,7 @@ cs:arts
     skos:prefLabel "Arts" ;
 .
 
-cs:communicationServices
+:communicationServices
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -34,7 +35,7 @@ cs:communicationServices
     skos:prefLabel "Communication services" ;
 .
 
-cs:communityServices
+:communityServices
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -43,7 +44,7 @@ cs:communityServices
     skos:prefLabel "Community services" ;
 .
 
-cs:construction
+:construction
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -52,7 +53,7 @@ cs:construction
     skos:prefLabel "Construction" ;
 .
 
-cs:educationAndTraining
+:educationAndTraining
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -61,7 +62,7 @@ cs:educationAndTraining
     skos:prefLabel "Education and training" ;
 .
 
-cs:employment
+:employment
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -79,7 +80,7 @@ cs:healthCareAndHealthPromotion
     skos:prefLabel "Health care and health promotion" ;
 .
 
-cs:heritageAndCulture
+:heritageAndCulture
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -88,7 +89,7 @@ cs:heritageAndCulture
     skos:prefLabel "Heritage and culture" ;
 .
 
-cs:hospitalityAndTourism
+:hospitalityAndTourism
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -106,7 +107,7 @@ cs:housingAndTenancy
     skos:prefLabel "Housing and tenancy" ;
 .
 
-cs:landAndWatersManagementCareForCountry
+:landAndWatersManagementCareForCountry
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -115,7 +116,7 @@ cs:landAndWatersManagementCareForCountry
     skos:prefLabel "Land and waters management?care for Country" ;
 .
 
-cs:manufacturing
+:manufacturing
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -124,7 +125,7 @@ cs:manufacturing
     skos:prefLabel "Manufacturing" ;
 .
 
-cs:miningAndMiningSupportServices
+:miningAndMiningSupportServices
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -133,7 +134,7 @@ cs:miningAndMiningSupportServices
     skos:prefLabel "Mining and mining support services" ;
 .
 
-cs:municipalServices
+:municipalServices
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -142,7 +143,7 @@ cs:municipalServices
     skos:prefLabel "Municipal services" ;
 .
 
-cs:other
+:other
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -151,7 +152,7 @@ cs:other
     skos:prefLabel "Other" ;
 .
 
-cs:otherServices
+:otherServices
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -160,7 +161,7 @@ cs:otherServices
     skos:prefLabel "Other services" ;
 .
 
-cs:spiritualCongregationAndReligion
+:spiritualCongregationAndReligion
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -169,7 +170,7 @@ cs:spiritualCongregationAndReligion
     skos:prefLabel "Spiritual congregation and religion" ;
 .
 
-cs:transportAndStorage
+:transportAndStorage
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -178,7 +179,7 @@ cs:transportAndStorage
     skos:prefLabel "Transport and storage" ;
 .
 
-cs:wholesaleAndRetailTradeShops
+:wholesaleAndRetailTradeShops
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -200,33 +201,29 @@ cs:
     schema:dateModified "2024-01-11"^^xsd:date ;
     skos:historyNote "Extracted for Indigenous Data Network 2024" ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
-    dcterms:rights "(c) Indigenous Data Network, 2022" ;
+    schema:copyrightNotice "(c) Indigenous Data Network, 2022" ;
     reg:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     skos:definition "Industry that an organisation or individual operates in" ;
     skos:hasTopConcept
-        cs:agricultureAquacultureForestryFishing ,
-        cs:arts ,
-        cs:communicationServices ,
-        cs:communityServices ,
-        cs:construction ,
-        cs:educationAndTraining ,
-        cs:employment ,
-        cs:healthCareAndHealthPromotion ,
-        cs:heritageAndCulture ,
-        cs:hospitalityAndTourism ,
-        cs:housingAndTenancy ,
-        cs:landAndWatersManagementCareForCountry ,
-        cs:manufacturing ,
-        cs:miningAndMiningSupportServices ,
-        cs:municipalServices ,
-        cs:other ,
-        cs:otherServices ,
-        cs:spiritualCongregationAndReligion ,
-        cs:transportAndStorage ,
-        cs:wholesaleAndRetailTradeShops ;
+        :agricultureAquacultureForestryFishing ,
+        :arts ,
+        :communicationServices ,
+        :communityServices ,
+        :construction ,
+        :educationAndTraining ,
+        :employment ,
+        :healthCareAndHealthPromotion ,
+        :heritageAndCulture ,
+        :hospitalityAndTourism ,
+        :housingAndTenancy ,
+        :landAndWatersManagementCareForCountry ,
+        :manufacturing ,
+        :miningAndMiningSupportServices ,
+        :municipalServices ,
+        :other ,
+        :otherServices ,
+        :spiritualCongregationAndReligion ,
+        :transportAndStorage ,
+        :wholesaleAndRetailTradeShops ;
     skos:prefLabel "ORIC Industry Vocabulary" ;
-    prov:qualifiedDerivation [
-        prov:entity cs: ;
-        prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
-    ] ;
 .
