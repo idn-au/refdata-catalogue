@@ -226,7 +226,4 @@ cs:
         :transportAndStorage ,
         :wholesaleAndRetailTradeShops ;
     skos:prefLabel "ORIC Industry Vocabulary" ;
-    prov:qualifiedDerivation [
-        prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
-    ] ;
 .
