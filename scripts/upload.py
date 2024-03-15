@@ -1,16 +1,17 @@
+import argparse
 import os
 from pathlib import Path
-import argparse
+
 import httpx
 from rdflib import Graph, URIRef
-from rdflib.namespace import RDF, SKOS, DCAT
+from rdflib.namespace import RDF, SKOS
 
 TRIPLESTORE_URL = os.environ.get("TRIPLESTORE_URL", "")
 TRIPLESTORE_USERNAME = os.environ.get("TRIPLESTORE_USERNAME", "")
 TRIPLESTORE_PASSWORD = os.environ.get("TRIPLESTORE_PASSWORD", "")
 TIMEOUT = 30.0
-
 BACKGROUND_GRAPH_IRI = "https://vocab-background-data"
+PROJECT_ROOT = Path(__file__).parent.parent
 
 
 def upload_background():
@@ -22,21 +23,52 @@ def upload_background():
     # drop named graph
     sparql_update_query(f"DROP GRAPH <{BACKGROUND_GRAPH_IRI}>")
     # upload everything in _background/
-    project_root = Path(__file__).parent
-    for file in project_root.glob("_background/*.ttl"):
+    for file in PROJECT_ROOT.glob("_background/*.ttl"):
+        print(f"\t{file.name}")
         upload_named_graph(file, BACKGROUND_GRAPH_IRI, False)
     print("Upload complete")
 
 
 def upload_vocabs():
     """Uploads vocab files into their own named graphs."""
+    existing_vocabs = get_existing_vocabs()
     print("Uploading vocabularies...")
-    # upload vocabs in data/vocabularies/
-    project_root = Path(__file__).parent
-    for file in project_root.glob("vocabs/*.ttl"):
+    # upload vocabs in vocabs/
+    for file in PROJECT_ROOT.glob("vocabs/*.ttl"):
         iri = find_named_graph(file, SKOS.ConceptScheme)
-        upload_named_graph(file, iri)
+        drop_graph = iri in existing_vocabs
+        if drop_graph:
+            existing_vocabs.discard(iri)
+        print(f"\t{'~' if drop_graph else '+'} <{iri}> - {file.name}")
+        upload_named_graph(file, iri, drop_graph=drop_graph)
+    # remove old vocabs
+    for iri in existing_vocabs:
+        print(f"\t- <{iri}>")
+        sparql_update_query(f"DROP GRAPH <{iri}>")
     print("Upload complete")
+
+
+def get_existing_vocabs() -> set[str]:
+    """Does a SPARQL query to get the list of current vocabs in the triplestore"""
+    query = """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        SELECT ?cs
+        WHERE {
+            GRAPH ?cs {
+                ?cs a skos:ConceptScheme .
+            }
+        }
+    """
+    r = httpx.post(
+        url=f"{TRIPLESTORE_URL}/query",
+        auth=(TRIPLESTORE_USERNAME, TRIPLESTORE_PASSWORD),
+        timeout=TIMEOUT,
+        data=query,
+        headers={"Content-Type": "application/sparql-query"},
+        verify=False,  # for staging certs
+    )
+    results: list[dict] = r.json()["results"]["bindings"]
+    return {result["cs"]["value"] for result in results}
 
 
 # returns named graph IRI from class
@@ -44,7 +76,7 @@ def find_named_graph(file: Path, object_class: URIRef) -> str:
     """Finds the IRI of the object from a file based on a specified class."""
     g = Graph().parse(file, format="ttl")
     for s in g.subjects(RDF.type, object_class):
-        return s
+        return str(s)
 
 
 def upload_named_graph(file: Path, iri: str, drop_graph: bool = True):
@@ -66,6 +98,7 @@ def sparql_update_query(query: str):
         timeout=TIMEOUT,
         data=query,
         headers={"Content-Type": "application/sparql-update"},
+        verify=False,  # for staging certs
     )
 
 
@@ -80,6 +113,7 @@ def sparql_upload_file(file: Path, named_graph: str):
         params={"graph": named_graph},
         content=content,
         headers={"Content-Type": "text/turtle"},
+        verify=False,  # for staging certs
     )
 
 

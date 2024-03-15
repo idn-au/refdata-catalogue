@@ -1,2 +1,6 @@
 .idea/
 .mypy.ini
+.venv/
+venv/
+__pycache__/
+*.pyc

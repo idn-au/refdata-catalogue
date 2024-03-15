@@ -109,7 +109,7 @@ CC0 (aka CC Zero) is a public dedication tool, which enables creators to give up
     skos:topConceptOf cs: ;
 .
 
-<https://linked.data.gov.au/org/idn> ;
+<https://linked.data.gov.au/org/idn>
     a sdo:Organization ;
     sdo:name "Indigenous Data Network" ;
     sdo:url "https://idnau.org"^^xsd:anyURI ;

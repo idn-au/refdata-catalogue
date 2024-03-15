@@ -1,0 +1,58 @@
+name: Upload data to MRC triplestore
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "jamie/fix-vocab-upload"
+
+jobs:
+  # Detects changes in specific directories
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      data: ${{ steps.filter.outputs.data }}
+      background: ${{ steps.filter.outputs.background }}
+      vocabs: ${{ steps.filter.outputs.vocabs }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dorny/paths-filter@v2
+      id: changes
+      with:
+        filters: |
+          data:
+            - '_background/**'
+            - 'vocabs/**'
+          background:
+            - '_background/**'
+          vocabs:
+            - 'vocabs/**'
+  # Upload files if data has changed
+  upload:
+    needs: changes
+    if: ${{ needs.changes.outputs.data == 'true' }}
+    runs-on: ubuntu-latest
+    env:
+      TRIPLESTORE_URL: ${{ secrets.MRC_TRIPLESTORE_URL }}
+      TRIPLESTORE_USERNAME: ${{ secrets.MRC_TRIPLESTORE_USERNAME }}
+      TRIPLESTORE_PASSWORD: ${{ secrets.MRC_TRIPLESTORE_PASSWORD }}
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          # cache: poetry
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+      - name: Install dependencies
+        run: poetry install --no-interaction --no-root
+      # upload background data if changed
+      - name: Upload background
+        if: ${{ needs.changes.outputs.background == 'true' }}
+        run: poetry run python scripts/upload.py --background
+      # upload vocabulary data if changed
+      - name: Upload vocabs
+        if: ${{ needs.changes.outputs.vocabs == 'true' }}
+        run: poetry run python scripts/upload.py
