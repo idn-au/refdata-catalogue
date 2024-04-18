@@ -1,5 +1,5 @@
 PREFIX : <https://data.idnau.org/pid/vocab/urbanity/>
-PREFIX cs: <https://data.idnau.org/pid/vocab/aarr>
+PREFIX cs: <https://data.idnau.org/pid/vocab/urbanity>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -42,6 +42,6 @@ cs:
     skos:hasTopConcept
         :R ,
         :U ;
-    skos:prefLabel "Agent to Agent Relationship Roles"@en ;
+    skos:prefLabel "Concepts of urban and rural division."@en ;
 .
 
