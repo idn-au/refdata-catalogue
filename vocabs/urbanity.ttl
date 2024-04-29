@@ -42,6 +42,6 @@ cs:
     skos:hasTopConcept
         :R ,
         :U ;
-    skos:prefLabel "Concepts of urban and rural division."@en ;
+    skos:prefLabel "Urbanity"@en ;
 .
 
