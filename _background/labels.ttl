@@ -1,7 +1,5 @@
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-<http://purl.org/dc/terms/hasPart> rdfs:label "has part" .
-
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> rdfs:label "a" .
 
 <http://www.w3.org/ns/dcat#Catalog> rdfs:label "Catalogue" .
@@ -15,3 +13,18 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 <https://schema.org/keywords> rdfs:label "keywords" .
 <https://schema.org/name> rdfs:label "name" .
 <https://schema.org/publisher> rdfs:label "publisher" .
+<https://schema.org/Organization> rdfs:label "Organisation" .
+<https://schema.org/url> rdfs:label "URL" .
+
+
+
+<http://www.w3.org/2002/07/owl#versionIRI> rdfs:label "version IRI" .
+<http://www.w3.org/2002/07/owl#versionInfo> rdfs:label "version info" .
+
+
+<http://www.w3.org/ns/prov#entity> rdfs:label "entity" .
+<http://www.w3.org/ns/prov#hadRole> rdfs:label "had role" .
+<http://www.w3.org/ns/prov#qualifiedDerivation> rdfs:label "qualified derivation" .
+
+
+<http://purl.org/linked-data/registry#status> rdfs:label "status" .
