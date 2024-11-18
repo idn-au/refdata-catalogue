@@ -136,7 +136,7 @@ cs:
         <https://purl.org/NET/rdflicense/cc-by-sa4.0> ,
         <https://purl.org/NET/rdflicense/cc-by4.0> ,
         <https://purl.org/NET/rdflicense/cc-zero1.0> ;
-    skos:prefLabel "Data License"@en ;
+    skos:prefLabel "Data Licenses"@en ;
     prov:qualifiedAttribution [
             dcat:hadRole dataroles:custodian ;
             prov:agent [                

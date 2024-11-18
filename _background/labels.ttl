@@ -1,0 +1,17 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://purl.org/dc/terms/hasPart> rdfs:label "has part" .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> rdfs:label "a" .
+
+<http://www.w3.org/ns/dcat#Catalog> rdfs:label "Catalogue" .
+
+<https://schema.org/codeRepository> rdfs:label "code repository" .
+<https://schema.org/contributor> rdfs:label "contributor" .
+<https://schema.org/creator> rdfs:label "creator" .
+<https://schema.org/dateCreated> rdfs:label "date created" .
+<https://schema.org/dateModified> rdfs:label "date modified" .
+<https://schema.org/description> rdfs:label "description" .
+<https://schema.org/keywords> rdfs:label "keywords" .
+<https://schema.org/name> rdfs:label "name" .
+<https://schema.org/publisher> rdfs:label "publisher" .

@@ -78,4 +78,15 @@ Owner Organisation
 https://idnau.org
 
 
+## Prez resources
+
+This listing of the resources in this repository is used by the [Prez System](https://kurrawong.ai/products/prez/) to display the vocabularies correctly.
+
+| Resource             | Location                                                                                                              | Notes                                                   |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| Catalogue Definition | `catalogue.ttl`                                                                                                       |                                                         |
+| Items                | `./vocabs/*.ttl`                                                                                                      | Multiple ttl files                                      |
+| Profile Definition   | [Prez Records Profile](https://github.com/RDFLib/prez/blob/main/prez/reference_data/profiles/ogc_records_profile.ttl) | Default Prez profile for Records API                    |
+| Context Resources    | `_background/*.ttl`                                                                                                   | Multiple labels files for ontologies, licenses & agents |
+
 
