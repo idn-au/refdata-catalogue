@@ -16,6 +16,10 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     rdfs:label "Embargoed access"@en ;
 .
 
+<https://linked.data.gov.au/def/data-access-rights/limited-community-access>
+    rdfs:label "Limited community access"@en ;
+.
+
 <https://linked.data.gov.au/def/data-access-rights/metadata-only>
     rdfs:label "Metadata only access"@en ;
 .

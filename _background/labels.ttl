@@ -3,28 +3,43 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> rdfs:label "a" .
 
 <http://www.w3.org/ns/dcat#Catalog> rdfs:label "Catalogue" .
+<http://www.w3.org/ns/dcat#hadRole> rdfs:label "had role" .
+<http://www.w3.org/ns/dcat#keyword> rdfs:label "keyword" .
 
+<https://schema.org/citation> rdfs:label "citation" .
 <https://schema.org/codeRepository> rdfs:label "code repository" .
 <https://schema.org/contributor> rdfs:label "contributor" .
+<https://schema.org/copyrightNotice> rdfs:label "copyright notice" .
 <https://schema.org/creator> rdfs:label "creator" .
 <https://schema.org/dateCreated> rdfs:label "date created" .
+<https://schema.org/dateIssued> rdfs:label "date issued" .
 <https://schema.org/dateModified> rdfs:label "date modified" .
 <https://schema.org/description> rdfs:label "description" .
+<https://schema.org/email> rdfs:label "email" .
 <https://schema.org/keywords> rdfs:label "keywords" .
+<https://schema.org/license> rdfs:label "license" .
 <https://schema.org/name> rdfs:label "name" .
 <https://schema.org/publisher> rdfs:label "publisher" .
 <https://schema.org/Organization> rdfs:label "Organisation" .
+<https://schema.org/Person> rdfs:label "Person" .
 <https://schema.org/url> rdfs:label "URL" .
+<https://schema.org/version> rdfs:label "version" .
 
 
-
+<http://www.w3.org/2002/07/owl#Ontology> rdfs:label "Ontology" .
 <http://www.w3.org/2002/07/owl#versionIRI> rdfs:label "version IRI" .
 <http://www.w3.org/2002/07/owl#versionInfo> rdfs:label "version info" .
 
 
+<http://www.w3.org/ns/prov#agent> rdfs:label "agent" .
 <http://www.w3.org/ns/prov#entity> rdfs:label "entity" .
 <http://www.w3.org/ns/prov#hadRole> rdfs:label "had role" .
+<http://www.w3.org/ns/prov#qualifiedAttribution> rdfs:label "qualified attribution" .
 <http://www.w3.org/ns/prov#qualifiedDerivation> rdfs:label "qualified derivation" .
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdfs:label "was derived from" .
 
 
 <http://purl.org/linked-data/registry#status> rdfs:label "status" .
+
+
+<https://purl.org/NET/rdflicense> rdfs:label "license" .
