@@ -119,7 +119,7 @@ cs:
         :principle ,
         :procedure ;
     skos:historyNote "This vocab is for characterising policy documentation to improve the ability to apply FAIR and CARE scores."@en ;
-    skos:prefLabel "Policy Type"@en ;
+    skos:prefLabel "Policy Types"@en ;
     prov:qualifiedAttribution
         [
             dcat:hadRole dataroles:custodian ;
