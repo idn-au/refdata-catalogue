@@ -347,7 +347,7 @@ cs:
 			schema:url "https://kurrawong.ai"^^xsd:anyURI ;
         ] ;
     schema:dateCreated "2024-11-25"^^xsd:date ;
-    schema:dateModified "2024-11-25"^^xsd:date ;
+    schema:dateModified "2024-11-26"^^xsd:date ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
-    schema:version "None" ;
+    schema:version "0.1" ;
 .
