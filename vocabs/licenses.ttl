@@ -4,7 +4,7 @@ PREFIX dataroles: <https://linked.data.gov.au/def/data-roles/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX reg: <https://purl.org/linked-data/registry#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -144,7 +144,7 @@ cs:
         rdflicense:cc-by-sa4.0 ,
         rdflicense:cc-by4.0 ,
         rdflicense:cc-zero1.0 ;
-    skos:prefLabel "Data License"@en ;
+    skos:prefLabel "Data Licenses"@en ;
     prov:qualifiedAttribution [
             dcat:hadRole dataroles:custodian ;
             prov:agent [                

@@ -306,6 +306,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sdo:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
 .
 
+:0.0.2 rdfs:label "0.0.2" .
+
 cs:
     a skos:ConceptScheme ;
     dcterms:created "2022-11-14"^^xsd:date ;

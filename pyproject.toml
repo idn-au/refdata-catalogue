@@ -6,10 +6,11 @@ authors = ["Lawson Lewis <lawson@kurrawong.ai>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.12,<4.0"
 pyshacl = "^0.25.0"
 rdflib = "^7.0.0"
 httpx = "^0.25.2"
+labelify = {git = "https://github.com/Kurrawong/labelify"}
 
 
 [build-system]
