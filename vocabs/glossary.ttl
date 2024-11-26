@@ -304,7 +304,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
-    owl:versionIRI :None ;
+    owl:versionIRI "None" ;
     skos:definition "Glossary of terms describing the Indigenous Data Network metadata profile, guides, specifications and tools."@en ;
     skos:hasTopConcept
         :021c5daa-1354-4dd5-b8cf-8eb112e09174 ,
