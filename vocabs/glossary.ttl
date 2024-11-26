@@ -21,7 +21,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :2cab7bd9-8e6d-408b-8120-58ebf0953607
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "A resource is accessible if tt is possible to get a resoruce by a persistant identifier, or to get information about how to get the resource."@en ;
+    skos:definition "A resource is accessible if it is possible to get a resource by a persistant identifier, or to get information about how to get the resource."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Accessible"@en ;
     skos:topConceptOf cs: ;
@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:altLabel "RDF@en"@en ;
-    skos:definition "A type of metadata for describing resources on the internet"@en ;
+    skos:definition "A type of metadata for describing resources on the internet."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Resource Description Framework"@en ;
     skos:topConceptOf cs: ;
@@ -73,7 +73,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:altLabel "Interoperable@en"@en ;
-    skos:definition "The ability share information between different collections or catalogues that might use different tools."@en ;
+    skos:definition "The ability to share information between different collections or catalogues that might use different tools."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Interoperability"@en ;
     skos:topConceptOf cs: ;
@@ -83,7 +83,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:altLabel "JavaScript Object Notation for Linked Data@en"@en ;
-    skos:definition "A method for storing and sharing Resource Description Format metadata."@en ;
+    skos:definition "A method for storing and sharing Resource Description Framework metadata."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "JSON-LD"@en ;
     skos:topConceptOf cs: ;
@@ -102,7 +102,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :6ac34814-bd33-44ce-a1e9-5c71e88f8d06
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "Principles to make resources Findable, Accessible, Interoperable, and Reusable"@en ;
+    skos:definition "Principles to make resources Findable, Accessible, Interoperable, and Reusable."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "FAIR principles"@en ;
     skos:topConceptOf cs: ;
@@ -114,7 +114,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:altLabel
         "Concept scheme@en"@en ,
         "Controlled vocabulary@en"@en ;
-    skos:definition "A set of predefined words or phrases used for describing metadata records consistently"@en ;
+    skos:definition "A set of predefined words or phrases used for describing metadata records consistently."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Vocabulary"@en ;
     skos:topConceptOf cs: ;
@@ -143,7 +143,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :87931538-66e5-493d-800f-3c8a54fb8d6b
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "The prefix of an identifeir that groups concepts or resources together"@en ;
+    skos:definition "The prefix of an identifeir that groups concepts or resources together."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Namespace"@en ;
     skos:topConceptOf cs: ;
@@ -162,7 +162,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:altLabel "Terse RDF Triple Language@en"@en ;
-    skos:definition "A method for storing and sharing Resource Description Format metadata."@en ;
+    skos:definition "A method for storing and sharing Resource Description Framework metadata."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Turtle"@en ;
     skos:topConceptOf cs: ;
@@ -172,7 +172,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :a06424dd-4d26-4f01-85ee-ca8ff5dfc641
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "The relationship between people or organisations and catalogued resources"@en ;
+    skos:definition "The relationship between people or organisations and catalogued resources."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Role"@en ;
     skos:topConceptOf cs: ;
@@ -183,7 +183,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy cs: ;
     skos:altLabel "UUID@en"@en ;
     skos:broader :6c014466-c95f-4df5-a6cc-a1a50beffab0 ;
-    skos:definition "A type of persistant identifier that is universally unique"@en ;
+    skos:definition "A type of persistant identifier that is universally unique."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Universally Unique Identifier"@en ;
 .
@@ -219,7 +219,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         cs: ,
         isoroles:subjectAgent ;
     skos:broader :57110a82-2f4a-4038-aa71-4bbbc888aac4 ;
-    skos:definition "Person or organisation that the resources is about"@en ;
+    skos:definition "Person or organisation that the resource is about."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Subject agent"@en ;
 .
@@ -228,7 +228,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:altLabel "Metadata tool@"@en ;
-    skos:definition "A tool that helps to create and upload metadata about resources"@en ;
+    skos:definition "A tool that helps to create and upload metadata about resources."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Metadata Entry Form" ;
     skos:topConceptOf cs: ;
@@ -237,7 +237,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :d7907201-7eaa-4c08-80e1-404c3c2af5c1
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "A resource is findable if tt is possible to find a resource. Resources are findable when they are described with consistent metadata and vocabulary concepts."@en ;
+    skos:definition "A resource is findable if it is possible to find that resource. Resources are findable when they are described with consistent metadata and vocabulary concepts."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Findable"@en ;
     skos:topConceptOf cs: ;
@@ -305,7 +305,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 cs:
     a skos:ConceptScheme ;
     owl:versionIRI :None ;
-    skos:definition "Glossary of terms describing the Indigenous Data Network metadata profile, guides, specifications and tools"@en ;
+    skos:definition "Glossary of terms describing the Indigenous Data Network metadata profile, guides, specifications and tools."@en ;
     skos:hasTopConcept
         :021c5daa-1354-4dd5-b8cf-8eb112e09174 ,
         :2cab7bd9-8e6d-408b-8120-58ebf0953607 ,
@@ -333,7 +333,7 @@ cs:
         :df76959d-d915-4ce6-9bc8-8043dabc0cc2 ,
         :e1d0f465-d5a9-4154-a241-60c187e825e2 ,
         :f962d3c0-b94d-4306-9c47-f1c430509101 ;
-    skos:historyNote "This glossary is develped to assist ongoing operation of the Indigenous Data Network"@en ;
+    skos:historyNote "This glossary is developed to assist ongoing operation of the Indigenous Data Network."@en ;
     skos:prefLabel "Indigenous Data Network Glossary"@en ;
     prov:qualifiedAttribution
         [
@@ -343,8 +343,8 @@ cs:
     schema:creator
         [
             a schema:Organization ;
-            schema:name "Kurrawong Ai" ;
-            schema:url ""^^xsd:anyURI ;
+            schema:name "Kurrawong AI" ;
+			schema:url "https://kurrawong.ai"^^xsd:anyURI ;
         ] ;
     schema:dateCreated "2024-11-25"^^xsd:date ;
     schema:dateModified "2024-11-25"^^xsd:date ;
