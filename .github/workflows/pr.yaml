@@ -30,7 +30,7 @@ jobs:
         uses: snok/install-poetry@v1
       - name: Install dependencies
         if: ${{ steps.changes.outputs.data == 'true' }}
-        run: poetry install --without dev --no-interaction --no-root
+        run: poetry install --no-interaction --no-root
       # validate data if changed
       - name: Validate vocabs
         if: ${{ steps.changes.outputs.data == 'true' }}
