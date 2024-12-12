@@ -346,7 +346,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
     skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1391> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
+    skos:topConceptOf cs: ;
     skos:definition "Aboriginal men"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal men"@en ;
@@ -428,7 +428,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
     skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=2320> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
+    skos:topConceptOf cs: ;
     skos:definition "Aboriginal women"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal women"@en ;
@@ -440,8 +440,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=2355> ;
+    skos:topConceptOf cs: ;
     skos:definition "Aboriginal youth"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal youth"@en ;
@@ -499,7 +498,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
     skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=359> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
+    skos:topConceptOf cs: ;
     skos:definition "Aboriginal children"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal children"@en ;
@@ -748,11 +747,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1096> ;
     skos:definition "Aborigines"@en ;
     skos:inScheme cs: ;
-    skos:narrower
-        <https://vocabularyserver.com/apais/xml.php?skosTema=17> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=25> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=26> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=6> ;
     skos:prefLabel "Aborigines"@en ;
     skos:related
         <https://vocabularyserver.com/apais/xml.php?skosTema=10> ,
