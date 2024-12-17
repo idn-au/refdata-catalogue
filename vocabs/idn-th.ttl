@@ -544,7 +544,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=805> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=805> ;
     skos:definition "Indigenous peoples"@en ;
     skos:inScheme cs: ;
     skos:narrower
