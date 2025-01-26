@@ -8,6 +8,26 @@ PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+
+:PublicPolicyTaxonomy-vocabulary
+    a skos:Collection ;
+    dcterms:source "https://linked.data.gov.au/def/policy/Subject"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Indigenous keywords from the Public Policy Taxonomy" ;
+    skos:inScheme cs: ;
+    skos:member
+    <https://linked.data.gov.au/def/policy/940a5e39-a55c-488a-b72d-2b7eb01feee4> ,
+    <https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723> ,
+    <https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7> ,
+    <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ,
+    <https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> ,
+    <https://linked.data.gov.au/def/policy/4ef1f784-9f38-44f6-9505-ed9ba9c41a74> ,
+    <https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d> ,
+    <https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025> ;
+skos:prefLabel "Public Policy Taxonomy concepts"@en ;
+prov:wasDerivedFrom <https://linked.data.gov.au/def/policy/Subject> ;
+
+
 :apais-vocabulary
     a skos:Collection ;
     dcterms:source "https://vocabularyserver.com/apais/"^^xsd:anyURI ;
@@ -109,6 +129,92 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://vocabularyserver.com/apais/xml.php?skosTema=8> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=9> ;
     skos:prefLabel "Indigeneity Concepts" ;
+.
+
+<https://linked.data.gov.au/def/policy/940a5e39-a55c-488a-b72d-2b7eb01feee4> 
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "First Peoples health"@en ;
+    skos:altLabel "Aboriginal health"@en , "Indigenous health"@en , "Indigenous health workers"@en ;
+    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=12> ;
+.
+
+<https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723> 
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Aboriginal and Torres Strait Islander heritage and culture"@en ;
+    skos:narrower <https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7> ;
+.
+
+<https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7> 
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Repatriation of historic human remains"@en ;
+    skos:altLabel "Repatriation and reburial of human remains"@en ;
+    skos:broader <https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723> ;
+.
+
+<https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> 
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Reconciliation"@en ;
+    skos:altLabel "Aboriginal reconciliation"@en ;
+    skos:narrower <https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> , <https://linked.data.gov.au/def/policy/4ef1f784-9f38-44f6-9505-ed9ba9c41a74> , 
+                  <https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d> , <https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025> ;
+    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=21> ;
+.
+
+<https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> 
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Native Title"@en ;
+    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
+    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1483> ;
+.
+
+<https://linked.data.gov.au/def/policy/4ef1f784-9f38-44f6-9505-ed9ba9c41a74> 
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Government relations with First Peoples"@en ;
+    skos:altLabel "Aboriginal Australians government relations"@en ;
+    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
+.
+<https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d> 
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Uluru Statement"@en ;
+    skos:altLabel "Uluru Statement from the Heart"@en ;
+    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
+.
+<https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025> 
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Reconciliation Action Plans"@en ;
+    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=1291>
