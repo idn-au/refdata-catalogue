@@ -1,6 +1,7 @@
 PREFIX : <https://data.idnau.org/pid/vocab/idn-th/>
 PREFIX cs: <https://data.idnau.org/pid/vocab/idn-th>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
@@ -8,47 +9,15 @@ PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-:EMSAmodulesCollectionsofCategoricalValues
-    a skos:Collection
-    dcterms:source "https://core.vocabs.paratoo.tern.org.au/api/lut-intervention-fire-management-types"^^xsd:anyURI ;
-	skos:member <https://linked.data.gov.au/def/nrm/c9f1f747-3677-5e72-aac0-b49733ea4629> ;
-    skos:definition "Indigenous keywords from EMSA modules: Collections of Categorical Values" ;
-    dcterms:issued "2024-12-02" ;
-	skos:prefLabel "Ecological Monitoring System Australia (EMSA) modules: Collections of Categorical Values"@en ;
-    prov:wasDerivedFrom <https://linked.data.gov.au/def/nrm> ;
-.
-
-:TheUnifiedAstronomyThesaurus
-    a skos:Collection
-    dcterms:source "http://astrothesaurus.org/uat/1"^^xsd:anyURI ;
-	skos:member <http://astrothesaurus.org/uat/2367> ;
-    skos:definition "Indigenous keywords from The Unified Astronomy Thesaurus" ;
-    dcterms:issued "2024-06-20" ;
-	skos:prefLabel "The Unified Astronomy Thesaurus"@en ;
-    prov:wasDerivedFrom <http://astrothesaurus.org/uat/1> ;
-.
-
-:PlaceType
-    a skos:Collection
-    dcterms:source "http://pid.geoscience.gov.au/def/voc/ga/PlaceType"^^xsd:anyURI ;
-	skos:member <http://pid.geoscience.gov.au/def/voc/ga/PlaceType/INDIGENOUS_PROTECTED_AREA> ;
-    skos:definition "Indigenous keywords from the Place Type vocabulary" ;
-    dcterms:issued "2019-08-23" ;
-	owl:versionInfo "V1.0" ;
-	skos:prefLabel "Place Type"@en ;
-    prov:wasDerivedFrom <http://pid.geoscience.gov.au/def/voc/ga/PlaceType> ;
-.
-
 :AustralianLandUseandManagementClassification
     a skos:Collection ;
     dcterms:source "https://linked.data.gov.au/def/alum"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from the Australian Land Use and Management Classification" ;
     skos:inScheme cs: ;
-    skos:member
-    <https://linked.data.gov.au/def/alum/1.2.5> ;
-skos:prefLabel "Australian Land Use and Management Classification"@en ;
-prov:wasDerivedFrom <https://linked.data.gov.au/def/alum> ;
+    skos:member <https://linked.data.gov.au/def/alum/1.2.5> ;
+    skos:prefLabel "Australian Land Use and Management Classification"@en ;
+    prov:wasDerivedFrom <https://linked.data.gov.au/def/alum> ;
 .
 
 :CODATAResearchDataManagementTerminology
@@ -58,10 +27,31 @@ prov:wasDerivedFrom <https://linked.data.gov.au/def/alum> ;
     skos:definition "Indigenous keywords from the CODATA Research Data Management Terminology" ;
     skos:inScheme cs: ;
     skos:member
-    <https://terms.codata.org/rdmt/indigenous-data> ,
-    <https://terms.codata.org/rdmt/indigenous-data-sovereignty> ;
-skos:prefLabel "CODATA Research Data Management Terminology"@en ;
-prov:wasDerivedFrom <https://terms.codata.org/rdmt> ;
+        <https://terms.codata.org/rdmt/indigenous-data> ,
+        <https://terms.codata.org/rdmt/indigenous-data-sovereignty> ;
+    skos:prefLabel "CODATA Research Data Management Terminology"@en ;
+    prov:wasDerivedFrom <https://terms.codata.org/rdmt> ;
+.
+
+:EMSAmodulesCollectionsofCategoricalValues
+    a skos:Collection ;
+    dcterms:issued "2024-12-02" ;
+    dcterms:source "https://core.vocabs.paratoo.tern.org.au/api/lut-intervention-fire-management-types"^^xsd:anyURI ;
+    skos:definition "Indigenous keywords from EMSA modules: Collections of Categorical Values" ;
+    skos:member <https://linked.data.gov.au/def/nrm/c9f1f747-3677-5e72-aac0-b49733ea4629> ;
+    skos:prefLabel "Ecological Monitoring System Australia (EMSA) modules: Collections of Categorical Values"@en ;
+    prov:wasDerivedFrom <https://linked.data.gov.au/def/nrm> ;
+.
+
+:PlaceType
+    a skos:Collection ;
+    dcterms:issued "2019-08-23" ;
+    dcterms:source "http://pid.geoscience.gov.au/def/voc/ga/PlaceType"^^xsd:anyURI ;
+    owl:versionInfo "V1.0" ;
+    skos:definition "Indigenous keywords from the Place Type vocabulary" ;
+    skos:member <http://pid.geoscience.gov.au/def/voc/ga/PlaceType/INDIGENOUS_PROTECTED_AREA> ;
+    skos:prefLabel "Place Type"@en ;
+    prov:wasDerivedFrom <http://pid.geoscience.gov.au/def/voc/ga/PlaceType> ;
 .
 
 :PublicPolicyTaxonomy-vocabulary
@@ -71,18 +61,28 @@ prov:wasDerivedFrom <https://terms.codata.org/rdmt> ;
     skos:definition "Indigenous keywords from the Public Policy Taxonomy" ;
     skos:inScheme cs: ;
     skos:member
-    <https://linked.data.gov.au/def/policy/940a5e39-a55c-488a-b72d-2b7eb01feee4> ,
-    <https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723> ,
-    <https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7> ,
-    <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ,
-    <https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> ,
-    <https://linked.data.gov.au/def/policy/4ef1f784-9f38-44f6-9505-ed9ba9c41a74> ,
-    <https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d> ,
-    <https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025> ,
-    <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ,
-    <https://linked.data.gov.au/def/policy/755e3b92-6ac3-4d92-96fa-5bf903640668> ;
-skos:prefLabel "Public Policy Taxonomy concepts"@en ;
-prov:wasDerivedFrom <https://linked.data.gov.au/def/policy/Subject> ;
+        <https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> ,
+        <https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7> ,
+        <https://linked.data.gov.au/def/policy/4ef1f784-9f38-44f6-9505-ed9ba9c41a74> ,
+        <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ,
+        <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ,
+        <https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723> ,
+        <https://linked.data.gov.au/def/policy/755e3b92-6ac3-4d92-96fa-5bf903640668> ,
+        <https://linked.data.gov.au/def/policy/940a5e39-a55c-488a-b72d-2b7eb01feee4> ,
+        <https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d> ,
+        <https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025> ;
+    skos:prefLabel "Public Policy Taxonomy concepts"@en ;
+    prov:wasDerivedFrom <https://linked.data.gov.au/def/policy/Subject> ;
+.
+
+:TheUnifiedAstronomyThesaurus
+    a skos:Collection ;
+    dcterms:issued "2024-06-20" ;
+    dcterms:source "http://astrothesaurus.org/uat/1"^^xsd:anyURI ;
+    skos:definition "Indigenous keywords from The Unified Astronomy Thesaurus" ;
+    skos:member <http://astrothesaurus.org/uat/2367> ;
+    skos:prefLabel "The Unified Astronomy Thesaurus"@en ;
+    prov:wasDerivedFrom <http://astrothesaurus.org/uat/1> ;
 .
 
 :apais-vocabulary
@@ -188,53 +188,37 @@ prov:wasDerivedFrom <https://linked.data.gov.au/def/policy/Subject> ;
     skos:prefLabel "Indigeneity Concepts" ;
 .
 
-<https://linked.data.gov.au/def/nrm/c9f1f747-3677-5e72-aac0-b49733ea4629>
-a skos:Concept ;
-    dcterms:provenance "Ecological Monitoring System Australia (EMSA) modules: Collections of Categorical Values" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm> ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Cultural burn"@en ;
-    skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
-.
-
 <http://astrothesaurus.org/uat/2367>
-a skos:Concept ;
-	dcterms:created "2022-06-22 19:49:16.856Z"^^xsd:dateTime ;
+    a skos:Concept ;
+    dcterms:created "2022-06-22T19:49:16.856000+00:00"^^xsd:dateTime ;
     dcterms:provenance "Taken directly from The Unified Astronomy Thesaurus" ;
     rdfs:isDefinedBy <http://astrothesaurus.org/uat/1> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=2> ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous astronomy"@en ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=2> ;
 .
 
-<http://pid.geoscience.gov.au/def/voc/ga/PlaceType/INDIGENOUS_PROTECTED_AREA> 
-a skos:Concept ;
-	dcterms:created "2019-08-23T01:15:53.242Z"^^xsd:dateTime ;
-    dcterms:provenance "Taken directly from Place Type vocabulary" ;
-    rdfs:isDefinedBy <http://pid.geoscience.gov.au/def/voc/ga/PlaceType> ;
+<https://linked.data.gov.au/def/policy/940a5e39-a55c-488a-b72d-2b7eb01feee4>
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:altLabel
+        "Aboriginal health"@en ,
+        "Indigenous health"@en ,
+        "Indigenous health workers"@en ;
+    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=12> ;
     skos:inScheme cs: ;
-    skos:prefLabel "Indigenous protected area"@en ;
-    skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
-skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-owned land or sea where Traditional Owners have entered into an agreement with the Australian Government to promote biodiversity and cultural resource conservation"@en ;
+    skos:prefLabel "First Peoples health"@en ;
 .
 
-<https://linked.data.gov.au/def/alum/1.2.5>
-  a skos:Concept ;
-    dcterms:provenance "Taken directly from Australian Land Use and Management Classification" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/alum> ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Traditional Indigenous uses"@en ;
-    skos:definition "Area managed primarily for traditional Indigenous uses. This class should only be applied where traditional Indigenous uses are the current prime use."@en ;
-    skos:topConceptOf cs: ;
-    skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
-.
 <https://terms.codata.org/rdmt/indigenous-data>
     a skos:Concept ;
     dcterms:provenance "Taken directly from CODATA Research Data Management Terminology" ;
     rdfs:isDefinedBy <https://terms.codata.org/rdmt/> ;
+    skos:definition "Data that pertains to (is created or gathered by, or is about) Indigenous peoples."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous data"@en ;
-    skos:definition "Data that pertains to (is created or gathered by, or is about) Indigenous peoples."@en ;
     skos:topConceptOf cs: ;
 .
 
@@ -242,124 +226,110 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     a skos:Concept ;
     dcterms:provenance "Taken directly from CODATA Research Data Management Terminology" ;
     rdfs:isDefinedBy <https://terms.codata.org/rdmt/> ;
+    skos:definition "Data that pertains to (is created or gathered by, or is about) Indigenous peoples."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous data sovereignty"@en ;
-    skos:definition "Data that pertains to (is created or gathered by, or is about) Indigenous peoples."@en ;
     skos:topConceptOf cs: ;
 .
 
-<https://linked.data.gov.au/def/policy/940a5e39-a55c-488a-b72d-2b7eb01feee4> 
+<http://pid.geoscience.gov.au/def/voc/ga/PlaceType/INDIGENOUS_PROTECTED_AREA>
     a skos:Concept ;
-    dcterms:created "2020-09-15"^^xsd:date ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    dcterms:created "2019-08-23T01:15:53.242000+00:00"^^xsd:dateTime ;
+    dcterms:provenance "Taken directly from Place Type vocabulary" ;
+    rdfs:isDefinedBy <http://pid.geoscience.gov.au/def/voc/ga/PlaceType> ;
+    skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
+    skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-owned land or sea where Traditional Owners have entered into an agreement with the Australian Government to promote biodiversity and cultural resource conservation"@en ;
     skos:inScheme cs: ;
-    skos:prefLabel "First Peoples health"@en ;
-    skos:altLabel "Aboriginal health"@en , "Indigenous health"@en , "Indigenous health workers"@en ;
-    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=12> ;
+    skos:prefLabel "Indigenous protected area"@en ;
 .
 
-<https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723> 
+<https://linked.data.gov.au/def/alum/1.2.5>
     a skos:Concept ;
-    dcterms:created "2020-09-15"^^xsd:date ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    dcterms:provenance "Taken directly from Australian Land Use and Management Classification" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/alum> ;
+    skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
+    skos:definition "Area managed primarily for traditional Indigenous uses. This class should only be applied where traditional Indigenous uses are the current prime use."@en ;
     skos:inScheme cs: ;
-    skos:prefLabel "Aboriginal and Torres Strait Islander heritage and culture"@en ;
-    skos:narrower <https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7> ;
+    skos:prefLabel "Traditional Indigenous uses"@en ;
+    skos:topConceptOf cs: ;
 .
 
-<https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7> 
+<https://linked.data.gov.au/def/nrm/c9f1f747-3677-5e72-aac0-b49733ea4629>
+    a skos:Concept ;
+    dcterms:provenance "Ecological Monitoring System Australia (EMSA) modules: Collections of Categorical Values" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm> ;
+    skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Cultural burn"@en ;
+.
+
+<https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Repatriation of historic human remains"@en ;
     skos:altLabel "Repatriation and reburial of human remains"@en ;
     skos:broader <https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Repatriation of historic human remains"@en ;
 .
 
-<https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> 
+<https://linked.data.gov.au/def/policy/4ef1f784-9f38-44f6-9505-ed9ba9c41a74>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Reconciliation"@en ;
-    skos:altLabel "Aboriginal reconciliation"@en ;
-    skos:narrower <https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> , <https://linked.data.gov.au/def/policy/4ef1f784-9f38-44f6-9505-ed9ba9c41a74> , 
-                  <https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d> , <https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025> ;
-    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=21> ;
-.
-
-<https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> 
-    a skos:Concept ;
-    dcterms:created "2020-09-15"^^xsd:date ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Native Title"@en ;
-    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
-    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1483> ;
-.
-
-<https://linked.data.gov.au/def/policy/4ef1f784-9f38-44f6-9505-ed9ba9c41a74> 
-    a skos:Concept ;
-    dcterms:created "2020-09-15"^^xsd:date ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Government relations with First Peoples"@en ;
     skos:altLabel "Aboriginal Australians government relations"@en ;
     skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Government relations with First Peoples"@en ;
 .
 
-<https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d> 
+<https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
     skos:inScheme cs: ;
-    skos:prefLabel "Uluru Statement"@en ;
-    skos:altLabel "Uluru Statement from the Heart"@en ;
-    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
-.
-
-<https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025> 
-    a skos:Concept ;
-    dcterms:created "2020-09-15"^^xsd:date ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Reconciliation Action Plans"@en ;
-    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
-.
-
-<https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> 
-    a skos:Concept ;
-    dcterms:created "2020-09-15"^^xsd:date ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
-    skos:inScheme cs: ;
-    skos:topConceptOf cs: ;
-    skos:prefLabel "First Peoples land management"@en ;
-    skos:altLabel "First Peoples land management"@en , "Aboriginal land councils"@en , "Indigenous land management"@en , "Land and sea councils"@en , "Land councils"@en ;
-    skos:narrower <https://linked.data.gov.au/def/policy/755e3b92-6ac3-4d92-96fa-5bf903640668> ,
-    skos:narrower <https://linked.data.gov.au/def/alum/1.2.5> ,
-    skos:narrower <https://linked.data.gov.au/def/nrm/c9f1f747-3677-5e72-aac0-b49733ea4629> ,
-    skos:narrower <http://pid.geoscience.gov.au/def/voc/ga/PlaceType/INDIGENOUS_PROTECTED_AREA> ;
-    skos:related <https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> ;
+    skos:narrower <https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7> ;
+    skos:prefLabel "Aboriginal and Torres Strait Islander heritage and culture"@en ;
 .
 
 <https://linked.data.gov.au/def/policy/755e3b92-6ac3-4d92-96fa-5bf903640668>
-   a skos:Concept ;
+    a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal water use"@en ;
-    skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
+.
+
+<https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d>
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:altLabel "Uluru Statement from the Heart"@en ;
+    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Uluru Statement"@en ;
+.
+
+<https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025>
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Reconciliation Action Plans"@en ;
+.
+
+<https://linked.data.gov.au/org/idn>
+    a sdo:Organization ;
+    sdo:name "Indigenous Data Network" ;
+    sdo:url "https://www.idnau.org"^^xsd:anyURI ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=1291>
@@ -382,18 +352,6 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     skos:definition "Queensland" ;
     skos:inScheme cs: ;
     skos:prefLabel "Queensland" ;
-.
-
-<https://vocabularyserver.com/apais/xml.php?skosTema=2>
-    a skos:Concept ;
-    dcterms:created "2011-04-29"^^xsd:date ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=132> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=29> ;
-    skos:definition "Aboriginal archaeology"@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Aboriginal archaeology"@en ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=2179>
@@ -433,6 +391,17 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     skos:definition "Customary law" ;
     skos:inScheme cs: ;
     skos:prefLabel "Customary law" ;
+.
+
+<https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1>
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
+    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1483> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Native Title"@en ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=10>
@@ -481,18 +450,6 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal employment"@en ;
     skos:scopeNote "Includes Torres Strait Islander employment"@en ;
-.
-
-<https://vocabularyserver.com/apais/xml.php?skosTema=12>
-    a skos:Concept ;
-    dcterms:created "2011-04-29"^^xsd:date ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1004> ;
-    skos:definition "Aboriginal health"@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Aboriginal health"@en ;
-    skos:scopeNote "Includes Torres Strait Islander health"@en ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=1246>
@@ -570,8 +527,9 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1246> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=8> ;
+    skos:broader
+        <https://vocabularyserver.com/apais/xml.php?skosTema=1246> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=8> ;
     skos:definition "Aboriginal languages"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal languages"@en ;
@@ -583,8 +541,9 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1326> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=5> ;
+    skos:broader
+        <https://vocabularyserver.com/apais/xml.php?skosTema=1326> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=5> ;
     skos:definition "Aboriginal literature"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal literature"@en ;
@@ -596,8 +555,9 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1391> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
+    skos:broader
+        <https://vocabularyserver.com/apais/xml.php?skosTema=1391> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
     skos:definition "Aboriginal men"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal men"@en ;
@@ -625,6 +585,19 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     skos:inScheme cs: ;
     skos:prefLabel "Religion" ;
     skos:topConceptOf cs: ;
+.
+
+<https://vocabularyserver.com/apais/xml.php?skosTema=2>
+    a skos:Concept ;
+    dcterms:created "2011-04-29"^^xsd:date ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    skos:broader
+        <https://vocabularyserver.com/apais/xml.php?skosTema=132> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=29> ;
+    skos:definition "Aboriginal archaeology"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Aboriginal archaeology"@en ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=23>
@@ -678,8 +651,9 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=2320> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
+    skos:broader
+        <https://vocabularyserver.com/apais/xml.php?skosTema=2320> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
     skos:definition "Aboriginal women"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal women"@en ;
@@ -691,8 +665,9 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=2355> ;
+    skos:broader
+        <https://vocabularyserver.com/apais/xml.php?skosTema=2355> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
     skos:definition "Aboriginal youth"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal youth"@en ;
@@ -749,8 +724,9 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=359> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
+    skos:broader
+        <https://vocabularyserver.com/apais/xml.php?skosTema=27> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=359> ;
     skos:definition "Aboriginal children"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal children"@en ;
@@ -805,6 +781,18 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     skos:scopeNote "Members of ethnic groups which originally populated the country in which they live. From Mar. 1980-July 1985 Indigenous people was used as a descriptor and then as an identifier until Nov. 1991"@en ;
 .
 
+<https://vocabularyserver.com/apais/xml.php?skosTema=12>
+    a skos:Concept ;
+    dcterms:created "2011-04-29"^^xsd:date ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1004> ;
+    skos:definition "Aboriginal health"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Aboriginal health"@en ;
+    skos:scopeNote "Includes Torres Strait Islander health"@en ;
+.
+
 <https://vocabularyserver.com/apais/xml.php?skosTema=14>
     a skos:Concept ;
     dcterms:created "2011-04-29"^^xsd:date ;
@@ -841,18 +829,6 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     skos:topConceptOf cs: ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=21>
-    a skos:Concept ;
-    dcterms:created "2011-04-29"^^xsd:date ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:altLabel "Racial reconciliation"@en ;
-    skos:definition "Aboriginal reconciliation"@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Aboriginal reconciliation"@en ;
-    skos:topConceptOf cs: ;
-.
-
 <https://vocabularyserver.com/apais/xml.php?skosTema=29>
     a skos:Concept ;
     dcterms:created "2011-04-29"^^xsd:date ;
@@ -869,8 +845,9 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
     skos:altLabel "Aboriginal paintings"@en ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=147> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=5> ;
+    skos:broader
+        <https://vocabularyserver.com/apais/xml.php?skosTema=147> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=5> ;
     skos:definition "Aboriginal art"@en ;
     skos:inScheme cs: ;
     skos:narrower <https://vocabularyserver.com/apais/xml.php?skosTema=4> ;
@@ -907,12 +884,63 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=559> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=8> ;
+    skos:broader
+        <https://vocabularyserver.com/apais/xml.php?skosTema=559> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=8> ;
     skos:definition "Aboriginal customary law"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal customary law"@en ;
     skos:scopeNote "Includes Torres Strait Islander customary law"@en ;
+.
+
+<https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012>
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:altLabel "Aboriginal reconciliation"@en ;
+    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=21> ;
+    skos:inScheme cs: ;
+    skos:narrower
+        <https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> ,
+        <https://linked.data.gov.au/def/policy/4ef1f784-9f38-44f6-9505-ed9ba9c41a74> ,
+        <https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d> ,
+        <https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025> ;
+    skos:prefLabel "Reconciliation"@en ;
+.
+
+<https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761>
+    a skos:Concept ;
+    dcterms:created "2020-09-15"^^xsd:date ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:altLabel
+        "Aboriginal land councils"@en ,
+        "First Peoples land management"@en ,
+        "Indigenous land management"@en ,
+        "Land and sea councils"@en ,
+        "Land councils"@en ;
+    skos:inScheme cs: ;
+    skos:narrower
+        <http://pid.geoscience.gov.au/def/voc/ga/PlaceType/INDIGENOUS_PROTECTED_AREA> ,
+        <https://linked.data.gov.au/def/alum/1.2.5> ,
+        <https://linked.data.gov.au/def/nrm/c9f1f747-3677-5e72-aac0-b49733ea4629> ,
+        <https://linked.data.gov.au/def/policy/755e3b92-6ac3-4d92-96fa-5bf903640668> ;
+    skos:prefLabel "First Peoples land management"@en ;
+    skos:related <https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> ;
+    skos:topConceptOf cs: ;
+.
+
+<https://vocabularyserver.com/apais/xml.php?skosTema=21>
+    a skos:Concept ;
+    dcterms:created "2011-04-29"^^xsd:date ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    skos:altLabel "Racial reconciliation"@en ;
+    skos:definition "Aboriginal reconciliation"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Aboriginal reconciliation"@en ;
+    skos:topConceptOf cs: ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=2178>
@@ -920,8 +948,9 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=189> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1096> ;
+    skos:broader
+        <https://vocabularyserver.com/apais/xml.php?skosTema=1096> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=189> ;
     skos:definition "Torres Strait Islanders"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Torres Strait Islanders"@en ;
@@ -954,22 +983,6 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     skos:topConceptOf cs: ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=1483>
-    a skos:Concept ;
-    dcterms:created "2011-04-29"^^xsd:date ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:altLabel "Aboriginal title"@en ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=14> ;
-    skos:definition "Native title"@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Native title"@en ;
-    skos:related
-        <https://vocabularyserver.com/apais/xml.php?skosTema=2178> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
-    skos:scopeNote "Traditional laws and customs of Australian Aboriginal and Torres Strait Islander peoples pertaining to the land and waters which are recognised by the common law of Australia"@en ;
-.
-
 <https://vocabularyserver.com/apais/xml.php?skosTema=8>
     a skos:Concept ;
     dcterms:created "2011-04-29"^^xsd:date ;
@@ -986,6 +999,22 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     skos:prefLabel "Aboriginal culture"@en ;
 .
 
+<https://vocabularyserver.com/apais/xml.php?skosTema=1483>
+    a skos:Concept ;
+    dcterms:created "2011-04-29"^^xsd:date ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    skos:altLabel "Aboriginal title"@en ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=14> ;
+    skos:definition "Native title"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Native title"@en ;
+    skos:related
+        <https://vocabularyserver.com/apais/xml.php?skosTema=2178> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
+    skos:scopeNote "Traditional laws and customs of Australian Aboriginal and Torres Strait Islander peoples pertaining to the land and waters which are recognised by the common law of Australia"@en ;
+.
+
 <https://vocabularyserver.com/apais/xml.php?skosTema=27>
     a skos:Concept ;
     dcterms:created "2011-04-29"^^xsd:date ;
@@ -995,8 +1024,9 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
         "Australian Aborigines"@en ,
         "Koori peoples"@en ,
         "Murri peoples"@en ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=189> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1096> ;
+    skos:broader
+        <https://vocabularyserver.com/apais/xml.php?skosTema=1096> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=189> ;
     skos:definition "Aborigines"@en ;
     skos:inScheme cs: ;
     skos:narrower
@@ -1022,12 +1052,6 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
 
 <https://vocabularyserver.com/apais/>
     rdfs:label "APAIS Thesaurus" ;
-.
-
-<https://linked.data.gov.au/org/idn>
-    a sdo:Organization ;
-    sdo:name "Indigenous Data Network" ;
-    sdo:url "https://www.idnau.org"^^xsd:anyURI ;
 .
 
 cs:
@@ -1067,8 +1091,9 @@ cs:
         <https://vocabularyserver.com/apais/xml.php?skosTema=765> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=805> ;
     skos:prefLabel "IDN Themes"@en ;
-    prov:qualifiedDerivation [
+    prov:qualifiedDerivation
+        [
             prov:entity <https://vocabularyserver.com/apais/> ;
-            prov:hadRole <https://linked.data.gov.au/def/vocdermods/subsetting-and-extension>
+            prov:hadRole <https://linked.data.gov.au/def/vocdermods/subsetting-and-extension> ;
         ] ;
 .
