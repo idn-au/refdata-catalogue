@@ -367,7 +367,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1251> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1251> ;
     skos:definition "Legal rights" ;
     skos:inScheme cs: ;
     skos:prefLabel "Legal rights" ;
@@ -389,7 +389,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=132> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=132> ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=29> ;
     skos:definition "Aboriginal archaeology"@en ;
     skos:inScheme cs: ;
@@ -401,7 +401,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1774> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1774> ;
     skos:definition "Torres Strait Islands"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Torres Strait Islands"@en ;
@@ -417,7 +417,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
     skos:altLabel "Dreaming stories"@en ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1824> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1824> ;
     skos:definition "Aboriginal religion"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal religion"@en ;
@@ -429,7 +429,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1251> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1251> ;
     skos:definition "Customary law" ;
     skos:inScheme cs: ;
     skos:prefLabel "Customary law" ;
@@ -441,7 +441,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
     skos:altLabel "Education, Aboriginal"@en ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=691> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=691> ;
     skos:definition "Aboriginal education"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal education"@en ;
@@ -476,7 +476,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
     skos:altLabel "Employment of Aborigines"@en ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=762> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=762> ;
     skos:definition "Aboriginal employment"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal employment"@en ;
@@ -488,7 +488,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1004> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1004> ;
     skos:definition "Aboriginal health"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal health"@en ;
@@ -514,7 +514,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     skos:altLabel
         "Aborigines in history"@en ,
         "History, Aboriginal"@en ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1029> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1029> ;
     skos:definition "Aboriginal history"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal history"@en ;
@@ -570,7 +570,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1246> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1246> ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=8> ;
     skos:definition "Aboriginal languages"@en ;
     skos:inScheme cs: ;
@@ -583,7 +583,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1326> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1326> ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=5> ;
     skos:definition "Aboriginal literature"@en ;
     skos:inScheme cs: ;
@@ -596,7 +596,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1391> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1391> ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
     skos:definition "Aboriginal men"@en ;
     skos:inScheme cs: ;
@@ -678,7 +678,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=2320> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=2320> ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
     skos:definition "Aboriginal women"@en ;
     skos:inScheme cs: ;
@@ -691,7 +691,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=2355> ;
     skos:definition "Aboriginal youth"@en ;
     skos:inScheme cs: ;
@@ -704,7 +704,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1251> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1251> ;
     skos:definition "Aborigines and the law"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aborigines and the law"@en ;
@@ -749,7 +749,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=359> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=359> ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
     skos:definition "Aboriginal children"@en ;
     skos:inScheme cs: ;
@@ -773,7 +773,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=762> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=762> ;
     skos:definition "Employment of Aborigines"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Employment of Aborigines"@en ;
@@ -811,7 +811,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
     skos:altLabel "Land rights, Aboriginal"@en ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1291> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1291> ;
     skos:definition "Aboriginal land rights"@en ;
     skos:inScheme cs: ;
     skos:narrower <https://vocabularyserver.com/apais/xml.php?skosTema=1483> ;
@@ -869,7 +869,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
     skos:altLabel "Aboriginal paintings"@en ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=147> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=147> ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=5> ;
     skos:definition "Aboriginal art"@en ;
     skos:inScheme cs: ;
@@ -907,7 +907,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=559> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=559> ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=8> ;
     skos:definition "Aboriginal customary law"@en ;
     skos:inScheme cs: ;
@@ -920,7 +920,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=189> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=189> ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1096> ;
     skos:definition "Torres Strait Islanders"@en ;
     skos:inScheme cs: ;
@@ -975,7 +975,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
     dcterms:created "2011-04-29"^^xsd:date ;
     dcterms:provenance "Taken directly from APAIS online" ;
     rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=553> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=553> ;
     skos:definition "Aboriginal culture"@en ;
     skos:inScheme cs: ;
     skos:narrower
@@ -995,7 +995,7 @@ skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-own
         "Australian Aborigines"@en ,
         "Koori peoples"@en ,
         "Murri peoples"@en ;
-    skos:broadMatch <https://vocabularyserver.com/apais/xml.php?skosTema=189> ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=189> ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1096> ;
     skos:definition "Aborigines"@en ;
     skos:inScheme cs: ;
