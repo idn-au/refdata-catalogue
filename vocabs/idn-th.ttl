@@ -38,6 +38,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:issued "2024-12-02" ;
     dcterms:source "https://core.vocabs.paratoo.tern.org.au/api/lut-intervention-fire-management-types"^^xsd:anyURI ;
     skos:definition "Indigenous keywords from EMSA modules: Collections of Categorical Values" ;
+    skos:inScheme cs: ;
     skos:member <https://linked.data.gov.au/def/nrm/c9f1f747-3677-5e72-aac0-b49733ea4629> ;
     skos:prefLabel "Ecological Monitoring System Australia (EMSA) modules: Collections of Categorical Values"@en ;
     prov:wasDerivedFrom <https://linked.data.gov.au/def/nrm> ;
@@ -49,6 +50,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "http://pid.geoscience.gov.au/def/voc/ga/PlaceType"^^xsd:anyURI ;
     owl:versionInfo "V1.0" ;
     skos:definition "Indigenous keywords from the Place Type vocabulary" ;
+    skos:inScheme cs: ;
     skos:member <http://pid.geoscience.gov.au/def/voc/ga/PlaceType/INDIGENOUS_PROTECTED_AREA> ;
     skos:prefLabel "Place Type"@en ;
     prov:wasDerivedFrom <http://pid.geoscience.gov.au/def/voc/ga/PlaceType> ;
@@ -80,6 +82,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:issued "2024-06-20" ;
     dcterms:source "http://astrothesaurus.org/uat/1"^^xsd:anyURI ;
     skos:definition "Indigenous keywords from The Unified Astronomy Thesaurus" ;
+    skos:inScheme cs: ;
     skos:member <http://astrothesaurus.org/uat/2367> ;
     skos:prefLabel "The Unified Astronomy Thesaurus"@en ;
     prov:wasDerivedFrom <http://astrothesaurus.org/uat/1> ;
@@ -193,6 +196,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:created "2022-06-22T19:49:16.856000+00:00"^^xsd:dateTime ;
     dcterms:provenance "Taken directly from The Unified Astronomy Thesaurus" ;
     rdfs:isDefinedBy <http://astrothesaurus.org/uat/1> ;
+    skos:definition "The use and study of astronomical subjects and their movements by indigenous groups. This field encompasses culture, traditional knowledge, and astronomy." ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=2> ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous astronomy"@en ;
@@ -203,6 +207,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:definition "First Peoples health" ;
     skos:altLabel
         "Aboriginal health"@en ,
         "Indigenous health"@en ,
@@ -258,9 +263,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:provenance "Ecological Monitoring System Australia (EMSA) modules: Collections of Categorical Values" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm> ;
+    skos:definition "Cultural burning is a traditional Aboriginal land management practice that involves using fire to care for the land. It's also known as cool burning or fire-stick farming."@en ;
     skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
     skos:inScheme cs: ;
     skos:prefLabel "Cultural burn"@en ;
+    skos:altLabel "Fire-stick farming"@en , "Cool burning"@en ;
 .
 
 <https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7>
@@ -268,6 +275,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    rdfs:definition "The process of returning human remains to their communities of origin. This process can help create healing and reconciliation for the descendants of those remains."@en ;
     skos:altLabel "Repatriation and reburial of human remains"@en ;
     skos:broader <https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723> ;
     skos:inScheme cs: ;
@@ -279,6 +287,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:definition "Relations between Aboriginal Australins and Australian governments"@en ;
     skos:altLabel "Aboriginal Australians government relations"@en ;
     skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
     skos:inScheme cs: ;
@@ -290,6 +299,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:definition "Aboriginal and Torres Strait Islander heritage and culture"@en ;
     skos:inScheme cs: ;
     skos:narrower <https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7> ;
     skos:prefLabel "Aboriginal and Torres Strait Islander heritage and culture"@en ;
@@ -300,6 +310,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:definition "Aboriginal water use."@en ;
     skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal water use"@en ;
@@ -310,6 +321,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:definition "A 2017 petition to the people of Australia, written and endorsed by the Australian Aboriginal and Torres Strait Islander leaders selected as delegates to the First Nations National Constitutional Convention. The document calls for substantive constitutional change and structural reform through the creation of two new institutions; a constitutionally protected First Nations Voice and a Makarrata Commission[a], to oversee agreement-making and truth-telling between governments and First Nations."@en ;
     skos:altLabel "Uluru Statement from the Heart"@en ;
     skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
     skos:inScheme cs: ;
@@ -321,6 +333,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    skos:definition "Practical and structured plans for action within a workplace, based on relationships, respect and opportunities. They help people in the workplace to understand important issues relating to Indigenous Australians, and further meaningful engagement among groups. They also aim to increase equality in the workplace, and help to create sustainable employment opportunities."@en ;
     skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
     skos:inScheme cs: ;
     skos:prefLabel "Reconciliation Action Plans"@en ;
