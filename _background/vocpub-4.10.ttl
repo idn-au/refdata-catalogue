@@ -5,7 +5,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX schema: <https://schema.org/>
+PREFIX sdo: <https://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -14,16 +14,22 @@ BASE <https://w3id.org/profile/vocpub/validator/>
 
 <https://w3id.org/profile/vocpub/validator>
     a owl:Ontology ;
-    schema:name "VocPub Validator"@en ;
-    schema:definition "SHACL validator for the VocPub Profile"@en ;
-    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
-    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
-    schema:dateCreated "2020-06-14"^^xsd:date ;
-    schema:dateModified "2023-12-05"^^xsd:date ;
-    owl:versionIRI <https://w3id.org/profile/vocpub/validator/4.7> ;
-    owl:versionInfo """4.7 Fixed modified date alternate path listing bug
+    sdo:name "VocPub Validator"@en ;
+    sdo:definition "SHACL validator for the VocPub Profile"@en ;
+    sdo:creator <https://orcid.org/0000-0002-8742-7730> ;
+    sdo:publisher <https://linked.data.gov.au/org/agldwg> ;
+    sdo:dateCreated "2020-06-14"^^xsd:date ;
+    sdo:dateModified "2024-06-13"^^xsd:date ;
+    owl:versionIRI <https://w3id.org/profile/vocpub/validator/4.10> ;
+    owl:versionInfo """4.10 move all warning from PropertyShapes to NodeShapes
 
-4.6 Fixed schema:historyNote->skos:historyNote bug
+4.9 Fixed RDF syntax errors
+
+4.8 Fixed Warning/Violation error for PropertyShapes
+
+4.7 Fixed modified date alternate path listing bug
+
+4.6 Fixed sdo:historyNote->skos:historyNote bug
 
 4.5 Added suggested predicates of license & copyrightHolder
 
@@ -35,7 +41,7 @@ BASE <https://w3id.org/profile/vocpub/validator/>
 
 4.1: Added Requirements 2.1.10, 2.1.11 & 2.1.12 and example RDF
 
-4.0: Added a SPARQL function to allow for the inferenceing of skos:inScheme predicates, skos:broader / skos:narrower and skos:topConceptOf/skos:hasTopConcept pairs of inverse predicates
+4.0: Added a SPARQL function to allow for the inferencing of skos:inScheme predicates, skos:broader / skos:narrower and skos:topConceptOf/skos:hasTopConcept pairs of inverse predicates
 
 3.3: Converted validator metadata to schema.org, enabled bibliographic references for Concepts, enabled DCTERMS or schema.org for many ConceptScheme predicates; simplified 2.1.6 from two Requirements to one; included skos:topConceptOf in 2.1.8 for Concepts at the top of the hierarchy; collapsed title & definition requirement pairs to single requirements
 
@@ -47,16 +53,16 @@ BASE <https://w3id.org/profile/vocpub/validator/>
 .
 
 <https://linked.data.gov.au/org/agldwg>
-    a schema:Organization ;
-    schema:name "Australian Government Linked Data Working Group" ;
-    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+    a sdo:Organization ;
+    sdo:name "Australian Government Linked Data Working Group" ;
+    sdo:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
 .
 
 <https://orcid.org/0000-0002-8742-7730>
-    a schema:Person ;
-    schema:name "Nicholas J. Car" ;
-    schema:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
-    schema:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+    a sdo:Person ;
+    sdo:name "Nicholas J. Car" ;
+    sdo:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
+    sdo:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
 .
 
 #
@@ -86,7 +92,7 @@ BASE <https://w3id.org/profile/vocpub/validator/>
 <Requirement-2.1.5>
 	a sh:NodeShape ;
 	sh:targetClass skos:ConceptScheme ;
-	sh:message "Requirement 2.1.5 Each vocabulary MUST have exactly one created date and exactly one modified date indicated using the schema:dateCreated and schema:dateModified or dcterms:created and dcterms:modified predicates respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal value" ;
+	sh:message "Requirement 2.1.5 Each vocabulary MUST have exactly one created date and exactly one modified date indicated using the sdo:dateCreated and sdo:dateModified or dcterms:created and dcterms:modified predicates respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal value" ;
 	sh:property
         <created> ,
         <modified> ;
@@ -95,7 +101,7 @@ BASE <https://w3id.org/profile/vocpub/validator/>
 <Requirement-2.1.6>
 	a sh:NodeShape ;
 	sh:targetClass skos:ConceptScheme ;
-	sh:message "Requirement 2.1.6 Each vocabulary MUST have at least one creator, indicated using schema:creator or dcterms:creator predicate and exactly one publisher, indicated using schema:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of schema:Person, or schema:Organization" ;
+	sh:message "Requirement 2.1.6 Each vocabulary MUST have at least one creator, indicated using sdo:creator or dcterms:creator predicate and exactly one publisher, indicated using sdo:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of sdo:Person, or sdo:Organization" ;
 	sh:property
         <creator> ,
         <publisher> ;
@@ -104,7 +110,7 @@ BASE <https://w3id.org/profile/vocpub/validator/>
 <Requirement-2.1.7>
     a sh:NodeShape ;
     sh:targetClass skos:ConceptScheme ;
-    sh:message "Requirement 2.1.7 The origins of a Concept Scheme MUST be indicated by at least one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of schema:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
+    sh:message "Requirement 2.1.7 The origins of a Concept Scheme MUST be indicated by at least one of the following predicates: skos:historyNote, sdo:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of sdo:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
     sh:or (
         <provenance-properties-01>
         <provenance-properties-02>
@@ -117,7 +123,13 @@ BASE <https://w3id.org/profile/vocpub/validator/>
 <Requirement-2.1.8>
 	a sh:NodeShape ;
 	sh:targetClass skos:Concept ;
-    sh:property <minConcepts> ;
+    sh:property [
+        sh:message "Requirement 2.1.8 All Concept instances within a Concept Scheme MUST be contained in a single term hierarchy using skos:hasTopConcept / skos:topConceptOf predicates indicating the broadest Concepts in the vocabulary and then skos:broader and/or skos:narrower predicates for all non-broadest Concepts in a hierarchy that contains no cycles" ;
+        sh:path skos:inScheme ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class skos:ConceptScheme ;
+    ] ;
 .
 
 <Requirement-2.1.9>
@@ -146,40 +158,78 @@ BASE <https://w3id.org/profile/vocpub/validator/>
 <Requirement-2.1.11>
 	a sh:NodeShape ;
 	sh:targetClass skos:ConceptScheme ;
-    sh:property <qualifiedDerivation> ;
+    sh:property [
+        sh:message "Requirement 2.1.11 The derivation status of the vocabulary SHOULD be given should be given with the predicate prov:qualifiedDerivation indicating a Blank Node that contains the predicated prov:entity, to indicate the vocabulary derived from and prov:hadRole to indicate the mode of derivation which SHOULD be taken from the Vocabulary Derivation Modes vocabulary (https://linked.data.gov.au/def/vocdermods)" ;
+        sh:path prov:qualifiedDerivation ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
+    ] ;
     sh:severity sh:Warning ;
 .
 
 <Requirement-2.1.11b>
 	a sh:NodeShape ;
 	sh:targetObjectsOf prov:qualifiedDerivation ;
-    sh:property <qualifiedDerivation-entity> ;
+    sh:property [
+        sh:message "Requirement 2.1.11 If a vocabulary has a qualified derivation given, it MUST then give a prove:entity predicate within the derivation" ;
+        sh:path prov:entity ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
 .
 
 <Requirement-2.1.11c>
 	a sh:NodeShape ;
 	sh:targetObjectsOf prov:qualifiedDerivation ;
-    sh:property <qualifiedDerivation-hadRole> ;
+    sh:property [
+        sh:message "Requirement 2.1.11 If a vocabulary has a qualified derivation given, it MUST then give a prove:hadRole predicate within the derivation" ;
+        sh:path prov:hadRole ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
 .
 
 <Requirement-2.1.12>
 	a sh:NodeShape ;
 	sh:targetClass skos:ConceptScheme ;
-    sh:property <theming> ;
+    sh:property [
+        sh:message "Requirement 2.1.12 High-level theming of a vocabulary SHOULD be given by using the sdo:keywords predicate indicating Concepts from another vocabulary. Alternatively, dcat:theme MAY be used. Text literal values for either predicate SHOULD NOT be used" ;
+        sh:path [
+            sh:alternativePath (
+                sdo:keywords
+                dcat:theme
+            ) ;
+        ] ;
+        sh:nodeKind sh:IRI ;
+    ] ;
     sh:severity sh:Warning ;
 .
 
 <Requirement-2.1.13>
 	a sh:NodeShape ;
 	sh:targetClass skos:ConceptScheme ;
-    sh:property <license> ;
-    sh:severity sh:Warning ;
+    sh:property [
+        sh:message "Requirement 2.1.13 Any licence pertaining to the reuse of a vocabulary's content SHOULD be given using the sdo:license predicate preferentially indicating the IRI of a license if in RDF form or a literal URL (datatype xsd:anyURI) if online but not in RDF form. If the licence is expressed in test, a literal text field may be indicated" ;
+        sh:path sdo:license ;
+        sh:nodeKind sh:IRI ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:anyURI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+        sh:severity sh:Warning ;
+    ] ;
 .
 
 <Requirement-2.1.14>
 	a sh:NodeShape ;
 	sh:targetClass skos:ConceptScheme ;
-    sh:property <copyrightHolder> ;
+    sh:property [
+        sh:message "Requirement 2.1.14 The copyright holder for the vocabulary SHOULD be given using the sdo:copyrightHolder predicate preferentially indicating the IRI of an Agent or a Blank Node instance of an Agent containing details as per Agent requirements. A prov:qualifiedAttribution predicate indicating an Agent with the prov:hadRole predicate indicating the value isorole:rightsHolder may be used instead of sdo:copyrightHolder" ;
+        sh:path sdo:copyrightHolder ;
+        sh:nodeKind sh:IRI ;
+    ] ;
     sh:severity sh:Warning ;
 .
 
@@ -197,7 +247,7 @@ BASE <https://w3id.org/profile/vocpub/validator/>
 
 <Requirement-2.2.2>
     a sh:NodeShape ;
-    sh:message "Requirement 2.2.2 The origins of a Collection, if different from its containing Concept Scheme, SHOULD be indicated by at least one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of schema:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
+    sh:message "Requirement 2.2.2 The origins of a Collection, if different from its containing Concept Scheme, SHOULD be indicated by at least one of the following predicates: skos:historyNote, sdo:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of sdo:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
     sh:targetClass skos:Collection ;
     sh:or (
         <provenance-properties-01>
@@ -216,13 +266,13 @@ BASE <https://w3id.org/profile/vocpub/validator/>
         sh:path skos:inScheme ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:message "Requirement 2.2.3 A Collection exists within a vocabulary SHOULD indicate that it is within the vocabulary by use of the skos:inScheme predicate. If it is defined for the first time in the vocabulary, it should also indicate this with the rdfs:isDefinedBy predicate. This message is about skos:inScheme"
+        sh:message "Requirement 2.2.3 A Collection exists within a vocabulary SHOULD indicate that it is within the vocabulary by use of the skos:inScheme predicate. If it is defined for the first time in the vocabulary, it should also indicate this with the rdfs:isDefinedBy predicate. This message is about skos:inScheme" ;
     ] ,
     [
         sh:path rdfs:isDefinedBy ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:message "Requirement 2.2.3 A Collection exists within a vocabulary SHOULD indicate that it is within the vocabulary by use of the skos:inScheme predicate. If it is defined for the first time in the vocabulary, it should also indicate this with the rdfs:isDefinedBy predicate. This message is about rdfs:isDefinedBy"
+        sh:message "Requirement 2.2.3 A Collection exists within a vocabulary SHOULD indicate that it is within the vocabulary by use of the skos:inScheme predicate. If it is defined for the first time in the vocabulary, it should also indicate this with the rdfs:isDefinedBy predicate. This message is about rdfs:isDefinedBy" ;
     ] ;
     sh:severity sh:Warning ;
 .
@@ -259,20 +309,25 @@ BASE <https://w3id.org/profile/vocpub/validator/>
         sh:minCount 0 ;
         sh:maxCount 1 ;
         sh:nodeKind sh:IRI ;
+        sh:severity sh:Warning ;
     ] ;
-    sh:severity sh:Warning ;
 .
 
 <Requirement-2.3.3>
 	a sh:NodeShape ;
 	sh:targetClass skos:Concept ;
-    sh:property <inScheme> ;
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Requirement 2.3.3 Each Concept in a vocabulary MUST indicate that it appears within that vocabulary's hierarchy of Concepts either directly by use of the skos:topConceptOf predicate indicating the vocabulary or indirectly by use of one or more skos:broader / skos:narrower predicates placing the Concept within a chain of other Concepts, the top concept of which uses the skos:topConceptOf predicate to indicate the vocabulary" ;
+    ] ;
 .
 
 <Requirement-2.3.4>
     a sh:NodeShape ;
     sh:targetClass skos:Concept ;
-    sh:message "Requirement 2.2.2 The origins of a Concept, if different from its containing Concept Scheme, SHOULD be indicated by at least one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of schema:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
+    sh:message "Requirement 2.2.2 The origins of a Concept, if different from its containing Concept Scheme, SHOULD be indicated by at least one of the following predicates: skos:historyNote, sdo:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of sdo:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
     sh:or (
         <provenance-properties-01>
         <provenance-properties-02>
@@ -288,36 +343,36 @@ BASE <https://w3id.org/profile/vocpub/validator/>
 #
 <Requirement-2.4.2>
 	a sh:NodeShape ;
-	sh:targetClass schema:Organization , schema:Person ;
+	sh:targetClass sdo:Organization , sdo:Person ;
     sh:property [
-        sh:path schema:name ;
+        sh:path sdo:name ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:string ;
-        sh:message "Requirement 2.4.2 Each Agent MUST give exactly one name with the schema:name predicate indicating a literal text value" ;
+        sh:message "Requirement 2.4.2 Each Agent MUST give exactly one name with the sdo:name predicate indicating a literal text value" ;
     ] ;
 .
 
 <Requirement-2.4.3a>
 	a sh:NodeShape ;
-	sh:targetClass schema:Organization ;
+	sh:targetClass sdo:Organization ;
     sh:property [
-        sh:path schema:url ;
+        sh:path sdo:url ;
         sh:minCount 1 ;
         sh:datatype xsd:anyURI ;
-        sh:message "Requirement 2.4.3 Each Agent MUST indicate either a schema:url (for organizations) or a schema:email (for people) predicate with a URL or email value. This error message is for Organizations" ;
+        sh:message "Requirement 2.4.3 Each Agent MUST indicate either a sdo:url (for organizations) or a sdo:email (for people) predicate with a URL or email value. This error message is for Organizations" ;
     ] ;
 
 .
 
 <Requirement-2.4.3b>
 	a sh:NodeShape ;
-	sh:targetClass schema:Person ;
+	sh:targetClass sdo:Person ;
     sh:property [
-        sh:path schema:email ;
+        sh:path sdo:email ;
         sh:minCount 1 ;
         sh:datatype xsd:anyURI ;
-        sh:message "Requirement 2.4.3 Each Agent MUST indicate either a schema:url (for organizations) or a schema:email (for people) predicate with a URL or email value. This error message is for Persons"
+        sh:message "Requirement 2.4.3 Each Agent MUST indicate either a sdo:url (for organizations) or a sdo:email (for people) predicate with a URL or email value. This error message is for Persons"
     ] ;
 .
 
@@ -362,7 +417,7 @@ BASE <https://w3id.org/profile/vocpub/validator/>
     sh:message "Requirement 2.15 - created date - violated" ;
     sh:path [
         sh:alternativePath (
-            schema:dateCreated
+            sdo:dateCreated
             dcterms:created
         ) ;
     ] ;
@@ -380,7 +435,7 @@ BASE <https://w3id.org/profile/vocpub/validator/>
     sh:message "Requirement 2.15 - modified date - violated" ;
     sh:path [
         sh:alternativePath (
-            schema:dateModified
+            sdo:dateModified
             dcterms:modified
         ) ;
     ] ;
@@ -395,18 +450,18 @@ BASE <https://w3id.org/profile/vocpub/validator/>
 
 <creator>
     a sh:PropertyShape ;
-    sh:message "Requirement 2.1.6 Each vocabulary MUST have at least one creator, indicated using schema:creator or dcterms:creator predicate and exactly one publisher, indicated using schema:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of schema:Person, or schema:Organization. This error message is for creator" ;
+    sh:message "Requirement 2.1.6 Each vocabulary MUST have at least one creator, indicated using sdo:creator or dcterms:creator predicate and exactly one publisher, indicated using sdo:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of sdo:Person, or sdo:Organization. This error message is for creator" ;
     sh:path [
         sh:alternativePath (
-            schema:creator
+            sdo:creator
             dcterms:creator
         ) ;
     ] ;
     sh:minCount 1 ;
 
     sh:or (
-        [ sh:class schema:Organization ]
-        [ sh:class schema:Person ]
+        [ sh:class sdo:Organization ]
+        [ sh:class sdo:Person ]
     ) ;
 .
 
@@ -414,15 +469,15 @@ BASE <https://w3id.org/profile/vocpub/validator/>
     a sh:PropertyShape ;
     sh:path [
         sh:alternativePath (
-            schema:publisher
+            sdo:publisher
             dcterms:publisher
         ) ;
     ] ;
     sh:minCount 1 ;
-    sh:message "Requirement 2.1.6 Each vocabulary MUST have at least one creator, indicated using schema:creator or dcterms:creator predicate and exactly one publisher, indicated using schema:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of schema:Person, or schema:Organization. This error message is for publisher" ;
+    sh:message "Requirement 2.1.6 Each vocabulary MUST have at least one creator, indicated using sdo:creator or dcterms:creator predicate and exactly one publisher, indicated using sdo:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of sdo:Person, or sdo:Organization. This error message is for publisher" ;
     sh:or (
-        [ sh:class schema:Organization ]
-        [ sh:class schema:Person ]
+        [ sh:class sdo:Organization ]
+        [ sh:class sdo:Person ]
     ) ;
 .
 
@@ -431,16 +486,18 @@ BASE <https://w3id.org/profile/vocpub/validator/>
     sh:path prov:wasDerivedFrom ;
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
+    sh:severity sh:Warning ;
 .
 
 <provenance-properties-02>
     a sh:PropertyShape ;
-    sh:path schema:citation ;
+    sh:path sdo:citation ;
     sh:minCount 1 ;
     sh:or (
         [ sh:datatype xsd:anyURI ]
         [ sh:datatype xsd:string ]
     ) ;
+    sh:severity sh:Warning ;
 .
 
 <provenance-properties-03>
@@ -451,6 +508,7 @@ BASE <https://w3id.org/profile/vocpub/validator/>
         [ sh:datatype xsd:anyURI ]
         [ sh:datatype xsd:string ]
     ) ;
+    sh:severity sh:Warning ;
 .
 
 <provenance-properties-04>
@@ -461,6 +519,7 @@ BASE <https://w3id.org/profile/vocpub/validator/>
         [ sh:datatype rdf:langString ]
         [ sh:datatype xsd:string ]
     ) ;
+    sh:severity sh:Warning ;
 .
 
 <provenance-properties-05>
@@ -471,78 +530,5 @@ BASE <https://w3id.org/profile/vocpub/validator/>
         [ sh:datatype rdf:langString ]
         [ sh:datatype xsd:string ]
     ) ;
-.
-
-<inScheme>
-    a sh:PropertyShape ;
-    sh:path skos:inScheme ;
-    sh:minCount 1 ;
-    sh:nodeKind sh:IRI ;
-    sh:message "Requirement 2.3.3 Each Concept in a vocabulary MUST indicate that it appears within that vocabulary's hierarchy of Concepts either directly by use of the skos:topConceptOf predicate indicating the vocabulary or indirectly by use of one or more skos:broader / skos:narrower predicates placing the Concept within a chain of other Concepts, the top concept of which uses the skos:topConceptOf predicate to indicate the vocabulary" ;
-.
-
-<minConcepts>
-    a sh:PropertyShape ;
-    sh:message "Requirement 2.1.8 All Concept instances within a Concept Scheme MUST be contained in a single term hierarchy using skos:hasTopConcept / skos:topConceptOf predicates indicating the broadest Concepts in the vocabulary and then skos:broader and/or skos:narrower predicates for all non-broadest Concepts in a hierarchy that contains no cycles" ;
-    sh:path skos:inScheme ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-        sh:class skos:ConceptScheme ;
-.
-
-<qualifiedDerivation>
-    a sh:PropertyShape ;
-    sh:message "Requirement 2.1.11 The derivation status of the vocabulary SHOULD be given should be given with the predicate prov:qualifiedDerivation indicating a Blank Node that contains the predicated prov:entity, to indicate the vocabulary derived from and prov:hadRole to indicate the mode of derivation which SHOULD be taken from the Vocabulary Derivation Modes vocabulary (https://linked.data.gov.au/def/vocdermods)" ;
-    sh:path prov:qualifiedDerivation ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-.
-
-<qualifiedDerivation-entity>
-    a sh:PropertyShape ;
-    sh:message "Requirement 2.1.11 If a vocabulary has a qualified derivation given, it must then give a prove:entity predicate within the derivation" ;
-    sh:path prov:entity ;
-    sh:nodeKind sh:IRI ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-.
-
-<qualifiedDerivation-hadRole>
-    a sh:PropertyShape ;
-    sh:message "Requirement 2.1.11 If a vocabulary has a qualified derivation given, it must then give a prove:hadRole predicate within the derivation" ;
-    sh:path prov:hadRole ;
-    sh:nodeKind sh:IRI ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-.
-
-<theming>
-    a sh:PropertyShape ;
-    sh:message "Requirement 2.1.12 High-level theming of a vocabulary SHOULD be given by using the schema:keywords predicate indicating Concepts from another vocabulary. Alternatively, dcat:theme MAY be used. Text literal values for either predicate SHOULD NOT be used" ;
-    sh:path [
-        sh:alternativePath (
-            schema:keywords
-            dcat:theme
-        ) ;
-    ] ;
-    sh:nodeKind sh:IRI ;
-.
-
-<license>
-    a sh:PropertyShape ;
-    sh:message "Requirement 2.1.13 Any licence pertaining to the reuse of a vocabulary's content SHOULD be given using the schema:license predicate preferentially indicating the IRI of a license if in RDF form or a literal URL (datatype xsd:anyURI) if online but not in RDF form. If the licence is expressed in test, a literal text field may be indicated" ;
-    sh:path schema:license ;
-    sh:nodeKind sh:IRI ;
-    sh:or (
-        [ sh:nodeKind sh:IRI ]
-        [ sh:datatype xsd:anyURI ]
-        [ sh:datatype xsd:string ]
-    )
-.
-
-<copyrightHolder>
-    a sh:PropertyShape ;
-    sh:message "Requirement 2.1.14 The copyright holder for the vocabulary SHOULD be given using the schema:copyrightHolder predicate preferentially indicating the IRI of an Agent or a Blank Node instance of an Agent containing details as per Agent requirements. A prov:qualifiedAttribution predicate indicating an Agent with the prov:hadRole predicate indicating the value isorole:rightsHolder may be used instead of schema:copyrightHolder" ;
-    sh:path schema:copyrightHolder ;
-    sh:nodeKind sh:IRI ;
-    sh:nodeKind sh:IRI ;
+    sh:severity sh:Warning ;
 .

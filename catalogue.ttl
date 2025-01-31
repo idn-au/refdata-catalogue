@@ -8,16 +8,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a dcat:Catalog ;
     dcterms:hasPart
         <https://data.idnau.org/pid/vocab/aarr> ,
+        <https://data.idnau.org/pid/agent-systems> ,
+        <https://data.idnau.org/pid/austlang> ,
         <https://data.idnau.org/pid/vocab/care> ,
         <https://data.idnau.org/pid/vocab/cat-roles> ,
+        <https://linked.data.gov.au/def/data-access-rights> ,
+        <https://linked.data.gov.au/def/data-roles> ,
         <https://data.idnau.org/pid/vocab/idn-th> ,
         <https://data.idnau.org/pid/vocab/indigeneity> ,
+        <https://data.idnau.org/pid/licenses> ,
         <https://data.idnau.org/pid/vocab/org-indigeneity> ,
         <https://data.idnau.org/pid/vocab/oric> ,
         <https://data.idnau.org/pid/vocab/policy-types> ,
-        <https://linked.data.gov.au/def/data-access-rights> ,
-        <https://linked.data.gov.au/def/data-roles> ,
-        <https://linked.data.gov.au/def/licenses> ;
+        <https://data.idnau.org/pid/vocab/urbanity> ;
     skos:historyNote "This catalogue was was created in 2024 from the listing of IDN vocabs published since 2022"@en ;
     schema:codeRepository "https://github.com/idn-au/vocab-data/" ;
     schema:contributor <https://kurrawong.ai> ;

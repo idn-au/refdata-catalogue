@@ -4,7 +4,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
-PREFIX sdo: <https://schema.org/>
+PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -774,9 +774,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <https://linked.data.gov.au/org/idn>
-    a sdo:Organization ;
-    sdo:name "Indigenous Data Network" ;
-    sdo:url "https://www.idnau.org"^^xsd:anyURI ;
+    a schema:Organization ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://www.idnau.org"^^xsd:anyURI ;
 .
 
 cs:
