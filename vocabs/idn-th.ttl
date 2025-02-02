@@ -367,6 +367,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "Relations between Aboriginal Australins and Australian governments"@en ;
     skos:altLabel "Aboriginal Australians government relations"@en ;
     skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
+    skos:exactMatch <http://id.worldcat.org/fast/794522> ;
     skos:inScheme cs: ;
     skos:prefLabel "Government relations with First Peoples"@en ;
 .
@@ -490,7 +491,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
     skos:definition "Native title is the recognition in Australian law that some Aboriginal and Torres Strait Islander people continue to hold rights and interests in land and water."@en ;
     skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
-    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1483> ;
+    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=1483> , <http://id.worldcat.org/fast/1033935> ;
     skos:inScheme cs: ;
     skos:prefLabel "Native Title"@en ;
 .
@@ -821,6 +822,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "Aboriginal children"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal children"@en ;
+    skos:exactMatch <http://id.worldcat.org/fast/856898> ;
     skos:scopeNote "Includes Torres Strait Islander children"@en ;
 .
 
@@ -1495,6 +1497,7 @@ cs:
     skos:definition "Aboriginal religion"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal religion"@en ;
+    skos:exactMatch <http://id.worldcat.org/fast/897914> ;
     skos:scopeNote "Includes Torres Strait Islander religion"@en ;
 .
 
@@ -1650,6 +1653,7 @@ cs:
     skos:definition "Aboriginal languages"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal languages"@en ;
+    skos:exactMatch <http://id.worldcat.org/fast/794531> ;
     skos:scopeNote "Includes Torres Strait Islander languages"@en ;
 .
 
@@ -1775,6 +1779,7 @@ cs:
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal women"@en ;
     skos:scopeNote "Includes Torres Strait Islander women"@en ;
+    skos:exactMatch <http://id.worldcat.org/fast/970270> ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=26>
@@ -1789,6 +1794,7 @@ cs:
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal youth"@en ;
     skos:scopeNote "Includes Torres Strait Islander youth"@en ;
+    skos:exactMatch <http://id.worldcat.org/fast/1183678> ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=28>
@@ -1870,6 +1876,7 @@ cs:
     skos:definition "Employment of Aborigines"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Employment of Aborigines"@en ;
+    skos:exactMatch <http://id.worldcat.org/fast/794515> ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=805>
@@ -1983,6 +1990,7 @@ cs:
     skos:prefLabel "Aboriginal communities"@en ;
     skos:scopeNote "Includes Torres Strait Islander communities"@en ;
     skos:topConceptOf cs: ;
+    skos:exactMatch <http://id.worldcat.org/fast/794557> ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=762>
