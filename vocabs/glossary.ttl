@@ -53,7 +53,7 @@
 <https://data.idnau.org/pid/glossary/324b9d70-1d31-450a-bc5e-a91ab7d65875> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/324b9d70-1d31-450a-bc5e-a91ab7d65875> <http://www.w3.org/2004/02/skos/core#prefLabel> "Resource Description Framework"@en .
 <https://data.idnau.org/pid/glossary/324b9d70-1d31-450a-bc5e-a91ab7d65875> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
-<https://data.idnau.org/pid/glossary/324b9d70-1d31-450a-bc5e-a91ab7d65875> <http://www.w3.org/2004/02/skos/core#altLabel> "RDF@en"@en .
+<https://data.idnau.org/pid/glossary/324b9d70-1d31-450a-bc5e-a91ab7d65875> <http://www.w3.org/2004/02/skos/core#altLabel> "RDF"@en .
 <https://data.idnau.org/pid/glossary/324b9d70-1d31-450a-bc5e-a91ab7d65875> <https://schema.org/citation> "https://www.w3.org/TR/rdf11-concepts/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://data.idnau.org/pid/glossary/37258c00-fea6-4837-8b3c-db9efa85a4e3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/37258c00-fea6-4837-8b3c-db9efa85a4e3> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
@@ -61,7 +61,7 @@
 <https://data.idnau.org/pid/glossary/37258c00-fea6-4837-8b3c-db9efa85a4e3> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/37258c00-fea6-4837-8b3c-db9efa85a4e3> <http://www.w3.org/2004/02/skos/core#prefLabel> "Validator"@en .
 <https://data.idnau.org/pid/glossary/37258c00-fea6-4837-8b3c-db9efa85a4e3> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
-<https://data.idnau.org/pid/glossary/37258c00-fea6-4837-8b3c-db9efa85a4e3> <https://schema.org/citation> "https://data.idnau.org/pid/cp/validator/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://data.idnau.org/pid/glossary/37258c00-fea6-4837-8b3c-db9efa85a4e3> <https://schema.org/citation> "https://www.w3.org/TR/shacl/#dfn-validators/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://data.idnau.org/pid/glossary/37e0be20-e754-4f7c-a7c8-cb769e3b8d9d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/37e0be20-e754-4f7c-a7c8-cb769e3b8d9d> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/37e0be20-e754-4f7c-a7c8-cb769e3b8d9d> <http://www.w3.org/2004/02/skos/core#definition> "A set of rules or guidelines for creating consistent metadata."@en .
@@ -74,22 +74,22 @@
 <https://data.idnau.org/pid/glossary/3e4ebd2a-a787-44c7-b8b9-697e91df313d> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/3e4ebd2a-a787-44c7-b8b9-697e91df313d> <http://www.w3.org/2004/02/skos/core#prefLabel> "Catalogue"@en .
 <https://data.idnau.org/pid/glossary/3e4ebd2a-a787-44c7-b8b9-697e91df313d> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
-<https://data.idnau.org/pid/glossary/3e4ebd2a-a787-44c7-b8b9-697e91df313d> <http://www.w3.org/2004/02/skos/core#altLabel> "Catalog@en"@en .
-<https://data.idnau.org/pid/glossary/3e4ebd2a-a787-44c7-b8b9-697e91df313d> <http://www.w3.org/2004/02/skos/core#altLabel> "Data catalogue@en"@en .
+<https://data.idnau.org/pid/glossary/3e4ebd2a-a787-44c7-b8b9-697e91df313d> <http://www.w3.org/2004/02/skos/core#altLabel> "Catalog"@en .
+<https://data.idnau.org/pid/glossary/3e4ebd2a-a787-44c7-b8b9-697e91df313d> <http://www.w3.org/2004/02/skos/core#altLabel> "Data catalogue"@en .
 <https://data.idnau.org/pid/glossary/5876f61f-1c82-4ac8-894b-b2bfc4debf8d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/5876f61f-1c82-4ac8-894b-b2bfc4debf8d> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/5876f61f-1c82-4ac8-894b-b2bfc4debf8d> <http://www.w3.org/2004/02/skos/core#definition> "The ability to share information between different collections or catalogues that might use different tools."@en .
 <https://data.idnau.org/pid/glossary/5876f61f-1c82-4ac8-894b-b2bfc4debf8d> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/5876f61f-1c82-4ac8-894b-b2bfc4debf8d> <http://www.w3.org/2004/02/skos/core#prefLabel> "Interoperability"@en .
 <https://data.idnau.org/pid/glossary/5876f61f-1c82-4ac8-894b-b2bfc4debf8d> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
-<https://data.idnau.org/pid/glossary/5876f61f-1c82-4ac8-894b-b2bfc4debf8d> <http://www.w3.org/2004/02/skos/core#altLabel> "Interoperable@en"@en .
+<https://data.idnau.org/pid/glossary/5876f61f-1c82-4ac8-894b-b2bfc4debf8d> <http://www.w3.org/2004/02/skos/core#altLabel> "Interoperable"@en .
 <https://data.idnau.org/pid/glossary/61ee574a-e34e-4636-8d6f-5d7ce5807528> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/61ee574a-e34e-4636-8d6f-5d7ce5807528> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/61ee574a-e34e-4636-8d6f-5d7ce5807528> <http://www.w3.org/2004/02/skos/core#definition> "A method for storing and sharing Resource Description Framework metadata."@en .
 <https://data.idnau.org/pid/glossary/61ee574a-e34e-4636-8d6f-5d7ce5807528> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/61ee574a-e34e-4636-8d6f-5d7ce5807528> <http://www.w3.org/2004/02/skos/core#prefLabel> "JSON-LD"@en .
 <https://data.idnau.org/pid/glossary/61ee574a-e34e-4636-8d6f-5d7ce5807528> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
-<https://data.idnau.org/pid/glossary/61ee574a-e34e-4636-8d6f-5d7ce5807528> <http://www.w3.org/2004/02/skos/core#altLabel> "JavaScript Object Notation for Linked Data@en"@en .
+<https://data.idnau.org/pid/glossary/61ee574a-e34e-4636-8d6f-5d7ce5807528> <http://www.w3.org/2004/02/skos/core#altLabel> "JavaScript Object Notation for Linked Data"@en .
 <https://data.idnau.org/pid/glossary/61ee574a-e34e-4636-8d6f-5d7ce5807528> <https://schema.org/citation> "https://json-ld.org"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://data.idnau.org/pid/glossary/63da5279-8772-4f9c-8e55-6f5f6f85129a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/63da5279-8772-4f9c-8e55-6f5f6f85129a> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
@@ -103,21 +103,22 @@
 <https://data.idnau.org/pid/glossary/6ac34814-bd33-44ce-a1e9-5c71e88f8d06> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/6ac34814-bd33-44ce-a1e9-5c71e88f8d06> <http://www.w3.org/2004/02/skos/core#prefLabel> "FAIR principles"@en .
 <https://data.idnau.org/pid/glossary/6ac34814-bd33-44ce-a1e9-5c71e88f8d06> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
+<https://data.idnau.org/pid/glossary/6ac34814-bd33-44ce-a1e9-5c71e88f8d06> <https://schema.org/citation> "https://www.go-fair.org/fair-principles/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://data.idnau.org/pid/glossary/6d0f3fed-3187-4825-ad06-35956922dada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/6d0f3fed-3187-4825-ad06-35956922dada> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/6d0f3fed-3187-4825-ad06-35956922dada> <http://www.w3.org/2004/02/skos/core#definition> "A set of predefined words or phrases used for describing metadata records consistently."@en .
 <https://data.idnau.org/pid/glossary/6d0f3fed-3187-4825-ad06-35956922dada> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/6d0f3fed-3187-4825-ad06-35956922dada> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vocabulary"@en .
 <https://data.idnau.org/pid/glossary/6d0f3fed-3187-4825-ad06-35956922dada> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
-<https://data.idnau.org/pid/glossary/6d0f3fed-3187-4825-ad06-35956922dada> <http://www.w3.org/2004/02/skos/core#altLabel> "Concept scheme@en"@en .
-<https://data.idnau.org/pid/glossary/6d0f3fed-3187-4825-ad06-35956922dada> <http://www.w3.org/2004/02/skos/core#altLabel> "Controlled vocabulary@en"@en .
+<https://data.idnau.org/pid/glossary/6d0f3fed-3187-4825-ad06-35956922dada> <http://www.w3.org/2004/02/skos/core#altLabel> "Concept scheme"@en .
+<https://data.idnau.org/pid/glossary/6d0f3fed-3187-4825-ad06-35956922dada> <http://www.w3.org/2004/02/skos/core#altLabel> "Controlled vocabulary"@en .
 <https://data.idnau.org/pid/glossary/6f057945-b9b9-41ac-b7c1-8eb739bee9fa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/6f057945-b9b9-41ac-b7c1-8eb739bee9fa> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/6f057945-b9b9-41ac-b7c1-8eb739bee9fa> <http://www.w3.org/2004/02/skos/core#definition> "A standard used for describing data catalogs on the web to enable interoperability between systems."@en .
 <https://data.idnau.org/pid/glossary/6f057945-b9b9-41ac-b7c1-8eb739bee9fa> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/6f057945-b9b9-41ac-b7c1-8eb739bee9fa> <http://www.w3.org/2004/02/skos/core#prefLabel> "Data Catalog Vocabulary"@en .
 <https://data.idnau.org/pid/glossary/6f057945-b9b9-41ac-b7c1-8eb739bee9fa> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
-<https://data.idnau.org/pid/glossary/6f057945-b9b9-41ac-b7c1-8eb739bee9fa> <http://www.w3.org/2004/02/skos/core#altLabel> "DCAT@en"@en .
+<https://data.idnau.org/pid/glossary/6f057945-b9b9-41ac-b7c1-8eb739bee9fa> <http://www.w3.org/2004/02/skos/core#altLabel> "DCAT"@en .
 <https://data.idnau.org/pid/glossary/6f057945-b9b9-41ac-b7c1-8eb739bee9fa> <https://schema.org/citation> "https://www.w3.org/TR/vocab-dcat-3/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://data.idnau.org/pid/glossary/81b2c6f3-1e8c-4a81-ab3b-7949dfc53456> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/81b2c6f3-1e8c-4a81-ab3b-7949dfc53456> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
@@ -127,7 +128,7 @@
 <https://data.idnau.org/pid/glossary/81b2c6f3-1e8c-4a81-ab3b-7949dfc53456> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/87931538-66e5-493d-800f-3c8a54fb8d6b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/87931538-66e5-493d-800f-3c8a54fb8d6b> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
-<https://data.idnau.org/pid/glossary/87931538-66e5-493d-800f-3c8a54fb8d6b> <http://www.w3.org/2004/02/skos/core#definition> "The prefix of an identifeir that groups concepts or resources together."@en .
+<https://data.idnau.org/pid/glossary/87931538-66e5-493d-800f-3c8a54fb8d6b> <http://www.w3.org/2004/02/skos/core#definition> "The prefix of an identifier that groups concepts or resources together."@en .
 <https://data.idnau.org/pid/glossary/87931538-66e5-493d-800f-3c8a54fb8d6b> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/87931538-66e5-493d-800f-3c8a54fb8d6b> <http://www.w3.org/2004/02/skos/core#prefLabel> "Namespace"@en .
 <https://data.idnau.org/pid/glossary/87931538-66e5-493d-800f-3c8a54fb8d6b> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
@@ -143,7 +144,7 @@
 <https://data.idnau.org/pid/glossary/9c8ca3b5-cf7d-4c73-83c1-c5c7e5cabb9f> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/9c8ca3b5-cf7d-4c73-83c1-c5c7e5cabb9f> <http://www.w3.org/2004/02/skos/core#prefLabel> "Turtle"@en .
 <https://data.idnau.org/pid/glossary/9c8ca3b5-cf7d-4c73-83c1-c5c7e5cabb9f> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
-<https://data.idnau.org/pid/glossary/9c8ca3b5-cf7d-4c73-83c1-c5c7e5cabb9f> <http://www.w3.org/2004/02/skos/core#altLabel> "Terse RDF Triple Language@en"@en .
+<https://data.idnau.org/pid/glossary/9c8ca3b5-cf7d-4c73-83c1-c5c7e5cabb9f> <http://www.w3.org/2004/02/skos/core#altLabel> "Terse RDF Triple Language"@en .
 <https://data.idnau.org/pid/glossary/9c8ca3b5-cf7d-4c73-83c1-c5c7e5cabb9f> <http://www.w3.org/2004/02/skos/core#altLabel> "TTL"@en .
 <https://data.idnau.org/pid/glossary/9c8ca3b5-cf7d-4c73-83c1-c5c7e5cabb9f> <https://schema.org/citation> "https://www.w3.org/TR/turtle/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://data.idnau.org/pid/glossary/a06424dd-4d26-4f01-85ee-ca8ff5dfc641> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -158,7 +159,7 @@
 <https://data.idnau.org/pid/glossary/6c014466-c95f-4df5-a6cc-a1a50beffab0> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/6c014466-c95f-4df5-a6cc-a1a50beffab0> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persistent Identifier"@en .
 <https://data.idnau.org/pid/glossary/6c014466-c95f-4df5-a6cc-a1a50beffab0> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
-<https://data.idnau.org/pid/glossary/6c014466-c95f-4df5-a6cc-a1a50beffab0> <http://www.w3.org/2004/02/skos/core#altLabel> "PID@en"@en .
+<https://data.idnau.org/pid/glossary/6c014466-c95f-4df5-a6cc-a1a50beffab0> <http://www.w3.org/2004/02/skos/core#altLabel> "PID"@en .
 <https://data.idnau.org/pid/glossary/6c014466-c95f-4df5-a6cc-a1a50beffab0> <http://www.w3.org/2004/02/skos/core#narrower> <https://data.idnau.org/pid/glossary/a5cac5df-9d31-4f06-bf2a-fc32bb403e6c> .
 <https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
@@ -166,10 +167,10 @@
 <https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/2004/02/skos/core#prefLabel> "Local context labels"@en .
 <https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
-<https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/2004/02/skos/core#altLabel> "BC labels@en"@en .
-<https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/2004/02/skos/core#altLabel> "Bicultural labels@en"@en .
-<https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/2004/02/skos/core#altLabel> "LC labels@en"@en .
-<https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/2004/02/skos/core#altLabel> "Traditional knowledge labels@en"@en .
+<https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/2004/02/skos/core#altLabel> "BC labels"@en .
+<https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/2004/02/skos/core#altLabel> "Bicultural labels"@en .
+<https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/2004/02/skos/core#altLabel> "LC labels"@en .
+<https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <http://www.w3.org/2004/02/skos/core#altLabel> "Traditional knowledge labels"@en .
 <https://data.idnau.org/pid/glossary/a877b16b-2581-4339-9da4-87774b14980a> <https://schema.org/citation> "https://localcontexts.org/labels/traditional-knowledge-labels/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://data.idnau.org/pid/glossary/ac5eba92-55dc-494c-9d9f-b331e05e7c8d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/ac5eba92-55dc-494c-9d9f-b331e05e7c8d> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
@@ -192,6 +193,7 @@
 <https://data.idnau.org/pid/glossary/c44493ef-8c87-4e41-ac6d-2a0961203a07> <http://www.w3.org/2004/02/skos/core#prefLabel> "Metadata Entry Form" .
 <https://data.idnau.org/pid/glossary/c44493ef-8c87-4e41-ac6d-2a0961203a07> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/c44493ef-8c87-4e41-ac6d-2a0961203a07> <http://www.w3.org/2004/02/skos/core#altLabel> "Metadata tool@"@en .
+<https://data.idnau.org/pid/glossary/c44493ef-8c87-4e41-ac6d-2a0961203a07> <https://schema.org/url> "https://metadata.idnau.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://data.idnau.org/pid/glossary/d7907201-7eaa-4c08-80e1-404c3c2af5c1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/d7907201-7eaa-4c08-80e1-404c3c2af5c1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/d7907201-7eaa-4c08-80e1-404c3c2af5c1> <http://www.w3.org/2004/02/skos/core#definition> "A resource is findable if it is possible to find that resource. Resources are findable when they are described with consistent metadata and vocabulary concepts."@en .
@@ -204,7 +206,7 @@
 <https://data.idnau.org/pid/glossary/df76959d-d915-4ce6-9bc8-8043dabc0cc2> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/df76959d-d915-4ce6-9bc8-8043dabc0cc2> <http://www.w3.org/2004/02/skos/core#prefLabel> "Attribution"@en .
 <https://data.idnau.org/pid/glossary/df76959d-d915-4ce6-9bc8-8043dabc0cc2> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://data.idnau.org/pid/glossary> .
-<https://data.idnau.org/pid/glossary/df76959d-d915-4ce6-9bc8-8043dabc0cc2> <http://www.w3.org/2004/02/skos/core#altLabel> "Qualified attribution@en"@en .
+<https://data.idnau.org/pid/glossary/df76959d-d915-4ce6-9bc8-8043dabc0cc2> <http://www.w3.org/2004/02/skos/core#altLabel> "Qualified attribution"@en .
 <https://data.idnau.org/pid/glossary/e1d0f465-d5a9-4154-a241-60c187e825e2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/e1d0f465-d5a9-4154-a241-60c187e825e2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/e1d0f465-d5a9-4154-a241-60c187e825e2> <http://www.w3.org/2004/02/skos/core#definition> "Priniples for the ethical use and sharing of data to prioritize community benefit, agency, and respect. They are: Collective Benefit; Authority to Control; Responsibility; Ethics."@en .
@@ -233,7 +235,7 @@ _:n3-369 <https://schema.org/url> "https://kurrawong.ai"^^<http://www.w3.org/200
 <https://data.idnau.org/pid/glossary/a5cac5df-9d31-4f06-bf2a-fc32bb403e6c> <http://www.w3.org/2004/02/skos/core#definition> "A type of persistant identifier that is universally unique."@en .
 <https://data.idnau.org/pid/glossary/a5cac5df-9d31-4f06-bf2a-fc32bb403e6c> <http://www.w3.org/2004/02/skos/core#inScheme> <https://data.idnau.org/pid/glossary> .
 <https://data.idnau.org/pid/glossary/a5cac5df-9d31-4f06-bf2a-fc32bb403e6c> <http://www.w3.org/2004/02/skos/core#prefLabel> "Universally Unique Identifier"@en .
-<https://data.idnau.org/pid/glossary/a5cac5df-9d31-4f06-bf2a-fc32bb403e6c> <http://www.w3.org/2004/02/skos/core#altLabel> "UUID@en"@en .
+<https://data.idnau.org/pid/glossary/a5cac5df-9d31-4f06-bf2a-fc32bb403e6c> <http://www.w3.org/2004/02/skos/core#altLabel> "UUID"@en .
 <https://data.idnau.org/pid/glossary/a5cac5df-9d31-4f06-bf2a-fc32bb403e6c> <http://www.w3.org/2004/02/skos/core#broader> <https://data.idnau.org/pid/glossary/6c014466-c95f-4df5-a6cc-a1a50beffab0> .
 <https://data.idnau.org/pid/glossary/c22de8ec-914d-46c9-8c70-3c859765f43e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://data.idnau.org/pid/glossary/c22de8ec-914d-46c9-8c70-3c859765f43e> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://data.idnau.org/pid/glossary> .
