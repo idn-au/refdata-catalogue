@@ -1,3 +1,5 @@
+@prefix : <https://data.idnau.org/pid/glossary/> .
+@prefix dcterms:<<http://purl.org/dc/terms/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -5,6 +7,17 @@
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:dataRoles-vocabulary
+    a skos:Collection ;
+    dcterms:source "https://linked.data.gov.au/def/data-roles"^^xsd:anyURI ;
+    rdfs:isDefinedBy <https://data.idnau.org/pid/glossary> ;
+    skos:definition "Selected concepts from the Data roles vocabulary" ;
+    skos:inScheme <https://data.idnau.org/pid/glossary> ;
+    skos:member
+        <https://linked.data.gov.au/def/data-roles/subjectAgent> ;
+    skos:prefLabel "Data roles concepts"@en ;
+    prov:wasDerivedFrom <https://linked.data.gov.au/def/data-roles> .
 
 <https://data.idnau.org/pid/glossary/021c5daa-1354-4dd5-b8cf-8eb112e09174> a skos:Concept ;
     rdfs:isDefinedBy <https://data.idnau.org/pid/glossary> ;
@@ -75,7 +88,8 @@
     skos:definition "Metadata about the relationships between things."@en ;
     skos:inScheme <https://data.idnau.org/pid/glossary> ;
     skos:prefLabel "Ontology"@en ;
-    skos:topConceptOf <https://data.idnau.org/pid/glossary> .
+    skos:topConceptOf <https://data.idnau.org/pid/glossary> ;
+    schema:citation "https://doi.org/10.1006/knac.1993.1008"^^xsd:anyURI .
 
 <https://data.idnau.org/pid/glossary/6ac34814-bd33-44ce-a1e9-5c71e88f8d06> a skos:Concept ;
     rdfs:isDefinedBy <https://data.idnau.org/pid/glossary> ;
@@ -169,9 +183,9 @@
     skos:topConceptOf <https://data.idnau.org/pid/glossary> ;
     schema:citation "https://www.w3.org/TR/skos-reference/#concepts"^^xsd:anyURI .
 
-<https://data.idnau.org/pid/glossary/c22de8ec-914d-46c9-8c70-3c859765f43e> a skos:Concept ;
-    rdfs:isDefinedBy <https://data.idnau.org/pid/glossary>,
-        <https://linked.data.gov.au/def/data-roles/subjectAgent> ;
+<https://linked.data.gov.au/def/data-roles/subjectAgent> a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/data-roles/> ;
+    skos:historyNote "This concept is taken from the Data roles vocabulary."@en ;
     skos:broader <https://data.idnau.org/pid/glossary/57110a82-2f4a-4038-aa71-4bbbc888aac4> ;
     skos:definition "Person or organisation that the resource is about."@en ;
     skos:inScheme <https://data.idnau.org/pid/glossary> ;
@@ -220,7 +234,7 @@
     rdfs:isDefinedBy <https://data.idnau.org/pid/glossary> ;
     skos:definition "Persons or organisations that have a role associated with a resource."@en ;
     skos:inScheme <https://data.idnau.org/pid/glossary> ;
-    skos:narrower <https://data.idnau.org/pid/glossary/c22de8ec-914d-46c9-8c70-3c859765f43e> ;
+    skos:narrower <https://linked.data.gov.au/def/data-roles/subjectAgent> ;
     skos:prefLabel "Agents"@en ;
     skos:topConceptOf <https://data.idnau.org/pid/glossary> .
 
