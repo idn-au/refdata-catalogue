@@ -1,5 +1,5 @@
 @prefix : <https://data.idnau.org/pid/glossary/> .
-@prefix dcterms:<<http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
