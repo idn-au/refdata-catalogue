@@ -27,13 +27,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2022"^^xsd:gYear ;
     schema:dateModified "2024-11-19"^^xsd:date ;
-    schema:description "The Indigenous Data Network's catalogue of vocabularies" ;
+    schema:description "The Indigenous Data Network's catalogue of reference data" ;
     schema:keywords
         "Aboriginal" ,
         "Australia" ,
         "Indigenous" ,
         "Indigenous Data Network" ,
         "SKOS" ;
-    schema:name "IDN Vocabularies" ;
+    schema:name "IDN Reference Data Catalogue" ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
 .

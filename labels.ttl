@@ -89,10 +89,6 @@ dcterms:source
     rdfs:label "status" ;
 .
 
-rdf:type
-    rdfs:label "a" ;
-.
-
 rdfs:isDefinedBy
     rdfs:label "is defined by" ;
     schema:description "The defininition of the subject resource." ;

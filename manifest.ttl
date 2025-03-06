@@ -10,7 +10,7 @@ PREFIX schema: <https://schema.org/>
         [
             prof:hasArtifact "catalogue.ttl" ;
             prof:hasRole mrr:CatalogueData ;
-            schema:description "The definition of, and medata for, the container which here is a dcat:Catalog object" ;
+            schema:description "The definition of, and metadata for, the container which here is a dcat:Catalog object" ;
             schema:name "Catalogue Definition" ;
         ] ,
         [
@@ -24,7 +24,7 @@ PREFIX schema: <https://schema.org/>
             prof:hasArtifact "https://github.com/RDFLib/prez/blob/main/prez/reference_data/profiles/ogc_records_profile.ttl" ;
             prof:hasRole mrr:CatalogueAndResourceModel ;
             schema:description "The default Prez profile for Records API" ;
-            schema:name "Profile Definition"
+            schema:name "Profile Definition" ;
         ] ,
         [
             prof:hasArtifact "labels.ttl" ;
