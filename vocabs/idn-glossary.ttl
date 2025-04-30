@@ -7,7 +7,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ref: <https://linked.data.gov.au/def/reg-statuses> .
+@prefix reg: <https://linked.data.gov.au/def/reg-statuses> .
 
 :dataRoles-vocabulary
     a skos:Collection ;
@@ -295,4 +295,3 @@
     schema:publisher <https://linked.data.gov.au/org/idn> ;
     reg:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     schema:version "0.1" .
-
