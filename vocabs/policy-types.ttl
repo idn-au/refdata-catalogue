@@ -17,6 +17,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:narrower :indigenous-data-governance ;
     skos:prefLabel "data governance"@en ;
+    skos:broader :governance ;
     schema:citation "https://resources.data.gov/assets/documents/fds-data-governance-playbook.pdf"^^xsd:anyURI ;
 .
 
@@ -26,6 +27,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "The process of setting, controlling, administering and monitoring in conformance with data policy."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "data management"@en ;
+    skos:broader :governance ;
     schema:citation "https://resources.data.gov/assets/documents/fds-data-governance-playbook.pdf"^^xsd:anyURI ;
 .
 
@@ -36,6 +38,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "DAMA-DMBOK Guide, 1st edition, pg.47" ;
     skos:inScheme cs: ;
     skos:prefLabel "data policy"@en ;
+    skos::policy ;
 .
 
 :governance
@@ -57,6 +60,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "Refers to the right of Indigenous peoples to autonomously decide what, how and why Indigenous Data are collected, accessed and used. It ensures that data on or about Indigenous peoples reflects our priorities, values, cultures, worldviews and diversity."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "indigenous data governance"@en ;
+    skos:broader :data-governance ;
     schema:citation "https://www.maiamnayriwingara.org/definitions"^^xsd:anyURI ;
 .
 
