@@ -286,6 +286,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Member Of"@en ;
     skos:scopeNote "Agent to Agent relations" ;
+    skos:narrower 
+        :chairOf , 
+        :headOf , 
+        :managerOf ;
     skos:topConceptOf cs: ;
 .
 
@@ -297,6 +301,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Member"@en ;
     skos:scopeNote "Agent to Agent relations" ;
+    skos:narrower 
+        :chair , 
+        :head , 
+        :manager ;
     skos:topConceptOf cs: ;
 .
 
