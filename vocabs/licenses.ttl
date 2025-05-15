@@ -1,18 +1,19 @@
-PREFIX cs: <https://linked.data.gov.au/def/licenses>
+PREFIX : <https://data.idnau.org/pid/licenses/>
+PREFIX cs: <https://data.idnau.org/pid/licenses>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dataroles: <https://linked.data.gov.au/def/data-roles/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
-PREFIX sdo: <https://schema.org/>
+PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdflicense: <http://purl.org/NET/rdflicense/>
 
 rdflicense:allrightsreserved
     a skos:Concept ;
-    sdo:citation "http://en.wikipedia.org/wiki/All_rights_reserved"^^xsd:anyURI ;
+    schema:citation "http://en.wikipedia.org/wiki/All_rights_reserved"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://purl.org/NET/rdflicense> ;
     skos:definition "The phrase \"All rights reserved\" is used to indicate that the copyright holder reserves, or holds for their own use, all the rights provided by copyright law, such as distribution, performance, and creation of derivative works; that is, they have not waived any such right."@en ;
     skos:inScheme cs: ;
@@ -22,7 +23,7 @@ rdflicense:allrightsreserved
 
 rdflicense:cc-by-nc-nd4.0
     a skos:Concept ;
-    sdo:citation "https://creativecommons.org/licenses/by-nc-nd/4.0/"^^xsd:anyURI ;
+    schema:citation "https://creativecommons.org/licenses/by-nc-nd/4.0/"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://purl.org/NET/rdflicense> ;
     skos:definition """Creative Commons 4.0 - By Attribution - Non Commercial - No Derivatives
 This license enables reusers to copy and distribute the material in any medium or format in unadapted form only, for noncommercial purposes only, and only so long as attribution is given to the creator. CC BY-NC-ND includes the following elements:
@@ -37,7 +38,7 @@ ND - No derivatives or adaptations of the work are permitted."""@en ;
 
 rdflicense:cc-by-nc-sa4.0
     a skos:Concept ;
-    sdo:citation "https://creativecommons.org/licenses/by-nc-sa/4.0/"^^xsd:anyURI ;
+    schema:citation "https://creativecommons.org/licenses/by-nc-sa/4.0/"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://purl.org/NET/rdflicense> ;
     skos:definition """Creative Commons 4.0 - By Attribution - Non Commercial - Share Alike
 This license enables reusers to distribute, remix, adapt, and build upon the material in any medium or format for noncommercial purposes only, and only so long as attribution is given to the creator. If you remix, adapt, or build upon the material, you must license the modified material under identical terms. CC BY-NC-SA includes the following elements:
@@ -52,7 +53,7 @@ SA - Adaptations must be shared under the same terms."""@en ;
 
 rdflicense:cc-by-nc4.0
     a skos:Concept ;
-    sdo:citation "https://creativecommons.org/licenses/by-nc/4.0/"^^xsd:anyURI ;
+    schema:citation "https://creativecommons.org/licenses/by-nc/4.0/"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://purl.org/NET/rdflicense> ;
     skos:definition """Creative Commons 4.0 - By Attribution - Non Commercial
 This license enables reusers to distribute, remix, adapt, and build upon the material in any medium or format for noncommercial purposes only, and only so long as attribution is given to the creator. CC BY-NC includes the following elements:
@@ -66,7 +67,7 @@ NC - Only noncommercial uses of the work are permitted."""@en ;
 
 rdflicense:cc-by-nd4.0
     a skos:Concept ;
-    sdo:citation "https://creativecommons.org/licenses/by-nd/4.0/"^^xsd:anyURI ;
+    schema:citation "https://creativecommons.org/licenses/by-nd/4.0/"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://purl.org/NET/rdflicense> ;
     skos:definition """Creative Commons 4.0 - By Attribution - No Derivatives
  This license enables reusers to copy and distribute the material in any medium or format in unadapted form only, and only so long as attribution is given to the creator. The license allows for commercial use. CC BY-ND includes the following elements:
@@ -80,7 +81,7 @@ ND - No derivatives or adaptations of the work are permitted."""@en ;
 
 rdflicense:cc-by-sa4.0
     a skos:Concept ;
-    sdo:citation "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI ;
+    schema:citation "https://creativecommons.org/licenses/by-sa/4.0/"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://purl.org/NET/rdflicense> ;
     skos:definition """Creative Commons 4.0 - By Attribution - Share Alike
 This license enables reusers to distribute, remix, adapt, and build upon the material in any medium or format, so long as attribution is given to the creator. The license allows for commercial use. If you remix, adapt, or build upon the material, you must license the modified material under identical terms. CC BY-SA includes the following elements:
@@ -94,7 +95,7 @@ SA - Adaptations must be shared under the same terms."""@en ;
 
 rdflicense:cc-by4.0
     a skos:Concept ;
-    sdo:citation "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    schema:citation "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://purl.org/NET/rdflicense> ;
     skos:definition """Creative Commons 4.0 - By Attribution
 This license enables reusers to distribute, remix, adapt, and build upon the material in any medium or format, so long as attribution is given to the creator. The license allows for commercial use. CC BY includes the following elements:
@@ -107,7 +108,7 @@ BY - credit must be given to the creator."""@en ;
 
 rdflicense:cc-zero1.0
     a skos:Concept ;
-    sdo:citation "https://creativecommons.org/publicdomain/zero/1.0/"^^xsd:anyURI ;
+    schema:citation "https://creativecommons.org/publicdomain/zero/1.0/"^^xsd:anyURI ;
     rdfs:isDefinedBy <https://purl.org/NET/rdflicense> ;
     skos:definition """Public Domain Dedication
 CC0 (aka CC Zero) is a public dedication tool, which enables creators to give up their copyright and put their works into the worldwide public domain. CC0 enables reusers to distribute, remix, adapt, and build upon the material in any medium or format, with no conditions."""@en ;
@@ -118,20 +119,20 @@ CC0 (aka CC Zero) is a public dedication tool, which enables creators to give up
 .
 
 <https://linked.data.gov.au/org/idn>
-    a sdo:Organization ;
-    sdo:name "Indigenous Data Network" ;
-    sdo:url "https://idnau.org"^^xsd:anyURI ;
+    a schema:Organization ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://idnau.org"^^xsd:anyURI ;
 .
 
 cs:
     a skos:ConceptScheme ;
-    sdo:dateCreated "2023-10-30"^^xsd:date ;
-    sdo:creator <https://linked.data.gov.au/org/idn> ;
-    sdo:dateModified "2023-10-30"^^xsd:date ;
+    schema:dateCreated "2023-10-30"^^xsd:date ;
+    schema:creator <https://linked.data.gov.au/org/idn> ;
+    schema:dateModified "2023-10-30"^^xsd:date ;
     skos:historyNote "This vocabulary is being used to populate content for data licence pick lists in online catalogue tools."@en ;
-    sdo:license rdflicense:cc-by4.0 ;
-    sdo:publisher <https://linked.data.gov.au/org/idn> ;
-    owl:versionIRI <https://linked.data.gov.au/def/license/1> ;
+    schema:license rdflicense:cc-by4.0 ;
+    schema:publisher <https://linked.data.gov.au/org/idn> ;
+    owl:versionIRI :1 ;
     owl:versionInfo "1" ;
     reg:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
     skos:definition "Licenses used in the description of data assets being catalogued so that data users are aware of the permissions they are obligated to uphold when reusing the data."@en ;
@@ -148,9 +149,9 @@ cs:
     prov:qualifiedAttribution [
             dcat:hadRole dataroles:custodian ;
             prov:agent [                
-                    a sdo:Person ;
-                    sdo:name "M. Smith" ;
-                    sdo:email "margie@kurrawong.ai"^^xsd:anyURI ;
+                    a schema:Person ;
+                    schema:name "M. Smith" ;
+                    schema:email "margie@kurrawong.ai"^^xsd:anyURI ;
                 ]
         ] ;
     prov:qualifiedDerivation [
@@ -159,3 +160,4 @@ cs:
     ] ;
 .
 
+:1 schema:name "Version 1" .
