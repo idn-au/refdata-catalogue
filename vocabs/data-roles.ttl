@@ -307,6 +307,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/stakeholder"^^xsd:anyURI ;
     skos:prefLabel "stakeholder"@en ;
+    skos:narrower :subjectAgentRepresentative ;
     skos:topConceptOf cs: ;
 .
 
