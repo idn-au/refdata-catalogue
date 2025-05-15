@@ -45,6 +45,10 @@ care:C
     skos:definition "The principle of collective benefit"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Collective Benefit"@en ;
+    skos:narrower
+      care:C1 , 
+      care:C2 , 
+      care:C3 ;
     skos:topConceptOf cs: ;
     skos:scopeNote "Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit from the data"@en ;
     dcterms:source "https://datascience.codata.org/articles/10.5334/dsj-2020-043#exposition"^^xsd:anyURI ;
@@ -89,6 +93,10 @@ care:A
     skos:definition "The principle of authority to control"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Authority to Control"@en ;
+    skos:narrower
+      care:A1 , 
+      care:A2 , 
+      care:A3 ;
     skos:topConceptOf cs: ;
     skos:scopeNote "Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data be empowered. Indigenous data governance enables Indigenous Peoples and governing bodies to determine how Indigenous Peoples, as well as Indigenous lands, territories, resources, knowledges and geographical indicators, are represented and identified within data"@en ;
     dcterms:source "https://datascience.codata.org/articles/10.5334/dsj-2020-043#exposition"^^xsd:anyURI ;
@@ -133,6 +141,10 @@ care:R
     skos:definition "The principle of responsibility"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Responsibility"@en ;
+    skos:narrower
+      care:R1 , 
+      care:R2 , 
+      care:R3 ;
     skos:topConceptOf cs: ;
     skos:scopeNote "Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ selfdetermination and collective benefit. Accountability requires meaningful and openly available evidence of these efforts and the benefits accruing to Indigenous Peoples"@en ;
     dcterms:source "https://datascience.codata.org/articles/10.5334/dsj-2020-043#exposition"^^xsd:anyURI ;
@@ -177,6 +189,10 @@ care:E
     skos:definition "The principle of ethics"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Ethics"@en ;
+    skos:narrower
+      care:E1 , 
+      care:E2 , 
+      care:E3 ;
     skos:topConceptOf cs: ;
     skos:scopeNote "Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem"@en ;
     dcterms:source "https://datascience.codata.org/articles/10.5334/dsj-2020-043#exposition"^^xsd:anyURI ;
