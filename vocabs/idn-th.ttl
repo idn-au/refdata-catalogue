@@ -268,6 +268,25 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Indigeneity Concepts" ;
 .
 
+<https://data.idnau.org/pid/vocab/idn-th/place>
+    a skos:Concept ;
+    dcterms:created "2025-05-21"^^xsd:dateTime ;
+    skos:definition "Relationship to place" ;
+    prov:wasDerivedFrom "https://aiatsis.gov.au/thesaurus/topical/XX101477"^^xsd:anyURI ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Place"@en ;
+    skos:topConceptOf cs: ;
+.
+
+<https://data.idnau.org/pid/vocab/idn-th/indigenous-demographics>
+    a skos:Concept ;
+    dcterms:created "2025-05-21"^^xsd:dateTime ;
+    skos:definition "Demographics of indigenous peoples" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Indigenous demographics"@en ;
+    skos:topConceptOf cs: ;
+.
+
 <http://astrothesaurus.org/uat/2367>
     a skos:Concept ;
     dcterms:created "2022-06-22T19:49:16.856000+00:00"^^xsd:dateTime ;
@@ -1184,7 +1203,9 @@ cs:
         <https://vocabularyserver.com/apais/xml.php?skosTema=7> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=762> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=765> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=805> ;
+        <https://vocabularyserver.com/apais/xml.php?skosTema=805> ,
+        <https://data.idnau.org/pid/vocab/idn-th/place> ,
+        <https://data.idnau.org/pid/vocab/idn-th/indigenous-demographics> ;
     skos:prefLabel "IDN Themes"@en ;
     prov:qualifiedDerivation
         [
