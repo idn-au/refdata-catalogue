@@ -56,8 +56,8 @@ cs:
     skos:definition "The Indigenous status of a person."@en ;
     skos:hasTopConcept
         :indigenous,
-        :nonIndigenous
-        :indigenousStatusUnknown
+        :nonIndigenous,
+        :indigenousStatusUnknown ;
     skos:prefLabel "Indigenous Status of Persons"@en ;
     prov:qualifiedDerivation [
         prov:entity cs: ;
