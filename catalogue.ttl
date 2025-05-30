@@ -1,14 +1,20 @@
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://data.idnau.org/pid/vocabs>
-    a dcat:Catalog ;
-    dcterms:hasPart
+    a schema:DataCatalog ;
+    skos:historyNote "This catalogue was was created in 2024 from the listing of IDN vocabs published since 2022"@en ;
+    schema:codeRepository "https://github.com/idn-au/refdata-catalogue" ;
+    schema:contributor <https://kurrawong.ai> ;
+    schema:creator <https://linked.data.gov.au/org/idn> ;
+    schema:dateCreated "2022"^^xsd:gYear ;
+    schema:dateModified "2025-05-30"^^xsd:date ;
+    schema:description "The Indigenous Data Network's catalogue of vocabularies" ;
+    schema:hasPart
         <https://data.idnau.org/pid/agent-systems> ,
-        <https://data.idnau.org/pid/austlang> ,
+        # <https://data.idnau.org/pid/austlang> ,
+        <https://data.idnau.org/pid/glossary> ,
         <https://data.idnau.org/pid/licenses> ,
         <https://data.idnau.org/pid/vocab/aarr> ,
         <https://data.idnau.org/pid/vocab/care> ,
@@ -21,13 +27,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://data.idnau.org/pid/vocab/urbanity> ,
         <https://linked.data.gov.au/def/data-access-rights> ,
         <https://linked.data.gov.au/def/data-roles> ;
-    skos:historyNote "This catalogue was was created in 2024 from the listing of IDN vocabs published since 2022"@en ;
-    schema:codeRepository "https://github.com/idn-au/vocab-data/" ;
-    schema:contributor <https://kurrawong.ai> ;
-    schema:creator <https://linked.data.gov.au/org/idn> ;
-    schema:dateCreated "2022"^^xsd:gYear ;
-    schema:dateModified "2024-11-19"^^xsd:date ;
-    schema:description "The Indigenous Data Network's catalogue of vocabularies" ;
     schema:keywords
         "Aboriginal" ,
         "Australia" ,

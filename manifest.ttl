@@ -14,12 +14,20 @@ PREFIX schema: <https://schema.org/>
             schema:name "Catalogue Definition" ;
         ] ,
         [
-            prof:hasArtifact "vocabs/*.ttl" ;
+            prof:hasArtifact "vocabs/sync/*.ttl" ;
             prof:hasRole mrr:ResourceData ;
             schema:description "skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/ folder" ;
             schema:name "Resource Data" ;
             dcterms:conformsTo <https://w3id.org/profile/vocpub> ;
         ] ,
+        # [
+        #     prof:hasArtifact "vocabs/non-sync/*.ttl" ;
+        #     prof:hasRole mrr:ResourceData ;
+        #     prez:sync false ;
+        #     schema:description "skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/ folder" ;
+        #     schema:name "Resource Data" ;
+        #     dcterms:conformsTo <https://w3id.org/profile/vocpub> ;
+        # ] ,
         [
             prof:hasArtifact "https://github.com/RDFLib/prez/blob/main/prez/reference_data/profiles/ogc_records_profile.ttl" ;
             prof:hasRole mrr:CatalogueAndResourceModel ;
