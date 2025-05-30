@@ -24,5 +24,5 @@ jobs:
         run: pm validate manifest.ttl
       - name: Summary of sync
         run: pm sync manifest.ttl $TRIPLESTORE_URL -u $TRIPLESTORE_USERNAME -p $TRIPLESTORE_PASSWORD False False False False
-      # - name: Sync manifest
-      #   run: pm sync manifest.ttl $TRIPLESTORE_URL -u $TRIPLESTORE_USERNAME -p $TRIPLESTORE_PASSWORD True False True False
+      - name: Sync manifest
+        run: pm sync manifest.ttl $TRIPLESTORE_URL -u $TRIPLESTORE_USERNAME -p $TRIPLESTORE_PASSWORD True False True False
