@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - "jamie/manifest-workflow"
+      - "main"
 
 jobs:
   sync:
