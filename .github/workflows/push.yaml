@@ -33,9 +33,9 @@ jobs:
     if: ${{ needs.changes.outputs.data == 'true' }}
     runs-on: ubuntu-latest
     env:
-      TRIPLESTORE_URL: ${{ secrets.MRC_TRIPLESTORE_URL }}
-      TRIPLESTORE_USERNAME: ${{ secrets.MRC_TRIPLESTORE_USERNAME }}
-      TRIPLESTORE_PASSWORD: ${{ secrets.MRC_TRIPLESTORE_PASSWORD }}
+      TRIPLESTORE_URL: ${{ secrets.TRIPLESTORE_URL }}
+      TRIPLESTORE_USERNAME: ${{ secrets.TRIPLESTORE_USERNAME }}
+      TRIPLESTORE_PASSWORD: ${{ secrets.TRIPLESTORE_PASSWORD }}
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v4

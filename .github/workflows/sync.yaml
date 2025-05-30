@@ -1,0 +1,28 @@
+name: Sync manifest with triplestore
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      TRIPLESTORE_URL: ${{ secrets.NEW_TRIPLESTORE_URL }}
+      TRIPLESTORE_USERNAME: ${{ secrets.TRIPLESTORE_USERNAME }}
+      TRIPLESTORE_PASSWORD: ${{ secrets.TRIPLESTORE_PASSWORD }}
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+      - name: Install prezmanifest
+        run: uv tool install prezmanifest
+      - name: Validate manifest
+        run: pm validate manifest.ttl
+      - name: Summary of sync
+        run: pm sync manifest.ttl $TRIPLESTORE_URL -u $TRIPLESTORE_USERNAME -p $TRIPLESTORE_PASSWORD False False False False
+      - name: Sync manifest
+        run: pm sync manifest.ttl $TRIPLESTORE_URL -u $TRIPLESTORE_USERNAME -p $TRIPLESTORE_PASSWORD True False True False

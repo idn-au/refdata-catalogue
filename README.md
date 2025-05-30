@@ -1,6 +1,6 @@
 # IDN Reference Data Catalogue
 
-This repository contains the reference data - background vocabularies, spatial datasets adn models - part of the data of the Indigenous Data Network (IDN)'s Knowledge Graph. This information is available online at:
+This repository contains the reference data - background vocabularies, spatial datasets and models - part of the data of the Indigenous Data Network (IDN)'s Knowledge Graph. This information is available online at:
 
 - https://data.idnau.org
 
