@@ -92,7 +92,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         :protected ,
         :conditional ,
         :embargoed ,
-        :limited-community-access ;
+        :limited-communities-access ;
 .
 
 :limited-communities-access
@@ -113,7 +113,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created by the Indigenous Data Network, 2024" ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous Communities Access"@en ;
-    skos:broader: limited-communities-access ;
+    skos:broader :limited-communities-access ;
 .
 
 <https://linked.data.gov.au/org/gsq>
