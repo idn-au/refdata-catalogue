@@ -1,6 +1,7 @@
 PREFIX : <https://data.idnau.org/pid/agent-systems/>
 PREFIX aarr: <https://data.idnau.org/pid/vocab/aarr/>
 PREFIX cs: <https://data.idnau.org/pid/agent-systems>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -41,7 +42,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	skos:inScheme cs: ;
 .
 
-id:abn
+id:abn a skos:Concept ;
     skos:prefLabel "ABN" ;
 	skos:definition "Australian Business Number" ;
 	rdfs:isDefinedBy <http://id.loc.gov/vocabulary/identifiers/> ;
@@ -62,7 +63,7 @@ id:orcid a skos:Concept ;
 	skos:inScheme cs: ;
 .
 
-id:ror a skos:concept ;
+id:ror a skos:Concept ;
 	skos:prefLabel "ROR" ;
 	skos:definition "Research Organization Registry" ;
 	rdfs:isDefinedBy <http://id.loc.gov/vocabulary/identifiers/> ;

@@ -200,7 +200,7 @@ cs:
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateModified "2024-01-11"^^xsd:date ;
     skos:historyNote "Extracted for Indigenous Data Network 2024" ;
-    schema:citation <https://www.oric.gov.au>^^xsd:anyURI ;
+    schema:citation "https://www.oric.gov.au"^^xsd:anyURI ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
     schema:copyrightNotice "(c) Indigenous Data Network, 2022" ;
     reg:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
