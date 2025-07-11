@@ -20,13 +20,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://data.idnau.org/pid/vocab/org-indigeneity> ,
         <https://data.idnau.org/pid/vocab/oric> ,
         <https://data.idnau.org/pid/vocab/policy-types> ,
-        <https://data.idnau.org/pid/vocab/urbanity> ;
+        <https://data.idnau.org/pid/vocab/urbanity> ,
+        <https://data.idnau.org/pid/vocab/persons-indigenous-status> ;
     skos:historyNote "This catalogue was was created in 2024 from the listing of IDN vocabs published since 2022"@en ;
-    schema:codeRepository "https://github.com/idn-au/vocab-data/" ;
+    schema:codeRepository "https://github.com/idn-au/refdata-catalogue/" ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2022"^^xsd:gYear ;
-    schema:dateModified "2024-11-19"^^xsd:date ;
+    schema:dateModified "2025-07-11"^^xsd:date ;
     schema:description "The Indigenous Data Network's catalogue of vocabularies" ;
     schema:keywords
         "Aboriginal" ,
