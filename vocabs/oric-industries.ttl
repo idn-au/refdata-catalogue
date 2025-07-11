@@ -71,7 +71,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Employment" ;
 .
 
-cs:healthCareAndHealthPromotion
+:healthCareAndHealthPromotion
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;
@@ -98,7 +98,7 @@ cs:healthCareAndHealthPromotion
     skos:prefLabel "Hospitality and tourism" ;
 .
 
-cs:housingAndTenancy
+:housingAndTenancy
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Not given"@en ;

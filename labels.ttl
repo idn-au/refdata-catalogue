@@ -1,11 +1,21 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+<https://linked.data.gov.au/org/isu>
+    a schema:Organization ;
+    schema:name "Indigenous Studies Unit" ;
+    schema:url "https://mspgh.unimelb.edu.au/centres-institutes/onemda/research-group/indigenous-studies-unit"^^xsd:anyURI ;
+.
+
 
 dcterms:created
     rdfs:label "Date Created"@en ;
@@ -382,4 +392,29 @@ skos:notation
 <https://linked.data.gov.au/def/reg-statuses/original>
     rdfs:label "stable"@en ;
     schema:description "The item's status is stable and was supplied to the registry after initial creation."@en ;
+.
+
+dcterms:type
+    schema:description "The nature or genre of the resource."@en ;
+    schema:name "Type"@en ;
+.
+
+geo:sfWithin
+    schema:description "States that the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
+    schema:name "within"@en ;
+.
+
+rdfs:comment
+    schema:description "A description of the subject resource." ;
+    schema:name "comment" ;
+.
+
+schema:identifier
+    schema:description """The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.""" ;
+    schema:name "identifier" ;
+.
+
+rdfs:Datatype
+    schema:description "The class of RDF datatypes." ;
+    schema:name "Datatype" ;
 .

@@ -10,7 +10,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :AustLangCode
-    a rdfs:DataType ;
+    a rdfs:Datatype ;
     rdfs:label "AustLang Code" ;
     rdfs:comment "Codes assigned to Australian Aboriginal languages within the AIATSIS AustLang dataset" ;
     schema:citation "https://collection.aiatsis.gov.au/austlang"^^xsd:anyURI ;
@@ -31866,6 +31866,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://www.idnau.org"^^xsd:anyURI ;
 .
 
+:0.1 schema:name "0.1" .
+
 cs:
     a skos:ConceptScheme ;
     reg:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
@@ -33094,3 +33096,12 @@ cs:
     schema:publisher <https://linked.data.gov.au/org/idn> ;
     schema:version "0.1" ;
 .
+
+<https://linked.data.gov.au/dataset/asgsed3/STE/1> schema:name "NSW" .
+<https://linked.data.gov.au/dataset/asgsed3/STE/2> schema:name "VIC" .
+<https://linked.data.gov.au/dataset/asgsed3/STE/3> schema:name "QLD" .
+<https://linked.data.gov.au/dataset/asgsed3/STE/4> schema:name "SA" .
+<https://linked.data.gov.au/dataset/asgsed3/STE/5> schema:name "WA" .
+<https://linked.data.gov.au/dataset/asgsed3/STE/6> schema:name "TAS" .
+<https://linked.data.gov.au/dataset/asgsed3/STE/7> schema:name "NT" .
+<https://linked.data.gov.au/dataset/asgsed3/STE/8> schema:name "ACT" .

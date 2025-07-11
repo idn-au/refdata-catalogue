@@ -1,41 +1,38 @@
-prefix : <https://data.idnau.org/pid/system/>
-prefix aarr: <https://data.idnau.org/pid/vocab/aarr/>
-prefix cs: <https://data.idnau.org/pid/system>
-prefix adb: <https://data.idnau.org/pid/adb/>
-prefix skos: <http://www.w3.org/2004/02/skos/core#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
-prefix dcterms: <http://purl.org/dc/terms/>
-prefix id: <http://id.loc.gov/vocabulary/identifiers/>
-prefix sdo: <https://schema.org/>
-prefix dcat: <http://www.w3.org/ns/dcat#>
-prefix prov: <http://www.w3.org/ns/prov#>
-prefix aarr: <https://data.idnau.org/pid/vocab/aarr/>
-prefix idncp: <https://data.idnau.org/pid/cp/>
+PREFIX : <https://data.idnau.org/pid/agent-systems/>
+PREFIX aarr: <https://data.idnau.org/pid/vocab/aarr/>
+PREFIX cs: <https://data.idnau.org/pid/agent-systems>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://linked.data.gov.au/org/idn>
-    a sdo:Organization ;
+    a schema:Organization ;
     dcterms:type <https://data.idnau.org/pid/vocab/org-indigeneity/non-indigenous> ;
     dcat:qualifiedRelation [
             dcat:hadRole aarr:partOf ;
-            sdo:agent <https://data.idnau.org/pid/org/isu>
+            schema:agent <https://data.idnau.org/pid/org/isu>
         ] ;
-    sdo:description "The IDN is within the University of Melbourne. It was established in 2018 to support and coordinate the governance of Indigenous data for Aboriginal and Torres Strait Islander peoples and empower Aboriginal and Torres Strait Islander communities to decide their own local data priorities." ;
-    sdo:name "Indigenous Data Network" ;
-    sdo:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
+    schema:description "The IDN is within the University of Melbourne. It was established in 2018 to support and coordinate the governance of Indigenous data for Aboriginal and Torres Strait Islander peoples and empower Aboriginal and Torres Strait Islander communities to decide their own local data priorities." ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
 .
 
 <https://kurrawong.ai>
-    a sdo:Organization ;
+    a schema:Organization ;
     dcterms:type <https://data.idnau.org/pid/vocab/org-indigeneity/non-indigenous> ;
-    sdo:description "Kurrawong AI is a small, Artificial Intelligence, company in Australia specialising in Knowledge Graphs." ;
-    sdo:identifier "31353542036"^^id:ausbn ;
-    sdo:name "KurrawongAI" ;
-    sdo:url "https://kurrawong.ai"^^xsd:anyURI ;
+    schema:description "Kurrawong AI is a small, Artificial Intelligence, company in Australia specialising in Knowledge Graphs." ;
+    schema:identifier "31353542036"^^id:ausbn ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
 .
 
 :oric a skos:Concept ;
 	skos:prefLabel "ORIC" ;
 	skos:definition "Office of the Registrar of Indigenous Corporations" ;
+	skos:topConceptOf cs: ;
 	skos:scopeNote """
 	By definition the ORIC system contains only Indigenous corporations.
 	Registered corporations can be found by searching the main site.
@@ -44,7 +41,15 @@ prefix idncp: <https://data.idnau.org/pid/cp/>
 	skos:inScheme cs: ;
 .
 
-:orcid a skos:Concept ;
+id:abn
+    skos:prefLabel "ABN" ;
+	skos:definition "Australian Business Number" ;
+	rdfs:isDefinedBy <http://id.loc.gov/vocabulary/identifiers/> ;
+	dcterms:replaces <https://data.idnau.org/pid/adb/abn> ;
+	skos:inScheme cs: ;
+.
+
+id:orcid a skos:Concept ;
 	skos:prefLabel "ORCID" ;
 	skos:definition "Open Researcher and Contributor ID" ;
 	skos:scopeNote """
@@ -52,12 +57,22 @@ prefix idncp: <https://data.idnau.org/pid/cp/>
 	ORCID is not exclusively for listing Indigenous agents but can be filtered by using the Indigenous Studies keyword.
 	""" ;
 	dcterms:source "https://orcid.org/orcid-search/search?keyword=Indigenous%20Studies"^^xsd:anyURI ;
+	rdfs:isDefinedBy <http://id.loc.gov/vocabulary/identifiers/> ;
+	dcterms:replaces <https://data.idnau.org/pid/agent-systems/orcid> ;
+	skos:inScheme cs: ;
+.
+
+id:ror a skos:concept ;
+	skos:prefLabel "ROR" ;
+	skos:definition "Research Organization Registry" ;
+	rdfs:isDefinedBy <http://id.loc.gov/vocabulary/identifiers/> ;
 	skos:inScheme cs: ;
 .
 
 :find-an-expert a skos:Concept ;
 	skos:prefLabel "Find an Expert" ;
 	skos:definition "University of Melbourne's Find an Expert system." ;
+	skos:topConceptOf cs: ;
 	skos:scopeNote """
 	The Find an Expert system is a service provided by the University of Melbourne. While it is not exclusively a register
 	of Indigenous agents, it is a useful resource for communities to find Indigenous experts.
@@ -75,8 +90,6 @@ cs: a skos:ConceptScheme ;
 	dcterms:publisher <https://linked.data.gov.au/org/idn> ;
 	dcterms:creator <https://kurrawong.ai> ;
 	dcterms:created "2024-11-01"^^xsd:date ;
-	dcterms:modified "2024-11-01"^^xsd:date ;
-	skos:hasTopConcept
-		:oric
+	dcterms:modified "2025-04-29"^^xsd:date ;
+	skos:hasTopConcept :oric , :find-an-expert , id:ror , id:abn , id:orcid ;
 .
-
