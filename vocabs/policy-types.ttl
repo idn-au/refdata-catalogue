@@ -38,7 +38,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "DAMA-DMBOK Guide, 1st edition, pg.47" ;
     skos:inScheme cs: ;
     skos:prefLabel "data policy"@en ;
-    skos::policy ;
+    skos:broader :policy ;
 .
 
 :governance
