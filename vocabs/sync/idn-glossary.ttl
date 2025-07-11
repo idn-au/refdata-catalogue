@@ -1,0 +1,298 @@
+@prefix : <https://data.idnau.org/pid/glossary/> .
+@prefix cs: <https://data.idnau.org/pid/glossary> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix reg: <https://linked.data.gov.au/def/reg-statuses> .
+
+:dataRoles-vocabulary
+    a skos:Collection ;
+    dcterms:source "https://linked.data.gov.au/def/data-roles"^^xsd:anyURI ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Selected concepts from the Data roles vocabulary" ;
+    skos:inScheme cs: ;
+    skos:member
+        <https://linked.data.gov.au/def/data-roles/subjectAgent> ;
+    skos:prefLabel "Data roles concepts"@en ;
+    prov:wasDerivedFrom <https://linked.data.gov.au/def/data-roles> .
+
+:021c5daa-1354-4dd5-b8cf-8eb112e09174 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Tracking changes to resources over time."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Versioning"@en ;
+    skos:topConceptOf cs: .
+
+:2cab7bd9-8e6d-408b-8120-58ebf0953607 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A resource is accessible if it is possible to get a resource by a persistant identifier, or to get information about how to get the resource."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Accessible"@en ;
+    skos:topConceptOf cs: .
+
+:324b9d70-1d31-450a-bc5e-a91ab7d65875 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "RDF"@en ;
+    skos:definition "A type of metadata for describing resources on the internet."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Resource Description Framework"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://www.w3.org/TR/rdf11-concepts/"^^xsd:anyURI .
+
+:37258c00-fea6-4837-8b3c-db9efa85a4e3 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A tool that checks if metadata conforms to the rules of a profile."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Validator"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://www.w3.org/TR/shacl/#dfn-validators/"^^xsd:anyURI .
+
+:37e0be20-e754-4f7c-a7c8-cb769e3b8d9d a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A set of rules or guidelines for creating consistent metadata."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Profile"@en ;
+    skos:topConceptOf cs: .
+
+:3e4ebd2a-a787-44c7-b8b9-697e91df313d a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Catalog"@en,
+        "Data catalogue"@en ;
+    skos:definition "A collection of metadata records organised for easy access and use."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Catalogue"@en ;
+    skos:topConceptOf cs: .
+
+:5876f61f-1c82-4ac8-894b-b2bfc4debf8d a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Interoperable"@en ;
+    skos:definition "The ability to share information between different collections or catalogues that might use different tools."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Interoperability"@en ;
+    skos:topConceptOf cs: .
+
+:61ee574a-e34e-4636-8d6f-5d7ce5807528 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "JavaScript Object Notation for Linked Data"@en ;
+    skos:definition "A method for storing and sharing Resource Description Framework metadata."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "JSON-LD"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://json-ld.org"^^xsd:anyURI .
+
+:63da5279-8772-4f9c-8e55-6f5f6f85129a a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Metadata about the relationships between things."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Ontology"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://doi.org/10.1006/knac.1993.1008"^^xsd:anyURI .
+
+:6ac34814-bd33-44ce-a1e9-5c71e88f8d06 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Principles to make resources Findable, Accessible, Interoperable, and Reusable."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "FAIR principles"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://www.go-fair.org/fair-principles/"^^xsd:anyURI .
+
+:6d0f3fed-3187-4825-ad06-35956922dada a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Concept scheme"@en,
+        "Controlled vocabulary"@en ;
+    skos:definition "A set of predefined words or phrases used for describing metadata records consistently."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Vocabulary"@en ;
+    skos:topConceptOf cs: .
+
+:6f057945-b9b9-41ac-b7c1-8eb739bee9fa a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "DCAT"@en ;
+    skos:definition "A standard used for describing data catalogs on the web to enable interoperability between systems."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Data Catalog Vocabulary"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://www.w3.org/TR/vocab-dcat-3/"^^xsd:anyURI .
+
+:81b2c6f3-1e8c-4a81-ab3b-7949dfc53456 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A resource is reuseable if there is permission from those responsible for the resource to use it."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Reuseable"@en ;
+    skos:topConceptOf cs: .
+
+:87931538-66e5-493d-800f-3c8a54fb8d6b a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The prefix of an identifier that groups concepts or resources together."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Namespace"@en ;
+    skos:topConceptOf cs: .
+
+:8949db57-af31-47fb-a089-b0a77e3feb0e a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Information that describes a resource, such as its title, description, author or custodian."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Metadata"@en ;
+    skos:topConceptOf cs: .
+
+:9c8ca3b5-cf7d-4c73-83c1-c5c7e5cabb9f a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "TTL"@en,
+        "Terse RDF Triple Language"@en ;
+    skos:definition "A method for storing and sharing Resource Description Framework metadata."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Turtle"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://www.w3.org/TR/turtle/"^^xsd:anyURI .
+
+:a06424dd-4d26-4f01-85ee-ca8ff5dfc641 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The relationship between people or organisations and catalogued resources."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Role"@en ;
+    skos:topConceptOf cs: .
+
+:a5cac5df-9d31-4f06-bf2a-fc32bb403e6c a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "UUID"@en ;
+    skos:broader :6c014466-c95f-4df5-a6cc-a1a50beffab0 ;
+    skos:definition "A type of persistant identifier that is universally unique."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Universally Unique Identifier"@en .
+
+:a877b16b-2581-4339-9da4-87774b14980a a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "BC labels"@en,
+        "Bicultural labels"@en,
+        "LC labels"@en,
+        "Traditional knowledge labels"@en ;
+    skos:definition "Conepts that express local and specific conditions such as community rules, governance and protocols for using and sharing knowledge."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Local context labels"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://localcontexts.org/labels/traditional-knowledge-labels/"^^xsd:anyURI .
+
+:ac5eba92-55dc-494c-9d9f-b331e05e7c8d a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A single unit of meaning or part of knowledge. Conepts are expressed as words or terms. Many concepts from the same knowledge system belong to a vocabulary."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Concept"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://www.w3.org/TR/skos-reference/#concepts"^^xsd:anyURI .
+
+<https://linked.data.gov.au/def/data-roles/subjectAgent> a skos:Concept ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/data-roles/> ;
+    skos:historyNote "This concept is taken from the Data roles vocabulary."@en ;
+    skos:broader :57110a82-2f4a-4038-aa71-4bbbc888aac4 ;
+    skos:definition "Person or organisation that the resource is about."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Subject agent"@en .
+
+:c44493ef-8c87-4e41-ac6d-2a0961203a07 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Metadata tool@"@en ;
+    skos:definition "A tool that helps to create and upload metadata about resources."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Metadata Entry Form" ;
+    skos:topConceptOf cs: ;
+    schema:url "https://metadata.idnau.org/"^^xsd:anyURI .
+
+:d7907201-7eaa-4c08-80e1-404c3c2af5c1 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A resource is findable if it is possible to find that resource. Resources are findable when they are described with consistent metadata and vocabulary concepts."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Findable"@en ;
+    skos:topConceptOf cs: .
+
+:df76959d-d915-4ce6-9bc8-8043dabc0cc2 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "Qualified attribution"@en ;
+    skos:definition "Metadata about the agent and the role that they played with respect to a resource."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Attribution"@en ;
+    skos:topConceptOf cs: .
+
+:e1d0f465-d5a9-4154-a241-60c187e825e2 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Priniples for the ethical use and sharing of data to prioritize community benefit, agency, and respect. They are: Collective Benefit; Authority to Control; Responsibility; Ethics."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "CARE Principles"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://www.gida-global.org/care"^^xsd:anyURI .
+
+:f962d3c0-b94d-4306-9c47-f1c430509101 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "An item included in a catalogue. Each resource is described with metadata."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Resource"@en ;
+    skos:topConceptOf cs: .
+
+:57110a82-2f4a-4038-aa71-4bbbc888aac4 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Persons or organisations that have a role associated with a resource."@en ;
+    skos:inScheme cs: ;
+    skos:narrower <https://linked.data.gov.au/def/data-roles/subjectAgent> ;
+    skos:prefLabel "Agents"@en ;
+    skos:topConceptOf cs: .
+
+:6c014466-c95f-4df5-a6cc-a1a50beffab0 a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "PID"@en ;
+    skos:definition "A unique identifier given to a resource for long term reference."@en ;
+    skos:inScheme cs: ;
+    skos:narrower :a5cac5df-9d31-4f06-bf2a-fc32bb403e6c ;
+    skos:prefLabel "Persistent Identifier"@en ;
+    skos:topConceptOf cs: .
+
+<https://linked.data.gov.au/org/idn> a schema:Organization,
+        schema:Person ;
+    schema:email ""^^xsd:anyURI ;
+    schema:name "Idn" ;
+    schema:url ""^^xsd:anyURI .
+
+cs: a skos:ConceptScheme ;
+    # owl:versionIRI "None" ;
+    skos:definition "Glossary of terms describing the Indigenous Data Network metadata profile, guides, specifications and tools."@en ;
+    skos:hasTopConcept :021c5daa-1354-4dd5-b8cf-8eb112e09174,
+        :2cab7bd9-8e6d-408b-8120-58ebf0953607,
+        :324b9d70-1d31-450a-bc5e-a91ab7d65875,
+        :37258c00-fea6-4837-8b3c-db9efa85a4e3,
+        :37e0be20-e754-4f7c-a7c8-cb769e3b8d9d,
+        :3e4ebd2a-a787-44c7-b8b9-697e91df313d,
+        :57110a82-2f4a-4038-aa71-4bbbc888aac4,
+        :5876f61f-1c82-4ac8-894b-b2bfc4debf8d,
+        :61ee574a-e34e-4636-8d6f-5d7ce5807528,
+        :63da5279-8772-4f9c-8e55-6f5f6f85129a,
+        :6ac34814-bd33-44ce-a1e9-5c71e88f8d06,
+        :6c014466-c95f-4df5-a6cc-a1a50beffab0,
+        :6d0f3fed-3187-4825-ad06-35956922dada,
+        :6f057945-b9b9-41ac-b7c1-8eb739bee9fa,
+        :81b2c6f3-1e8c-4a81-ab3b-7949dfc53456,
+        :87931538-66e5-493d-800f-3c8a54fb8d6b,
+        :8949db57-af31-47fb-a089-b0a77e3feb0e,
+        :9c8ca3b5-cf7d-4c73-83c1-c5c7e5cabb9f,
+        :a06424dd-4d26-4f01-85ee-ca8ff5dfc641,
+        :a877b16b-2581-4339-9da4-87774b14980a,
+        :ac5eba92-55dc-494c-9d9f-b331e05e7c8d,
+        :c44493ef-8c87-4e41-ac6d-2a0961203a07,
+        :d7907201-7eaa-4c08-80e1-404c3c2af5c1,
+        :df76959d-d915-4ce6-9bc8-8043dabc0cc2,
+        :e1d0f465-d5a9-4154-a241-60c187e825e2,
+        :f962d3c0-b94d-4306-9c47-f1c430509101 ;
+    skos:historyNote "This glossary is developed to assist ongoing operation of the Indigenous Data Network."@en ;
+    skos:prefLabel "Indigenous Data Network Glossary"@en ;
+    prov:qualifiedAttribution [ dcat:hadRole <https://linked.data.gov.au/def/data-roles/custodian> ;
+            prov:agent <https://linked.data.gov.au/org/idn> ] ;
+    schema:creator [ a schema:Organization ;
+            schema:name "Kurrawong AI" ;
+            schema:url "https://kurrawong.ai"^^xsd:anyURI ] ;
+    schema:dateCreated "2024-11-25"^^xsd:date ;
+    schema:dateModified "2025-04-30"^^xsd:date ;
+    schema:publisher <https://linked.data.gov.au/org/idn> ;
+    reg:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
+    schema:version "0.1" .
