@@ -437,9 +437,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <https://linked.data.gov.au/org/idn>
-    a sdo:Organization ;
-    sdo:name "Indigenous Data Network" ;
-    sdo:url "https://www.idnau.org"^^xsd:anyURI ;
+    a schema:Organization ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://www.idnau.org"^^xsd:anyURI ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=1291>
@@ -1466,9 +1466,9 @@ cs:
 .
 
 <https://linked.data.gov.au/org/idn>
-    a sdo:Organization ;
-    sdo:name "Indigenous Data Network" ;
-    sdo:url "https://www.idnau.org"^^xsd:anyURI ;
+    a schema:Organization ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://www.idnau.org"^^xsd:anyURI ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=1291>

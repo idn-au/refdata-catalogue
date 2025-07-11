@@ -88,7 +88,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         :protected ,
         :conditional ,
         :embargoed ,
-        :limited-community-access ;
+        :limited-communities-access ;
 .
 
 :limited-communities-access
