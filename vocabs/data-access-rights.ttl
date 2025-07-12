@@ -41,6 +41,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Conditionally protected"@en ;
     skos:narrower :metadata-only ;
+    skos:broader :restricted ;
 .
 
 :embargoed
@@ -49,6 +50,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Original term in the COAR vocabulary" ;
     skos:inScheme cs: ;
     skos:prefLabel "Embargoed access"@en ;
+    skos:broader :restricted ;
 .
 
 :metadata-only
@@ -57,6 +59,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Original term in the COAR vocabulary" ;
     skos:inScheme cs: ;
     skos:prefLabel "Metadata only access"@en ;
+    skos:broader :conditional ;
 .
 
 :open
@@ -75,6 +78,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Original term in the COAR vocabulary" ;
     skos:inScheme cs: ;
     skos:prefLabel "Protected access"@en ;
+    skos:broader :restricted ;
 .
 
 :restricted
@@ -88,7 +92,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         :protected ,
         :conditional ,
         :embargoed ,
-        :limited-community-access ;
+        :limited-communities-access ;
 .
 
 :limited-communities-access
@@ -98,6 +102,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created by the Indigenous Data Network, 2024" ;
     skos:inScheme cs: ;
     skos:prefLabel "Limited Communities Access"@en ;
+    skos:broader :restricted ;
     skos:narrower :indigenous-communities-access ;
 .
 
@@ -108,6 +113,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created by the Indigenous Data Network, 2024" ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous Communities Access"@en ;
+    skos:broader :limited-communities-access ;
 .
 
 <https://linked.data.gov.au/org/gsq>
