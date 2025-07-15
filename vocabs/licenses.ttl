@@ -147,6 +147,7 @@ cs:
         rdflicense:cc-zero1.0 ;
     skos:prefLabel "Data Licenses"@en ;
     prov:qualifiedAttribution [
+        a prov:Attribution ;
             dcat:hadRole dataroles:custodian ;
             prov:agent [                
                     a schema:Person ;
@@ -155,6 +156,7 @@ cs:
                 ]
         ] ;
     prov:qualifiedDerivation [
+       a prov:Derivation ;
         prov:entity cs: ;
         prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
     ] ;
