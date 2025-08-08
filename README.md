@@ -8,9 +8,9 @@ All the resources in this catalogue are listed in the _Prez resources section_ b
 
 ## Updating resources
 
-When a resource is updated, the `dateModified` date should be updated in the resource and the catalogue as the Prez Manifest tool relies on this to determine when to update data.
+When a resource is updated, the `dateModified` date or `version` should be updated in the resource and the catalogue as the Prez Manifest tool relies on this to determine when to update data.
 
-If a new resource is added to the catalogue, ensure its IRI is added to `dcterms:hasPart` in `catalogue.ttl`.
+If a new resource is added to the catalogue, ensure its IRI is added to `schema:hasPart` in `catalogue.ttl`.
 
 Pull requests will trigger validation of the manifest, which is required to pass before merging.
 
@@ -46,9 +46,8 @@ https://idnau.org
 
 Resource | Role | Description
 --- | --- | ---
-Catalogue Definition:<br />[`catalogue.ttl`](catalogue.ttl) | [Catalogue Data](https://prez.dev/ManifestResourceRoles/CatalogueData) | The definition of, and metadata for, the container which here is a dcat:Catalog object
+Catalogue Definition:<br />[`catalogue.ttl`](catalogue.ttl) | [Catalogue Data](https://prez.dev/ManifestResourceRoles/CatalogueData) | The definition of, and metadata for, the container which here is a schema:DataCatalog object
 Syncable Resource Data:<br />[`vocabs/sync/*.ttl`](vocabs/sync/*.ttl) | [Resource Data](https://prez.dev/ManifestResourceRoles/ResourceData) | skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/sync/ folder for syncing
 Non-syncable Resource Data:<br />[`vocabs/non-sync/*.ttl`](vocabs/non-sync/*.ttl) | [Resource Data](https://prez.dev/ManifestResourceRoles/ResourceData) | skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/non-sync/ folder, to be synced externally
-Draft Resource Data:<br />[`vocabs/drafts/persons-indigenous-status.ttl`](vocabs/drafts/persons-indigenous-status.ttl) | [Resource Data](https://prez.dev/ManifestResourceRoles/ResourceData) | skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/drafts/ folder
 Profile Definition:<br />[`ogc_records_profile.ttl`](https://github.com/RDFLib/prez/blob/main/prez/reference_data/profiles/ogc_records_profile.ttl) | [Catalogue & Resource Model](https://prez.dev/ManifestResourceRoles/CatalogueAndResourceModel) | The default Prez profile for Records API
 Labels:<br />[`labels.ttl`](labels.ttl) | [Complete Catalogue and Resource Labels](https://prez.dev/ManifestResourceRoles/CompleteCatalogueAndResourceLabels) | An RDF file containing all the labels for the container content

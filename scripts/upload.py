@@ -1,3 +1,4 @@
+# this script is no longer used
 import argparse
 import os
 from pathlib import Path

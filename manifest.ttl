@@ -10,7 +10,7 @@ PREFIX schema: <https://schema.org/>
         [
             prof:hasArtifact "catalogue.ttl" ;
             prof:hasRole mrr:CatalogueData ;
-            schema:description "The definition of, and metadata for, the container which here is a dcat:Catalog object" ;
+            schema:description "The definition of, and metadata for, the container which here is a schema:DataCatalog object" ;
             schema:name "Catalogue Definition" ;
         ] ,
         [
@@ -27,13 +27,6 @@ PREFIX schema: <https://schema.org/>
             schema:name "Non-syncable Resource Data" ;
             dcterms:conformsTo <https://w3id.org/profile/vocpub> ;
             prez:sync false ;
-        ] ,
-        [
-            prof:hasArtifact "vocabs/drafts/persons-indigenous-status.ttl" ;
-            prof:hasRole mrr:ResourceData ;
-            schema:description "skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/drafts/ folder" ;
-            schema:name "Draft Resource Data" ;
-            dcterms:conformsTo <https://w3id.org/profile/vocpub> ;
         ] ,
         [
             prof:hasArtifact "https://github.com/RDFLib/prez/blob/main/prez/reference_data/profiles/ogc_records_profile.ttl" ;
