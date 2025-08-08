@@ -2246,7 +2246,7 @@ cs:
         <https://vocabularyserver.com/apais/xml.php?skosTema=805> ;
     skos:prefLabel "IDN Themes"@en ;
     prov:qualifiedDerivation
-        [
+        [  a prov:Derivation ;
             prov:entity <https://vocabularyserver.com/apais/> ;
             prov:hadRole <https://linked.data.gov.au/def/vocdermods/subsetting-and-extension> ;
         ] ;
