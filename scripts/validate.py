@@ -1,3 +1,4 @@
+# this script is no longer used
 import glob
 from pathlib import Path
 from pyshacl import validate
