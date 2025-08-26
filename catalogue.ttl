@@ -9,7 +9,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2022"^^xsd:gYear ;
-    schema:dateModified "2025-08-08"^^xsd:date ;
+    schema:dateModified "2025-08-26"^^xsd:date ;
     schema:description "The Indigenous Data Network's catalogue of vocabularies" ;
     schema:hasPart
         <https://data.idnau.org/pid/agent-systems> ,

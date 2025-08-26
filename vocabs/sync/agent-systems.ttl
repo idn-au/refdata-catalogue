@@ -14,7 +14,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:type <https://data.idnau.org/pid/vocab/org-indigeneity/non-indigenous> ;
     dcat:qualifiedRelation [
             dcat:hadRole aarr:partOf ;
-            schema:agent <https://data.idnau.org/pid/org/isu>
+            schema:agent <https://linked.data.gov.au/org/isu>
         ] ;
     schema:description "The IDN is within the University of Melbourne. It was established in 2018 to support and coordinate the governance of Indigenous data for Aboriginal and Torres Strait Islander peoples and empower Aboriginal and Torres Strait Islander communities to decide their own local data priorities." ;
     schema:name "Indigenous Data Network" ;
@@ -45,7 +45,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 id:abn a skos:Concept ;
     skos:prefLabel "ABN" ;
 	skos:definition "Australian Business Number" ;
-	rdfs:isDefinedBy <http://id.loc.gov/vocabulary/identifiers/> ;
+	rdfs:isDefinedBy <http://id.loc.gov/vocabulary/identifiers> ;
 	dcterms:replaces <https://data.idnau.org/pid/adb/abn> ;
 	skos:inScheme cs: ;
 .
@@ -58,7 +58,7 @@ id:orcid a skos:Concept ;
 	ORCID is not exclusively for listing Indigenous agents but can be filtered by using the Indigenous Studies keyword.
 	""" ;
 	dcterms:source "https://orcid.org/orcid-search/search?keyword=Indigenous%20Studies"^^xsd:anyURI ;
-	rdfs:isDefinedBy <http://id.loc.gov/vocabulary/identifiers/> ;
+	rdfs:isDefinedBy <http://id.loc.gov/vocabulary/identifiers> ;
 	dcterms:replaces <https://data.idnau.org/pid/agent-systems/orcid> ;
 	skos:inScheme cs: ;
 .
@@ -66,7 +66,7 @@ id:orcid a skos:Concept ;
 id:ror a skos:Concept ;
 	skos:prefLabel "ROR" ;
 	skos:definition "Research Organization Registry" ;
-	rdfs:isDefinedBy <http://id.loc.gov/vocabulary/identifiers/> ;
+	rdfs:isDefinedBy <http://id.loc.gov/vocabulary/identifiers> ;
 	skos:inScheme cs: ;
 .
 

@@ -2,7 +2,6 @@ PREFIX : <https://linked.data.gov.au/def/data-roles/>
 PREFIX cs: <https://linked.data.gov.au/def/data-roles>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX status: <https://linked.data.gov.au/def/reg-statuses/>
@@ -41,7 +40,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :supervisor
     a skos:Concept ;
     skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2025"@en ;
-    reg:status status:addition ;
+    schema:status status:addition ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party that guides and oversees the planning, execution, and completion of a student’s independent research project, such as an honours thesis, doctoral dissertation, or postdoctoral study."@en ;
     skos:inScheme cs: ;
@@ -53,7 +52,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :projectLead
     a skos:Concept ;
     skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2025"@en ;
-    reg:status status:addition ;
+    schema:status status:addition ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party that manages and coordinates responsibility for a research activity."@en ;
     skos:inScheme cs: ;
@@ -65,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :projectParticipant
     a skos:Concept ;
     skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2025"@en ;
-    reg:status status:addition ;
+    schema:status status:addition ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party that undertakes a research activity."@en ;
     skos:exactMatch <http://purl.org/au-research/vocabulary/RIFCS/RIFCSActivityRelationType/hasParticipant> ;
@@ -78,7 +77,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :subjectAgent
     a skos:Concept ;
     skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2022"@en ;
-    reg:status status:addition ;
+    schema:status status:addition ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party that the resources contains information about" ;
     skos:inScheme cs: ;
@@ -90,7 +89,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :subjectAgentRepresentative
     a skos:Concept ;
     skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2022"@en ;
-    reg:status status:addition ;
+    schema:status status:addition ;
     rdfs:isDefinedBy cs: ;
     skos:broader :stakeholder ;
     skos:definition "party who can be contacted who best represents the interests of the subject agent" ;
@@ -106,7 +105,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :author
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party who authored the resource" ;
     skos:inScheme cs: ;
@@ -118,7 +117,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :coAuthor
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party who jointly authors the resource" ;
     skos:inScheme cs: ;
@@ -130,7 +129,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :collaborator
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party who assists with the generation of the resource other than the principal investigator" ;
     skos:inScheme cs: ;
@@ -142,7 +141,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :contributor
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party contributing to the resource" ;
     skos:inScheme cs: ;
@@ -154,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :custodian
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party that accepts accountability and responsibility for the resource and ensures appropriate care and maintenance of the resource" ;
     skos:inScheme cs: ;
@@ -166,7 +165,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :distributor
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party who distributes the resource" ;
     skos:inScheme cs: ;
@@ -178,7 +177,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :editor
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party who reviewed or modified the resource to improve the content" ;
     skos:inScheme cs: ;
@@ -190,7 +189,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :funder
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party providing monetary support for the resource" ;
     skos:inScheme cs: ;
@@ -202,7 +201,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :mediator
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "a class of entity that mediates access to the resource and for whom the resource is intended or useful" ;
     skos:inScheme cs: ;
@@ -214,7 +213,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :originator
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party who created the resource" ;
     skos:inScheme cs: ;
@@ -226,7 +225,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :owner
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party that owns the resource" ;
     skos:inScheme cs: ;
@@ -238,7 +237,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :pointOfContact
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party who can be contacted for acquiring knowledge about or acquisition of the resource" ;
     skos:inScheme cs: ;
@@ -250,7 +249,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :principalInvestigator
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "key party responsible for gathering information and conducting research" ;
     skos:inScheme cs: ;
@@ -262,7 +261,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :processor
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party who has processed the data in a manner such that the resource has been modified" ;
     skos:inScheme cs: ;
@@ -274,7 +273,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :publisher
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party who published the resource" ;
     skos:inScheme cs: ;
@@ -286,7 +285,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :resourceProvider
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party that supplies the resource" ;
     skos:inScheme cs: ;
@@ -298,7 +297,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :rightsHolder
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party owning or managing rights over the resource" ;
     skos:inScheme cs: ;
@@ -310,7 +309,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :sponsor
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party who speaks for the resource" ;
     skos:inScheme cs: ;
@@ -322,7 +321,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :stakeholder
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party who has an interest in the resource or the use of the resource" ;
     skos:inScheme cs: ;
@@ -334,7 +333,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :user
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
-    reg:status status:original ;
+    schema:status status:original ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party who uses the resource" ;
     skos:inScheme cs: ;
@@ -364,12 +363,12 @@ cs:
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateIssued "2024-02-28"^^xsd:date ;
     schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
-    schema:dateModified "2024-02-28"^^xsd:date ;
+    schema:dateModified "2025-08-26"^^xsd:date ;
     skos:historyNote "Derived from the ISO 19115's CI Role Code codelist and added to by Australian vocabulary users"@en ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;
     schema:copyrightNotice "(c) Australian Government Linked Data Working Group, 2024" ;
     schema:citation "http://iso.kurrawong.net/vocab/CI_RoleCode"^^xsd:anyURI ;
-    reg:status status:stable ;
+    schema:status status:stable ;
     skos:definition "This vocabulary lists the roles that Agents - People and Organisations - play in relation to data. This is an extended and Semantic Web version of the International Organisation for Standardization's ISO19115-1 standard's Role Codes codelist."@en ;
     skos:hasTopConcept
         :author ,
