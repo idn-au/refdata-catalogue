@@ -346,21 +346,25 @@ We use knowledge graphs for data storage, as a transfer format, when serialised,
 
 <https://linked.data.gov.au/def/reg-statuses/addition>
     rdfs:label "addition"@en ;
+    schema:color "#4ac11b" ;
     schema:description "The item's status is stable and was supplied to the registry after initial creation"@en ;
 .
 
 <https://linked.data.gov.au/def/reg-statuses/experimental>
     rdfs:label "experimental"@en ;
+    schema:color "#eae72c" ;
     schema:description "An entry that has been accepted into the register temporarily and may be subject to change or withdrawal."@en ;
 .
 
 <https://linked.data.gov.au/def/reg-statuses/original>
-    rdfs:label "stable"@en ;
+    rdfs:label "original"@en ;
+    schema:color "#38a30e" ;
     schema:description "The item's status is stable and was supplied to the registry after initial creation."@en ;
 .
 
 <https://linked.data.gov.au/def/reg-statuses/stable>
     rdfs:label "stable"@en ;
+    schema:color "#2e8c09" ;
     schema:description "An entry that is seen as having a reasonable measure of stability, may be used to mark the full adoption of a previously 'experimental' entry."@en ;
 .
 
@@ -497,6 +501,11 @@ schema:publisher
     rdfs:label "publisher" ;
 .
 
+schema:status
+    schema:description "The status of the study (enumerated)" ;
+    schema:name "status" ;
+.
+
 schema:url
     rdfs:label "URL" ;
 .
@@ -507,4 +516,69 @@ schema:version
 
 schema:Organization
     rdfs:label "Organisation" ;
+.
+
+<http://astrothesaurus.org/uat/1>
+    schema:name "The Unified Astronomy Thesaurus" ;
+    schema:description "The Unified Astronomy Thesaurus (UAT) is an open, interoperable and community-supported thesaurus which unifies existing, divergent, and isolated controlled vocabularies in astronomy and astrophysics into a single high-quality, freely-available open thesaurus formalizing astronomical concepts and their inter-relationships. The UAT builds upon the IAU Thesaurus with major contributions from the Astronomy portions of the thesauri developed by the Institute of Physics Publishing and the American Institute of Physics. The Unified Astronomy Thesaurus will be further enhanced and updated through a collaborative effort involving broad community participation." ;
+.
+
+<http://id.worldcat.org/fast/1033935>
+    schema:name "Native title (Australia)" ;
+.
+
+<http://id.worldcat.org/fast/1183678>
+    schema:name "Youth, Aboriginal Australian" ;
+.
+
+<http://id.worldcat.org/fast/794515>
+    schema:name "Aboriginal Australians--Employment" ;
+.
+
+<http://id.worldcat.org/fast/794522>
+    schema:name "Aboriginal Australians--Government relations" ;
+.
+
+<http://id.worldcat.org/fast/794531>
+    schema:name "Aboriginal Australians--Languages" ;
+.
+
+<http://id.worldcat.org/fast/794557>
+    schema:name "Aboriginal Australians--Reservations" ;
+.
+
+<http://id.worldcat.org/fast/856898>
+    schema:name "Children, Aboriginal Australian" ;
+.
+
+<http://id.worldcat.org/fast/897914>
+    schema:name "Dreamtime (Aboriginal Australian mythology)" ;
+.
+
+<http://id.worldcat.org/fast/970270>
+    schema:name "Indigenous women" ;
+.
+
+<http://pid.geoscience.gov.au/def/voc/ga/PlaceType>
+    schema:name "Place Type" ;
+.
+
+<http://purl.org/au-research/vocabulary/RIFCS/RIFCSActivityRelationType/hasParticipant>
+    schema:name "hasParticipant" ;
+    schema:description "Is undertaken by the related party" ;
+.
+
+<https://linked.data.gov.au/def/alum>
+    schema:name "Australian Land Use and Management Classification" ;
+    schema:description "This is a land use nomenclature and classification scheme for Australia, ordering land use in a systematic, logical and consistent way. It has a three-tiered hierarchical structure. Primary, secondary and tertiary classes are broadly structured by the potential degree of modification and the impact on a putative 'natural state' (essentially, a native land cover)." ;
+.
+
+<https://linked.data.gov.au/def/nrm>
+    schema:name "Ecological Monitoring System Australia (EMSA) Controlled Vocabularies" ;
+    schema:description "The EMSA controlled vocabularies support the data representation of field survey data collected using the Ecological Monitoring System Australia (EMSA) modules." ;
+.
+
+<https://terms.codata.org/rdmt>
+    schema:name "RDM Terminology" ;
+    schema:description "The goal of this terminology is to gather the key terms needed for a common understanding of the research data management domain. Research data management (RDM) refers to the storage, access and preservation of data created or collected in the course of research. Research data management practices cover the entire lifecycle of the data, from planning the investigation to conducting it, and from backing up data as it is created and used to long term preservation of data deliverables after the research investigation has concluded." ;
 .

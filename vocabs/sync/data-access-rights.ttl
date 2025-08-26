@@ -4,7 +4,6 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -97,7 +96,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :limited-communities-access
     a skos:Concept ;
-    reg:status <https://linked.data.gov.au/def/reg-statuses/addition> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/addition> ;
     skos:definition "Access is limited to particular communities only"@en ;
     skos:historyNote "Created by the Indigenous Data Network, 2024" ;
     skos:inScheme cs: ;
@@ -108,7 +107,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :indigenous-communities-access
     a skos:Concept ;
-    reg:status <https://linked.data.gov.au/def/reg-statuses/addition> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/addition> ;
     skos:definition "Access is limited to particular indigenous communities only"@en ;
     skos:historyNote "Created by the Indigenous Data Network, 2024" ;
     skos:inScheme cs: ;
@@ -128,10 +127,10 @@ cs:
         skos:ConceptScheme ;
     dcterms:created "2019-04-03"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2021-02-08"^^xsd:date ;
+    dcterms:modified "2025-08-26"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source "http://vocabularies.coar-repositories.org/documentation/access_rights/"^^xsd:anyURI ;
-    reg:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
     skos:definition "Data access rights control how users and systems access a data resource."@en ;
     skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
     skos:prefLabel "Data Access Rights"@en ;

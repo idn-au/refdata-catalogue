@@ -3,7 +3,6 @@ PREFIX cs: <https://data.idnau.org/pid/vocab/oric>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -198,12 +197,12 @@ cs:
     a skos:ConceptScheme ;
     schema:dateCreated "2024-01-11"^^xsd:date ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
-    schema:dateModified "2024-01-11"^^xsd:date ;
+    schema:dateModified "2025-08-26"^^xsd:date ;
     skos:historyNote "Extracted for Indigenous Data Network 2024" ;
     schema:citation "https://www.oric.gov.au"^^xsd:anyURI ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
     schema:copyrightNotice "(c) Indigenous Data Network, 2022" ;
-    reg:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     skos:definition "Industry that an organisation or individual operates in" ;
     skos:hasTopConcept
         :agricultureAquacultureForestryFishing ,
