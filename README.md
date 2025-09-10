@@ -2,7 +2,7 @@
 
 This repository contains the reference data - background vocabularies, spatial datasets and models - part of the data of the Indigenous Data Network (IDN)'s Knowledge Graph. This information is available online at:
 
-- https://data.dev.idnau.org
+- https://data.idnau.org
 
 All the resources in this catalogue are listed in the _Prez resources section_ below. These resources are automatically validated and (re)loaded into the catalogue online using the [Prez Manifest](https://pypi.org/project/prezmanifest/) tool.
 
