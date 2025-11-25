@@ -433,7 +433,7 @@ cs:
         :publisher ,
         :resourceProvider ,
         :rightsHolder ,
-        :sme
+        :sme ,
         :sponsor ,
         :stakeholder ,
         :supervisor ,
