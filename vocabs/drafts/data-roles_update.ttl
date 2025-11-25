@@ -52,6 +52,32 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:contributor <https://linked.data.gov.au/org/idn> ;
 .
 
+:systemadmin
+    a skos:Concept ;
+    skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2025"@en ;
+    schema:status status:addition ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "party responsible for an information systems and technologies that support it."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "system administrator"@en ;
+    skos:altLabel "technical steward"@en ;
+    skos:topConceptOf cs: ;
+    schema:contributor <https://linked.data.gov.au/org/idn> ;
+.
+
+:datasteward
+ a skos:Concept ;
+    skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2025"@en ;
+    schema:status status:addition ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "party responsible for day-to day operations of a catalogue or dataset."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "data steward"@en ;
+    skos:altLabel "data officer"@en ;
+    skos:topConceptOf cs: ;
+    schema:contributor <https://linked.data.gov.au/org/idn> ;
+.   
+
 :supervisor
     a skos:Concept ;
     skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2025"@en ;
@@ -82,7 +108,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:status status:addition ;
     rdfs:isDefinedBy cs: ;
     skos:definition "party that undertakes a research activity."@en ;
-    skos:exactMatch <http://purl.org/au-research/vocabulary/RIFCS/RIFCSActivityRelationType/hasParticipant> ;
     skos:inScheme cs: ;
     skos:prefLabel "project participant"@en ;
     skos:topConceptOf cs: ;
@@ -393,6 +418,7 @@ cs:
         :collaborator ,
         :contributor ,
         :custodian ,
+        :datasteward ,
         :distributor ,
         :editor ,
         :funder ,
@@ -407,9 +433,11 @@ cs:
         :publisher ,
         :resourceProvider ,
         :rightsHolder ,
+        :sme
         :sponsor ,
         :stakeholder ,
         :supervisor ,
+        :systemadmin ,
         :user ,
         :subjectAgent ,
         :subjectAgentRepresentative ;
