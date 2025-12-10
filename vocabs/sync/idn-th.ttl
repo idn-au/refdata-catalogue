@@ -897,7 +897,7 @@ apo:Subject rdfs:label "Public Policy Taxonomy" .
 gaPlacecs: rdfs:label "Place Type" .
 nrmcs: rdfs:label "Natural Resource Management Controlled Vocabularies" .
 rdmtcs: rdfs:label "RDM Terminology" .
-uatcs: rdf:label "The Unified Astronomy Thesaurus" .
+uatcs: rdfs:label "The Unified Astronomy Thesaurus" .
 
 
 cs: a skos:ConceptScheme ;
