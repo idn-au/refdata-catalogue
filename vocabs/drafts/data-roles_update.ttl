@@ -1,0 +1,429 @@
+PREFIX : <https://linked.data.gov.au/def/data-roles/>
+PREFIX cs: <https://linked.data.gov.au/def/data-roles>
+PREFIX iso: <https://def.isotc211.org/common/RoleCode/>
+PREFIX isovoc: <https://def.isotc211.org/common/RoleCode>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX status: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:isoRoles
+    a skos:Collection ;
+    skos:historyNote "The list of Concepts from the original ISO 19115 Role Code codelist"@en ;
+    prov:wasDerivedFrom isovoc: ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Role Codes presented in the ISO 19115 original standard's codelist"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ISO CI Role Code codes"@en ;
+    skos:member 
+        iso:author ,
+        iso:coAuthor ,
+        iso:collaborator ,
+        iso:contributor ,
+        iso:custodian ,
+        iso:distributor ,
+        iso:editor ,
+        iso:funder ,
+        iso:mediator ,
+        iso:originator ,
+        iso:owner ,
+        iso:pointOfContact ,
+        iso:principalInvestigator ,
+        iso:processor ,
+        iso:publisher ,
+        iso:resourceProvider ,
+        iso:rightsHolder ,
+        iso:sponsor ,
+        iso:stakeholder ,
+        iso:user ;
+.
+
+:sme
+    a skos:Concept ;
+    skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2025"@en ;
+    schema:status status:addition ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "party responsible for informing practices impacting relevant domain."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "subject matter expert"@en ;
+    skos:altLabel "SME"@en ;
+    skos:topConceptOf cs: ;
+    schema:contributor <https://linked.data.gov.au/org/idn> ;
+.
+
+:systemadmin
+    a skos:Concept ;
+    skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2025"@en ;
+    schema:status status:addition ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "party responsible for an information systems and technologies that support it."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "system administrator"@en ;
+    skos:altLabel "technical steward"@en ;
+    skos:topConceptOf cs: ;
+    schema:contributor <https://linked.data.gov.au/org/idn> ;
+.
+
+:datasteward
+ a skos:Concept ;
+    skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2025"@en ;
+    schema:status status:addition ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "party responsible for day-to day operations of a catalogue or dataset."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "data steward"@en ;
+    skos:altLabel "data officer"@en ;
+    skos:topConceptOf cs: ;
+    schema:contributor <https://linked.data.gov.au/org/idn> ;
+.   
+
+:supervisor
+    a skos:Concept ;
+    skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2025"@en ;
+    schema:status status:addition ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "party that guides and oversees the planning, execution, and completion of a student’s independent research project, such as an honours thesis, doctoral dissertation, or postdoctoral study."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "supervisor"@en ;
+    skos:topConceptOf cs: ;
+    schema:contributor <https://linked.data.gov.au/org/idn> ;
+.
+
+:projectLead
+    a skos:Concept ;
+    skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2025"@en ;
+    schema:status status:addition ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "party that manages and coordinates responsibility for a research activity."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "project lead"@en ;
+    skos:topConceptOf cs: ;
+    schema:contributor <https://linked.data.gov.au/org/idn> ;
+.
+
+:projectParticipant
+    a skos:Concept ;
+    skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2025"@en ;
+    schema:status status:addition ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "party that undertakes a research activity."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "project participant"@en ;
+    skos:topConceptOf cs: ;
+    schema:contributor <https://linked.data.gov.au/org/idn> ;
+.
+
+:subjectAgent
+    a skos:Concept ;
+    skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2022"@en ;
+    schema:status status:addition ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "party that the resources contains information about" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "subject agent"@en ;
+    skos:topConceptOf cs: ;
+    schema:contributor <https://linked.data.gov.au/org/idn> ;
+.
+
+:subjectAgentRepresentative
+    a skos:Concept ;
+    skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2022"@en ;
+    schema:status status:addition ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :stakeholder ;
+    skos:definition "party who can be contacted who best represents the interests of the subject agent" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "subject agent representative"@en ;
+    schema:contributor <https://linked.data.gov.au/org/idn> ;
+.
+
+#
+#   Original ISO Concepts
+#
+
+iso:author
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party who authored the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "author"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:coAuthor
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party who jointly authors the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "co author"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:collaborator
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party who assists with the generation of the resource other than the principal investigator" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "collaborator"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:contributor
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party contributing to the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "contributor"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:custodian
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party that accepts accountability and responsibility for the resource and ensures appropriate care and maintenance of the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "custodian"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:distributor
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party who distributes the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "distributor"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:editor
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party who reviewed or modified the resource to improve the content" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "editor"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:funder
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party providing monetary support for the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "funder"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:mediator
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "a class of entity that mediates access to the resource and for whom the resource is intended or useful" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "mediator"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:originator
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party who created the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "originator"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:owner
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party that owns the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "owner"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:pointOfContact
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party who can be contacted for acquiring knowledge about or acquisition of the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "point of contact"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:principalInvestigator
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "key party responsible for gathering information and conducting research" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "principal investigator"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:processor
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party who has processed the data in a manner such that the resource has been modified" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "processor"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:publisher
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party who published the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "publisher"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:resourceProvider
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party that supplies the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "resource provider"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:rightsHolder
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party owning or managing rights over the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "rights holder"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:sponsor
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party who speaks for the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "sponsor"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:stakeholder
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party who has an interest in the resource or the use of the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "stakeholder"@en ;
+    skos:topConceptOf cs: 
+.
+
+iso:user
+    a skos:Concept ;
+    skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
+    schema:status status:original ;
+    rdfs:isDefinedBy isovoc: ;
+    skos:definition "party who uses the resource" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "user"@en ;
+    skos:topConceptOf cs: 
+.
+
+<https://linked.data.gov.au/org/agldwg>
+    a schema:Organization ;
+    schema:description "The Australian Government's community of practice for Linked Data"@en ;
+    schema:name "Australian Government Linked Data Working Group" ;
+    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+    schema:email "linkeddatairi@ardc.edu.au"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/idn>
+    a schema:Organization ;
+    schema:description "The Indigenous Data Network (IDN) was established in 2018 to support and coordinate the governance of Indigenous data for Aboriginal and Torres Strait Islander peoples and empower Aboriginal and Torres Strait Islander communities to decide their own local data priorities."@en ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    schema:dateCreated "2024-02-28"^^xsd:date ;
+    schema:creator <https://linked.data.gov.au/org/idn> ;
+    schema:dateIssued "2024-02-28"^^xsd:date ;
+    schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    schema:dateModified "2025-08-26"^^xsd:date ;
+    skos:historyNote "Derived from the ISO 19115's CI Role Code codelist and added to by Australian vocabulary users"@en ;
+    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
+    schema:copyrightNotice "(c) Australian Government Linked Data Working Group, 2024" ;
+    schema:citation "http://iso.kurrawong.net/vocab/CI_RoleCode"^^xsd:anyURI ;
+    schema:status status:stable ;
+    skos:definition "This vocabulary lists the roles that Agents - People and Organisations - play in relation to data. This is an extended and Semantic Web version of the International Organisation for Standardization's ISO19115-1 standard's Role Codes codelist."@en ;
+    skos:hasTopConcept
+        iso:author ,
+        iso:coAuthor ,
+        iso:collaborator ,
+        iso:contributor ,
+        iso:custodian ,
+        :datasteward ,
+        iso:distributor ,
+        iso:editor ,
+        iso:funder ,
+        iso:mediator ,
+        iso:originator ,
+        iso:owner ,
+        iso:pointOfContact ,
+        iso:principalInvestigator ,
+        iso:processor ,
+        :projectLead ,
+        :projectParticipant ,
+        iso:publisher ,
+        iso:resourceProvider ,
+        iso:rightsHolder ,
+        :sme ,
+        iso:sponsor ,
+        iso:stakeholder ,
+        :supervisor ,
+        :systemadmin ,
+        iso:user ,
+        :subjectAgent ,
+        :subjectAgentRepresentative ;
+    skos:prefLabel "IDN Role Codes"@en ;
+    prov:qualifiedDerivation [
+       a prov:Derivation ;
+        prov:entity cs: ;
+        prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
+    ] ;
+.
