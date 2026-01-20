@@ -339,7 +339,6 @@ cs: a skos:ConceptScheme ;
         :projectParticipant,
         :sme,
         :subjectAgent,
-        :subjectAgentRepresentative,
         :supervisor,
         :systemadmin ;
     skos:historyNote "Derived from the ISO 19115's CI Role Code codelist and added to by Australian vocabulary users"@en ;
