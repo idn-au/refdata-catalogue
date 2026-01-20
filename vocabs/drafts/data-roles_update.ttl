@@ -1,6 +1,7 @@
 PREFIX : <https://linked.data.gov.au/def/data-roles/>
 PREFIX cs: <https://linked.data.gov.au/def/data-roles>
-PREFIX iso19115: <https://standards.iso.org/iso/19115/-3/cit/1.0/>
+PREFIX iso: <https://def.isotc211.org/common/RoleCode/>
+PREFIX isovoc: <https://def.isotc211.org/common/RoleCode>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
@@ -11,32 +12,32 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :isoRoles
     a skos:Collection ;
     skos:historyNote "The list of Concepts from the original ISO 19115 Role Code codelist"@en ;
-    prov:wasDerivedFrom iso19115: ;
+    prov:wasDerivedFrom isovoc: ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Role Codes presented in the ISO 19115 original standard's codelist"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "ISO CI Role Code codes"@en ;
     skos:member 
-        :author ,
-        :coAuthor ,
-        :collaborator ,
-        :contributor ,
-        :custodian ,
-        :distributor ,
-        :editor ,
-        :funder ,
-        :mediator ,
-        :originator ,
-        :owner ,
-        :pointOfContact ,
-        :principalInvestigator ,
-        :processor ,
-        :publisher ,
-        :resourceProvider ,
-        :rightsHolder ,
-        :sponsor ,
-        :stakeholder ,
-        :user ;
+        iso:author ,
+        iso:coAuthor ,
+        iso:collaborator ,
+        iso:contributor ,
+        iso:custodian ,
+        iso:distributor ,
+        iso:editor ,
+        iso:funder ,
+        iso:mediator ,
+        iso:originator ,
+        iso:owner ,
+        iso:pointOfContact ,
+        iso:principalInvestigator ,
+        iso:processor ,
+        iso:publisher ,
+        iso:resourceProvider ,
+        iso:rightsHolder ,
+        iso:sponsor ,
+        iso:stakeholder ,
+        iso:user ;
 .
 
 :sme
@@ -142,246 +143,224 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 #   Original ISO Concepts
 #
 
-:author
+iso:author
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party who authored the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "author"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/author"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:coAuthor
+iso:coAuthor
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party who jointly authors the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "co author"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/coAuthor"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:collaborator
+iso:collaborator
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party who assists with the generation of the resource other than the principal investigator" ;
     skos:inScheme cs: ;
     skos:prefLabel "collaborator"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/collaborator"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:contributor
+iso:contributor
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party contributing to the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "contributor"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/contributor"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:custodian
+iso:custodian
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party that accepts accountability and responsibility for the resource and ensures appropriate care and maintenance of the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "custodian"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/custodian"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:distributor
+iso:distributor
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party who distributes the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "distributor"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/distributor"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:editor
+iso:editor
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party who reviewed or modified the resource to improve the content" ;
     skos:inScheme cs: ;
     skos:prefLabel "editor"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/editor"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-# http://standards.iso.org/iso/19115/-3/cit/1.0#CI_RoleCode_editor
-
-:funder
+iso:funder
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party providing monetary support for the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "funder"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/funder"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:mediator
+iso:mediator
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "a class of entity that mediates access to the resource and for whom the resource is intended or useful" ;
     skos:inScheme cs: ;
     skos:prefLabel "mediator"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/mediator"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:originator
+iso:originator
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party who created the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "originator"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/originator"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:owner
+iso:owner
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party that owns the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "owner"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/owner"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:pointOfContact
+iso:pointOfContact
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party who can be contacted for acquiring knowledge about or acquisition of the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "point of contact"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/pointOfContact"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:principalInvestigator
+iso:principalInvestigator
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "key party responsible for gathering information and conducting research" ;
     skos:inScheme cs: ;
     skos:prefLabel "principal investigator"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/principalInvestigator"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:processor
+iso:processor
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party who has processed the data in a manner such that the resource has been modified" ;
     skos:inScheme cs: ;
     skos:prefLabel "processor"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/processor"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:publisher
+iso:publisher
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party who published the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "publisher"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/publisher"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:resourceProvider
+iso:resourceProvider
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party that supplies the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "resource provider"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/resourceProvider"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:rightsHolder
+iso:rightsHolder
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party owning or managing rights over the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "rights holder"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/rightsHolder"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:sponsor
+iso:sponsor
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party who speaks for the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "sponsor"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/sponsor"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:stakeholder
+iso:stakeholder
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party who has an interest in the resource or the use of the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "stakeholder"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/stakeholder"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
-:user
+iso:user
     a skos:Concept ;
     skos:historyNote "Presented in the ISO 19115 original standard's codelist"@en ;
     schema:status status:original ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy isovoc: ;
     skos:definition "party who uses the resource" ;
     skos:inScheme cs: ;
     skos:prefLabel "user"@en ;
-    skos:topConceptOf cs: ;
-    skos:notation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/user"^^xsd:anyURI ;
+    skos:topConceptOf cs: 
 .
 
 <https://linked.data.gov.au/org/agldwg>
@@ -413,32 +392,32 @@ cs:
     schema:status status:stable ;
     skos:definition "This vocabulary lists the roles that Agents - People and Organisations - play in relation to data. This is an extended and Semantic Web version of the International Organisation for Standardization's ISO19115-1 standard's Role Codes codelist."@en ;
     skos:hasTopConcept
-        :author ,
-        :coAuthor ,
-        :collaborator ,
-        :contributor ,
-        :custodian ,
+        iso:author ,
+        iso:coAuthor ,
+        iso:collaborator ,
+        iso:contributor ,
+        iso:custodian ,
         :datasteward ,
-        :distributor ,
-        :editor ,
-        :funder ,
-        :mediator ,
-        :originator ,
-        :owner ,
-        :pointOfContact ,
-        :principalInvestigator ,
-        :processor ,
+        iso:distributor ,
+        iso:editor ,
+        iso:funder ,
+        iso:mediator ,
+        iso:originator ,
+        iso:owner ,
+        iso:pointOfContact ,
+        iso:principalInvestigator ,
+        iso:processor ,
         :projectLead ,
         :projectParticipant ,
-        :publisher ,
-        :resourceProvider ,
-        :rightsHolder ,
+        iso:publisher ,
+        iso:resourceProvider ,
+        iso:rightsHolder ,
         :sme ,
-        :sponsor ,
-        :stakeholder ,
+        iso:sponsor ,
+        iso:stakeholder ,
         :supervisor ,
         :systemadmin ,
-        :user ,
+        iso:user ,
         :subjectAgent ,
         :subjectAgentRepresentative ;
     skos:prefLabel "IDN Role Codes"@en ;
