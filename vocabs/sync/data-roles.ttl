@@ -353,7 +353,7 @@ cs: a skos:ConceptScheme ;
     schema:dateCreated "2024-02-28"^^xsd:date ;
     schema:dateIssued "2024-02-28"^^xsd:date ;
     schema:dateModified "2025-08-26"^^xsd:date ;
-    schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;
     schema:status status:stable .
 
