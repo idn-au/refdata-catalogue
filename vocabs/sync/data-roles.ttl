@@ -97,7 +97,7 @@ idn: a schema:Organization ;
 
 :subjectAgentRepresentative a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:broader :stakeholder ;
+    skos:broader iso:stakeholder ;
     skos:definition "party who can be contacted who best represents the interests of the subject agent" ;
     skos:historyNote "Created for the Indigenous Data Network's Catalogue Project, 2022"@en ;
     skos:inScheme cs: ;
