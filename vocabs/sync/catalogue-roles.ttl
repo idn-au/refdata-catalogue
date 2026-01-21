@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:provenance "Created for the IDN project, 2023"@en ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "An catalogue for a resource that is not the one that first published it" ;
+    skos:definition "A catalogue for a resource that is not the one that first published it" ;
     skos:inScheme cs: ;
     skos:prefLabel "Non-Original"@en ;
     skos:scopeNote "This classification is orthogonal to home/non-home" ;
@@ -41,7 +41,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:provenance "Created for the IDN project, 2023"@en ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "An catalogue for a resource that is the one that first published it"@en ;
+    skos:definition "A catalogue for a resource that is the one that first published it"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Original"@en ;
     skos:scopeNote "This classification is orthogonal to home/non-home" ;
