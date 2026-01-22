@@ -10,99 +10,92 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 dcterms:conformsTo
-    schema:description "An established standard to which the described resource conforms."@en ;
-    schema:name "Conforms To"@en ;
+    schema:description "An established standard to which the described resource conforms." ;
+    schema:name "Conforms To" ;
 .
 
 dcterms:created
-    rdfs:label "Date Created"@en ;
+    schema:name "Date Created" ;
     schema:description
         "Date of creation of the resource."@en ,
-        "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+        "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
 .
 
 dcterms:creator
-    rdfs:label "Creator"@en ;
+    schema:name "Creator" ;
     schema:description
         "An entity responsible for making the resource."@en ,
-        "Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided."@en ;
+        "Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided." ;
 .
 
 dcterms:hasPart
-    rdfs:label "Has Part"@en ;
+    schema:name "Has Part" ;
     schema:description
-        "A related resource that is included either physically or logically in the described resource."@en ,
-        "This property is intended to be used with non-literal values. This property is an inverse property of Is Part Of."@en ;
+        "A related resource that is included either physically or logically in the described resource." ;
 .
 
 dcterms:issued
-    rdfs:label "Date Issued"@en ;
+    schema:name "Date Issued" ;
     schema:description
-        "Date of formal issuance of the resource."@en ,
-        "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+        "Date of formal issuance of the resource." ;
 .
 
 dcterms:license
-    rdfs:label "License"@en ;
+    schema:name "License" ;
     schema:description
-        "A legal document giving official permission to do something with the resource."@en ,
-        "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided."@en ;
+        "A legal document giving official permission to do something with the resource." ;
 .
 
 dcterms:modified
-    rdfs:label "Date Modified"@en ;
+    schema:name "Date Modified" ;
     schema:description
-        "Date on which the resource was changed."@en ,
-        "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
+        "Date on which the resource was changed." ;
 .
 
 dcterms:provenance
-    rdfs:label "Provenance"@en ;
+    schema:name "Provenance" ;
     schema:description
-        "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ,
-        "The statement may include a description of any changes successive custodians made to the resource."@en ;
+        "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation." ;
 .
 
 dcterms:publisher
-    rdfs:label "Publisher"@en ;
-    schema:description "An entity responsible for making the resource available."@en ;
+    schema:name "Publisher" ;
+    schema:description "An entity responsible for making the resource available." ;
 .
 
 dcterms:replaces
-    schema:description "A related resource that is supplanted, displaced, or superseded by the described resource."@en ;
-    schema:name "Replaces"@en ;
+    schema:description "A related resource that is supplanted, displaced, or superseded by the described resource." ;
+    schema:name "Replaces" ;
 .
 
 dcterms:rights
-    rdfs:label "Rights"@en ;
+    schema:name "Rights" ;
     schema:description
-        "Information about rights held in and over the resource."@en ,
-        "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  Recommended practice is to refer to a rights statement with a URI.  If this is not possible or feasible, a literal value (name, label, or short text) may be provided."@en ;
+        "Information about rights held in and over the resource." ;
 .
 
 dcterms:source
-    rdfs:label "Source"@en ;
+    schema:name "Source" ;
     schema:description
-        "A related resource from which the described resource is derived."@en ,
-        "This property is intended to be used with non-literal values. The described resource may be derived from the related resource in whole or in part. Best practice is to identify the related resource by means of a URI or a string conforming to a formal identification system."@en ;
+        "A related resource from which the described resource is derived." ;
 .
 
 dcterms:type
-    schema:description "The nature or genre of the resource."@en ;
-    schema:name "Type"@en ;
+    schema:description "The nature or genre of the resource." ;
+    schema:name "Type" ;
 .
 
 <http://purl.org/linked-data/registry#status>
-    rdfs:label "status" ;
+    schema:name "status" ;
 .
 
 geo:sfWithin
-    schema:description "States that the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
-    schema:name "within"@en ;
+    schema:description "States that the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***" ;
+    schema:name "within" ;
 .
 
 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-    rdfs:label "a" ;
+    schema:name "a" ;
 .
 
 rdfs:Datatype
@@ -116,209 +109,200 @@ rdfs:comment
 .
 
 rdfs:isDefinedBy
-    rdfs:label "is defined by" ;
+    schema:name "is defined by" ;
     schema:description "The defininition of the subject resource." ;
 .
 
 rdfs:label
-    rdfs:label "label" ;
+    schema:name "label" ;
     schema:description "A human-readable name for the subject." ;
 .
 
 owl:Ontology
-    rdfs:label "Ontology" ;
+    schema:name "Ontology" ;
 .
 
 owl:versionIRI
-    rdfs:label "version IRI" ;
+    schema:name "version IRI" ;
 .
 
 owl:versionInfo
-    rdfs:label "version info" ;
+    schema:name "version info" ;
 .
 
 skos:Collection
-    rdfs:label "Collection"@en ;
-    schema:description "A meaningful collection of concepts."@en ;
+    schema:name "Collection" ;
+    schema:description "A meaningful collection of concepts." ;
 .
 
 skos:Concept
-    rdfs:label "Concept"@en ;
-    schema:description "An idea or notion; a unit of thought."@en ;
+    schema:name "Concept" ;
+    schema:description "An idea or notion; a unit of thought." ;
 .
 
 skos:ConceptScheme
-    rdfs:label "Concept Scheme"@en ;
-    schema:description "A set of concepts, optionally including statements about semantic relationships between those concepts."@en ;
+    schema:name "Concept Scheme" ;
+    schema:description "A set of concepts, optionally including statements about semantic relationships between those concepts." ;
 .
 
 skos:altLabel
-    rdfs:label "alternative label"@en ;
+    schema:name "alternative label" ;
     schema:description
-        "An alternative lexical label for a resource."@en ,
-        "The range of skos:altLabel is the class of RDF plain literals."@en ,
-        "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+        "An alternative lexical label for a resource." ;
 .
 
 skos:broadMatch
-    rdfs:label "has broader match"@en ;
-    schema:description "skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes."@en ;
+    schema:name "has broader match" ;
+    schema:description "skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes." ;
 .
 
 skos:broader
-    rdfs:label "has broader"@en ;
+    schema:name "has broader" ;
     schema:description
-        "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."@en ,
-        "Relates a concept to a concept that is more general in meaning."@en ;
+        "Broader concepts are typically rendered as parents in a concept hierarchy (tree)." ;
 .
 
 skos:definition
-    rdfs:label "definition"@en ;
-    schema:description "A statement or formal explanation of the meaning of a concept."@en ;
+    schema:name "definition" ;
+    schema:description "A statement or formal explanation of the meaning of a concept." ;
 .
 
 skos:exactMatch
-    schema:description "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch"@en ;
-    schema:name "has exact match"@en ;
+    schema:description "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch" ;
+    schema:name "has exact match" ;
 .
 
 skos:hasTopConcept
-    rdfs:label "has top concept"@en ;
-    schema:description "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies."@en ;
+    schema:name "has top concept" ;
+    schema:description "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies." ;
 .
 
 skos:historyNote
-    rdfs:label "history note"@en ;
-    schema:description "A note about the past state/use/meaning of a concept."@en ;
+    schema:name "history note" ;
+    schema:description "A note about the past state/use/meaning of a concept." ;
 .
 
 skos:inScheme
-    rdfs:label "is in scheme"@en ;
-    schema:description "Relates a resource (for example a concept) to a concept scheme in which it is included."@en ;
+    schema:name "is in scheme" ;
+    schema:description "Relates a resource (for example a concept) to a concept scheme in which it is included." ;
 .
 
 skos:member
-    rdfs:label "has member"@en ;
-    schema:description "Relates a collection to one of its members."@en ;
+    schema:name "has member" ;
+    schema:description "Relates a collection to one of its members." ;
 .
 
 skos:narrower
-    rdfs:label "has narrower"@en ;
+    schema:name "has narrower" ;
     schema:description
         "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."@en ,
-        "Relates a concept to a concept that is more specific in meaning."@en ;
+        "Relates a concept to a concept that is more specific in meaning." ;
 .
 
 skos:notation
-    rdfs:label "notation" ;
-    skos:definition """A notation, also known as classification code, is a string of characters such as "T58.5" or "303.4833" used to uniquely identify a concept within the scope of a given concept scheme."""@en ;
+    schema:name "notation" ;
+    skos:definition """A notation, also known as classification code, is a string of characters such as "T58.5" or "303.4833" used to uniquely identify a concept within the scope of a given concept scheme.""" ;
 .
 
 skos:prefLabel
-    rdfs:label "preferred label"@en ;
+    schema:name "preferred label" ;
     schema:description
-        "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en ,
-        "The preferred lexical label for a resource, in a given language."@en ,
-        "The range of skos:prefLabel is the class of RDF plain literals."@en ,
-        """skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
-      disjoint properties."""@en ;
+        "The preferred lexical label for a resource, in a given language." ;
 .
 
 skos:related
-    rdfs:label "has related"@en ;
+    schema:name "has related" ;
     schema:description
-        "Relates a concept to a concept with which there is an associative semantic relationship."@en ,
-        "skos:related is disjoint with skos:broaderTransitive"@en ;
+        "Relates a concept to a concept with which there is an associative semantic relationship." ;
 .
 
 skos:scopeNote
-    rdfs:label "scope note"@en ;
-    schema:description "A note that helps to clarify the meaning and/or the use of a concept."@en ;
+    schema:name "scope note" ;
+    schema:description "A note that helps to clarify the meaning and/or the use of a concept." ;
 .
 
 skos:topConceptOf
-    rdfs:label "is top concept in scheme"@en ;
-    schema:description "Relates a concept to the concept scheme that it is a top level concept of."@en ;
+    schema:name "is top concept in scheme" ;
+    schema:description "Relates a concept to the concept scheme that it is a top level concept of." ;
 .
 
 dcat:Catalog
-    rdfs:label "Catalogue" ;
+    schema:name "Catalogue" ;
 .
 
 dcat:hadRole
-    rdfs:label "had role" ;
+    schema:name "had role" ;
 .
 
 dcat:keyword
-    rdfs:label "keyword" ;
+    schema:name "keyword" ;
 .
 
 dcat:qualifiedRelation
-    schema:description "Link to a description of a relationship with another resource."@en ;
-    schema:name "qualified relation"@en ;
+    schema:description "Link to a description of a relationship with another resource." ;
+    schema:name "qualified relation" ;
 .
 
 prof:hasArtifact
-    schema:description "The URL of a downloadable file with particulars such as its format and role indicated by the Resource Descriptor"@en ;
+    schema:description "The URL of a downloadable file with particulars such as its format and role indicated by the Resource Descriptor" ;
     schema:name "has artifact" ;
 .
 
 prof:hasResource
-    schema:description "A resource which describes the nature of an artifact and the role it plays in relation to the Profile"@en ;
-    schema:name "has resource"@en ;
+    schema:description "A resource which describes the nature of an artifact and the role it plays in relation to the Profile" ;
+    schema:name "has resource" ;
 .
 
 prof:hasRole
-    schema:description "The function of an artifact described by a Resource Descriptor, such as specification, guidance etc."@en ;
+    schema:description "The function of an artifact described by a Resource Descriptor, such as specification, guidance etc." ;
     schema:name "has role" ;
 .
 
 prov:Attribution
-    schema:description "An instance of prov:Attribution provides additional descriptions about the binary prov:wasAttributedTo relation from an prov:Entity to some prov:Agent that had some responsible for it. For example, :cake prov:wasAttributedTo :baker; prov:qualifiedAttribution [ a prov:Attribution; prov:entity :baker; :foo :bar ]."@en ;
+    schema:description "An instance of prov:Attribution provides additional descriptions about the binary prov:wasAttributedTo relation from an prov:Entity to some prov:Agent that had some responsible for it. For example, :cake prov:wasAttributedTo :baker; prov:qualifiedAttribution [ a prov:Attribution; prov:entity :baker; :foo :bar ]." ;
     schema:name "Attribution" ;
 .
 
 prov:Derivation
     schema:description
-        "An instance of prov:Derivation provides additional descriptions about the binary prov:wasDerivedFrom relation from some derived prov:Entity to another prov:Entity from which it was derived. For example, :chewed_bubble_gum prov:wasDerivedFrom :unwrapped_bubble_gum; prov:qualifiedDerivation [ a prov:Derivation; prov:entity :unwrapped_bubble_gum; :foo :bar ]."@en ,
-        "The more specific forms of prov:Derivation (i.e., prov:Revision, prov:Quotation, prov:PrimarySource) should be asserted if they apply."@en ;
+        "An instance of prov:Derivation provides additional descriptions about the binary prov:wasDerivedFrom relation from some derived prov:Entity to another prov:Entity from which it was derived. For example, :chewed_bubble_gum prov:wasDerivedFrom :unwrapped_bubble_gum; prov:qualifiedDerivation [ a prov:Derivation; prov:entity :unwrapped_bubble_gum; :foo :bar ]." ;
     schema:name "Derivation" ;
 .
 
 prov:agent
-    rdfs:label "agent" ;
+    schema:name "agent" ;
 .
 
 prov:entity
-    rdfs:label "entity" ;
+    schema:name "entity" ;
 .
 
 prov:hadRole
-    rdfs:label "had role" ;
+    schema:name "had role" ;
 .
 
 prov:qualifiedAttribution
-    rdfs:label "qualified attribution" ;
+    schema:name "qualified attribution" ;
 .
 
 prov:qualifiedDerivation
-    rdfs:label "qualified derivation" ;
+    schema:name "qualified derivation" ;
 .
 
 prov:wasDerivedFrom
-    rdfs:label "was derived from" ;
+    schema:name "was derived from" ;
 .
 
 <https://data.idnau.org/pid/vocab/cat-roles>
-    rdfs:label "Catalogue Roles"@en ;
+    schema:name "Catalogue Roles" ;
 .
 
 <https://data.idnau.org/pid/vocab/indigeneity>
-    rdfs:label "Data Indigeneity"@en ;
+    schema:name "Data Indigeneity" ;
 .
 
 <https://kurrawong.ai>
-    rdfs:label "KurrawongAI" ;
+    schema:name "KurrawongAI" ;
     schema:description """KurrawongAI is a small, Australian-based company enabling organisations to take control of their data.
 
 We use data modelling, data governance and data systems implementation expertise all based on Semantic Web and Knowledge Graph principles to ensure data is in the richest, most open and most extensible form it can be.
@@ -327,60 +311,60 @@ We use knowledge graphs for data storage, as a transfer format, when serialised,
 .
 
 <https://linked.data.gov.au/def/data-access-rights>
-    rdfs:label "Data Access Rights"@en ;
+    schema:name "Data Access Rights" ;
 .
 
 <https://linked.data.gov.au/def/data-access-rights/limited-community-access>
-    rdfs:label "Limited community access"@en ;
+    schema:name "Limited community access" ;
 .
 
 <https://linked.data.gov.au/def/data-roles>
-    rdfs:label "IDN Role Codes"@en ;
-    schema:description "This vocabulary lists the roles that Agents - People and Organisations - play in relation to data. This is an extended and Semantic Web version of the International Organisation for Standardization's ISO19115-1 standard's Role Codes codelist."@en ;
+    schema:name "IDN Role Codes" ;
+    schema:description "This vocabulary lists the roles that Agents - People and Organisations - play in relation to data. This is an extended and Semantic Web version of the International Organisation for Standardization's ISO19115-1 standard's Role Codes codelist." ;
 .
 
 <https://linked.data.gov.au/def/data-roles/custodian>
-    rdfs:label "custodian"@en ;
+    schema:name "custodian" ;
     schema:description "party that accepts accountability and responsibility for the resource and ensures appropriate care and maintenance of the resource" ;
 .
 
 <https://linked.data.gov.au/def/reg-statuses/addition>
-    rdfs:label "addition"@en ;
+    schema:name "addition" ;
     schema:color "#4ac11b" ;
-    schema:description "The item's status is stable and was supplied to the registry after initial creation"@en ;
+    schema:description "The item's status is stable and was supplied to the registry after initial creation" ;
 .
 
 <https://linked.data.gov.au/def/reg-statuses/experimental>
-    rdfs:label "experimental"@en ;
+    schema:name "experimental" ;
     schema:color "#eae72c" ;
-    schema:description "An entry that has been accepted into the register temporarily and may be subject to change or withdrawal."@en ;
+    schema:description "An entry that has been accepted into the register temporarily and may be subject to change or withdrawal." ;
 .
 
 <https://linked.data.gov.au/def/reg-statuses/original>
-    rdfs:label "original"@en ;
+    schema:name "original" ;
     schema:color "#38a30e" ;
-    schema:description "The item's status is stable and was supplied to the registry after initial creation."@en ;
+    schema:description "The item's status is stable and was supplied to the registry after initial creation." ;
 .
 
 <https://linked.data.gov.au/def/reg-statuses/stable>
-    rdfs:label "stable"@en ;
+    schema:name "stable" ;
     schema:color "#2e8c09" ;
-    schema:description "An entry that is seen as having a reasonable measure of stability, may be used to mark the full adoption of a previously 'experimental' entry."@en ;
+    schema:description "An entry that is seen as having a reasonable measure of stability, may be used to mark the full adoption of a previously 'experimental' entry." ;
 .
 
 <https://linked.data.gov.au/def/vocdermods/none>
-    rdfs:label "None"@en ;
-    schema:description "This vocabulary does not derive from another"@en ;
+    schema:name "None" ;
+    schema:description "This vocabulary does not derive from another" ;
 .
 
 <https://linked.data.gov.au/def/vocdermods/subsetting-and-extension>
-    rdfs:label "Subset & Extension"@en ;
-    schema:description "Derivation with subsetting and extension"@en ;
+    schema:name "Subset & Extension" ;
+    schema:description "Derivation with subsetting and extension" ;
 .
 
 <https://linked.data.gov.au/org/idn>
-    rdfs:label "Indigenous Data Network" ;
-    schema:description "The Indigenous Data Network (IDN) was established in 2018 to support and coordinate the governance of Indigenous data for Aboriginal and Torres Strait Islander peoples and empower Aboriginal and Torres Strait Islander communities to decide their own local data priorities."@en ;
+    schema:name "Indigenous Data Network" ;
+    schema:description "The Indigenous Data Network (IDN) was established in 2018 to support and coordinate the governance of Indigenous data for Aboriginal and Torres Strait Islander peoples and empower Aboriginal and Torres Strait Islander communities to decide their own local data priorities." ;
 .
 
 <https://linked.data.gov.au/org/isu>
@@ -414,7 +398,7 @@ We use knowledge graphs for data storage, as a transfer format, when serialised,
 .
 
 <https://purl.org/NET/rdflicense>
-    rdfs:label "license" ;
+    schema:name "license" ;
 .
 
 schema:DataCatalog
@@ -423,7 +407,7 @@ schema:DataCatalog
 .
 
 schema:Person
-    rdfs:label "Person" ;
+    schema:name "Person" ;
 .
 
 schema:agent
@@ -432,43 +416,43 @@ schema:agent
 .
 
 schema:citation
-    rdfs:label "citation" ;
+    schema:name "citation" ;
 .
 
 schema:codeRepository
-    rdfs:label "code repository" ;
+    schema:name "code repository" ;
 .
 
 schema:contributor
-    rdfs:label "contributor" ;
+    schema:name "contributor" ;
 .
 
 schema:copyrightNotice
-    rdfs:label "copyright notice" ;
+    schema:name "copyright notice" ;
 .
 
 schema:creator
-    rdfs:label "creator" ;
+    schema:name "creator" ;
 .
 
 schema:dateCreated
-    rdfs:label "date created" ;
+    schema:name "date created" ;
 .
 
 schema:dateIssued
-    rdfs:label "date issued" ;
+    schema:name "date issued" ;
 .
 
 schema:dateModified
-    rdfs:label "date modified" ;
+    schema:name "date modified" ;
 .
 
 schema:description
-    rdfs:label "description" ;
+    schema:name "description" ;
 .
 
 schema:email
-    rdfs:label "email" ;
+    schema:name "email" ;
 .
 
 schema:hasPart
@@ -486,19 +470,19 @@ schema:identifier
 .
 
 schema:keywords
-    rdfs:label "keywords" ;
+    schema:name "keywords" ;
 .
 
 schema:license
-    rdfs:label "license" ;
+    schema:name "license" ;
 .
 
 schema:name
-    rdfs:label "name" ;
+    schema:name "name" ;
 .
 
 schema:publisher
-    rdfs:label "publisher" ;
+    schema:name "publisher" ;
 .
 
 schema:status
@@ -507,15 +491,15 @@ schema:status
 .
 
 schema:url
-    rdfs:label "URL" ;
+    schema:name "URL" ;
 .
 
 schema:version
-    rdfs:label "version" ;
+    schema:name "version" ;
 .
 
 schema:Organization
-    rdfs:label "Organisation" ;
+    schema:name "Organisation" ;
 .
 
 <http://astrothesaurus.org/uat/1>
@@ -581,4 +565,32 @@ schema:Organization
 <https://terms.codata.org/rdmt>
     schema:name "RDM Terminology" ;
     schema:description "The goal of this terminology is to gather the key terms needed for a common understanding of the research data management domain. Research data management (RDM) refers to the storage, access and preservation of data created or collected in the course of research. Research data management practices cover the entire lifecycle of the data, from planning the investigation to conducting it, and from backing up data as it is created and used to long term preservation of data deliverables after the research investigation has concluded." ;
+.
+
+<https://schema.org/color>
+    schema:name "colour" ;
+.
+
+<https://schema.org/spatialCoverage>
+    schema:name "spatial coverage" ;
+.
+
+<https://w3id.org/profile/vocpub>
+    schema:name "VocPub Profile of SKOS" ;
+.
+
+<http://id.loc.gov/vocabulary/identifiers>
+    schema:name "Library of Congress Identifiers Vocabulary" ;
+.
+
+<https://data.idnau.org/pid/adb/abn>
+    schema:name "Australian Business Number" ;
+.
+
+<https://data.idnau.org/pid/agent-systems/orcid>
+    schema:name "ORCID" ;
+.
+
+<https://linked.data.gov.au/def/policy/Subject>
+    schema:name "subject" ;
 .
