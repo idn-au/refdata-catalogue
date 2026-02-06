@@ -18,14 +18,14 @@ PREFIX schema: <https://schema.org/>
             prof:hasRole mrr:ResourceData ;
             schema:description "skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/sync/ folder for syncing" ;
             schema:name "Syncable Resource Data" ;
-            dcterms:conformsTo <https://w3id.org/profile/vocpub> ;
+#            dcterms:conformsTo <https://w3id.org/profile/vocpub> ;
         ] ,
         [
             prof:hasArtifact "vocabs/non-sync/*.ttl" ;
             prof:hasRole mrr:ResourceData ;
             schema:description "skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/non-sync/ folder, to be synced externally" ;
             schema:name "Non-syncable Resource Data" ;
-            dcterms:conformsTo <https://w3id.org/profile/vocpub> ;
+#            dcterms:conformsTo <https://w3id.org/profile/vocpub> ;
             prez:sync false ;
         ] ,
         [
