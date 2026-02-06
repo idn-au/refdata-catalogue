@@ -1,28 +1,28 @@
-@prefix : <https://data.idnau.org/pid/vocab/idn-th/> .
-@prefix alum: <https://linked.data.gov.au/def/alum/> .
-@prefix alumcs: <https://linked.data.gov.au/def/alum> .
-@prefix apaiscs: <https://vocabularyserver.com/apais/> .
-@prefix apo: <https://linked.data.gov.au/def/policy/> .
-@prefix cs: <https://data.idnau.org/pid/vocab/idn-th> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix fast: <http://id.worldcat.org/fast/> .
-@prefix gaPlace: <http://pid.geoscience.gov.au/def/voc/ga/PlaceType/> .
-@prefix gaPlacecs: <http://pid.geoscience.gov.au/def/voc/ga/PlaceType> .
-@prefix idn: <https://linked.data.gov.au/org/idn> .
-@prefix nrm: <https://linked.data.gov.au/def/nrm/> .
-@prefix nrmcs: <https://linked.data.gov.au/def/nrm> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rdmt: <https://terms.codata.org/rdmt/> .
-@prefix rdmtcs: <https://terms.codata.org/rdmt> .
-@prefix regstat: <https://linked.data.gov.au/def/reg-statuses/> .
-@prefix schema: <https://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix uat: <http://astrothesaurus.org/uat/> .
-@prefix uatcs: <http://astrothesaurus.org/uat/1> .
-@prefix vocdermods: <https://linked.data.gov.au/def/vocdermods/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX : <https://data.idnau.org/pid/vocab/idn-th/>
+PREFIX alum: <https://linked.data.gov.au/def/alum/>
+PREFIX alumcs: <https://linked.data.gov.au/def/alum>
+PREFIX apaiscs: <https://vocabularyserver.com/apais/>
+PREFIX apo: <https://linked.data.gov.au/def/policy/>
+PREFIX cs: <https://data.idnau.org/pid/vocab/idn-th>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX fast: <http://id.worldcat.org/fast/>
+PREFIX gaPlace: <http://pid.geoscience.gov.au/def/voc/ga/PlaceType/>
+PREFIX gaPlacecs: <http://pid.geoscience.gov.au/def/voc/ga/PlaceType>
+PREFIX idn: <https://linked.data.gov.au/org/idn>
+PREFIX nrm: <https://linked.data.gov.au/def/nrm/>
+PREFIX nrmcs: <https://linked.data.gov.au/def/nrm>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdmt: <https://terms.codata.org/rdmt/>
+PREFIX rdmtcs: <https://terms.codata.org/rdmt>
+PREFIX regstat: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX uat: <http://astrothesaurus.org/uat/>
+PREFIX uatcs: <http://astrothesaurus.org/uat/1>
+PREFIX vocdermods: <https://linked.data.gov.au/def/vocdermods/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :AusLandUseManagementClassCollection a skos:Collection ;
     dcterms:source "https://linked.data.gov.au/def/alum"^^xsd:anyURI ;
