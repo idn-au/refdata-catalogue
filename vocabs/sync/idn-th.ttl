@@ -59,7 +59,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :PublicPolicyTaxonomy-vocabulary
     a skos:Collection ;
-    dcterms:source "https://linked.data.gov.au/def/policy/Subject"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from the Public Policy Taxonomy" ;
     skos:inScheme cs: ;
@@ -75,7 +74,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d> ,
         <https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025> ;
     skos:prefLabel "Public Policy Taxonomy concepts"@en ;
-    prov:wasDerivedFrom <https://linked.data.gov.au/def/policy/Subject> ;
+    prov:wasDerivedFrom <https://linked.data.gov.au/def/policy> ;
 .
 
 :TheUnifiedAstronomyThesaurus
@@ -220,14 +219,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Place"@en ;
     skos:topConceptOf cs: ;
-    prov:wasDerivedFrom "https://aiatsis.gov.au/thesaurus/topical/XX101477"^^xsd:anyURI ;
+    schema:citation "https://aiatsis.gov.au/thesaurus/topical/XX101477"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/def/policy/940a5e39-a55c-488a-b72d-2b7eb01feee4>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
     skos:altLabel
         "Aboriginal health"@en ,
         "Indigenous health"@en ,
@@ -297,7 +296,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
     skos:altLabel "Repatriation and reburial of human remains"@en ;
     skos:broader <https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723> ;
     skos:definition "The process of returning human remains to their communities of origin. This process can help create healing and reconciliation for the descendants of those remains."@en ;
@@ -309,7 +308,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
     skos:altLabel "Aboriginal Australians government relations"@en ;
     skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
     skos:definition "Relations between Aboriginal Australins and Australian governments"@en ;
@@ -322,7 +321,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
     skos:definition "Aboriginal and Torres Strait Islander heritage and culture"@en ;
     skos:inScheme cs: ;
     skos:narrower <https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7> ;
@@ -333,7 +332,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
     skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
     skos:definition "Aboriginal water use."@en ;
     skos:inScheme cs: ;
@@ -344,7 +343,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
     skos:altLabel "Uluru Statement from the Heart"@en ;
     skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
     skos:definition "A 2017 petition to the people of Australia, written and endorsed by the Australian Aboriginal and Torres Strait Islander leaders selected as delegates to the First Nations National Constitutional Convention. The document calls for substantive constitutional change and structural reform through the creation of two new institutions; a constitutionally protected First Nations Voice and a Makarrata Commission[a], to oversee agreement-making and truth-telling between governments and First Nations."@en ;
@@ -356,7 +355,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
     skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
     skos:definition "Practical and structured plans for action within a workplace, based on relationships, respect and opportunities. They help people in the workplace to understand important issues relating to Indigenous Australians, and further meaningful engagement among groups. They also aim to increase equality in the workplace, and help to create sustainable employment opportunities."@en ;
     skos:inScheme cs: ;
@@ -435,7 +434,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
     skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
     skos:definition "Native title is the recognition in Australian law that some Aboriginal and Torres Strait Islander people continue to hold rights and interests in land and water."@en ;
     skos:exactMatch
@@ -944,7 +943,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
     skos:altLabel "Aboriginal reconciliation"@en ;
     skos:definition "Aboriginal reconciliation in Australia is the process of improving relationships between Aboriginal and Torres Strait Islander peoples and non-Indigenous Australians. It involves acknowledging the past, working to reduce racism, and improving opportunities for Indigenous Australians."@en ;
     skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=21> ;
@@ -961,7 +960,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:created "2020-09-15"^^xsd:date ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy/Subject> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
     skos:altLabel
         "Aboriginal land councils"@en ,
         "First Peoples land management"@en ,
