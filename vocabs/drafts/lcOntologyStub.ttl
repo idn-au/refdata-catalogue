@@ -1,0 +1,232 @@
+@prefix lc:   <https://data.idnau.org/pid/vocab/lc-ontology#> .
+@prefix collectionscare: <https://data.idnau.org/pid/vocab/lc-notice/collectionscare> .
+@prefix disclosure: <https://data.idnau.org/pid/vocab/lc-notice/disclosure> .
+@prefix engage: <https://data.idnau.org/pid/vocab/lc-notice/engage> .
+@prefix notice:   <https://data.idnau.org/pid/vocab/lc-notice/> .
+@prefix noticecs:   <https://data.idnau.org/pid/vocab/lc-notice> .
+@prefix bc:   <https://data.idnau.org/pid/vocab/bc-labels/> .
+@prefix bccs:   <https://data.idnau.org/pid/vocab/bc-labels> .
+@prefix tk:   <https://data.idnau.org/pid/vocab/tk-labels/> .
+@prefix tkcs:   <https://data.idnau.org/pid/vocab/tk-labels> .
+@prefix kai:  <https://kurrawong.ai> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <https://schema.org/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Ontology header
+
+lc:
+    a owl:Ontology ;
+    dcterms:title "Local Contexts Label Extension Vocabulary"@en ;
+    dcterms:creator <https://kurrawong.ai> ;
+    dcterms:created "2025-09-23"^^xsd:date ;
+    schema:dateCreated "2025-09-23"^^xsd:date ;
+    schema:dateModified "2025-10-07"^^xsd:date ;
+    owl:versionInfo "0.1" ;
+    dcterms:description "Defines TKLabel and BCLabel classes as subclasses of skos:Concept, and lc:templateText for associating reusable boilerplate text with Local Contexts labels."@en
+.
+
+# Classes
+
+lc:TKLabel a rdfs:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Traditional Knowledge Label"@en ;
+    rdfs:comment "A SKOS Concept representing a Traditional Knowledge Label from the Local Contexts framework."@en
+.
+
+lc:BCLabel a rdfs:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Biocultural Label"@en ;
+    rdfs:comment "A SKOS Concept representing a Biocultural Label from the Local Contexts framework."@en
+.
+
+lc:CCNotice a rdfs:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Collections Care Notices"@en ;
+    rdfs:comment "A SKOS Concept representing a Collection Care Notice from the Local Contexts framework."@en
+.
+
+lc:CollectionsCareDuty
+  a odrl:Duty ;
+  odrl:comment "You are entering a space where Collections Care Notices are in use. Be prepared to follow the protocols for access, use, handling, and viewing associated with certain items or collections. These are in place for the care of the collections and the communities to whom they belong. For more information about Collections Care Notices, see localcontexts.org."@en
+.
+
+odrl:Duty
+	a rdfs:Class , owl:Class, skos:Concept ;
+	rdfs:label "Duty"@en ;
+    skos:definition "The obligation to perform an Action"@en
+.
+
+odrl:Policy
+	a rdfs:Class , owl:Class, skos:Concept ;
+	rdfs:label "Policy"@en ;
+	skos:definition "A non-empty group of Permissions and/or Prohibitions."@en ;
+	skos:note "A Policy may contain multiple Rules."@en
+.
+
+# Properties
+
+lc:templateText a rdf:Property, owl:DatatypeProperty ;
+    rdfs:domain lc:TKLabel , lc:BCLabel , lc:CCNotice ;
+    rdfs:range rdf:langString ;
+    rdfs:label "Template Text"@en ;
+    rdfs:comment "A prescriptive text string associated with a Label that provides boilerplate wording intended to be reused or customised by end-users. Distinct from skos:example, which is illustrative only."@en .
+
+# Concept Schemes
+
+tkcs:
+    a skos:ConceptScheme ;
+    skos:prefLabel "Traditional Knowledge Labels"@en ;
+    skos:definition "The Traditional Knowledge (TK) Labels are an initiative for Indigenous communities and local organizations. The Labels allow communities to express local and specific conditions for sharing and engaging in future research and relationships in ways that are consistent with already existing community rules, governance and protocols for using, sharing and circulating knowledge and data."@en ;
+    schema:citation "https://localcontexts.org/labels/traditional-knowledge-labels/"^^xsd:anyURI ;
+    dcterms:creator <https://kurrawong.ai> ;
+    dcterms:created "2025-09-23"^^xsd:date ;
+    schema:dateCreated "2025-09-23"^^xsd:date ;
+    schema:dateModified "2026-02-11"^^xsd:date ;
+    owl:versionInfo "0.1" ;
+    skos:hasTopConcept tk:attribution , tk:clan , tk:family , tk:multicommun , tk:commvoice , tk:creative , tk:verified , tk:non-verified , tk:seasonal , tk:womengen , tk:mengen , tk:menrestrict , tk:womenrestrict , tk:cultsensitive , tk:secsac , tk:opentocom , tk:noncom , tk:comuseonly , tk:outreach , tk:opentocollab
+.
+
+bccs:
+    a skos:ConceptScheme ;
+    skos:prefLabel "Biocultural Labels"@en ;
+    dcterms:creator <https://kurrawong.ai> ;
+    skos:definition "The Biocultural (BC) Labels extend the TK Label initiative to genetic resources and within the biological and genomic data sciences. The BC Labels define community expectations about appropriate use of biocultural collections and data. The BC Labels focus on accurate provenance, transparency and integrity in research engagements with Indigenous communities. The BC Labels ensure Indigenous people are represented in the metadata and create opportunities for future researchers to connect and support appropriate benefit sharing."@en ;
+    dcterms:created "2025-09-23"^^xsd:date ;
+    schema:dateCreated "2025-09-23"^^xsd:date ;
+    schema:dateModified "2026-02-11"^^xsd:date ;
+    owl:versionInfo "0.1" ;
+    skos:hasTopConcept bc:provenance , bc:multipcomm , bc:clan , bc:concentverified , bc:conceptnonverified , bc:researchuse , bc:opentocollab , bc:opentocommercial , bc:outreach , bc:noncommercial 
+.
+
+noticecs:
+    a skos:ConceptScheme ;
+    skos:prefLabel "Local Contexts Notices"@en ;
+    skos:definition "The Notices are tools for institutions and researchers to identify Indigenous collections and data and recognize Indigenous rights and interests. The Notices were developed to create pathways for partnership, collaboration, and support of Indigenous cultural authority."@en ;
+    schema:citation "https://localcontexts.org/notices/about-the-notices/"@en ;
+    dcterms:creator <https://kurrawong.ai> ;
+    dcterms:created "2026-02-11"^^xsd:date ;
+    schema:dateCreated "2026-02-11"^^xsd:date ;
+    schema:dateModified "2026-02-11"^^xsd:date ;
+    owl:versionInfo "0.1" ;
+    skos:hasTopConcept notice:opentocollab , notice:attributioncomp , notice:tknotice , notice:bcnotice , notice:authorization , notice:belonging , notice:caring , notice:genderaware , notice:leaveundisturbed , notice:safety , notice:viewing , notice:withholding
+.
+
+# notice collections
+
+engage:
+    a skos:Collection ;
+    skos:prefLabel "Local Contexts Engagement Notice collection"@en ;
+    skos:definition "A collection of Local Contexts engagement notices"@en ;
+    schema:citation "https://localcontexts.org/notice/open-to-collaborate/"^^xsd:anyURI ;
+    dcterms:creator <https://kurrawong.ai> ;
+    dcterms:created "2026-02-11"^^xsd:date ;
+    schema:dateCreated "2026-02-11"^^xsd:date ;
+    schema:dateModified "2026-02-11"^^xsd:date ;
+    owl:versionInfo "0.1" ;
+    skos:member notice:opentocollab
+.
+
+disclosure:
+    a skos:Collection ;
+    skos:prefLabel "Local Contexts Discosulre Notice collection"@en ;
+    skos:definition "A collection of Local Contexts disclosure notices"@en ;
+    schema:citation "https://localcontexts.org/notices/disclosure-notices/"^^xsd:anyURI ;
+    dcterms:creator <https://kurrawong.ai> ;
+    dcterms:created "2026-02-11"^^xsd:date ;
+    schema:dateCreated "2026-02-11"^^xsd:date ;
+    schema:dateModified "2026-02-11"^^xsd:date ;
+    owl:versionInfo "0.1" ;
+    skos:member 
+       notice:attributioncomp , 
+       notice:tknotice , 
+       notice:bcnotice
+.
+
+collectionscare:
+    a skos:Collection ;
+    skos:prefLabel "Local Contexts Collections Care Notice collection"@en ;
+    skos:definition "A collection of Local Contexts collections care notices"@en ;
+    schema:citation "https://localcontexts.org/notices/cc-notices/"^^xsd:anyURI ;
+    dcterms:creator <https://kurrawong.ai> ;
+    dcterms:created "2026-02-11"^^xsd:date ;
+    schema:dateCreated "2026-02-11"^^xsd:date ;
+    schema:dateModified "2026-02-11"^^xsd:date ;
+    owl:versionInfo "0.1" ;
+    skos:member 
+       notice:authorization , 
+       notice:belonging , 
+       notice:caring , 
+       notice:genderaware , 
+       notice:leaveundisturbed , 
+       notice:safety , 
+       notice:viewing , 
+       notice:withholding
+.
+
+# Example TK Labels
+
+tk:attribution
+    a lc:TKLabel, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Attribution"@en ;
+    dcterms:identifier "attribution"^^xsd:token ;
+    skos:notation "TK A" ;
+    schema:citation "https://localcontexts.org/label/tk-attribution/"^^xsd:anyURI ;
+    skos:definition "This Label should be used when you would like anyone who uses this material to know who the correct sources, custodians, or owners are. This is especially useful if this material has been wrongly attributed or important names of the people involved in making this material or safeguarding this material, are missing. This Label allows you to correct historical mistakes in terms of naming and acknowledging the legitimate authorities for this material. This Label asks for future users to also apply the correct names and attribution."@en ;
+    skos:scopeNote "Each Label is meant to be customized by a community. See Template Text."@en ;
+    lc:templateText "This Label is being used to correct historical mistakes or exclusions pertaining to this material. This is especially in relation to the names of the people involved in performing or making this work and/or correctly naming the community from which it originally derives. As a user you are being asked to also apply the correct attribution in any future use of this work."@en ; 
+    skos:example "Photo by the Warumungu community, Tennant Creek"@en ;
+    skos:inScheme tkcs: ;
+    rdfs:isDefinedBy tkcs: .
+
+tk:seasonal
+    a lc:TKLabel, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Seasonal"@en ;
+    dcterms:identifier "seasonal"^^xsd:token ;
+    skos:notation "TK S" ;
+    schema:citation "https://localcontexts.org/label/tk-seasonal/"^^xsd:anyURI ;
+    skos:definition "This Label should be used when you want to let external users know that the material that is openly circulating has seasonal conditions of access and use. This could mean that some material should only be used and heard at particular times of the year. It could also mean that the environment and land where this material derives also influences and impacts its meaning and significance. This Label can be used to help external users know that there are land-based teachings in this material which affect proper use and respectful understanding."@en ;
+    skos:scopeNote "Each Label is meant to be customized by a community. See Template Text."@en ;
+    lc:templateText "This Label is being used to indicate that this material traditionally and usually is heard and/or utilized at a particular time of year and in response to specific seasonal changes and conditions. For instance, many important ceremonies are held at very specific times of the year. This Label is being used to indicate sophisticated relationships between land and knowledge creation. It is also being used to highlight the relationships between recorded material and the specific contexts where it derives, especially the interconnected and embodied teachings that it conveys."@en ;
+    skos:example "This practice is connected to the flowering of wattle in late winter."@en ;
+    skos:inScheme tkcs: ;
+    rdfs:isDefinedBy tkcs:
+.
+
+# Example BC Label
+
+bc:provenance
+    a lc:BCLabel, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Provenance"@en ;
+    dcterms:identifier "provenance"^^xsd:token ;
+    skos:notation "BC P" ;
+    schema:citation "https://localcontexts.org/label/bc-provenance/"^^xsd:anyURI ;
+    skos:definition "Indigenous peoples have the right to make decisions about the future use of information, biological collections, data, and digital sequence information (DSI) that derives from associated lands, waters and territories. This Label reflects a significant relationship and responsibility to the species or biological entity and associated scientific collections and data, and supports the practice of proper and appropriate acknowledgement into the future."@en ;
+    lc:templateText """This Label is being used to affirm an inherent interest Indigenous people have in the scientific collections and data about communities, peoples, and the biodiversity found within traditional lands, waters and territories. [Community name or authorizing party] retains the right to be named and associated with it into the future. This association reflects a significant relationship and responsibility to [the species or biological entity] and associated scientific collections and data.
+
+[Optional attribution statement]"""@en ;
+    skos:example "This Label is being used to affirm an inherent interest Te Roroa people have in the scientific collections and data (including Digital Sequence Information) about communities, peoples, and the biodiversity found within traditional lands, waters and territories. Te Roroa retains the right to be named and associated with it into the future. This association reflects a significant relationship and responsibility to biocultural materials from within the rohe of Te Roroa and associated scientific collections and data."@en ;
+    skos:inScheme bccs: ;
+    rdfs:isDefinedBy bccs:
+.
+
+# Example Notice
+
+notice:authorization
+    a lc:CCNotice, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Authorization"@en ;
+    skos:definition "The Authorization Notice recognizes that specific Tribal or community authorization through consultation is necessary prior to use of specific items or collections in all forms of publication and exhibits."@en ;
+    dcterms:identifier "authorization"^^xsd:token ;
+    odrl:duty lc:CollectionsCareDuty ;
+    lc:templateText "The Authorization Notice is being used to indicate that distinct Tribal or community authorization through consultation needs to be obtained for any reproduction of this item, including for the use in exhibitions and publications in print or online."@en ;
+    schema:citation "https://localcontexts.org/notice/authorization/"^^xsd:anyURI ;
+    skos:inScheme noticecs: ;
+    skos:topConceptOf noticecs: ;
+.
+
+
