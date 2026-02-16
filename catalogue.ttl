@@ -19,6 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://data.idnau.org/pid/vocab/aarr> ,
         <https://data.idnau.org/pid/vocab/care> ,
         <https://data.idnau.org/pid/vocab/cat-roles> ,
+        <https://data.idnau.org/pid/vocab/idn-glossary> ,
         <https://data.idnau.org/pid/vocab/idn-th> ,
         <https://data.idnau.org/pid/vocab/indigeneity> ,
         <https://data.idnau.org/pid/vocab/org-indigeneity> ,
