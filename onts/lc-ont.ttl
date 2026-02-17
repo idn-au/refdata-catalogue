@@ -12,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 odrl:Policy
     a owl:Class ;
     rdfs:isDefinedBy odrl: ;
-    skos:note "A Policy may contain multiple Rules." ;
+    skos:scopeNote "A Policy may contain multiple Rules." ;
     schema:description "A non-empty group of Permissions and/or Prohibitions." ;
     schema:name "Policy" ;
 .
@@ -20,7 +20,8 @@ odrl:Policy
 :CollectionsCareDuty
     a odrl:Duty ;
     rdfs:isDefinedBy ont: ;
-    odrl:comment "You are entering a space where Collections Care Notices are in use. Be prepared to follow the protocols for access, use, handling, and viewing associated with certain items or collections. These are in place for the care of the collections and the communities to whom they belong. For more information about Collections Care Notices, see localcontexts.org." ;
+    schema:name "Collections Care Duty" ;
+    schema:description "You are entering a space where Collections Care Notices are in use. Be prepared to follow the protocols for access, use, handling, and viewing associated with certain items or collections. These are in place for the care of the collections and the communities to whom they belong. For more information about Collections Care Notices, see localcontexts.org." ;
 .
 
 :templateText
