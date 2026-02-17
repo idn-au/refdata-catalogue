@@ -1,0 +1,40 @@
+tkcs:
+    a skos:ConceptScheme ;
+    skos:prefLabel "Traditional Knowledge Labels"@en ;
+    skos:definition "The Traditional Knowledge (TK) Labels are an initiative for Indigenous communities and local organizations. The Labels allow communities to express local and specific conditions for sharing and engaging in future research and relationships in ways that are consistent with already existing community rules, governance and protocols for using, sharing and circulating knowledge and data."@en ;
+    schema:citation "https://localcontexts.org/labels/traditional-knowledge-labels/"^^xsd:anyURI ;
+    dcterms:creator <https://kurrawong.ai> ;
+    dcterms:created "2025-09-23"^^xsd:date ;
+    schema:dateCreated "2025-09-23"^^xsd:date ;
+    schema:dateModified "2026-02-11"^^xsd:date ;
+    owl:versionInfo "0.1" ;
+    skos:hasTopConcept tk:attribution , tk:clan , tk:family , tk:multicommun , tk:commvoice , tk:creative , tk:verified , tk:non-verified , tk:seasonal , tk:womengen , tk:mengen , tk:menrestrict , tk:womenrestrict , tk:cultsensitive , tk:secsac , tk:opentocom , tk:noncom , tk:comuseonly , tk:outreach , tk:opentocollab
+.
+
+
+tk:attribution
+    a :TKLabel, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Attribution"@en ;
+    dcterms:identifier "attribution"^^xsd:token ;
+    skos:notation "TK A" ;
+    schema:citation "https://localcontexts.org/label/tk-attribution/"^^xsd:anyURI ;
+    skos:definition "This Label should be used when you would like anyone who uses this material to know who the correct sources, custodians, or owners are. This is especially useful if this material has been wrongly attributed or important names of the people involved in making this material or safeguarding this material, are missing. This Label allows you to correct historical mistakes in terms of naming and acknowledging the legitimate authorities for this material. This Label asks for future users to also apply the correct names and attribution."@en ;
+    skos:scopeNote "Each Label is meant to be customized by a community. See Template Text."@en ;
+    :templateText "This Label is being used to correct historical mistakes or exclusions pertaining to this material. This is especially in relation to the names of the people involved in performing or making this work and/or correctly naming the community from which it originally derives. As a user you are being asked to also apply the correct attribution in any future use of this work."@en ;
+    skos:example "Photo by the Warumungu community, Tennant Creek"@en ;
+    skos:inScheme tkcs: ;
+    rdfs:isDefinedBy tkcs: .
+
+tk:seasonal
+    a :TKLabel, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Seasonal"@en ;
+    dcterms:identifier "seasonal"^^xsd:token ;
+    skos:notation "TK S" ;
+    schema:citation "https://localcontexts.org/label/tk-seasonal/"^^xsd:anyURI ;
+    skos:definition "This Label should be used when you want to let external users know that the material that is openly circulating has seasonal conditions of access and use. This could mean that some material should only be used and heard at particular times of the year. It could also mean that the environment and land where this material derives also influences and impacts its meaning and significance. This Label can be used to help external users know that there are land-based teachings in this material which affect proper use and respectful understanding."@en ;
+    skos:scopeNote "Each Label is meant to be customized by a community. See Template Text."@en ;
+    :templateText "This Label is being used to indicate that this material traditionally and usually is heard and/or utilized at a particular time of year and in response to specific seasonal changes and conditions. For instance, many important ceremonies are held at very specific times of the year. This Label is being used to indicate sophisticated relationships between land and knowledge creation. It is also being used to highlight the relationships between recorded material and the specific contexts where it derives, especially the interconnected and embodied teachings that it conveys."@en ;
+    skos:example "This practice is connected to the flowering of wattle in late winter."@en ;
+    skos:inScheme tkcs: ;
+    rdfs:isDefinedBy tkcs:
+.
