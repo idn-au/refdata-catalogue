@@ -39,5 +39,12 @@ PREFIX schema: <https://schema.org/>
             prof:hasRole mrr:CompleteCatalogueAndResourceLabels ;
             schema:description "An RDF file containing all the labels for the container content" ;
             schema:name "Labels" ;
+        ] ,
+        [
+            prof:hasArtifact "onts/*.ttl" ;
+            prof:hasRole mrr:ResourceData ;
+            schema:description "Ontologies for syncing" ;
+            schema:name "Syncable Ontologies" ;
+            dcterms:conformsTo <https://linked.data.gov.au/def/ontpub/validator> ;
         ] ;
 .
