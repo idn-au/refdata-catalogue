@@ -1,44 +1,75 @@
-@prefix :   <https://data.idnau.org/pid/lc-ont/> .
-@prefix ont:   <https://data.idnau.org/pid/lc-ont> .
-@prefix collectionscare: <https://data.idnau.org/pid/vocab/lc-notice/collectionscare> .
-@prefix disclosure: <https://data.idnau.org/pid/vocab/lc-notice/disclosure> .
-@prefix engage: <https://data.idnau.org/pid/vocab/lc-notice/engage> .
-@prefix notice:   <https://data.idnau.org/pid/vocab/lc-notice/> .
-@prefix noticecs:   <https://data.idnau.org/pid/vocab/lc-notice> .
-@prefix bc:   <https://data.idnau.org/pid/vocab/bc-labels/> .
-@prefix bccs:   <https://data.idnau.org/pid/vocab/bc-labels> .
-@prefix tk:   <https://data.idnau.org/pid/vocab/tk-labels/> .
-@prefix tkcs:   <https://data.idnau.org/pid/vocab/tk-labels> .
-@prefix kai:  <https://kurrawong.ai> .
-@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix schema: <https://schema.org/> .
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+PREFIX : <https://data.idnau.org/pid/lc-ont/>
+PREFIX kai: <https://kurrawong.ai>
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
+PREFIX ont: <https://data.idnau.org/pid/lc-ont>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-# Ontology header
+odrl:Policy
+    a owl:Class ;
+    rdfs:isDefinedBy odrl: ;
+    skos:note "A Policy may contain multiple Rules." ;
+    schema:description "A non-empty group of Permissions and/or Prohibitions." ;
+    schema:name "Policy" ;
+.
 
-ont:
-    a owl:Ontology ;
-    schema:name "Local Contexts Label Extension Vocabulary" ;
-    schema:creator <https://kurrawong.ai> ;
-    schema:publisher <https://linked.data.gov.au/org/idn> ;
-    schema:dateCreated "2025-09-23"^^xsd:date ;
-    schema:dateModified "2026-02-17"^^xsd:date ;
-    schema:dateIssued "2026-03-31"^^xsd:date ;
-    schema:version "0.2" ;
-    owl:versionIRI :0.2 ;
-    schema:description "Defines TKLabel and BCLabel classes as subclasses of skos:Concept, and lc:templateText for associating reusable boilerplate text with Local Contexts labels." ;
-    skos:historyNote """2026-02 NJC: made OntPub-conformant
+:CollectionsCareDuty
+    a odrl:Duty ;
+    rdfs:isDefinedBy ont: ;
+    odrl:comment "You are entering a space where Collections Care Notices are in use. Be prepared to follow the protocols for access, use, handling, and viewing associated with certain items or collections. These are in place for the care of the collections and the communities to whom they belong. For more information about Collections Care Notices, see localcontexts.org." ;
+.
 
-2025-09 LK: created""" ;
-    schema:codeRepository "https://github.com/idn-au/refdata-catalogue"^^xsd:anyURI ;
-    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+:templateText
+    a owl:DatatypeProperty ;
+    rdfs:domain
+        :BCLabel ,
+        :CCNotice ,
+        :TKLabel ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdf:langString ;
+    schema:description "A prescriptive text string associated with a Label that provides boilerplate wording intended to be reused or customised by end-users. Distinct from skos:example, which is illustrative only." ;
+    schema:name "Template Text" ;
+.
+
+odrl:Duty
+    a owl:Class ;
+    rdfs:isDefinedBy odrl: ;
+    schema:description "The obligation to perform an Action" ;
+    schema:name "Duty" ;
+.
+
+:BCLabel
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf skos:Concept ;
+    schema:description "A SKOS Concept representing a Biocultural Label from the Local Contexts framework." ;
+    schema:name "Biocultural Label" ;
+.
+
+:CCNotice
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf skos:Concept ;
+    schema:description "A SKOS Concept representing a Collection Care Notice from the Local Contexts framework." ;
+    schema:name "Collections Care Notices" ;
+.
+
+:TKLabel
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf skos:Concept ;
+    schema:description "A SKOS Concept representing a Traditional Knowledge Label from the Local Contexts framework." ;
+    schema:name "Traditional Knowledge Label" ;
+.
+
+kai:
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/idn>
@@ -47,59 +78,20 @@ ont:
     schema:url "https://idnau.org/"^^xsd:anyURI ;
 .
 
-<https://kurrawong.ai>
-    a schema:Organization ;
-    schema:name "KurrawongAI" ;
-    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
-.
+ont:
+    a owl:Ontology ;
+    owl:versionIRI :0.2 ;
+    skos:historyNote """2026-02 NJC: made OntPub-conformant
 
-
-:TKLabel a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    schema:name "Traditional Knowledge Label" ;
-    schema:description "A SKOS Concept representing a Traditional Knowledge Label from the Local Contexts framework." ;
-    rdfs:isDefinedBy ont: ;
-.
-
-:BCLabel a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    schema:name "Biocultural Label" ;
-    schema:description "A SKOS Concept representing a Biocultural Label from the Local Contexts framework." ;
-    rdfs:isDefinedBy ont: ;
-.
-
-:CCNotice a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    schema:name "Collections Care Notices" ;
-    schema:description "A SKOS Concept representing a Collection Care Notice from the Local Contexts framework." ;
-    rdfs:isDefinedBy ont: ;
-.
-
-:CollectionsCareDuty
-  a odrl:Duty ;
-  odrl:comment "You are entering a space where Collections Care Notices are in use. Be prepared to follow the protocols for access, use, handling, and viewing associated with certain items or collections. These are in place for the care of the collections and the communities to whom they belong. For more information about Collections Care Notices, see localcontexts.org." ;
-  rdfs:isDefinedBy ont: ;
-.
-
-odrl:Duty
-	a owl:Class ;
-	schema:name "Duty" ;
-    schema:description "The obligation to perform an Action" ;
-    rdfs:isDefinedBy <http://www.w3.org/ns/odrl/2/> ;
-.
-
-odrl:Policy
-	a owl:Class ;
-	schema:name "Policy" ;
-	schema:description "A non-empty group of Permissions and/or Prohibitions." ;
-	skos:note "A Policy may contain multiple Rules." ;
-	rdfs:isDefinedBy <http://www.w3.org/ns/odrl/2/> ;
-.
-
-:templateText a owl:DatatypeProperty ;
-    rdfs:domain :TKLabel , :BCLabel , :CCNotice ;
-    rdfs:range rdf:langString ;
-    schema:name "Template Text" ;
-    schema:description "A prescriptive text string associated with a Label that provides boilerplate wording intended to be reused or customised by end-users. Distinct from skos:example, which is illustrative only." ;
-    rdfs:isDefinedBy ont: ;
+2025-09 LK: created""" ;
+    schema:codeRepository "https://github.com/idn-au/refdata-catalogue"^^xsd:anyURI ;
+    schema:creator kai: ;
+    schema:dateCreated "2025-09-23"^^xsd:date ;
+    schema:dateIssued "2026-03-31"^^xsd:date ;
+    schema:dateModified "2026-02-17"^^xsd:date ;
+    schema:description "Defines TKLabel and BCLabel classes as subclasses of skos:Concept, and lc:templateText for associating reusable boilerplate text with Local Contexts labels." ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "Local Contexts Label Extension Vocabulary" ;
+    schema:publisher <https://linked.data.gov.au/org/idn> ;
+    schema:version "0.2" ;
 .
