@@ -94,7 +94,7 @@ SA - Adaptations must be shared under the same terms."""@en ;
 
 rdflicense:cc-by4.0
     a skos:Concept ;
-    schema:citation "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    schema:citation <http://purl.org/NET/rdflicense/cc-by4.0> ;
     rdfs:isDefinedBy <https://purl.org/NET/rdflicense> ;
     skos:definition """Creative Commons 4.0 - By Attribution
 This license enables reusers to distribute, remix, adapt, and build upon the material in any medium or format, so long as attribution is given to the creator. The license allows for commercial use. CC BY includes the following elements:

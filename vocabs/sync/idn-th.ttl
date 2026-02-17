@@ -1106,7 +1106,7 @@ cs:
     a skos:ConceptScheme ;
     dcterms:created "2022-07-15"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/idn> ;
-    dcterms:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dcterms:modified "2025-08-26"^^xsd:date ;
     dcterms:provenance "This vocabulary was established with a few, broad, themes early in the IDN's 2022 project and will be expanded to incorporate indigenous terms from other data holders, acting as an overarching vocabulary"@en ;
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;
