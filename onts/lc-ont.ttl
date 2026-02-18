@@ -51,12 +51,11 @@ odrl:Duty
     schema:name "Biocultural Label" ;
 .
 
-:CCNotice
+:LCNotice
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
-    rdfs:subClassOf skos:Concept ;
-    schema:description "A SKOS Concept representing a Collection Care Notice from the Local Contexts framework." ;
-    schema:name "Collections Care Notices" ;
+    schema:description The class of all Notice concepts from the Local Contexts framework." ;
+    schema:name "Local Contexts Notice" ;
 .
 
 :TKLabel
