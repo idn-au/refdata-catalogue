@@ -28,7 +28,7 @@ lcncs:
 lcn:collection-engage
     a skos:Collection ;
     skos:prefLabel "Local Contexts Engagement Notice collection"@en ;
-    skos:definition "A collection of Local Contexts engagement notices"@en ;
+    skos:definition "A collection of Local Contexts Engagement notices"@en ;
     sdo:citation "https://localcontexts.org/notice/open-to-collaborate/"^^xsd:anyURI ;
     dcterms:creator <https://kurrawong.ai> ;
     dcterms:created "2026-02-11"^^xsd:date ;
@@ -41,7 +41,7 @@ lcn:collection-engage
 lcn:collection-disclosure
     a skos:Collection ;
     skos:prefLabel "Local Contexts Discosulre Notice collection"@en ;
-    skos:definition "A collection of Local Contexts disclosure notices"@en ;
+    skos:definition "A collection of Local Contexts Disclosure notices"@en ;
     sdo:citation "https://localcontexts.org/notices/disclosure-notices/"^^xsd:anyURI ;
     dcterms:creator <https://kurrawong.ai> ;
     dcterms:created "2026-02-11"^^xsd:date ;
@@ -57,7 +57,7 @@ lcn:collection-disclosure
 lcn:collection-collections-care
     a skos:Collection ;
     skos:prefLabel "Local Contexts Collections Care Notice collection"@en ;
-    skos:definition "A collection of Local Contexts collections care notices"@en ;
+    skos:definition "A collection of Local Contexts Collections Care notices"@en ;
     sdo:citation "https://localcontexts.org/notices/cc-notices/"^^xsd:anyURI ;
     dcterms:creator <https://kurrawong.ai> ;
     dcterms:created "2026-02-11"^^xsd:date ;
