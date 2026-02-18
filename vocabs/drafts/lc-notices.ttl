@@ -79,7 +79,7 @@ lcn:collection-collections-care
 
 #######
 ## to do: sor out template text - or possibluy a different property is needed for these two notices.
-
+#######
 lcn:bc-notice
    a lcont:LCNotice, skos:Concept , odrl:Policy ;
     skos:prefLabel "BC Notice"@en ;
@@ -110,7 +110,10 @@ lcn:attribution-incomplete
     skos:definition "The Attribution Incomplete Notice is attached to a collection or at an item level where there is incomplete, inaccurate, or missing attribution. This Notice indicates to the public that the record and/or metadata is incomplete. Visibly identifying missing attribution within collections is the first step towards correcting existing attribution to include: contributors, collaborators, other authors and/or communities of origin."@en ;
     dcterms:identifier "authorization-incomplete"^^xsd:token ;
     lcont:templateText "Collections and items in our institution have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution."@en ;
-    sdo:citation "https://localcontexts.org/notice/attribution-incomplete/"^^xsd:anyURI ;
+    skos:example """Collections and items Welcome Collection have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution.
+
+If you know of (or think there may be) items among the collections here of relevance to your community, we activelty encourage you to get in touch."""@en ;    
+sdo:citation "https://localcontexts.org/notice/attribution-incomplete/"^^xsd:anyURI ;
     skos:inScheme lcncs: ;
     skos:topConceptOf lcncs: ;
 .
@@ -176,6 +179,7 @@ lcn:open-to-collaborate
     skos:definition "The Open to Collaborate Notice indicates that an institution is committed to developing new modes of collaboration, engagement, and partnership over Indigenous collections and data that have colonial and/or problematic histories or unclear provenance. This Notice indicates an institutional commitment to change and to develop new processes for the care and stewardship of past and future heritage collections."@en ;
     dcterms:identifier "open-to-collaborate"^^xsd:token ;
     lcont:templateText "Our institution is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous Peoples for the care and stewardship of past and future heritage collections."@en ;
+    skos:example "Wise Ancestors is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous Peoples for the care and stewardship of past and future heritage collections."@en ;
     sdo:citation "https://localcontexts.org/notice/open-to-collaborate/"^^xsd:anyURI ;
     skos:inScheme lcncs: ;
     skos:topConceptOf lcncs: ;
