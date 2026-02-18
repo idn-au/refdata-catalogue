@@ -17,6 +17,15 @@ odrl:Policy
     schema:name "Policy" ;
 .
 
+# to do: add below to lc-ont
+
+:LCNotice
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    schema:description The class of all Notice concepts from the Local Contexts framework."@en ;
+    schema:name "Local Contexts Notice"@en ;
+.
+
 :CollectionsCareDuty
     a odrl:Duty ;
     rdfs:isDefinedBy ont: ;
