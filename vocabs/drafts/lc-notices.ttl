@@ -193,11 +193,26 @@ lcn:safety
 .
 
 lcn:viewing
-
+   a lcont:LCNotice, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Viewing"@en ;
+    skos:definition "The Viewing Notice recognizes that there are limits to viewing or accessing current or deaccessioned items in a collection(s) or their representations."@en ;
+    dcterms:identifier "viewing"^^xsd:token ;
+    lcont:templateText "The Viewing Notice is being used to indicate that there are limits to who, how, and when an item/collection can be viewed, distributed, and circulated. This includes existing images or representations of an existing or deaccessioned item(s) within a collection(s)."@en ;
+    sdo:citation "https://localcontexts.org/notice/viewing/"^^xsd:anyURI ;
+    skos:inScheme lcncs: ;
+    skos:topConceptOf lcncs: ;
+.
 
 lcn:withholding
-
-
+   a lcont:LCNotice, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Withholding"@en ;
+    skos:definition "The Withholding Notice recognizes the need to completely withhold certain items or collections from photography, reproduction, publications, and any type of exhibit in future modalities."@en ;
+    dcterms:identifier "withholding"^^xsd:token ;
+    lcont:templateText "The Withholding Notice is being used to indicate that no reproductions of this item or collection should ever be made. If there are already existing photographs or reproductions, these should not be used in any exhibition or publication in print, online, or any other format."@en ;
+    sdo:citation "https://localcontexts.org/notice/withholding/"^^xsd:anyURI ;
+    skos:inScheme lcncs: ;
+    skos:topConceptOf lcncs: ;
+.
 
 
 # to do: add below to lc-ont
