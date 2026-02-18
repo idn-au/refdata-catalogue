@@ -233,13 +233,3 @@ lcn:withholding
     skos:topConceptOf lcncs: ;
 .
 
-
-# to do: add below to lc-ont
-
-lcont:LCNotice
-    a owl:Class ;
-    rdfs:isDefinedBy ont: ;
-    sdo:description The class of all Notice concepts from the Local Contexts framework." ;
-    sdo:name "Local Contexts Notice" ;
-.
-
