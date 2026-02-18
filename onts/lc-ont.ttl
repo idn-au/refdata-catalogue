@@ -17,8 +17,6 @@ odrl:Policy
     schema:name "Policy" ;
 .
 
-# to do: add below to lc-ont
-
 :LCNotice
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
