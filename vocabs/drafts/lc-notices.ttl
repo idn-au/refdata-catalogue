@@ -103,6 +103,21 @@ lcn:tk-notice
 .
 #######
 
+# the 'overall notice'
+
+lcn:cc-overall-notice
+  a lcont:LCNotice, skos:Concept , odrl:Policy ;
+  skos:prefLabel "Overall Notice"@en ;
+  skos:definition "This is the overall Notice icon that can be used to indicate that some or all of the Collections Care Notices are being used."@en ;
+  lcont:templateText "You are entering a space where Collections Care Notices are in use. Be prepared to follow the protocols for access, use, handling, and viewing associated with certain items or collections. These are in place for the care of the collections and the communities to whom they belong. For more information about Collections Care Notices, see localcontexts.org."@en ;
+  sdo:citation "https://localcontexts.org/notices/cc-notices/"^^xsd:anyURI ;
+  odrl:obligation [
+    a odrl:Duty ;
+    odrl:action odrl:inform ;
+    odrl:informedParty odrl:public
+  ] .
+
+# regular notices
 
 lcn:attribution-incomplete 
     a lcont:LCNotice, skos:Concept , odrl:Policy ;
