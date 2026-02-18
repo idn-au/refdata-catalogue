@@ -20,7 +20,7 @@ lcncs:
     sdo:dateCreated "2026-02-11"^^xsd:date ;
     sdo:dateModified "2026-02-11"^^xsd:date ;
     owl:versionInfo "0.1" ;
-    skos:hasTopConcept lcn:open-to-collaboration , lcn:attribution-incomplete , lcn:tk-notice , lcn:bc-notice , lcn:authorization , lcn:belonging , lcn:caring , lcn:gender-aware , lcn:leave-undisturbed , lcn:safety , lcn:viewing , lcn:withholding
+    skos:hasTopConcept lcn:open-to-collaborate , lcn:attribution-incomplete , lcn:tk-notice , lcn:bc-notice , lcn:authorization , lcn:belonging , lcn:caring , lcn:gender-aware , lcn:leave-undisturbed , lcn:safety , lcn:viewing , lcn:withholding
 .
 
 # lc notice concept collections
@@ -35,7 +35,7 @@ lcn:collection-engage
     sdo:dateCreated "2026-02-11"^^xsd:date ;
     sdo:dateModified "2026-02-12"^^xsd:date ;
     owl:versionInfo "0.1" ;
-    skos:member lcn:open-to-collaboration
+    skos:member lcn:open-to-collaborate
 .
 
 lcn:collection-disclosure
@@ -77,6 +77,33 @@ lcn:collection-collections-care
 
 # concepts
 
+#######
+## to do: sor out template text - or possibluy a different property is needed for these two notices.
+
+lcn:bc-notice
+   a lcont:LCNotice, skos:Concept , odrl:Policy ;
+    skos:prefLabel "BC Notice"@en ;
+    skos:definition ""@en ;
+    dcterms:identifier "bc-notice"^^xsd:token ;
+    lcont:templateText ""@en ;
+    sdo:citation "https://localcontexts.org/notice/authorization/"^^xsd:anyURI ;
+    skos:inScheme lcncs: ;
+    skos:topConceptOf lcncs: ;
+.
+
+lcn:tk-notice
+   a lcont:LCNotice, skos:Concept , odrl:Policy ;
+    skos:prefLabel "TK Notice"@en ;
+    skos:definition "This Notice should be used to recognize that place-based knowledge carries accompanying cultural rights and responsibilities and that appropriate permissions may need to be sought for future use of this material."@en ;
+    dcterms:identifier "tk-notice"^^xsd:token ;
+    lcont:templateText "The Leave Undisturbed Notice is being used to indicate that items in a collection should not be disturbed. They should only be moved or disturbed under very limited circumstances according to community guidance."@en ;
+    sdo:citation "https://localcontexts.org/notice/leave-undisturbed/"^^xsd:anyURI ;
+    skos:inScheme lcncs: ;
+    skos:topConceptOf lcncs: ;
+.
+#######
+
+
 lcn:attribution-incomplete 
     a lcont:LCNotice, skos:Concept , odrl:Policy ;
     skos:prefLabel ""@en ;
@@ -98,21 +125,6 @@ lcn:authorization
     skos:inScheme lcncs: ;
     skos:topConceptOf lcncs: ;
 .
-
-#######
-# to do
-
-lcn:bc-notice
-   a lcont:LCNotice, skos:Concept , odrl:Policy ;
-    skos:prefLabel "BC Notice"@en ;
-    skos:definition ""@en ;
-    dcterms:identifier "bc-notice"^^xsd:token ;
-    lcont:templateText ""@en ;
-    sdo:citation "https://localcontexts.org/notice/authorization/"^^xsd:anyURI ;
-    skos:inScheme lcncs: ;
-    skos:topConceptOf lcncs: ;
-.
-#######
 
 lcn:belonging
    a lcont:LCNotice, skos:Concept , odrl:Policy ;
@@ -136,13 +148,54 @@ lcn:caring
     skos:topConceptOf lcncs: ;
 .
 
-
 lcn:gender-aware 
+   a lcont:LCNotice, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Gender Aware"@en ;
+    skos:definition "The Gender Aware Notice recognizes that gender influences access, handling, viewing, and interacting with items or collections. Specifically, this Notice calls attention to who should handle items or collections based on their self-identified gender."@en ;
+    dcterms:identifier "gender-aware"^^xsd:token ;
+    lcont:templateText "The Gender Aware Notice is being used to indicate there are specific gender responsibilities that affect who can access, view, and/or handle this item or collection."@en ;
+    sdo:citation "https://localcontexts.org/notice/gender-aware/"^^xsd:anyURI ;
+    skos:inScheme lcncs: ;
+    skos:topConceptOf lcncs: ;
+.
 
 lcn:leave-undisturbed
+   a lcont:LCNotice, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Leave Undisturbed"@en ;
+    skos:definition "The Leave Undisturbed Notice recognizes the cultural significance and necessity of not disturbing certain cultural materials."@en ;
+    dcterms:identifier "leave-undisturbed"^^xsd:token ;
+    lcont:templateText "The Leave Undisturbed Notice is being used to indicate that items in a collection should not be disturbed. They should only be moved or disturbed under very limited circumstances according to community guidance."@en ;
+    sdo:citation "https://localcontexts.org/notice/leave-undisturbed/"^^xsd:anyURI ;
+    skos:inScheme lcncs: ;
+    skos:topConceptOf lcncs: ;
+.
+
+lcn:open-to-collaborate
+   a lcont:LCNotice, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Open to Collaborate"@en ;
+    skos:definition "The Open to Collaborate Notice indicates that an institution is committed to developing new modes of collaboration, engagement, and partnership over Indigenous collections and data that have colonial and/or problematic histories or unclear provenance. This Notice indicates an institutional commitment to change and to develop new processes for the care and stewardship of past and future heritage collections."@en ;
+    dcterms:identifier "open-to-collaborate"^^xsd:token ;
+    lcont:templateText "Our institution is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous Peoples for the care and stewardship of past and future heritage collections."@en ;
+    sdo:citation "https://localcontexts.org/notice/open-to-collaborate/"^^xsd:anyURI ;
+    skos:inScheme lcncs: ;
+    skos:topConceptOf lcncs: ;
+.
+
+lcn:safety
+   a lcont:LCNotice, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Safety"@en ;
+    skos:definition "The Safety Notice calls attention to the need for respectful safety precautions to avoid handling items in collections when one is menstruating and/or pregnant for the well-being and health of the individual and their family."@en ;
+    dcterms:identifier "safety"^^xsd:token ;
+    lcont:templateText "The Safety Notice is being used to indicate that extreme caution and care needs to be taken in viewing and handling this item or collection for individual or community well-being and health."@en ;
+    sdo:citation "https://localcontexts.org/notice/safety/"^^xsd:anyURI ;
+    skos:inScheme lcncs: ;
+    skos:topConceptOf lcncs: ;
+.
+
+lcn:viewing
 
 
-lcn:open-to-collaboration ,  lcn:tk-notice , lcn:safety , lcn:viewing , lcn:withholding
+lcn:withholding
 
 
 
