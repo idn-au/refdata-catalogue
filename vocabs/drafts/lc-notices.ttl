@@ -1,3 +1,4 @@
+PREFIX idn: <https://linked.data.gov.au/org/idn>
 PREFIX lcn: <https://data.idnau.org/pid/vocab/lc-notices/>
 PREFIX lcncs: <https://data.idnau.org/pid/vocab/lc-notices>
 PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -14,8 +15,9 @@ lcncs:
     a skos:ConceptScheme ;
     skos:prefLabel "Local Contexts Notices"@en ;
     skos:definition "The Notices are tools for institutions and researchers to identify Indigenous collections and data and recognize Indigenous rights and interests. The Notices were developed to create pathways for partnership, collaboration, and support of Indigenous cultural authority."@en ;
-    sdo:citation "https://localcontexts.org/notices/about-the-notices/"@en ;
+    sdo:citation "https://localcontexts.org/notices/about-the-notices/"^^xsd:anyURI ;
     dcterms:creator <https://kurrawong.ai> ;
+    dcterms:publisher idn: ;
     dcterms:created "2026-02-11"^^xsd:date ;
     sdo:dateCreated "2026-02-11"^^xsd:date ;
     sdo:dateModified "2026-02-11"^^xsd:date ;
@@ -35,6 +37,7 @@ lcn:collection-engage
     sdo:dateCreated "2026-02-11"^^xsd:date ;
     sdo:dateModified "2026-02-12"^^xsd:date ;
     owl:versionInfo "0.1" ;
+    skos:inScheme lcncs: ;
     skos:member lcn:open-to-collaborate
 .
 
@@ -48,6 +51,7 @@ lcn:collection-disclosure
     sdo:dateCreated "2026-02-11"^^xsd:date ;
     sdo:dateModified "2026-02-11"^^xsd:date ;
     owl:versionInfo "0.1" ;
+    skos:inScheme lcncs: ;
     skos:member
        lcn:attribution-incomplete ,
        lcn:tk-notice ,
@@ -64,6 +68,7 @@ lcn:collection-collections-care
     sdo:dateCreated "2026-02-11"^^xsd:date ;
     sdo:dateModified "2026-02-11"^^xsd:date ;
     owl:versionInfo "0.1" ;
+    skos:inScheme lcncs: ;
     skos:member
        lcn:authorization ,
        lcn:belonging ,
@@ -77,16 +82,13 @@ lcn:collection-collections-care
 
 # concepts
 
-#######
-## to do: sor out template text - or possibluy a different property is needed for these two notices.
-#######
 lcn:bc-notice
    a lcont:LCNotice, skos:Concept , odrl:Policy ;
     skos:prefLabel "BC Notice"@en ;
     skos:definition ""@en ;
     dcterms:identifier "bc-notice"^^xsd:token ;
     lcont:templateText ""@en ;
-    sdo:citation "https://localcontexts.org/notice/authorization/"^^xsd:anyURI ;
+    sdo:citation "https://localcontexts.org/notice/bc-notice/"^^xsd:anyURI ;
     skos:inScheme lcncs: ;
     skos:topConceptOf lcncs: ;
 .
@@ -96,12 +98,13 @@ lcn:tk-notice
     skos:prefLabel "TK Notice"@en ;
     skos:definition "This Notice should be used to recognize that place-based knowledge carries accompanying cultural rights and responsibilities and that appropriate permissions may need to be sought for future use of this material."@en ;
     dcterms:identifier "tk-notice"^^xsd:token ;
-    lcont:templateText "The Leave Undisturbed Notice is being used to indicate that items in a collection should not be disturbed. They should only be moved or disturbed under very limited circumstances according to community guidance."@en ;
-    sdo:citation "https://localcontexts.org/notice/leave-undisturbed/"^^xsd:anyURI ;
+    lcont:templateText """The BC (Biocultural) Notice is a visible notification that there are accompanying cultural rights and responsibilities that need further attention for any future sharing and use of this material or data. The BC Notice recognizes the rights of Indigenous Peoples to permission the use of information, collections, data and digital sequence information (DSI) generated from the biodiversity or genetic resources associated with traditional lands, waters, and territories. The BC Notice may indicate that BC Labels are in development and their implementation is being negotiated.
+
+[Optional BC Notice use statement]"""@en ;
+    sdo:citation "https://localcontexts.org/notice/tk-notice/"^^xsd:anyURI ;
     skos:inScheme lcncs: ;
     skos:topConceptOf lcncs: ;
 .
-#######
 
 # the 'overall notice'
 
@@ -115,7 +118,10 @@ lcn:cc-overall-notice
     a odrl:Duty ;
     odrl:action odrl:inform ;
     odrl:informedParty odrl:public
-  ] .
+  ] ;
+    skos:inScheme lcncs: ;
+    skos:topConceptOf lcncs: ;
+.
 
 # regular notices
 
