@@ -3,6 +3,7 @@ PREFIX kai: <https://kurrawong.ai>
 PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
 PREFIX lcont: <https://data.idnau.org/pid/lc-ont#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
@@ -61,7 +62,7 @@ lcont:relatedNotice
 # ODRL property labels
 
 odrl:attribute
-	a :Action, skos:Concept ;
+	a odrl:Action, skos:Concept ;
 	schema:name "Attribute"@en ;
 	schema:description "To attribute the use of the Asset."@en ;
     prov:wasDerivedFrom
