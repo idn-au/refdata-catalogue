@@ -9,12 +9,30 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+# LCONT classes
+
+lcont:BCLabel
+    a owl:Class ;
+    rdfs:isDefinedBy lcont: ;
+    schema:description "A SKOS Concept representing a Biocultural Label from the Local Contexts framework." ;
+    schema:name "Biocultural Label" ;
+.
+
+lcont:TKLabel
+    a owl:Class ;
+    rdfs:isDefinedBy lcont: ;
+    schema:description "A SKOS Concept representing a Traditional Knowledge Label from the Local Contexts framework." ;
+    schema:name "Traditional Knowledge Label" ;
+.
+
 lcont:LCNotice
     a owl:Class ;
     rdfs:isDefinedBy lcont: ;
     schema:description "The class of all Notice concepts from the Local Contexts framework."@en ;
     schema:name "Local Contexts Notice"@en ;
 .
+
+# LCONT properties
 
 lcont:templateText
     a owl:DatatypeProperty ;
@@ -40,56 +58,35 @@ lcont:relatedNotice
     schema:name "Related Notice"
 .
 
-lcont:BCLabel
-    a owl:Class ;
-    rdfs:isDefinedBy lcont: ;
-    schema:description "A SKOS Concept representing a Biocultural Label from the Local Contexts framework." ;
-    schema:name "Biocultural Label" ;
-.
-
-:lcontLCNotice
-    a owl:Class ;
-    rdfs:isDefinedBy lcont: ;
-    schema:description "The class of all Notice concepts from the Local Contexts framework." ;
-    owl:disjointWith :BCLabel , :TKLabel ;
-    schema:name "Local Contexts Notice" ;
-.
-
-lcont:TKLabel
-    a owl:Class ;
-    rdfs:isDefinedBy lcont: ;
-    schema:description "A SKOS Concept representing a Traditional Knowledge Label from the Local Contexts framework." ;
-    schema:name "Traditional Knowledge Label" ;
-.
-
 # ODRL property labels
 
 odrl:attribute
 	a :Action, skos:Concept ;
-	rdfs:label "Attribute"@en ;
-	skos:definition "To attribute the use of the Asset."@en ;
+	schema:name "Attribute"@en ;
+	schema:description "To attribute the use of the Asset."@en ;
+    prov:wasDerivedFrom
 .
 
 odrl:duty
 	a rdf:Property , owl:ObjectProperty, skos:Concept ;
-	rdfs:label "Has Duty"@en ;
-	skos:definition "Relates an individual Duty to a Permission."@en ;
+	schema:name "Has Duty"@en ;
+	schema:description "Relates an individual Duty to a Permission."@en ;
 	rdfs:domain :Permission ;
 	rdfs:range :Duty 
 .
 
 odrl:permission
 	a rdf:Property , owl:ObjectProperty, skos:Concept ;
-	rdfs:label "Has Permission"@en ;
-	skos:definition "Relates an individual Permission to a Policy."@en ;
+	schema:name "Has Permission"@en ;
+	schema:description "Relates an individual Permission to a Policy."@en ;
 	rdfs:domain :Policy ;
 	rdfs:range :Permission
 .
 
 odrl:prohibition
 	a rdf:Property , owl:ObjectProperty, skos:Concept ;
-	rdfs:label "Has Prohibition"@en ;
-	skos:definition "Relates an individual Prohibition to a Policy."@en ;
+	schema:name "Has Prohibition"@en ;
+	schema:description "Relates an individual Prohibition to a Policy."@en ;
 .
 
 # ODRL Class labels
@@ -103,8 +100,8 @@ odrl:Duty
 odrl:Permission
 	a rdfs:Class , owl:Class, skos:Concept ;
 	owl:disjointWith :Prohibition, :Duty ;
-	rdfs:label "Permission"@en ;
-	skos:definition "The ability to perform an Action over an Asset."@en
+	schema:name "Permission"@en ;
+	schema:description "The ability to perform an Action over an Asset."@en
 .
 
 odrl:Policy
@@ -117,8 +114,8 @@ odrl:Prohibition
 	a rdfs:Class , owl:Class, skos:Concept ;
 	rdfs:subClassOf :Rule ;
 	owl:disjointWith :Duty, :Permission ;
-	rdfs:label "Prohibition"@en ;
-	skos:definition "The inability to perform an Action over an Asset."@en
+	schema:name "Prohibition"@en ;
+	schema:description"The inability to perform an Action over an Asset."@en
 .
 
 kai:
@@ -149,4 +146,7 @@ ont:
     schema:name "Local Contexts Label Extension Vocabulary" ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
     schema:version "0.2" ;
+    sdo:copyrightHolder kai: ;
+    sdo:copyrightNotice "KurrawongAI, 2026" ;
+    sdo:copyrightYear "2026"^^xsd:gYear ;
 .
