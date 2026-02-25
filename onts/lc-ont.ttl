@@ -14,21 +14,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 lcont:BCLabel
     a owl:Class ;
-    rdfs:isDefinedBy lcont: ;
+    rdfs:isDefinedBy ont: ;
     schema:description "A SKOS Concept representing a Biocultural Label from the Local Contexts framework." ;
     schema:name "Biocultural Label" ;
 .
 
 lcont:TKLabel
     a owl:Class ;
-    rdfs:isDefinedBy lcont: ;
+    rdfs:isDefinedBy ont: ;
     schema:description "A SKOS Concept representing a Traditional Knowledge Label from the Local Contexts framework." ;
     schema:name "Traditional Knowledge Label" ;
 .
 
 lcont:LCNotice
     a owl:Class ;
-    rdfs:isDefinedBy lcont: ;
+    rdfs:isDefinedBy ont: ;
     schema:description "The class of all Notice concepts from the Local Contexts framework."@en ;
     schema:name "Local Contexts Notice"@en ;
 .
@@ -65,23 +65,22 @@ odrl:attribute
 	a odrl:Action, skos:Concept ;
 	schema:name "Attribute"@en ;
 	schema:description "To attribute the use of the Asset."@en ;
-    prov:wasDerivedFrom
 .
 
 odrl:duty
 	a rdf:Property , owl:ObjectProperty, skos:Concept ;
 	schema:name "Has Duty"@en ;
 	schema:description "Relates an individual Duty to a Permission."@en ;
-	rdfs:domain :Permission ;
-	rdfs:range :Duty 
+	rdfs:domain odrl:Permission ;
+	rdfs:range odrl:Duty 
 .
 
 odrl:permission
 	a rdf:Property , owl:ObjectProperty, skos:Concept ;
 	schema:name "Has Permission"@en ;
 	schema:description "Relates an individual Permission to a Policy."@en ;
-	rdfs:domain :Policy ;
-	rdfs:range :Permission
+	rdfs:domain odrl:Policy ;
+	rdfs:range odrl:Permission
 .
 
 odrl:prohibition
@@ -100,7 +99,7 @@ odrl:Duty
 
 odrl:Permission
 	a rdfs:Class , owl:Class, skos:Concept ;
-	owl:disjointWith :Prohibition, :Duty ;
+	owl:disjointWith odrl:Prohibition, odrl:Duty ;
 	schema:name "Permission"@en ;
 	schema:description "The ability to perform an Action over an Asset."@en
 .
@@ -113,8 +112,8 @@ odrl:Policy
 
 odrl:Prohibition
 	a rdfs:Class , owl:Class, skos:Concept ;
-	rdfs:subClassOf :Rule ;
-	owl:disjointWith :Duty, :Permission ;
+	rdfs:subClassOf odrl:Rule ;
+	owl:disjointWith odrl:Duty, odrl:Permission ;
 	schema:name "Prohibition"@en ;
 	schema:description"The inability to perform an Action over an Asset."@en
 .
