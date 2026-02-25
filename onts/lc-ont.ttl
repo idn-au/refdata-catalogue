@@ -37,9 +37,9 @@ lcont:LCNotice
 lcont:templateText
     a owl:DatatypeProperty ;
     rdfs:domain
-        :BCLabel ,
-        :LCNotice ,
-        :TKLabel ;
+        lcont:BCLabel ,
+        lcont:LCNotice ,
+        lcont:TKLabel ;
     rdfs:isDefinedBy lcont: ;
     rdfs:range rdf:langString ;
     schema:description "A prescriptive text string associated with a Label or Notice that provides boilerplate wording intended to be reused or customised by end-users. Distinct from skos:example, which is illustrative only." ;
@@ -49,10 +49,10 @@ lcont:templateText
 lcont:relatedNotice
     a owl:Property ;
     rdfs:domain
-      :LCNotice ;
+      lcont:BCLabel ,
+      lcont:TKLabel ;
     rdfs:range
-      :BCLabel ,
-      :TKLabel ;
+      lcont:LCNotice ;
     rdfs:isDefinedBy lcont: ;
     schema:description "Property indicating that a Local Contexts Label is related in some way ot a Local Contexts Notice" ;
     schema:name "Related Notice"
