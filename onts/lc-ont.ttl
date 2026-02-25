@@ -1,7 +1,7 @@
-PREFIX : <https://data.idnau.org/pid/lc-ont#>
+PREFIX ont: <https://data.idnau.org/pid/lc-ont>
 PREFIX kai: <https://kurrawong.ai>
 PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
-PREFIX lcont: <https://data.idnau.org/pid/lc-ont>
+PREFIX lcont: <https://data.idnau.org/pid/lc-ont#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -9,14 +9,14 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-:LCNotice
+lcont:LCNotice
     a owl:Class ;
     rdfs:isDefinedBy lcont: ;
     schema:description "The class of all Notice concepts from the Local Contexts framework."@en ;
     schema:name "Local Contexts Notice"@en ;
 .
 
-:templateText
+lcont:templateText
     a owl:DatatypeProperty ;
     rdfs:domain
         :BCLabel ,
@@ -28,7 +28,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Template Text" ;
 .
 
-:relatedNotice
+lcont:relatedNotice
     a owl:Property ;
     rdfs:domain
       :LCNotice ;
@@ -40,14 +40,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Related Notice"
 .
 
-:BCLabel
+lcont:BCLabel
     a owl:Class ;
     rdfs:isDefinedBy lcont: ;
     schema:description "A SKOS Concept representing a Biocultural Label from the Local Contexts framework." ;
     schema:name "Biocultural Label" ;
 .
 
-:LCNotice
+:lcontLCNotice
     a owl:Class ;
     rdfs:isDefinedBy lcont: ;
     schema:description "The class of all Notice concepts from the Local Contexts framework." ;
@@ -55,7 +55,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Local Contexts Notice" ;
 .
 
-:TKLabel
+lcont:TKLabel
     a owl:Class ;
     rdfs:isDefinedBy lcont: ;
     schema:description "A SKOS Concept representing a Traditional Knowledge Label from the Local Contexts framework." ;
@@ -133,7 +133,7 @@ kai:
     schema:url "https://idnau.org/"^^xsd:anyURI ;
 .
 
-lcont:
+ont:
     a owl:Ontology ;
     owl:versionIRI :0.2 ;
     skos:historyNote """2026-02 NJC: made OntPub-conformant
