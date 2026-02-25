@@ -132,7 +132,7 @@ kai:
 
 ont:
     a owl:Ontology ;
-    owl:versionIRI :0.2 ;
+    owl:versionIRI lcont:0.2 ;
     skos:historyNote """2026-02 NJC: made OntPub-conformant
 
 2025-09 LK: created""" ;
