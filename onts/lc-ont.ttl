@@ -1,7 +1,7 @@
-PREFIX : <https://data.idnau.org/pid/lc-ont/>
+PREFIX : <https://data.idnau.org/pid/lc-ont#>
 PREFIX kai: <https://kurrawong.ai>
 PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
-PREFIX ont: <https://data.idnau.org/pid/lc-ont>
+PREFIX lcont: <https://data.idnau.org/pid/lc-ont>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -9,18 +9,10 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-odrl:Policy
-    a owl:Class ;
-    rdfs:isDefinedBy odrl: ;
-    skos:scopeNote "A Policy may contain multiple Rules." ;
-    schema:description "A non-empty group of Permissions and/or Prohibitions." ;
-    schema:name "Policy" ;
-.
-
 :LCNotice
     a owl:Class ;
-    rdfs:isDefinedBy ont: ;
-    schema:description The class of all Notice concepts from the Local Contexts framework."@en ;
+    rdfs:isDefinedBy lcont: ;
+    schema:description "The class of all Notice concepts from the Local Contexts framework."@en ;
     schema:name "Local Contexts Notice"@en ;
 .
 
@@ -30,7 +22,7 @@ odrl:Policy
         :BCLabel ,
         :LCNotice ,
         :TKLabel ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy lcont: ;
     rdfs:range rdf:langString ;
     schema:description "A prescriptive text string associated with a Label or Notice that provides boilerplate wording intended to be reused or customised by end-users. Distinct from skos:example, which is illustrative only." ;
     schema:name "Template Text" ;
@@ -40,43 +32,93 @@ odrl:Policy
     a owl:Property ;
     rdfs:domain
       :LCNotice ;
-    rdrf:range
+    rdfs:range
       :BCLabel ,
       :TKLabel ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy lcont: ;
     schema:description "Property indicating that a Local Contexts Label is related in some way ot a Local Contexts Notice" ;
-    schema:name "Related Notice" ;
-
-
-odrl:Duty
-    a owl:Class ;
-    rdfs:isDefinedBy odrl: ;
-    schema:description "The obligation to perform an Action" ;
-    schema:name "Duty" ;
+    schema:name "Related Notice"
 .
 
 :BCLabel
     a owl:Class ;
-    rdfs:isDefinedBy ont: ;
-    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy lcont: ;
     schema:description "A SKOS Concept representing a Biocultural Label from the Local Contexts framework." ;
     schema:name "Biocultural Label" ;
 .
 
 :LCNotice
     a owl:Class ;
-    rdfs:isDefinedBy ont: ;
-    schema:description The class of all Notice concepts from the Local Contexts framework." ;
+    rdfs:isDefinedBy lcont: ;
+    schema:description "The class of all Notice concepts from the Local Contexts framework." ;
     owl:disjointWith :BCLabel , :TKLabel ;
     schema:name "Local Contexts Notice" ;
 .
 
 :TKLabel
     a owl:Class ;
-    rdfs:isDefinedBy ont: ;
-    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy lcont: ;
     schema:description "A SKOS Concept representing a Traditional Knowledge Label from the Local Contexts framework." ;
     schema:name "Traditional Knowledge Label" ;
+.
+
+# ODRL property labels
+
+odrl:attribute
+	a :Action, skos:Concept ;
+	rdfs:label "Attribute"@en ;
+	skos:definition "To attribute the use of the Asset."@en ;
+.
+
+odrl:duty
+	a rdf:Property , owl:ObjectProperty, skos:Concept ;
+	rdfs:label "Has Duty"@en ;
+	skos:definition "Relates an individual Duty to a Permission."@en ;
+	rdfs:domain :Permission ;
+	rdfs:range :Duty 
+.
+
+odrl:permission
+	a rdf:Property , owl:ObjectProperty, skos:Concept ;
+	rdfs:label "Has Permission"@en ;
+	skos:definition "Relates an individual Permission to a Policy."@en ;
+	rdfs:domain :Policy ;
+	rdfs:range :Permission
+.
+
+odrl:prohibition
+	a rdf:Property , owl:ObjectProperty, skos:Concept ;
+	rdfs:label "Has Prohibition"@en ;
+	skos:definition "Relates an individual Prohibition to a Policy."@en ;
+.
+
+# ODRL Class labels
+
+odrl:Duty
+    a owl:Class ;
+    schema:description "The obligation to perform an Action" ;
+    schema:name "Duty" ;
+.
+
+odrl:Permission
+	a rdfs:Class , owl:Class, skos:Concept ;
+	owl:disjointWith :Prohibition, :Duty ;
+	rdfs:label "Permission"@en ;
+	skos:definition "The ability to perform an Action over an Asset."@en
+.
+
+odrl:Policy
+    a owl:Class ;
+    schema:description "A non-empty group of Permissions and/or Prohibitions." ;
+    schema:name "Policy" ;
+.
+
+odrl:Prohibition
+	a rdfs:Class , owl:Class, skos:Concept ;
+	rdfs:subClassOf :Rule ;
+	owl:disjointWith :Duty, :Permission ;
+	rdfs:label "Prohibition"@en ;
+	skos:definition "The inability to perform an Action over an Asset."@en
 .
 
 kai:
@@ -91,7 +133,7 @@ kai:
     schema:url "https://idnau.org/"^^xsd:anyURI ;
 .
 
-ont:
+lcont:
     a owl:Ontology ;
     owl:versionIRI :0.2 ;
     skos:historyNote """2026-02 NJC: made OntPub-conformant
