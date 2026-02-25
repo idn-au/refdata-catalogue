@@ -36,6 +36,18 @@ odrl:Policy
     schema:name "Template Text" ;
 .
 
+:relatedNotice
+    a owl:Property ;
+    rdfs:domain
+      :LCNotice ;
+    rdrf:range
+      :BCLabel ,
+      :TKLabel ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "Property indicating that a Local Contexts Label is related in some way ot a Local Contexts Notice" ;
+    schema:name "Related Notice" ;
+
+
 odrl:Duty
     a owl:Class ;
     rdfs:isDefinedBy odrl: ;
