@@ -1,7 +1,6 @@
 PREFIX bc:      <https://data.idnau.org/pid/vocab/bc-labels/>
 PREFIX bccs:    <https://data.idnau.org/pid/vocab/bc-labels>
 PREFIX cc:      <http://creativecommons.org/ns#>
-PREFIX cs:      <https://data.idnau.org/pid/vocab/tk-labels>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX idn:     <https://linked.data.gov.au/org/idn>
 PREFIX kai:     <https://kurrawong.ai>
@@ -18,6 +17,7 @@ PREFIX schema:  <https://schema.org/>
 PREFIX sdo:     <https://schema.org/>
 PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
 PREFIX tk:      <https://data.idnau.org/pid/vocab/tk-labels/>
+PREFIX tkcs:      <https://data.idnau.org/pid/vocab/tk-labels>
 PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 
 lcont:followProtocol  rdf:type  odrl:Action;
@@ -59,6 +59,7 @@ ont:    rdf:type             owl:Ontology;
         owl:versionIRI       lcont:0.2;
         skos:historyNote     "2026-02 NJC: made OntPub-conformant\n\n2025-09 LK: created";
         sdo:codeRepository   "https://github.com/idn-au/refdata-catalogue"^^xsd:anyURI;
+        rdfs:seeAlso         tkcs: , bccs: , lcncs: ; 
         sdo:copyrightHolder  kai:;
         sdo:copyrightNotice  "KurrawongAI, 2026";
         sdo:copyrightYear    "2026"^^xsd:gYear;
