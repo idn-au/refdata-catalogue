@@ -5,13 +5,13 @@ direction LR
 %% =========
 %% Schemes (instances)
 %% =========
-class TK_Scheme["ConceptScheme: TK Labels\nhttps://data.idnau.org/pid/vocab/tk-labels"] {
+class TK_Scheme["ConceptScheme: TK Labels [https://data.idnau.org/pid/vocab/tk-labels"] {
   <<skos:ConceptScheme>>
 }
-class BC_Scheme["ConceptScheme: BC Labels\nhttps://data.idnau.org/pid/vocab/bc-labels"] {
+class BC_Scheme["ConceptScheme: BC Labels [https://data.idnau.org/pid/vocab/bc-labels"] {
   <<skos:ConceptScheme>>
 }
-class Notices_Scheme["ConceptScheme: LC Notices\nhttps://data.idnau.org/pid/vocab/lc-notices"] {
+class Notices_Scheme["ConceptScheme: LC Notices [https://data.idnau.org/pid/vocab/lc-notices"] {
   <<skos:ConceptScheme>>
 }
 
