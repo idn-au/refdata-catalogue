@@ -19,7 +19,7 @@ class Notices_Scheme["ConceptScheme: LC Notices [https://data.idnau.org/pid/voca
 %% Core SKOS
 %% =========
 class Concept {
-  <skos:Concept>
+  <<skos:Concept>>
   skos:prefLabel (langString)
   skos:definition (langString)
   skos:scopeNote (langString)
