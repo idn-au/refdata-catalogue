@@ -2,42 +2,31 @@
 classDiagram
 direction LR
 
-%% =========
 %% Schemes (instances)
-%% =========
-class TK_Scheme["ConceptScheme: TK Labels [https://data.idnau.org/pid/vocab/tk-labels"] {
-  <<skos:ConceptScheme>>
-}
-class BC_Scheme["ConceptScheme: BC Labels [https://data.idnau.org/pid/vocab/bc-labels"] {
-  <<skos:ConceptScheme>>
-}
-class Notices_Scheme["ConceptScheme: LC Notices [https://data.idnau.org/pid/vocab/lc-notices"] {
-  <<skos:ConceptScheme>>
-}
+class TK_Scheme["TK Labels ConceptScheme"]
+class BC_Scheme["BC Labels ConceptScheme"]
+class Notices_Scheme["LC Notices ConceptScheme"]
 
-%% =========
 %% Core SKOS
-%% =========
 class Concept {
   <<skos:Concept>>
-  skos:prefLabel (langString)
-  skos:definition (langString)
-  skos:scopeNote (langString)
-  skos:notation (string)
-  skos:inScheme (IRI)
-  sdo:citation (anyURI)
-  dcterms:identifier (xsd:token)
+  skos:prefLabel
+  skos:definition
+  skos:scopeNote
+  skos:notation
+  skos:inScheme
+  sdo:citation
+  dcterms:identifier
 }
-TK_Scheme "1" o-- "*" Concept : skos:hasTopConcept
-BC_Scheme "1" o-- "*" Concept : skos:hasTopConcept
-Notices_Scheme "1" o-- "*" Concept : skos:hasTopConcept
 
-Concept "*" --> "*" Concept : skos:broader / skos:narrower
-Concept "*" --> "*" Concept : skos:relatedMatch
+TK_Scheme "1" o-- "*" Concept : hasTopConcept
+BC_Scheme "1" o-- "*" Concept : hasTopConcept
+Notices_Scheme "1" o-- "*" Concept : hasTopConcept
 
-%% =========
-%% Local Contexts ontology classes
-%% =========
+Concept "*" --> "*" Concept : broader/narrower
+Concept "*" --> "*" Concept : relatedMatch
+
+%% Local Contexts classes
 class TKLabel { <<lcont:TKLabel>> }
 class BCLabel { <<lcont:BCLabel>> }
 class LCNotice { <<lcont:LCNotice>> }
@@ -46,33 +35,21 @@ TKLabel --|> Concept
 BCLabel --|> Concept
 LCNotice --|> Concept
 
-TKLabel "*" --> "1" TK_Scheme : skos:inScheme
-BCLabel "*" --> "1" BC_Scheme : skos:inScheme
-LCNotice "*" --> "1" Notices_Scheme : skos:inScheme
+TKLabel "*" --> "1" TK_Scheme : inScheme
+BCLabel "*" --> "1" BC_Scheme : inScheme
+LCNotice "*" --> "1" Notices_Scheme : inScheme
 
-%% =========
-%% Declared properties in lc-ont
-%% =========
-class relatedNotice {
-  <<lcont:relatedNotice>>
-  domain: TKLabel, BCLabel
-  range: LCNotice
-}
-TKLabel "*" --> "*" LCNotice : lcont:relatedNotice
-BCLabel "*" --> "*" LCNotice : lcont:relatedNotice
+%% Declared lc-ont properties
+class relatedNotice { <<lcont:relatedNotice>> }
+TKLabel "*" --> "*" LCNotice : relatedNotice
+BCLabel "*" --> "*" LCNotice : relatedNotice
 
-class templateText {
-  <<lcont:templateText>>
-  domain: TKLabel, BCLabel, LCNotice
-  range: rdf:langString
-}
-TKLabel --> templateText : lcont:templateText
-BCLabel --> templateText : lcont:templateText
-LCNotice --> templateText : lcont:templateText
+class templateText { <<lcont:templateText>> }
+TKLabel --> templateText : templateText
+BCLabel --> templateText : templateText
+LCNotice --> templateText : templateText
 
-%% =========
-%% ODRL policy pattern
-%% =========
+%% ODRL pattern
 class Policy { <<odrl:Policy>> }
 class Permission { <<odrl:Permission>> }
 class Prohibition { <<odrl:Prohibition>> }
@@ -82,17 +59,14 @@ class Action { <<odrl:Action>> }
 TKLabel --|> Policy
 BCLabel --|> Policy
 
-Policy "1" o-- "*" Permission : odrl:permission
-Policy "1" o-- "*" Prohibition : odrl:prohibition
-Permission "1" o-- "*" Duty : odrl:duty
-Prohibition "1" o-- "*" Duty : odrl:duty
-Permission "*" --> "1" Action : odrl:action
-Prohibition "*" --> "1" Action : odrl:action
-Duty "*" --> "1" Action : odrl:action
+Policy "1" o-- "*" Permission : permission
+Policy "1" o-- "*" Prohibition : prohibition
+Permission "1" o-- "*" Duty : duty
+Prohibition "1" o-- "*" Duty : duty
+Permission "*" --> "1" Action : action
+Prohibition "*" --> "1" Action : action
+Duty "*" --> "1" Action : action
 
-class followProtocol {
-  <<lcont:followProtocol>>
-  skos:prefLabel "Follow protocol"@en
-}
+class followProtocol { <<lcont:followProtocol>> }
 followProtocol --|> Action
 ```
