@@ -107,7 +107,7 @@ care:E
 
 care:E1
     skos:scopeNote "Ethical data are data that do not stigmatize or portray Indigenous Peoples, cultures, or knowledges in terms of deficit. Ethical data are collected and used in ways that align with Indigenous ethical frameworks and with rights affirmed in UNDRIP. Assessing ethical benefits and harms should be done from the perspective of the Indigenous Peoples, nations, or communities to whom the data relate"@en ;
-    skos:relatedMatch  tk:verified , tk:non-verified , 
+    skos:relatedMatch  tk:verified , tk:non-verified ;
 .
 
 care:E2
