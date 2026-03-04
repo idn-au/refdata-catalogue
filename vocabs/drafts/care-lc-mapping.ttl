@@ -28,7 +28,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sdo:dateModified "2026-03-04"^^xsd:date ;
     sdo:dateIssued "2099-12-12"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;
-    dcterms:rights "(c) Indigenous Data Network, 2026" ;
+    sdo:copyrightHolder <https://linked.data.gov.au/org/idn> ;
+    sdo:copyrightNotice "(c) Indigenous Data Network, 2026" ;
+    sdo:copyrightYear "2026"^^xsd:gYear ;
     sdo:codeRepository "https://github.com/idn-au/refdata-catalogue"^^xsd:anyURI ;
 .
 
