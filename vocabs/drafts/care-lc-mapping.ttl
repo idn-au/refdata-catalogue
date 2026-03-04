@@ -9,7 +9,6 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX tk: <https://data.idnau.org/pid/vocab/tk-labels/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-
 cs:
     a skos:ConceptScheme ;
     dcterms:created "2019-12-11"^^xsd:date ;
@@ -56,6 +55,7 @@ care:C1
     skos:prefLabel "C1"@en ;
     skos:broader care:C ;
     skos:scopeNote "Governments and institutions must actively support the use and reuse of data by Indigenous nations and communities by facilitating the establishment of the foundations for Indigenous innovation, value generation, and the promotion of local self-determined development processes"@en ;
+    skos:related tk:commercial , tk:non-commercial , tk:open-to-collaboration , bc:non-commercial , bc:open-to-commercialization , bc:open-to-collaboration , bc:research-use ;
 .
 
 care:C2
@@ -67,6 +67,7 @@ care:C2
     skos:prefLabel "C2"@en ;
     skos:broader care:C ;
     skos:scopeNote "Data enrich the planning, implementation, and evaluation processes that support the service and policy needs of Indigenous communities. Data also enable better engagement between citizens, institutions, and governments to improve decision-making. Ethical use of open data has the capacity to improve transparency and decision-making by providing Indigenous nations and communities with a better understanding of their peoples, territories, and resources. It similarly can provide greater insight into third-party policies and programs affecting Indigenous Peoples"@en ;
+    skos:realated tk:outreach , bc:outreach ; 
 .
 
 care:C3
@@ -78,6 +79,7 @@ care:C3
     skos:prefLabel "C3"@en ;
     skos:broader care:C ;
     skos:scopeNote "Indigenous data are grounded in community values, which extend to society at large. Any value created from Indigenous data should benefit Indigenous communities in an equitable manner and contribute to Indigenous aspirations for wellbeing"@en ;
+    skos:related tk:commercial ;
 .
 
 care:A
@@ -100,6 +102,7 @@ care:A1
     skos:prefLabel "A1"@en ;
     skos:broader care:A ;
     skos:scopeNote "Indigenous Peoples have rights and interests in both Indigenous Knowledge and Indigenous data. Indigenous Peoples have collective and individual rights to free, prior, and informed consent in the collection and use of such data, including the development of data policies and protocols for collection"@en ;
+    skos:related tk:attribution , tk:multiple-communities , bc:provenance ;
 .
 
 care:A2
@@ -111,6 +114,7 @@ care:A2
     skos:prefLabel "A2"@en ;
     skos:broader care:A ;
     skos:scopeNote "Indigenous Peoples have the right to data that are relevant to their world views and empower self-determination and effective self-governance. Indigenous data must be made available and accessible to Indigenous nations and communities in order to support Indigenous governance"@en ;
+    skos:related tk:attribution , tk:multiple-communities , bc:provenance ;
 .
 
 care:A3
@@ -210,4 +214,5 @@ care:E3
     skos:prefLabel "E3"@en ;
     skos:broader care:E ;
     skos:scopeNote "Data governance should take into account the potential future use and future harm based on ethical frameworks grounded in the values and principles of the relevant Indigenous community. Metadata should acknowledge the provenance and purpose and any limitations or obligations in secondary use inclusive of issues of consent"@en ;
+    skos:related tk:attribution , bc:provenance , 
 .
