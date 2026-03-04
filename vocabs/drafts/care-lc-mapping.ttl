@@ -22,8 +22,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:historyNote "Created for scoring and inference use"@en ;
     owl:versionInfo "0.1.0" ;
     owl:versionIRI <https://data.idnau.org/def/care-lc-mapping/0.1.0> ;
-    void:subjectsTarget <http://linked.data.gov.au/def/care> ;
-    void:objectsTarget  <https://data.idnau.org/pid/vocab/tk-labels> ;
+    void:subjectsTarget <http://linked.data.gov.au/def/care/> ;
+    void:objectsTarget  tk: , bc: ;
     void:linkPredicate  skos:relatedMatch ;
     dcterms:identifier "carelcmap"^^xsd:token ;
     sdo:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
