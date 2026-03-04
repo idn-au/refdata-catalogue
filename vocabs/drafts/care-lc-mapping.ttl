@@ -3,7 +3,7 @@ PREFIX bc: <https://data.idnau.org/pid/vocab/bc-labels/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX care: <http://linked.data.gov.au/def/care/>
 PREFIX lcn: <https://data.idnau.org/pid/vocab/lc-notices/>
-PREFIX owl:   <http://www.w3.org/2002/07/owl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -13,19 +13,23 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://data.idnau.org/def/care-lc-mapping>
     a owl:Ontology, void:Linkset ;
-    dcterms:created "2026-03-04"^^xsd:date ;
+    sdo:dateCreated "2026-03-04"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/idn> ;
-    dcterms:title "CARE --> Local Contexts label mappings"@en ;
-    dcterms:description "Standalone mapping assertions linking CARE principles to Local Contexts TK and BC labels for scoring and inference use."@en ;
+    skos:prefLabel "CARE --> Local Contexts label mappings"@en ;
+    skos:definition "Standalone mapping assertions linking CARE principles to Local Contexts TK and BC labels"@en ;
+    skos:historyNote "Created for scoring and inference use"@en ;
     owl:versionInfo "0.1.0" ;
+    owl:versionIRI <https://data.idnau.org/def/care-lc-mapping/0.1.0> ;
     void:subjectsTarget <http://linked.data.gov.au/def/care> ;
     void:objectsTarget  <https://data.idnau.org/pid/vocab/tk-labels> ;
     void:linkPredicate  skos:relatedMatch ;
     dcterms:identifier "carelcmap"^^xsd:token ;
-    dcterms:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
-    dcterms:modified "2026-03-04"^^xsd:date ;
+    sdo:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    sdo:dateModified "2026-03-04"^^xsd:date ;
+    sdo:dateIssued "2099-12-12"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;
     dcterms:rights "(c) Indigenous Data Network, 2026" ;
+    sdo:codeRepository "https://github.com/idn-au/refdata-catalogue"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/idn>
