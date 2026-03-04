@@ -148,6 +148,7 @@ care:R1
     skos:prefLabel "R1"@en ;
     skos:broader care:R ;
     skos:scopeNote "Indigenous data use is unviable unless linked to relationships built on respect, reciprocity, trust, and mutual understanding, as defined by the Indigenous Peoples to whom those data relate. Those working with Indigenous data are responsible for ensuring that the creation, interpretation, and use of those data uphold, or are respectful of, the dignity of Indigenous nations and communities"@en ;
+    skos:related 
 .
 
 care:R2
@@ -192,6 +193,7 @@ care:E1
     skos:prefLabel "E1"@en ;
     skos:broader care:E ;
     skos:scopeNote "Ethical data are data that do not stigmatize or portray Indigenous Peoples, cultures, or knowledges in terms of deficit. Ethical data are collected and used in ways that align with Indigenous ethical frameworks and with rights affirmed in UNDRIP. Assessing ethical benefits and harms should be done from the perspective of the Indigenous Peoples, nations, or communities to whom the data relate"@en ;
+    skos:related  tk:verified , tk:non-verified , 
 .
 
 care:E2
@@ -214,5 +216,5 @@ care:E3
     skos:prefLabel "E3"@en ;
     skos:broader care:E ;
     skos:scopeNote "Data governance should take into account the potential future use and future harm based on ethical frameworks grounded in the values and principles of the relevant Indigenous community. Metadata should acknowledge the provenance and purpose and any limitations or obligations in secondary use inclusive of issues of consent"@en ;
-    skos:related tk:attribution , bc:provenance , 
+    skos:related tk:attribution , bc:provenance , tk:culturally-sensitive ;
 .
