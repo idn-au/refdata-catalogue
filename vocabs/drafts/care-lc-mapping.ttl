@@ -1,4 +1,5 @@
 # provisionally, skos:relatedMatch is assigned only to narrower principles (i.e. "care:C1", NOT "care:C"). Assuming the Care top concepts would inherit the skos:relatedMatch semantics.
+# additional metadata, skos:definition and skos:scopeNote etc are retained only for draft work - will be removed in OntoPub validated file.
 
 PREFIX cs: <http://linked.data.gov.au/def/care>
 PREFIX bc: <https://data.idnau.org/pid/vocab/bc-labels/>
