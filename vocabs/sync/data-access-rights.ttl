@@ -1,5 +1,5 @@
-PREFIX cs: <https://linked.data.gov.au/def/data-access-rights>
 PREFIX : <https://linked.data.gov.au/def/data-access-rights/>
+PREFIX cs: <https://linked.data.gov.au/def/data-access-rights>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -33,32 +33,43 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Open data access rights"@en ;
 .
 
-:conditional
+:indigenous-communities-access
     a skos:Concept ;
-    skos:definition "Conditionally protected access refers to a resource that is stored in a system but is not freely accessible and remains protected based on the satisfaction of other specified criteria. Access is limited to specific personnel or user groups. "@en ;
-    skos:historyNote "Original term in the COAR vocabulary" ;
+    skos:broader :limited-communities-access ;
+    skos:definition "Access is limited to particular indigenous communities only"@en ;
+    skos:historyNote "Created by the Indigenous Data Network, 2024" ;
     skos:inScheme cs: ;
-    skos:prefLabel "Conditionally protected"@en ;
-    skos:narrower :metadata-only ;
-    skos:broader :restricted ;
+    skos:prefLabel "Indigenous Communities Access"@en ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/addition> ;
 .
 
 :embargoed
     a skos:Concept ;
+    skos:broader :restricted ;
     skos:definition "Embargoed access refers to a resource accessible as metadata only until released for open access on a specified date."@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
     skos:inScheme cs: ;
     skos:prefLabel "Embargoed access"@en ;
+.
+
+:limited-communities-access
+    a skos:Concept ;
     skos:broader :restricted ;
+    skos:definition "Access is limited to particular communities only"@en ;
+    skos:historyNote "Created by the Indigenous Data Network, 2024" ;
+    skos:inScheme cs: ;
+    skos:narrower :indigenous-communities-access ;
+    skos:prefLabel "Limited Communities Access"@en ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/addition> ;
 .
 
 :metadata-only
     a skos:Concept ;
+    skos:broader :conditional ;
     skos:definition "Metadata only access refers to a resource in which access is limited to metadata only. Access to the resource requires granting of access rights."@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
     skos:inScheme cs: ;
     skos:prefLabel "Metadata only access"@en ;
-    skos:broader :conditional ;
 .
 
 :open
@@ -73,46 +84,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :protected
     a skos:Concept ;
+    skos:broader :restricted ;
     skos:definition "Protected access refers to a resource that is stored in a system but is not freely accessible due to specific legal or policy decisions, such as active legal proceedings or ministerial discretion. Access is limited to specific personnel or user groups. "@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
     skos:inScheme cs: ;
     skos:prefLabel "Protected access"@en ;
-    skos:broader :restricted ;
-.
-
-:restricted
-    a skos:Concept ;
-    skos:definition "Restricted access refers to a resource that is stored in a system but is not freely accessible. Access is limited to specific personnel or user groups."@en ;
-    skos:historyNote "Original term in the COAR vocabulary" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Restricted access"@en ;
-    skos:topConceptOf cs: ;
-    skos:narrower
-        :protected ,
-        :conditional ,
-        :embargoed ,
-        :limited-communities-access ;
-.
-
-:limited-communities-access
-    a skos:Concept ;
-    schema:status <https://linked.data.gov.au/def/reg-statuses/addition> ;
-    skos:definition "Access is limited to particular communities only"@en ;
-    skos:historyNote "Created by the Indigenous Data Network, 2024" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Limited Communities Access"@en ;
-    skos:broader :restricted ;
-    skos:narrower :indigenous-communities-access ;
-.
-
-:indigenous-communities-access
-    a skos:Concept ;
-    schema:status <https://linked.data.gov.au/def/reg-statuses/addition> ;
-    skos:definition "Access is limited to particular indigenous communities only"@en ;
-    skos:historyNote "Created by the Indigenous Data Network, 2024" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Indigenous Communities Access"@en ;
-    skos:broader :limited-communities-access ;
 .
 
 <https://linked.data.gov.au/org/gsq>
@@ -121,24 +97,50 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
 .
 
+:conditional
+    a skos:Concept ;
+    skos:broader :restricted ;
+    skos:definition "Conditionally protected access refers to a resource that is stored in a system but is not freely accessible and remains protected based on the satisfaction of other specified criteria. Access is limited to specific personnel or user groups. "@en ;
+    skos:historyNote "Original term in the COAR vocabulary" ;
+    skos:inScheme cs: ;
+    skos:narrower :metadata-only ;
+    skos:prefLabel "Conditionally protected"@en ;
+.
+
+:restricted
+    a skos:Concept ;
+    skos:definition "Restricted access refers to a resource that is stored in a system but is not freely accessible. Access is limited to specific personnel or user groups."@en ;
+    skos:historyNote "Original term in the COAR vocabulary" ;
+    skos:inScheme cs: ;
+    skos:narrower
+        :conditional ,
+        :embargoed ,
+        :limited-communities-access ,
+        :protected ;
+    skos:prefLabel "Restricted access"@en ;
+    skos:topConceptOf cs: ;
+.
+
 cs:
     a
         owl:Ontology ,
         skos:ConceptScheme ;
-    dcterms:created "2019-04-03"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/gsq> ;
-    dcterms:modified "2025-08-26"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/gsq> ;
     dcterms:source "http://vocabularies.coar-repositories.org/documentation/access_rights/"^^xsd:anyURI ;
-    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
     skos:definition "Data access rights control how users and systems access a data resource."@en ;
-    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
-    skos:prefLabel "Data Access Rights"@en ;
     skos:hasTopConcept
         :open ,
         :restricted ;
-    prov:qualifiedDerivation [
-        prov:entity cs: ;
-        prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
-    ] ;
+    skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
+    skos:prefLabel "Data Access Rights"@en ;
+    prov:qualifiedDerivation
+        [
+            a prov:Derivation ;
+            prov:entity cs: ;
+            prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/org/gsq> ;
+    schema:dateCreated "2019-04-03"^^xsd:date ;
+    schema:dateModified "2025-08-26"^^xsd:date ;
+    schema:publisher <https://linked.data.gov.au/org/gsq> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
 .

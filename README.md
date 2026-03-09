@@ -2,7 +2,7 @@
 
 This repository contains the reference data - background vocabularies, spatial datasets and models - part of the data of the Indigenous Data Network (IDN)'s Knowledge Graph. This information is available online at:
 
-- https://data.idnau.org
+- https://data.idnau.org/catalogs/pid:vocabs
 
 All the resources in this catalogue are listed in the _Prez resources section_ below. These resources are automatically validated and (re)loaded into the catalogue online using the [Prez Manifest](https://pypi.org/project/prezmanifest/) tool.
 
@@ -13,6 +13,9 @@ When a resource is updated, the `dateModified` date or `version` should be updat
 If a new resource is added to the catalogue, ensure its IRI is added to `schema:hasPart` in `catalogue.ttl`.
 
 Pull requests will trigger validation of the manifest, which is required to pass before merging.
+
+## Spatial Data
+Limit of 100MiB per file on GitHub
 
 ## License & Rights
 
