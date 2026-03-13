@@ -44,7 +44,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 cs:
     a skos:ConceptScheme ;
     dcterms:provenance "Created during the generation of the IDN's Data Agents Catalogue, based on IDN staff's perceptions of the Indigenous status of persons" ;
-    dcterms:rights "(c) Indigenous Data Network, 2025" ;
     skos:definition "The Indigenous status of a person."@en ;
     skos:hasTopConcept
         :indigenous ,
@@ -57,6 +56,7 @@ cs:
             prov:entity cs: ;
             prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
         ] ;
+    schema:copyrightNotice "(c) Indigenous Data Network, 2025" ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2025-05-14"^^xsd:date ;
     schema:dateModified "2025-08-26"^^xsd:date ;

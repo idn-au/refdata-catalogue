@@ -56,7 +56,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 cs:
     a skos:ConceptScheme ;
     dcterms:provenance "This vocabulary was established to assist the IDN with differentiating resources' various catalogues. There seems to be no precedent for this form of catalogue classification elsewhere."@en ;
-    dcterms:rights "(c) Indigenous Data Network, 2022" ;
     skos:definition "The Indigenous Data Network's classifications of the roles that Catalogs may play with respect to Resources catalogued within them"@en ;
     skos:hasTopConcept
         :home ,
@@ -78,6 +77,7 @@ cs:
             prov:entity cs: ;
             prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
         ] ;
+    schema:copyrightNotice "(c) Indigenous Data Network, 2022" ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2023-01-17"^^xsd:date ;
     schema:dateModified "2025-08-26"^^xsd:date ;

@@ -10,18 +10,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :AustralianLandUseandManagementClassification
     a skos:Collection ;
-    dcterms:source "https://linked.data.gov.au/def/alum"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from the Australian Land Use and Management Classification" ;
     skos:inScheme cs: ;
     skos:member <https://linked.data.gov.au/def/alum/1.2.5> ;
     skos:prefLabel "Australian Land Use and Management Classification"@en ;
     prov:wasDerivedFrom <https://linked.data.gov.au/def/alum> ;
+    schema:citation "https://linked.data.gov.au/def/alum"^^xsd:anyURI ;
 .
 
 :CODATAResearchDataManagementTerminology
     a skos:Collection ;
-    dcterms:source "https://terms.codata.org/rdmt"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from the CODATA Research Data Management Terminology" ;
     skos:inScheme cs: ;
@@ -30,23 +29,23 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://terms.codata.org/rdmt/indigenous-data-sovereignty> ;
     skos:prefLabel "CODATA Research Data Management Terminology"@en ;
     prov:wasDerivedFrom <https://terms.codata.org/rdmt> ;
+    schema:citation "https://terms.codata.org/rdmt"^^xsd:anyURI ;
 .
 
 :EMSAmodulesCollectionsofCategoricalValues
     a skos:Collection ;
-    dcterms:source "https://core.vocabs.paratoo.tern.org.au/api/lut-intervention-fire-management-types"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from EMSA modules: Collections of Categorical Values" ;
     skos:inScheme cs: ;
     skos:member <https://linked.data.gov.au/def/nrm/c9f1f747-3677-5e72-aac0-b49733ea4629> ;
     skos:prefLabel "Ecological Monitoring System Australia (EMSA) modules: Collections of Categorical Values"@en ;
     prov:wasDerivedFrom <https://linked.data.gov.au/def/nrm> ;
+    schema:citation "https://core.vocabs.paratoo.tern.org.au/api/lut-intervention-fire-management-types"^^xsd:anyURI ;
     schema:dateIssued "2024-12-02" ;
 .
 
 :PlaceType
     a skos:Collection ;
-    dcterms:source "http://pid.geoscience.gov.au/def/voc/ga/PlaceType"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     owl:versionInfo "V1.0" ;
     skos:definition "Indigenous keywords from the Place Type vocabulary" ;
@@ -54,6 +53,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:member <http://pid.geoscience.gov.au/def/voc/ga/PlaceType/INDIGENOUS_PROTECTED_AREA> ;
     skos:prefLabel "Place Type"@en ;
     prov:wasDerivedFrom <http://pid.geoscience.gov.au/def/voc/ga/PlaceType> ;
+    schema:citation "http://pid.geoscience.gov.au/def/voc/ga/PlaceType"^^xsd:anyURI ;
     schema:dateIssued "2019-08-23" ;
 .
 
@@ -79,19 +79,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :TheUnifiedAstronomyThesaurus
     a skos:Collection ;
-    dcterms:source "http://astrothesaurus.org/uat/1"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from The Unified Astronomy Thesaurus" ;
     skos:inScheme cs: ;
     skos:member <http://astrothesaurus.org/uat/2367> ;
     skos:prefLabel "The Unified Astronomy Thesaurus"@en ;
     prov:wasDerivedFrom <http://astrothesaurus.org/uat/1> ;
+    schema:citation "http://astrothesaurus.org/uat/1"^^xsd:anyURI ;
     schema:dateIssued "2024-06-20" ;
 .
 
 :apais-vocabulary
     a skos:Collection ;
-    dcterms:source "https://vocabularyserver.com/apais/"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from the APAIS vocabulary" ;
     skos:inScheme cs: ;
@@ -150,6 +149,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://vocabularyserver.com/apais/xml.php?skosTema=9> ;
     skos:prefLabel "APAIS Concepts"@en ;
     prov:wasDerivedFrom <https://vocabularyserver.com/apais/> ;
+    schema:citation "https://vocabularyserver.com/apais/"^^xsd:anyURI ;
 .
 
 :indigeneity-concepts
@@ -1105,7 +1105,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 cs:
     a skos:ConceptScheme ;
     dcterms:provenance "This vocabulary was established with a few, broad, themes early in the IDN's 2022 project and will be expanded to incorporate indigenous terms from other data holders, acting as an overarching vocabulary"@en ;
-    dcterms:rights "(c) Indigenous Data Network, 2022" ;
     skos:definition "The Indigenous Data Network's general-purpose vocabulary of thematic terms for indigenous data."@en ;
     skos:hasTopConcept
         :indigenous-demographics ,
@@ -1141,6 +1140,7 @@ cs:
             prov:entity <https://vocabularyserver.com/apais/> ;
             prov:hadRole <https://linked.data.gov.au/def/vocdermods/subsetting-and-extension> ;
         ] ;
+    schema:copyrightNotice "(c) Indigenous Data Network, 2022" ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2022-07-15"^^xsd:date ;
     schema:dateModified "2025-08-26"^^xsd:date ;

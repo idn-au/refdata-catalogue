@@ -21,7 +21,6 @@ id:abn
 id:orcid
     a skos:Concept ;
     dcterms:replaces :orcid ;
-    dcterms:source "https://orcid.org/orcid-search/search?keyword=Indigenous%20Studies"^^xsd:anyURI ;
     rdfs:isDefinedBy <http://id.loc.gov/vocabulary/identifiers> ;
     skos:definition "Open Researcher and Contributor ID" ;
     skos:inScheme cs: ;
@@ -30,6 +29,7 @@ id:orcid
 	The ORCID system is a global not-for-profit that provides identifiers for researchers and contributors.
 	ORCID is not exclusively for listing Indigenous agents but can be filtered by using the Indigenous Studies keyword.
 	""" ;
+    schema:citation "https://orcid.org/orcid-search/search?keyword=Indigenous%20Studies"^^xsd:anyURI ;
 .
 
 id:ror
@@ -42,7 +42,6 @@ id:ror
 
 :find-an-expert
     a skos:Concept ;
-    dcterms:source "https://findanexpert.unimelb.edu.au/searchresults?q=Indigenous%20studies&category=profile"^^xsd:anyURI ;
     skos:definition "University of Melbourne's Find an Expert system." ;
     skos:inScheme cs: ;
     skos:prefLabel "Find an Expert" ;
@@ -52,11 +51,11 @@ id:ror
 	The Find an Expert system can be filtered to show Indigenous agents using the Indigenous Studies category.
 	""" ;
     skos:topConceptOf cs: ;
+    schema:citation "https://findanexpert.unimelb.edu.au/searchresults?q=Indigenous%20studies&category=profile"^^xsd:anyURI ;
 .
 
 :oric
     a skos:Concept ;
-    dcterms:source "https://www.oric.gov.au/corporations-and-registers/find-corporation"^^xsd:anyURI ;
     skos:definition "Office of the Registrar of Indigenous Corporations" ;
     skos:inScheme cs: ;
     skos:prefLabel "ORIC" ;
@@ -65,6 +64,7 @@ id:ror
 	Registered corporations can be found by searching the main site.
 	An extract of the ORIC system is included in the IDN agents database.""" ;
     skos:topConceptOf cs: ;
+    schema:citation "https://www.oric.gov.au/corporations-and-registers/find-corporation"^^xsd:anyURI ;
 .
 
 <https://kurrawong.ai>

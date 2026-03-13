@@ -1,6 +1,5 @@
 PREFIX : <https://linked.data.gov.au/def/data-access-rights/>
 PREFIX cs: <https://linked.data.gov.au/def/data-access-rights>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -125,7 +124,6 @@ cs:
     a
         owl:Ontology ,
         skos:ConceptScheme ;
-    dcterms:source "http://vocabularies.coar-repositories.org/documentation/access_rights/"^^xsd:anyURI ;
     skos:definition "Data access rights control how users and systems access a data resource."@en ;
     skos:hasTopConcept
         :open ,
@@ -138,6 +136,7 @@ cs:
             prov:entity cs: ;
             prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
         ] ;
+    schema:citation "http://vocabularies.coar-repositories.org/documentation/access_rights/"^^xsd:anyURI ;
     schema:creator <https://linked.data.gov.au/org/gsq> ;
     schema:dateCreated "2019-04-03"^^xsd:date ;
     schema:dateModified "2025-08-26"^^xsd:date ;

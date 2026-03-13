@@ -62,7 +62,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 cs:
     a skos:ConceptScheme ;
     dcterms:provenance "Created during the generation of the IDN's Data Agents Catalogue, based on IDN staff's perceptions of categories of organisation indigeneity" ;
-    dcterms:rights "(c) Indigenous Data Network, 2022" ;
     skos:definition "The ways in which organisations may be related to indigenous peoples"@en ;
     skos:hasTopConcept
         :indigeneity-unknown ,
@@ -77,6 +76,7 @@ cs:
             prov:entity cs: ;
             prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
         ] ;
+    schema:copyrightNotice "(c) Indigenous Data Network, 2022" ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2022-09-24"^^xsd:date ;
     schema:dateModified "2025-08-26"^^xsd:date ;

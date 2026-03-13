@@ -43,8 +43,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
-    dcterms:rights "(c) Indigenous Data Network, 2022" ;
-    dcterms:source "https://www.data.govt.nz/assets/Uploads/Presentation-Tahu-Kukutai.pdf"^^xsd:anyURI ;
     skos:definition "The ways in which data may have a connection to indigenous people"@en ;
     skos:hasTopConcept
         :about-indigenous-people ,
@@ -58,6 +56,8 @@ cs:
             prov:entity cs: ;
             prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
         ] ;
+    schema:citation "https://www.data.govt.nz/assets/Uploads/Presentation-Tahu-Kukutai.pdf"^^xsd:anyURI ;
+    schema:copyrightNotice "(c) Indigenous Data Network, 2022" ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2022-08-29"^^xsd:date ;
     schema:dateModified "2025-08-26"^^xsd:date ;

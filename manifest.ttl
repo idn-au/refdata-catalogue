@@ -1,8 +1,10 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX mrr: <https://prez.dev/ManifestResourceRoles/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prez: <https://prez.dev/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 []
     a prez:Manifest ;
@@ -17,19 +19,19 @@ PREFIX schema: <https://schema.org/>
             prof:hasArtifact "vocabs/sync/*.ttl" ;
             prof:hasRole mrr:ResourceData ;
             schema:description "skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/sync/ folder for syncing" ;
-            schema:name "Syncable Resource Data" ;
+            schema:name "Syncable Vocabs" ;
+            schema:additionalType skos:ConceptScheme ;
             dcterms:conformsTo <https://linked.data.gov.au/def/vocpub/validator> ;
         ] ,
         [
-            prof:hasArtifact "vocabs/non-sync/*.ttl" ;
+            prof:hasArtifact "datasets/metadata/*.ttl" ;
             prof:hasRole mrr:ResourceData ;
-            schema:description "skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/non-sync/ folder, to be synced externally" ;
-            schema:name "Non-syncable Resource Data" ;
-            dcterms:conformsTo <https://linked.data.gov.au/def/vocpub/validator> ;
-            prez:sync false ;
+            schema:description "schema:Dataset objects in RDF (Turtle) files in the datasets/metadata/ folder for syncing" ;
+            schema:name "Syncable Datasets" ;
+            schema:additionalType schema:Dataset ;
         ] ,
         [
-            prof:hasArtifact "https://github.com/RDFLib/prez/blob/main/prez/reference_data/profiles/ogc_records_profile.ttl" ;
+            prof:hasArtifact "https://raw.githubusercontent.com/RDFLib/prez/refs/heads/main/prez/reference_data/profiles/ogc_records_profile.ttl" ;
             prof:hasRole mrr:CatalogueAndResourceModel ;
             schema:description "The default Prez profile for Records API" ;
             schema:name "Profile Definition" ;
@@ -45,6 +47,7 @@ PREFIX schema: <https://schema.org/>
             prof:hasRole mrr:ResourceData ;
             schema:description "Ontologies for syncing" ;
             schema:name "Syncable Ontologies" ;
+            schema:additionalType owl:Ontology ;
             dcterms:conformsTo <https://linked.data.gov.au/def/ontpub/validator> ;
         ] ;
 .

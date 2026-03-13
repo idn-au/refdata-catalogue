@@ -2,15 +2,15 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://data.idnau.org/pid/vocabs>
+<https://data.idnau.org/pid/refdata-catalogue>
     a schema:DataCatalog ;
     skos:historyNote "This catalogue was was created in 2024 from the listing of IDN vocabs published since 2022"@en ;
     schema:codeRepository "https://github.com/idn-au/refdata-catalogue/" ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2022"^^xsd:gYear ;
-    schema:dateModified "2025-08-26"^^xsd:date ;
-    schema:description "The Indigenous Data Network's catalogue of vocabularies" ;
+    schema:dateModified "2026-03-12"^^xsd:date ;
+    schema:description "The Indigenous Data Network's catalogue of reference data" ;
     schema:hasPart
         <https://data.idnau.org/pid/agent-systems> ,
         <https://data.idnau.org/pid/austlang> ,
@@ -27,13 +27,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://data.idnau.org/pid/vocab/policy-types> ,
         <https://data.idnau.org/pid/vocab/urbanity> ,
         <https://linked.data.gov.au/def/data-access-rights> ,
-        <https://linked.data.gov.au/def/data-roles> ;
+        <https://linked.data.gov.au/def/data-roles> ,
+        <https://data.idnau.org/pid/agil> ,
+        <https://data.idnau.org/pid/apt> ,
+        <https://data.idnau.org/pid/asgs-is> ,
+        <https://data.idnau.org/pid/atns> ,
+        <https://data.idnau.org/pid/capad2020> ,
+        <https://data.idnau.org/pid/ilm> ,
+        <https://data.idnau.org/pid/nntt> ,
+        <https://data.idnau.org/pid/nsw-ab> ;
     schema:keywords
         "Aboriginal" ,
         "Australia" ,
         "Indigenous" ,
         "Indigenous Data Network" ,
         "SKOS" ;
-    schema:name "IDN Vocabularies" ;
+    schema:name "IDN Reference Data Catalogue" ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
 .

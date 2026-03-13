@@ -102,13 +102,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :affiliateOf
     a skos:Concept ;
     dcterms:provenance "Informed by https://schema.org/affiliation"@en ;
-    dcterms:source "https://schema.org/affiliation"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:definition "The same as Affiliate but for inverse agent relations"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Affiliate Of"@en ;
     skos:scopeNote "Person to Organisation relations" ;
     skos:topConceptOf cs: ;
+    schema:citation "https://schema.org/affiliation"^^xsd:anyURI ;
 .
 
 :antecedent
@@ -136,13 +136,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :contactPointOf
     a skos:Concept ;
     dcterms:provenance "Informed by http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/pointOfContact"@en ;
-    dcterms:source "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/pointOfContact"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:definition "The same as Contact Point but for inverse agent relations"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Contact Point Of"@en ;
     skos:scopeNote "Person to Organisation relations" ;
     skos:topConceptOf cs: ;
+    schema:citation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/pointOfContact"^^xsd:anyURI ;
 .
 
 :descendant
@@ -170,13 +170,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :headOf
     a skos:Concept ;
     dcterms:provenance "Informed by http://www.w3.org/ns/org#headOf"@en ;
-    dcterms:source "http://www.w3.org/ns/org#headOf"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:broader :memberOf ;
     skos:definition "The same as Head but for inverse agent relations"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Head Of"@en ;
     skos:scopeNote "Person to Organisation relations" ;
+    schema:citation "http://www.w3.org/ns/org#headOf"^^xsd:anyURI ;
 .
 
 :managerOf
@@ -221,13 +221,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :affiliate
     a skos:Concept ;
     dcterms:provenance "Informed by https://schema.org/affiliation"@en ;
-    dcterms:source "https://schema.org/affiliation"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:definition "A looser association than member"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Affiliate"@en ;
     skos:scopeNote "Organisation to Person relations" ;
     skos:topConceptOf cs: ;
+    schema:citation "https://schema.org/affiliation"^^xsd:anyURI ;
 .
 
 :chair
@@ -244,13 +244,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :contactPoint
     a skos:Concept ;
     dcterms:provenance "Informed by http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/pointOfContact"@en ;
-    dcterms:source "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/pointOfContact"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Party who can be contacted for acquiring knowledge about the target Agent"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Contact Point"@en ;
     skos:scopeNote "Organisation to Person relations" ;
     skos:topConceptOf cs: ;
+    schema:citation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/pointOfContact"^^xsd:anyURI ;
 .
 
 :elder
@@ -267,13 +267,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :head
     a skos:Concept ;
     dcterms:provenance "Informed by http://www.w3.org/ns/org#headOf"@en ;
-    dcterms:source "http://www.w3.org/ns/org#headOf"^^xsd:anyURI ;
     rdfs:isDefinedBy cs: ;
     skos:broader :member ;
     skos:definition "Indicates that a Person is the leader or formal head of an Organisation"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Head"@en ;
     skos:scopeNote "Organisation to Person relations" ;
+    schema:citation "http://www.w3.org/ns/org#headOf"^^xsd:anyURI ;
 .
 
 :manager
@@ -320,7 +320,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 cs:
     a skos:ConceptScheme ;
     dcterms:provenance "This vocabulary was established in 2022 to relate Agents to other Agents within the Indigenous Data Network's Agents Database, however it it expected to be, and promoted to be, general-purpose in nature, i.e. for any Agent/Agent relations"@en ;
-    dcterms:rights "(c) Indigenous Data Network, 2022" ;
     owl:versionIRI :0.0.2 ;
     owl:versionInfo "0.0.2" ;
     skos:definition "Provides a vocabulary of roles that exist between Agents, that is Persons and Organisations"@en ;
@@ -346,6 +345,7 @@ cs:
             prov:entity cs: ;
             prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
         ] ;
+    schema:copyrightNotice "(c) Indigenous Data Network, 2022" ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2022-11-14"^^xsd:date ;
     schema:dateIssued "2022-11-14"^^xsd:date ;

@@ -1,13 +1,20 @@
 from pathlib import Path
 from typing import TypedDict
 
-from rdflib import Graph, URIRef, BNode, Namespace
-from rdflib.namespace import DCAT, DCTERMS, SDO, PROV, RDF, RDFS, SKOS
+from rdflib import Graph, URIRef, BNode, Namespace, Dataset
+from rdflib.namespace import DCAT, DCTERMS, SDO, PROV, RDF, RDFS, SKOS, GEO
+
+from utils import serialize_longtrig
 
 REG = Namespace("http://purl.org/linked-data/registry#")
 
-DIRECTORY = Path(__file__).parent / "vocabs/sync"
-# DIRECTORY = Path(__file__).parent / "vocabs/non-sync"
+# DIRECTORY = Path(__file__).parent / "vocabs/sync"
+# DIRECTORY = Path(__file__).parent / "datasets/metadata"
+DIRECTORY = Path(__file__).parent / "datasets/features"
+# DIRECTORY = Path(__file__).parent.parent / "isu-catalogue/resources"
+# DIRECTORY = Path(__file__).parent.parent / "kp-catalogue/resources"
+
+TRIG = True # for parsing TriG files
 
 
 class Mapping(TypedDict):
@@ -61,20 +68,24 @@ predicate_mappings: list[Mapping] = [
     },
     {
         "key": [DCTERMS.temporal],
-        "to": SDO.temporalCoverage,  # need coverageStartTime & coverageEndTime?
+        "to": SDO.temporalCoverage,
     },
     {
-        "key": [DCTERMS.accessRights, DCAT.accessRights],  # dcat:accessRights found in spatial datasets as a typo
+        "key": [PROV.startedAtTime],
+        "to": SDO.coverageStartTime,
+    },
+    {
+        "key": [PROV.endedAtTime],
+        "to": SDO.coverageEndTime,
+    },
+    {
+        "key": [DCTERMS.accessRights, DCAT.accessRights],  # dcat:accessRights found in NNTT spatial dataset as a typo
         "to": SDO.usageInfo,
     },
     {
         "key": [DCTERMS.language],
-        "to": SDO.inLanguage,  # unsure of this one
+        "to": SDO.inLanguage,
     },
-    # {
-    #     "key": [DCTERMS.source, DCAT.accessURL], # unsure if dcterms:source always maps to the same thing
-    #     "to": (SDO.distribution, SDO.url), # tuple - bnode chain
-    # },
     {
         "key": [DCTERMS.identifier],
         "to": SDO.identifier,
@@ -107,17 +118,56 @@ predicate_mappings: list[Mapping] = [
         "key": [REG.status],
         "to": SDO.status,
     },
+    {
+        "key": [DCTERMS.source],
+        "to": SDO.citation,
+    },
+    {
+        "key": [DCTERMS.rights],
+        "to": SDO.copyrightNotice,
+    },
+    {
+        "key": [DCAT.distribution],
+        "to": SDO.distribution,
+    },
+    {
+        "key": [DCAT.downloadURL],
+        "to": SDO.contentUrl,
+    },
     # {
-    #     "key": [DCTERMS.source, PROV.wasDerivedFrom],
-    #     "to": SDO.isBasedOn,
+    #     "key": [DCAT.hadRole, PROV.hadRole],
+    #     "to": SDO.roleCode, # roleCode not in schema.org
     # },
-    # TODO: unmapped predicates
-    # dcterms:rights -> sdo:copyrightNotice?
-    # indigeneity - currently using dcterms:type
+
+    # TODO: unmapped predicates (generated from script) - non geo, sdo & skos
+    # dcat:contactPoint
+    # dcat:hadRole
+    # dcat:qualifiedRelation
+    # dcterms:date - found in yirrakala under rico:hasOrHadLocation
     # dcterms:provenance
-    # dcat:hadRole & prov:hadRole
-    # dcat:downloadURL
-    # dcterms:date
+    # dcterms:replaces
+    # dcterms:type - used for indigeneity
+    # owl:versionIRI
+    # owl:versionInfo
+    # prov:entity
+    # prov:hadRole
+    # prov:qualifiedAttribution
+    # prov:qualifiedDerivation
+    # prov:wasAttributedTo
+    # prov:wasDerivedFrom
+    # rdfs:comment
+    # rdfs:isDefinedBy
+    # rdfs:member
+    # rdfs:seeAlso
+    # vcard:country-name
+    # vcard:fn
+    # vcard:hasAddress
+    # vcard:hasEmail
+    # vcard:hasTelephone
+    # vcard:hasValue
+    # vcard:locality
+    # vcard:postal-code
+    # vcard:street-address
 ]
 
 
@@ -139,13 +189,25 @@ bnode_types: list[BnodeType] = [
         "predicate": PROV.qualifiedGeneration,
         "type": PROV.Generation,
     },
+    # {
+    #     "predicate": DCAT.distribution,
+    #     "type": DCAT.Distribution,
+    # },
     {
-        "predicate": DCAT.distribution,
-        "type": DCAT.Distribution,
+        "predicate": SDO.distribution,
+        "type": SDO.DataDownload,
     },
     {
         "predicate": DCAT.qualifiedRelation,
         "type": DCAT.Relationship,
+    },
+    {
+        "predicate": GEO.hasGeometry,
+        "type": GEO.Geometry,
+    },
+    {
+        "predicate": GEO.hasBoundingBox,
+        "type": GEO.Geometry,
     },
 ]
 
@@ -153,8 +215,12 @@ bnode_types: list[BnodeType] = [
 def main():
     leftovers = set()
 
-    for file in [f for f in DIRECTORY.glob("**/*.ttl")]:
-        g = Graph().parse(file, format="turtle")
+    for file in DIRECTORY.glob(f"**/*.{'trig' if TRIG else 'ttl'}"):
+        if TRIG:
+            d = Dataset().parse(file, format="application/trig")
+            g = list(d.graphs())[0]
+        else:
+            g = Graph().parse(file, format="turtle")
 
         for mapping in type_mappings:
             for t in mapping["key"]:
@@ -180,7 +246,7 @@ def main():
                         g.add((s, mapping["to"], o))
                     g.remove((s, p, o))
 
-        # add any missing types to bnodes, e.g. prov:qualifiedAttribution [ a prov:Attribution ] etc
+        # add any missing types to bnodes, e.g. prov:qualifiedAttribution [ a prov:Attribution ]
         for bnode_type in bnode_types:
             for s, o in g.subject_objects(bnode_type["predicate"]):
                 types = g.objects(o, RDF.type)
@@ -195,7 +261,13 @@ def main():
 
         # check if changed and update dateModified?
 
-        g.serialize(destination=file, format="longturtle")
+        if TRIG:
+            trig_str = serialize_longtrig(g, g.identifier)
+
+            with open(file, "w") as f:
+                f.write(trig_str)
+        else:
+            g.serialize(destination=file, format="longturtle")
 
         # list any remaining non-SDO, SKOS or GEO predicates that may need to be mapped
         results = g.query("""PREFIX geo: <http://www.opengis.net/ont/geosparql#>
