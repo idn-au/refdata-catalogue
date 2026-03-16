@@ -41,7 +41,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Ecological Monitoring System Australia (EMSA) modules: Collections of Categorical Values"@en ;
     prov:wasDerivedFrom <https://linked.data.gov.au/def/nrm> ;
     schema:citation "https://core.vocabs.paratoo.tern.org.au/api/lut-intervention-fire-management-types"^^xsd:anyURI ;
-    schema:dateIssued "2024-12-02" ;
+    schema:dateIssued "2024-12-02"^^xsd:date ;
 .
 
 :PlaceType
@@ -54,7 +54,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Place Type"@en ;
     prov:wasDerivedFrom <http://pid.geoscience.gov.au/def/voc/ga/PlaceType> ;
     schema:citation "http://pid.geoscience.gov.au/def/voc/ga/PlaceType"^^xsd:anyURI ;
-    schema:dateIssued "2019-08-23" ;
+    schema:dateIssued "2019-08-23"^^xsd:date ;
 .
 
 :PublicPolicyTaxonomy-vocabulary
@@ -86,7 +86,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "The Unified Astronomy Thesaurus"@en ;
     prov:wasDerivedFrom <http://astrothesaurus.org/uat/1> ;
     schema:citation "http://astrothesaurus.org/uat/1"^^xsd:anyURI ;
-    schema:dateIssued "2024-06-20" ;
+    schema:dateIssued "2024-06-20"^^xsd:date ;
 .
 
 :apais-vocabulary
@@ -200,7 +200,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "The use and study of astronomical subjects and their movements by indigenous groups. This field encompasses culture, traditional knowledge, and astronomy." ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous astronomy"@en ;
-    schema:dateCreated "2022-06-22T19:49:16.856000+00:00"^^xsd:dateTime ;
+    schema:dateCreated "2022-06-22"^^xsd:date ;
 .
 
 :indigenous-demographics
@@ -209,7 +209,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous demographics"@en ;
     skos:topConceptOf cs: ;
-    schema:dateCreated "2025-05-21T00:00:00"^^xsd:dateTime ;
+    schema:dateCreated "2025-05-21"^^xsd:date ;
 .
 
 :place
@@ -219,7 +219,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Place"@en ;
     skos:topConceptOf cs: ;
     schema:citation "https://aiatsis.gov.au/thesaurus/topical/XX101477"^^xsd:anyURI ;
-    schema:dateCreated "2025-05-21T00:00:00"^^xsd:dateTime ;
+    schema:dateCreated "2025-05-21"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/policy/940a5e39-a55c-488a-b72d-2b7eb01feee4>
@@ -265,7 +265,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-owned land or sea where Traditional Owners have entered into an agreement with the Australian Government to promote biodiversity and cultural resource conservation"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous protected area"@en ;
-    schema:dateCreated "2019-08-23T01:15:53.242000+00:00"^^xsd:dateTime ;
+    schema:dateCreated "2019-08-23"^^xsd:date ;
 .
 
 <https://linked.data.gov.au/def/alum/1.2.5>
