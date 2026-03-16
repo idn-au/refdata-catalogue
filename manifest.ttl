@@ -20,7 +20,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             prof:hasRole mrr:ResourceData ;
             schema:description "skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/sync/ folder for syncing" ;
             schema:name "Syncable Vocabs" ;
-            schema:additionalType skos:ConceptScheme ;
+#            schema:additionalType skos:ConceptScheme ;
             dcterms:conformsTo <https://linked.data.gov.au/def/vocpub/validator> ;
         ] ,
         [
@@ -28,7 +28,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             prof:hasRole mrr:ResourceData ;
             schema:description "schema:Dataset objects in RDF (Turtle) files in the datasets/metadata/ folder for syncing" ;
             schema:name "Syncable Datasets" ;
-            schema:additionalType schema:Dataset ;
+#            schema:additionalType schema:Dataset ;
         ] ,
         [
             prof:hasArtifact "https://raw.githubusercontent.com/RDFLib/prez/refs/heads/main/prez/reference_data/profiles/ogc_records_profile.ttl" ;
@@ -47,7 +47,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             prof:hasRole mrr:ResourceData ;
             schema:description "Ontologies for syncing" ;
             schema:name "Syncable Ontologies" ;
-            schema:additionalType owl:Ontology ;
+#            schema:additionalType owl:Ontology ;
             dcterms:conformsTo <https://linked.data.gov.au/def/ontpub/validator> ;
         ] ;
 .
