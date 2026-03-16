@@ -1,0 +1,53 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://data.idnau.org/pid/ilm>
+    a schema:Dataset ;
+    dcterms:provenance "This dataset was assembled from existing language maps in 2023 by the IDN" ;
+    geo:hasBoundingBox
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((96.0 -45.0, 168.0 -45.0, 168.0 -9.0, 96.0 -9.0, 96.0 -45.0))"^^geo:wktLiteral ;
+        ] ;
+    rdfs:member <https://data.idnau.org/pid/ilm/austlang> ;
+    schema:creator <https://linked.data.gov.au/org/idn> ;
+    schema:dateCreated "2023-04-18"^^xsd:date ;
+    schema:dateModified "2023-04-18"^^xsd:date ;
+    schema:description "Multiple indigenous language maps aggregated into one dataset by the IDN" ;
+    schema:name "Indigenous Languages Multi-map" ;
+    schema:publisher <https://linked.data.gov.au/org/idn> ;
+.
+
+<https://data.idnau.org/pid/ilm/austlang>
+    a geo:FeatureCollection ;
+    dcterms:provenance "All of the data used in this FeatureCollection was sources from the AIATSIS AusLang database online at https://collection.aiatsis.gov.au/austlang. This FeatureCollection presents that AusLang DB information in Knowledge Graph manner compatible with systems such as the Location Index and Digital Atlas of Australia Data Platform." ;
+    geo:hasBoundingBox
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((96.0 -45.0, 168.0 -45.0, 168.0 -9.0, 96.0 -9.0, 96.0 -45.0))"^^geo:wktLiteral ;
+        ] ;
+    prov:qualifiedAttribution 
+        [
+            a prov:Attribution ;
+            dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/contributor> ;
+            schema:agent <https://linked.data.gov.au/org/idn> ;
+        ] ,
+        [
+            a prov:Attribution ;
+            dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/originator> ;
+            schema:agent <https://linked.data.gov.au/org/aiatsis> ;
+        ] ,
+        [
+            a prov:Attribution ;
+            dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/custodian> ;
+            schema:agent <https://linked.data.gov.au/org/aiatsis> ;
+        ] ;
+    schema:citation "https://collection.aiatsis.gov.au/austlang"^^xsd:anyURI ;
+    schema:description "Spatial point locations for 841 of the 1208 AustLang languages"@en ;
+    schema:name "AustLang point locations"@en ;
+.

@@ -43,14 +43,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
-    dcterms:created "2022-08-29"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/idn> ;
-    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    dcterms:modified "2025-08-26"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/idn> ;
-    dcterms:rights "(c) Indigenous Data Network, 2022" ;
-    dcterms:source "https://www.data.govt.nz/assets/Uploads/Presentation-Tahu-Kukutai.pdf"^^xsd:anyURI ;
-    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     skos:definition "The ways in which data may have a connection to indigenous people"@en ;
     skos:hasTopConcept
         :about-indigenous-people ,
@@ -58,9 +50,18 @@ cs:
         :by-indigenous-people ;
     skos:prefLabel "Data Indigeneity"@en ;
     skos:scopeNote "The IDN uses this vocabulary to indicate how, if at all, data is related to indigenous people. This is a simple vocabulary that is expected to be extended in later versions."@en ;
-    prov:qualifiedDerivation [
-       a prov:Derivation ;
-        prov:entity cs: ;
-        prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
-    ] ;
+    prov:qualifiedDerivation
+        [
+            a prov:Derivation ;
+            prov:entity cs: ;
+            prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
+        ] ;
+    schema:citation "https://www.data.govt.nz/assets/Uploads/Presentation-Tahu-Kukutai.pdf"^^xsd:anyURI ;
+    schema:copyrightNotice "(c) Indigenous Data Network, 2022" ;
+    schema:creator <https://linked.data.gov.au/org/idn> ;
+    schema:dateCreated "2022-08-29"^^xsd:date ;
+    schema:dateModified "2025-08-26"^^xsd:date ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:publisher <https://linked.data.gov.au/org/idn> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
 .

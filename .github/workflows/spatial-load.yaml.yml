@@ -1,0 +1,26 @@
+name: Load spatial data & reindex
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: self-hosted
+    env:
+      ADMIN_PASSWORD: ${{ secrets.FUSEKI_PASSWORD }}
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+      - name: Copy spatial data
+        run: |
+          rm /home/ubuntu/fuseki/rdf/*
+          cp datasets/features/* /home/ubuntu/fuseki/rdf/
+      - name: Stop Fuseki
+        working-directory: /home/ubuntu/fuseki
+        run: docker compose -f fuseki-compose.yaml stop
+      - name: Run TBD load & index
+        working-directory: /home/ubuntu/fuseki
+        run: sh spatial_tdb.sh
+      - name: Start Fuseki
+        working-directory: /home/ubuntu/fuseki
+        run: docker compose -f fuseki-compose.yaml up -d

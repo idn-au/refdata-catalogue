@@ -1,0 +1,47 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://data.idnau.org/pid/apt>
+    a schema:Dataset ;
+    dcterms:provenance "This dataset was extracted from the AIATSIS Place Thesaurus online (https://thesaurus.aiatsis.gov.au/placename/placename.html), a PDF copy of that content and the same content but in CSV form given to the IDN by AIATSIS" ;
+    geo:hasBoundingBox
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((96.00 -45.00, 96.00 -9.00, 168.00 -9.00, 168.00 -45.00, 96.00 -45.00))"^^geo:wktLiteral ;
+        ] ;
+    rdfs:member
+        <https://data.idnau.org/pid/apt/places> ,
+        <https://data.idnau.org/pid/apt/regions> ;
+    schema:creator <https://linked.data.gov.au/org/idn> ;
+    schema:dateCreated "2023-06-20"^^xsd:date ;
+    schema:dateModified "2023-06-25"^^xsd:date ;
+    schema:description "The AIATSIS Place Thesaurus contains headings for place names, using the Indigenous place name first wherever possible." ;
+    schema:isBasedOn "https://thesaurus.aiatsis.gov.au/placename/placename.html"^^xsd:anyURI ;
+    schema:name "AIATSIS Place Thesaurus" ;
+    schema:publisher <https://linked.data.gov.au/org/idn> ;
+.
+
+<https://data.idnau.org/pid/apt/places>
+    a geo:FeatureCollection ;
+    geo:hasBoundingBox
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((96.00 -45.00, 96.00 -9.00, 168.00 -9.00, 168.00 -45.00, 96.00 -45.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:description "Places in the AIATSIS Place Thesaurus dataset"@en ;
+    schema:name "Places"@en ;
+.
+
+<https://data.idnau.org/pid/apt/regions>
+    a geo:FeatureCollection ;
+    geo:hasBoundingBox
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((96.00 -45.00, 96.00 -9.00, 168.00 -9.00, 168.00 -45.00, 96.00 -45.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:description "Regions in the AIATSIS Place Thesaurus dataset"@en ;
+    schema:name "Regions"@en ;
+.

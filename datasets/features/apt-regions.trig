@@ -1,0 +1,912 @@
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+
+<https://data.idnau.org/pid/apt> {
+<https://data.idnau.org/pid/apt/regions>
+    rdfs:member
+        <https://data.idnau.org/pid/apt/act-s-nsw> ,
+        <https://data.idnau.org/pid/apt/arnhem-land-nt> ,
+        <https://data.idnau.org/pid/apt/bamaga-qld-far-north-cape-york> ,
+        <https://data.idnau.org/pid/apt/central-arnhem-land-nt> ,
+        <https://data.idnau.org/pid/apt/central-nt> ,
+        <https://data.idnau.org/pid/apt/central-nt-north-nt> ,
+        <https://data.idnau.org/pid/apt/central-nt-tanami-desert> ,
+        <https://data.idnau.org/pid/apt/central-nt-tanami-desert-north-nt> ,
+        <https://data.idnau.org/pid/apt/central-wa> ,
+        <https://data.idnau.org/pid/apt/central-wa-great-sandy-desert> ,
+        <https://data.idnau.org/pid/apt/central-wa-tanami-desert> ,
+        <https://data.idnau.org/pid/apt/central-wa-warburton> ,
+        <https://data.idnau.org/pid/apt/e-qld> ,
+        <https://data.idnau.org/pid/apt/e-tas> ,
+        <https://data.idnau.org/pid/apt/e-vic> ,
+        <https://data.idnau.org/pid/apt/e-vic-gippsland> ,
+        <https://data.idnau.org/pid/apt/east-arnhem-land-nt> ,
+        <https://data.idnau.org/pid/apt/east-kimberley-wa> ,
+        <https://data.idnau.org/pid/apt/elcho-island-east-arnhem-land-nt> ,
+        <https://data.idnau.org/pid/apt/far-west-sa> ,
+        <https://data.idnau.org/pid/apt/far-west-sa-nullarbor> ,
+        <https://data.idnau.org/pid/apt/gibson-desert-wa> ,
+        <https://data.idnau.org/pid/apt/great-sandy-desert-wa> ,
+        <https://data.idnau.org/pid/apt/little-sandy-desert-wa> ,
+        <https://data.idnau.org/pid/apt/mainland-qld-gulf> ,
+        <https://data.idnau.org/pid/apt/n-nsw> ,
+        <https://data.idnau.org/pid/apt/n-vic> ,
+        <https://data.idnau.org/pid/apt/n-vic-sw-nsw> ,
+        <https://data.idnau.org/pid/apt/ne-qld> ,
+        <https://data.idnau.org/pid/apt/ne-sa> ,
+        <https://data.idnau.org/pid/apt/ne-sa-flinders-ranges> ,
+        <https://data.idnau.org/pid/apt/north-nt> ,
+        <https://data.idnau.org/pid/apt/north-nt-roper> ,
+        <https://data.idnau.org/pid/apt/north-west-central-sa> ,
+        <https://data.idnau.org/pid/apt/nsw> ,
+        <https://data.idnau.org/pid/apt/nsw-far-s-coast> ,
+        <https://data.idnau.org/pid/apt/nsw-n-coast> ,
+        <https://data.idnau.org/pid/apt/nsw-s-coast> ,
+        <https://data.idnau.org/pid/apt/nt-top-end> ,
+        <https://data.idnau.org/pid/apt/nt-top-end-roper> ,
+        <https://data.idnau.org/pid/apt/nw-nsw> ,
+        <https://data.idnau.org/pid/apt/nw-tas> ,
+        <https://data.idnau.org/pid/apt/nw-vic> ,
+        <https://data.idnau.org/pid/apt/qld-far-north-ne-cape-york> ,
+        <https://data.idnau.org/pid/apt/qld-far-north-ne-cape-york-qld-gulf> ,
+        <https://data.idnau.org/pid/apt/qld-far-nw> ,
+        <https://data.idnau.org/pid/apt/qld-far-nw-barkly-tableland> ,
+        <https://data.idnau.org/pid/apt/qld-far-west> ,
+        <https://data.idnau.org/pid/apt/qld-gulf> ,
+        <https://data.idnau.org/pid/apt/qld-ne-cape-york> ,
+        <https://data.idnau.org/pid/apt/qld-nw-cape-york> ,
+        <https://data.idnau.org/pid/apt/qld-se-cape-york> ,
+        <https://data.idnau.org/pid/apt/qld-tsi> ,
+        <https://data.idnau.org/pid/apt/s-nsw> ,
+        <https://data.idnau.org/pid/apt/sa-central-australia> ,
+        <https://data.idnau.org/pid/apt/se-central-nt> ,
+        <https://data.idnau.org/pid/apt/se-central-nt-simpson-desert> ,
+        <https://data.idnau.org/pid/apt/se-qld> ,
+        <https://data.idnau.org/pid/apt/se-sa> ,
+        <https://data.idnau.org/pid/apt/se-wa> ,
+        <https://data.idnau.org/pid/apt/se-wa-goldfields> ,
+        <https://data.idnau.org/pid/apt/se-wa-great-victoria-desert> ,
+        <https://data.idnau.org/pid/apt/se-wa-nullarbor> ,
+        <https://data.idnau.org/pid/apt/south-central-nt> ,
+        <https://data.idnau.org/pid/apt/sw-nsw> ,
+        <https://data.idnau.org/pid/apt/sw-qld> ,
+        <https://data.idnau.org/pid/apt/sw-tas> ,
+        <https://data.idnau.org/pid/apt/sw-wa> ,
+        <https://data.idnau.org/pid/apt/tas-bass-strait> ,
+        <https://data.idnau.org/pid/apt/vic> ,
+        <https://data.idnau.org/pid/apt/victoria-river-north-nt> ,
+        <https://data.idnau.org/pid/apt/w-vic> ,
+        <https://data.idnau.org/pid/apt/wa> ,
+        <https://data.idnau.org/pid/apt/wa-east-kimberley> ,
+        <https://data.idnau.org/pid/apt/wa-east-pilbara> ,
+        <https://data.idnau.org/pid/apt/wa-fitzroy-river-west-kimberley> ,
+        <https://data.idnau.org/pid/apt/wa-gascoyne-murchison> ,
+        <https://data.idnau.org/pid/apt/wa-south-pilbara-gascoyne> ,
+        <https://data.idnau.org/pid/apt/wa-west-kimberley> ,
+        <https://data.idnau.org/pid/apt/wa-west-pilbara> ,
+        <https://data.idnau.org/pid/apt/west-arnhem-land-nt> ,
+        <https://data.idnau.org/pid/apt/west-sa> ;
+.
+
+<https://data.idnau.org/pid/apt/act-s-nsw>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((148.50 -36.00, 148.50 -34.93, 150.10 -34.93, 150.10 -36.00, 148.50 -36.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "ACT, S NSW" ;
+.
+
+<https://data.idnau.org/pid/apt/arnhem-land-nt>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((132.00 -14.00, 132.00 -11.93, 135.10 -11.93, 135.10 -14.00, 132.00 -14.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Arnhem Land NT" ;
+.
+
+<https://data.idnau.org/pid/apt/bamaga-qld-far-north-cape-york>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((141.00 -11.00, 141.00 -9.93, 142.60 -9.93, 142.60 -11.00, 141.00 -11.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Bamaga Qld Far North Cape York" ;
+.
+
+<https://data.idnau.org/pid/apt/central-arnhem-land-nt>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((133.42 -13.00, 133.42 -11.65, 135.10 -11.65, 135.10 -13.00, 133.42 -13.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Central Arnhem Land NT" ;
+.
+
+<https://data.idnau.org/pid/apt/central-nt>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((129.00 -22.00, 129.00 -16.93, 138.10 -16.93, 138.10 -22.00, 129.00 -22.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Central NT" ;
+.
+
+<https://data.idnau.org/pid/apt/central-nt-north-nt>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((129.00 -17.00, 129.00 -15.93, 130.60 -15.93, 130.60 -17.00, 129.00 -17.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Central NT, North NT" ;
+.
+
+<https://data.idnau.org/pid/apt/central-nt-tanami-desert>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((129.00 -23.00, 129.00 -17.93, 133.60 -17.93, 133.60 -23.00, 129.00 -23.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Central NT Tanami Desert" ;
+.
+
+<https://data.idnau.org/pid/apt/central-nt-tanami-desert-north-nt>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((132.00 -18.00, 132.00 -16.93, 133.60 -16.93, 133.60 -18.00, 132.00 -18.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Central NT Tanami Desert, North NT" ;
+.
+
+<https://data.idnau.org/pid/apt/central-wa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((126.00 -27.00, 126.00 -25.93, 127.60 -25.93, 127.60 -27.00, 126.00 -27.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Central WA" ;
+.
+
+<https://data.idnau.org/pid/apt/central-wa-great-sandy-desert>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((126.00 -24.00, 126.00 -18.93, 129.10 -18.93, 129.10 -24.00, 126.00 -24.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Central WA Great Sandy Desert" ;
+.
+
+<https://data.idnau.org/pid/apt/central-wa-tanami-desert>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((127.50 -22.00, 127.50 -18.93, 129.10 -18.93, 129.10 -22.00, 127.50 -22.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Central WA Tanami Desert" ;
+.
+
+<https://data.idnau.org/pid/apt/central-wa-warburton>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((126.00 -28.00, 126.00 -23.93, 129.10 -23.93, 129.10 -28.00, 126.00 -28.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Central WA Warburton" ;
+.
+
+<https://data.idnau.org/pid/apt/e-qld>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((144.00 -24.00, 144.00 -19.93, 153.10 -19.93, 153.10 -24.00, 144.00 -24.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "E Qld" ;
+.
+
+<https://data.idnau.org/pid/apt/e-tas>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((144.50 -42.00, 144.50 -40.93, 146.60 -40.93, 146.60 -42.00, 144.50 -42.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "E Tas" ;
+.
+
+<https://data.idnau.org/pid/apt/e-vic>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((147.00 -37.00, 147.00 -35.93, 148.60 -35.93, 148.60 -37.00, 147.00 -37.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "E Vic" ;
+.
+
+<https://data.idnau.org/pid/apt/e-vic-gippsland>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((145.50 -39.53, 145.50 -36.93, 150.10 -36.93, 150.10 -39.53, 145.50 -39.53))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "E Vic Gippsland" ;
+.
+
+<https://data.idnau.org/pid/apt/east-arnhem-land-nt>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((135.00 -15.00, 135.00 -11.43, 137.60 -11.43, 137.60 -15.00, 135.00 -15.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "East Arnhem Land NT" ;
+.
+
+<https://data.idnau.org/pid/apt/east-kimberley-wa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((126.00 -19.00, 126.00 -15.93, 129.10 -15.93, 129.10 -19.00, 126.00 -19.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "East Kimberley WA" ;
+.
+
+<https://data.idnau.org/pid/apt/elcho-island-east-arnhem-land-nt>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((135.00 -13.00, 135.00 -11.43, 136.10 -11.43, 136.10 -13.00, 135.00 -13.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Elcho Island East Arnhem Land NT" ;
+.
+
+<https://data.idnau.org/pid/apt/far-west-sa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((129.00 -32.00, 129.00 -27.93, 132.10 -27.93, 132.10 -32.00, 129.00 -32.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Far West SA" ;
+.
+
+<https://data.idnau.org/pid/apt/far-west-sa-nullarbor>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((129.00 -32.00, 129.00 -30.93, 130.60 -30.93, 130.60 -32.00, 129.00 -32.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Far West SA Nullarbor" ;
+.
+
+<https://data.idnau.org/pid/apt/gibson-desert-wa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((123.00 -24.00, 123.00 -22.93, 126.10 -22.93, 126.10 -24.00, 123.00 -24.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Gibson Desert WA" ;
+.
+
+<https://data.idnau.org/pid/apt/great-sandy-desert-wa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((121.50 -23.00, 121.50 -18.93, 126.10 -18.93, 126.10 -23.00, 121.50 -23.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Great Sandy Desert WA" ;
+.
+
+<https://data.idnau.org/pid/apt/little-sandy-desert-wa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((120.00 -28.00, 120.00 -22.93, 126.10 -22.93, 126.10 -28.00, 120.00 -28.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Little Sandy Desert WA" ;
+.
+
+<https://data.idnau.org/pid/apt/mainland-qld-gulf>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((139.50 -18.00, 139.50 -16.93, 141.10 -16.93, 141.10 -18.00, 139.50 -18.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Mainland Qld Gulf" ;
+.
+
+<https://data.idnau.org/pid/apt/n-nsw>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((145.50 -33.00, 145.50 -27.93, 151.60 -27.93, 151.60 -33.00, 145.50 -33.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "N NSW" ;
+.
+
+<https://data.idnau.org/pid/apt/n-vic>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((144.00 -37.00, 144.00 -34.93, 147.10 -34.93, 147.10 -37.00, 144.00 -37.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "N Vic" ;
+.
+
+<https://data.idnau.org/pid/apt/n-vic-sw-nsw>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((144.00 -36.00, 144.00 -34.93, 145.60 -34.93, 145.60 -36.00, 144.00 -36.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "N Vic, SW NSW" ;
+.
+
+<https://data.idnau.org/pid/apt/ne-qld>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((142.50 -20.00, 142.50 -15.93, 148.60 -15.93, 148.60 -20.00, 142.50 -20.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "NE Qld" ;
+.
+
+<https://data.idnau.org/pid/apt/ne-sa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((136.50 -32.00, 136.50 -25.93, 141.10 -25.93, 141.10 -32.00, 136.50 -32.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "NE SA" ;
+.
+
+<https://data.idnau.org/pid/apt/ne-sa-flinders-ranges>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((138.00 -32.00, 138.00 -29.93, 139.60 -29.93, 139.60 -32.00, 138.00 -32.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "NE SA Flinders Ranges" ;
+.
+
+<https://data.idnau.org/pid/apt/north-nt>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((130.50 -20.00, 130.50 -14.93, 138.10 -14.93, 138.10 -20.00, 130.50 -20.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "North NT" ;
+.
+
+<https://data.idnau.org/pid/apt/north-nt-roper>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((133.50 -16.00, 133.50 -14.93, 135.10 -14.93, 135.10 -16.00, 133.50 -16.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "North NT Roper" ;
+.
+
+<https://data.idnau.org/pid/apt/north-west-central-sa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((132.00 -29.00, 132.00 -27.93, 136.60 -27.93, 136.60 -29.00, 132.00 -29.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "North West Central SA" ;
+.
+
+<https://data.idnau.org/pid/apt/nsw>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((150.00 -34.50, 150.00 -32.93, 151.77 -32.93, 151.77 -34.50, 150.00 -34.50))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "NSW" ;
+.
+
+<https://data.idnau.org/pid/apt/nsw-far-s-coast>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((148.50 -38.00, 148.50 -35.93, 150.27 -35.93, 150.27 -38.00, 148.50 -38.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "NSW Far S Coast" ;
+.
+
+<https://data.idnau.org/pid/apt/nsw-n-coast>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((150.00 -33.00, 150.00 -27.93, 154.10 -27.93, 154.10 -33.00, 150.00 -33.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "NSW N Coast" ;
+.
+
+<https://data.idnau.org/pid/apt/nsw-s-coast>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((150.00 -36.00, 150.00 -34.27, 151.05 -34.27, 151.05 -36.00, 150.00 -36.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "NSW S Coast" ;
+.
+
+<https://data.idnau.org/pid/apt/nt-top-end>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((129.00 -15.00, 129.00 -11.93, 133.60 -11.93, 133.60 -15.00, 129.00 -15.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "NT Top End" ;
+.
+
+<https://data.idnau.org/pid/apt/nt-top-end-roper>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((133.50 -15.00, 133.50 -13.93, 135.10 -13.93, 135.10 -15.00, 133.50 -15.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "NT Top End Roper" ;
+.
+
+<https://data.idnau.org/pid/apt/nw-nsw>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((141.00 -33.00, 141.00 -27.93, 145.60 -27.93, 145.60 -33.00, 141.00 -33.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "NW NSW" ;
+.
+
+<https://data.idnau.org/pid/apt/nw-tas>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((147.00 -41.00, 147.00 -39.38, 148.60 -39.38, 148.60 -41.00, 147.00 -41.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "NW Tas" ;
+.
+
+<https://data.idnau.org/pid/apt/nw-vic>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((141.00 -37.00, 141.00 -33.93, 144.10 -33.93, 144.10 -37.00, 141.00 -37.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "NW Vic" ;
+.
+
+<https://data.idnau.org/pid/apt/qld-far-north-ne-cape-york>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((142.50 -12.00, 142.50 -10.93, 144.10 -10.93, 144.10 -12.00, 142.50 -12.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Qld Far North, NE Cape York" ;
+.
+
+<https://data.idnau.org/pid/apt/qld-far-north-ne-cape-york-qld-gulf>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((141.00 -12.00, 141.00 -10.93, 142.60 -10.93, 142.60 -12.00, 141.00 -12.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Qld Far North, NE Cape York, Qld Gulf" ;
+.
+
+<https://data.idnau.org/pid/apt/qld-far-nw>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((138.00 -21.00, 138.00 -18.93, 144.10 -18.93, 144.10 -21.00, 138.00 -21.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Qld Far NW" ;
+.
+
+<https://data.idnau.org/pid/apt/qld-far-nw-barkly-tableland>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((138.00 -20.00, 138.00 -18.93, 139.60 -18.93, 139.60 -20.00, 138.00 -20.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Qld Far NW Barkly Tableland" ;
+.
+
+<https://data.idnau.org/pid/apt/qld-far-west>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((138.00 -27.00, 138.00 -20.93, 147.10 -20.93, 147.10 -27.00, 138.00 -27.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Qld Far West" ;
+.
+
+<https://data.idnau.org/pid/apt/qld-gulf>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((138.00 -19.00, 138.00 -15.93, 144.10 -15.93, 144.10 -19.00, 138.00 -19.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Qld Gulf" ;
+.
+
+<https://data.idnau.org/pid/apt/qld-ne-cape-york>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((142.50 -14.00, 142.50 -11.93, 144.10 -11.93, 144.10 -14.00, 142.50 -14.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Qld NE Cape York" ;
+.
+
+<https://data.idnau.org/pid/apt/qld-nw-cape-york>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((141.00 -16.00, 141.00 -10.93, 142.60 -10.93, 142.60 -16.00, 141.00 -16.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Qld NW Cape York" ;
+.
+
+<https://data.idnau.org/pid/apt/qld-se-cape-york>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((142.50 -16.00, 142.50 -13.93, 145.60 -13.93, 145.60 -16.00, 142.50 -16.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Qld SE Cape York" ;
+.
+
+<https://data.idnau.org/pid/apt/qld-tsi>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((141.00 -11.00, 141.00 -8.93, 145.60 -8.93, 145.60 -11.00, 141.00 -11.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Qld TSI" ;
+.
+
+<https://data.idnau.org/pid/apt/s-nsw>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((147.00 -37.00, 147.00 -33.93, 150.10 -33.93, 150.10 -37.00, 147.00 -37.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "S NSW" ;
+.
+
+<https://data.idnau.org/pid/apt/sa-central-australia>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((129.00 -28.00, 129.00 -25.93, 138.10 -25.93, 138.10 -28.00, 129.00 -28.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SA Central Australia" ;
+.
+
+<https://data.idnau.org/pid/apt/se-central-nt>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((135.00 -26.00, 135.00 -20.93, 138.10 -20.93, 138.10 -26.00, 135.00 -26.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SE Central NT" ;
+.
+
+<https://data.idnau.org/pid/apt/se-central-nt-simpson-desert>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((135.00 -26.00, 135.00 -22.93, 138.10 -22.93, 138.10 -26.00, 135.00 -26.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SE Central NT Simpson Desert" ;
+.
+
+<https://data.idnau.org/pid/apt/se-qld>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((150.00 -29.00, 150.00 -23.93, 154.10 -23.93, 154.10 -29.00, 150.00 -29.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SE Qld" ;
+.
+
+<https://data.idnau.org/pid/apt/se-sa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((136.50 -38.50, 136.50 -31.93, 141.10 -31.93, 141.10 -38.50, 136.50 -38.50))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SE SA" ;
+.
+
+<https://data.idnau.org/pid/apt/se-wa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((120.00 -34.50, 120.00 -27.93, 129.10 -27.93, 129.10 -34.50, 120.00 -34.50))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SE WA" ;
+.
+
+<https://data.idnau.org/pid/apt/se-wa-goldfields>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((120.00 -33.00, 120.00 -27.93, 123.10 -27.93, 123.10 -33.00, 120.00 -33.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SE WA Goldfields" ;
+.
+
+<https://data.idnau.org/pid/apt/se-wa-great-victoria-desert>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((124.50 -29.00, 124.50 -27.93, 126.10 -27.93, 126.10 -29.00, 124.50 -29.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SE WA Great Victoria Desert" ;
+.
+
+<https://data.idnau.org/pid/apt/se-wa-nullarbor>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((124.50 -33.00, 124.50 -30.93, 129.10 -30.93, 129.10 -33.00, 124.50 -33.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SE WA Nullarbor" ;
+.
+
+<https://data.idnau.org/pid/apt/south-central-nt>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((129.00 -26.00, 129.00 -21.93, 135.10 -21.93, 135.10 -26.00, 129.00 -26.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "South Central NT" ;
+.
+
+<https://data.idnau.org/pid/apt/sw-nsw>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((141.00 -36.00, 141.00 -32.93, 150.10 -32.93, 150.10 -36.00, 141.00 -36.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SW NSW" ;
+.
+
+<https://data.idnau.org/pid/apt/sw-qld>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((141.00 -29.00, 141.00 -23.93, 150.10 -23.93, 150.10 -29.00, 141.00 -29.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SW Qld" ;
+.
+
+<https://data.idnau.org/pid/apt/sw-tas>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((146.50 -42.00, 146.50 -40.93, 148.60 -40.93, 148.60 -42.00, 146.50 -42.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SW Tas" ;
+.
+
+<https://data.idnau.org/pid/apt/sw-wa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((113.57 -35.50, 113.57 -27.93, 120.10 -27.93, 120.10 -35.50, 113.57 -35.50))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "SW WA" ;
+.
+
+<https://data.idnau.org/pid/apt/tas-bass-strait>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((143.75 -41.00, 143.75 -39.55, 145.80 -39.55, 145.80 -41.00, 143.75 -41.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Tas Bass Strait" ;
+.
+
+<https://data.idnau.org/pid/apt/vic>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((144.00 -39.00, 144.00 -36.93, 145.60 -36.93, 145.60 -39.00, 144.00 -39.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Vic" ;
+.
+
+<https://data.idnau.org/pid/apt/victoria-river-north-nt>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((129.00 -16.00, 129.00 -14.93, 130.60 -14.93, 130.60 -16.00, 129.00 -16.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "Victoria River, North NT" ;
+.
+
+<https://data.idnau.org/pid/apt/w-vic>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((141.00 -39.00, 141.00 -36.93, 144.10 -36.93, 144.10 -39.00, 141.00 -39.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "W Vic" ;
+.
+
+<https://data.idnau.org/pid/apt/wa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((120.00 -20.00, 120.00 -18.93, 121.60 -18.93, 121.60 -20.00, 120.00 -20.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "WA" ;
+.
+
+<https://data.idnau.org/pid/apt/wa-east-kimberley>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((126.00 -19.00, 126.00 -12.93, 129.10 -12.93, 129.10 -19.00, 126.00 -19.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "WA East Kimberley" ;
+.
+
+<https://data.idnau.org/pid/apt/wa-east-pilbara>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((117.00 -24.00, 117.00 -19.43, 121.60 -19.43, 121.60 -24.00, 117.00 -24.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "WA East Pilbara" ;
+.
+
+<https://data.idnau.org/pid/apt/wa-fitzroy-river-west-kimberley>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((123.00 -19.00, 123.00 -17.93, 126.10 -17.93, 126.10 -19.00, 123.00 -19.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "WA Fitzroy River, West Kimberley" ;
+.
+
+<https://data.idnau.org/pid/apt/wa-gascoyne-murchison>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((112.88 -28.00, 112.88 -24.93, 120.10 -24.93, 120.10 -28.00, 112.88 -28.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "WA Gascoyne / Murchison" ;
+.
+
+<https://data.idnau.org/pid/apt/wa-south-pilbara-gascoyne>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((112.92 -25.50, 112.92 -19.43, 120.10 -19.43, 120.10 -25.50, 112.92 -25.50))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "WA South Pilbara / Gascoyne" ;
+.
+
+<https://data.idnau.org/pid/apt/wa-west-kimberley>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((121.50 -19.00, 121.50 -13.43, 126.10 -13.43, 126.10 -19.00, 121.50 -19.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "WA West Kimberley" ;
+.
+
+<https://data.idnau.org/pid/apt/wa-west-pilbara>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((113.17 -24.00, 113.17 -19.93, 118.60 -19.93, 118.60 -24.00, 113.17 -24.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "WA West Pilbara" ;
+.
+
+<https://data.idnau.org/pid/apt/west-arnhem-land-nt>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((131.75 -12.00, 131.75 -10.93, 133.52 -10.93, 133.52 -12.00, 131.75 -12.00))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "West Arnhem Land NT" ;
+.
+
+<https://data.idnau.org/pid/apt/west-sa>
+    a geo:Feature ;
+    geo:hasGeometry
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((132.00 -35.42, 132.00 -28.93, 138.10 -28.93, 138.10 -35.42, 132.00 -35.42))"^^geo:wktLiteral ;
+        ] ;
+    schema:name "West SA" ;
+.
+
+}

@@ -16,15 +16,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Indigenous"@en ;
 .
 
-:nonIndigenous
-    a skos:Concept ;
-    dcterms:provenance "Created for the IDN project, 2025"@en ;
-    rdfs:isDefinedBy cs: ;
-    skos:definition "The individual is not an Indigenous individual" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Non-Indigenous"@en ;
-.
-
 :indigenousStatusUnknown
     a skos:Concept ;
     dcterms:provenance "Created for the IDN project, 2025"@en ;
@@ -34,6 +25,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Indigenous status Unknown"@en ;
 .
 
+:nonIndigenous
+    a skos:Concept ;
+    dcterms:provenance "Created for the IDN project, 2025"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The individual is not an Indigenous individual" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Non-Indigenous"@en ;
+.
 
 <https://linked.data.gov.au/org/idn>
     a schema:Organization ;
@@ -44,23 +43,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
-    dcterms:created "2025-05-14"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/idn> ;
-    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    dcterms:modified "2025-08-26"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/idn> ;
-    dcterms:rights "(c) Indigenous Data Network, 2025" ;
-    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     dcterms:provenance "Created during the generation of the IDN's Data Agents Catalogue, based on IDN staff's perceptions of the Indigenous status of persons" ;
     skos:definition "The Indigenous status of a person."@en ;
     skos:hasTopConcept
-        :indigenous,
-        :nonIndigenous,
-        :indigenousStatusUnknown ;
+        :indigenous ,
+        :indigenousStatusUnknown ,
+        :nonIndigenous ;
     skos:prefLabel "Indigenous Status of Persons"@en ;
-    prov:qualifiedDerivation [
-        a prov:Derivation ;
-        prov:entity cs: ;
-        prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
-    ] ;
+    prov:qualifiedDerivation
+        [
+            a prov:Derivation ;
+            prov:entity cs: ;
+            prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
+        ] ;
+    schema:copyrightNotice "(c) Indigenous Data Network, 2025" ;
+    schema:creator <https://linked.data.gov.au/org/idn> ;
+    schema:dateCreated "2025-05-14"^^xsd:date ;
+    schema:dateModified "2025-08-26"^^xsd:date ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:publisher <https://linked.data.gov.au/org/idn> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
 .
