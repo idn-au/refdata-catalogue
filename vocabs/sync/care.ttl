@@ -72,7 +72,7 @@ care:C2
     skos:inScheme cs: ;
     skos:prefLabel "C2"@en ;
     skos:broader care:C ;
-    skos:scopeNote "Data enrich the planning, implementation, and evaluation processes that support the service and policy needs of Indigenous communities. Data also enable better engagement between itizens, institutions, and governments to improve decision-making. Ethical use of open data has the capacity to improve transparency and decision-making by providing Indigenous nations and communities with a better understanding of their peoples, territories, and resources. It similarly can provide greater insight into third-party policies and programs affecting Indigenous Peoples"@en ;
+    skos:scopeNote "Data enrich the planning, implementation, and evaluation processes that support the service and policy needs of Indigenous communities. Data also enable better engagement between citizens, institutions, and governments to improve decision-making. Ethical use of open data has the capacity to improve transparency and decision-making by providing Indigenous nations and communities with a better understanding of their peoples, territories, and resources. It similarly can provide greater insight into third-party policies and programs affecting Indigenous Peoples"@en ;
     dcterms:source "https://datascience.codata.org/articles/10.5334/dsj-2020-043#exposition"^^xsd:anyURI ;
 .
 
@@ -146,7 +146,7 @@ care:R
       care:R2 , 
       care:R3 ;
     skos:topConceptOf cs: ;
-    skos:scopeNote "Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ selfdetermination and collective benefit. Accountability requires meaningful and openly available evidence of these efforts and the benefits accruing to Indigenous Peoples"@en ;
+    skos:scopeNote "Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ self-determination and collective benefit. Accountability requires meaningful and openly available evidence of these efforts and the benefits accruing to Indigenous Peoples"@en ;
     dcterms:source "https://datascience.codata.org/articles/10.5334/dsj-2020-043#exposition"^^xsd:anyURI ;
 .
 
