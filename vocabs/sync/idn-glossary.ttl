@@ -12,17 +12,6 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-:dataRoles-vocabulary
-    a skos:Collection ;
-    dcterms:source "https://linked.data.gov.au/def/data-roles"^^xsd:anyURI ;
-    rdfs:isDefinedBy cs: ;
-    skos:definition "Selected concepts from the Data roles vocabulary" ;
-    skos:inScheme cs: ;
-    skos:member drole:subjectAgent ;
-    skos:prefLabel "Data roles concepts"@en ;
-    prov:wasDerivedFrom <https://linked.data.gov.au/def/data-roles> ;
-.
-
 :bd5028a2-8536-4ca3-bef8-1525790271f7
     a skos:Concept ;
     dcterms:source "https://idnau.org/resources/glossary"^^xsd:anyURI ;
@@ -335,7 +324,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy cs: ;
     skos:definition "Persons or organisations that have a role associated with a resource."@en ;
     skos:inScheme cs: ;
-    skos:narrower drole:subjectAgent ;
+    skos:narrowMatch drole:subjectAgent ;
     skos:prefLabel "Agents"@en ;
     skos:topConceptOf cs: ;
 .
@@ -351,10 +340,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-drole:subjectAgent
+:66c85faf-5624-45b9-ae7a-49f8fe7f1f84
     a skos:Concept ;
-    rdfs:isDefinedBy drole: ;
-    skos:broader :57110a82-2f4a-4038-aa71-4bbbc888aac4 ;
+    prov:wasDerivedFrom drole:subjectAgent ;
+    skos:broadMatch :57110a82-2f4a-4038-aa71-4bbbc888aac4 ;
     skos:definition "Person or organisation that the resource is about."@en ;
     skos:historyNote "This concept is taken from the Data roles vocabulary."@en ;
     skos:inScheme cs: ;
