@@ -17,6 +17,7 @@ lcont:followProtocol a odrl:Action ;
     rdfs:isDefinedBy lcont: ;
     skos:prefLabel "Follow protocol"@en ;
     sdo:description "Action indicating that a protocol must be followed" ;
+    skos:historyNote "Defined here for the first time in the Local Contexts Label Extension Vocabulary" ; 
     sdo:name "Follow Protocol" .
 
 lcont:relatedNotice a owl:Property ;
@@ -25,6 +26,7 @@ lcont:relatedNotice a owl:Property ;
     rdfs:isDefinedBy lcont: ;
     rdfs:range lcont:LCNotice ;
     sdo:description "Property indicating that a Local Contexts Label is related in some way ot a Local Contexts Notice" ;
+    skos:historyNote "Defined here for the first time in the Local Contexts Label Extension Vocabulary" ; 
     sdo:name "Related Notice" .
 
 lcont:templateText a owl:DatatypeProperty ;
@@ -34,21 +36,25 @@ lcont:templateText a owl:DatatypeProperty ;
     rdfs:isDefinedBy lcont: ;
     rdfs:range rdf:langString ;
     sdo:description "A prescriptive text string associated with a Label or Notice that provides boilerplate wording intended to be reused or customised by end-users. Distinct from skos:example, which is illustrative only." ;
+    skos:historyNote "Defined here for the first time in the Local Contexts Label Extension Vocabulary" ; 
     sdo:name "Template Text" .
 
 lcont:BCLabel a owl:Class ;
     rdfs:isDefinedBy ont: ;
     sdo:description "A SKOS Concept representing a Biocultural Label from the Local Contexts framework." ;
+    skos:historyNote "Defined here for the first time in the Local Contexts Label Extension Vocabulary" ; 
     sdo:name "Biocultural Label" .
 
 lcont:LCNotice a owl:Class ;
     rdfs:isDefinedBy ont: ;
     sdo:description "The class of all Notice concepts from the Local Contexts framework."@en ;
+    skos:historyNote "Defined here for the first time in the Local Contexts Label Extension Vocabulary" ; 
     sdo:name "Local Contexts Notice"@en .
 
 lcont:TKLabel a owl:Class ;
     rdfs:isDefinedBy ont: ;
     sdo:description "A SKOS Concept representing a Traditional Knowledge Label from the Local Contexts framework." ;
+    skos:historyNote "Defined here for the first time in the Local Contexts Label Extension Vocabulary" ; 
     sdo:name "Traditional Knowledge Label" .
 
 ont: a owl:Ontology ;
@@ -66,9 +72,9 @@ ont: a owl:Ontology ;
     sdo:creator kai: ;
     sdo:dateCreated "2025-09-23"^^xsd:date ;
     sdo:dateIssued "2026-03-31"^^xsd:date ;
-    sdo:dateModified "2026-02-24"^^xsd:date ;
+    sdo:dateModified "2026-03-30"^^xsd:date ;
     sdo:description "Defines TKLabel and BCLabel classes as subclasses of skos:Concept, and lc:templateText for associating reusable boilerplate text with Local Contexts labels." ;
-    sdo:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    sdo:license "http://purl.org/NET/rdflicense/cc-by4.0"^^xsd:anyURI ;
     sdo:name "Local Contexts Label Extension Vocabulary" ;
     sdo:publisher idn: ;
     sdo:version "0.2" .
