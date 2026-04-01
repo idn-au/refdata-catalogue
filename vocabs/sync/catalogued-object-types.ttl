@@ -1,3 +1,4 @@
+PREFIX : <https://data.idnau.org/pid/vocab/cat-obj-types/>
 PREFIX cs: <https://data.idnau.org/pid/vocab/cat-obj-types>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
@@ -13,6 +14,29 @@ schema:Book
     skos:inScheme cs: ;
     skos:prefLabel "Book"@en ;
 .
+
+schema:DataModel
+    a
+        skos:Concept ,
+        schema:CreativeWork ;
+    rdfs:isDefinedBy <https://schema.org> ;
+    skos:definition "A conceptual blueprint that defines how data is structured"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Data Model"@en ;
+    skos:scopeNote "2026-03: This term is proposed to schema.org but not yet accepted, nevertheless it can be used within this vocabulary" ;
+.
+
+schema:DataValidationRules
+    a
+        skos:Concept ,
+        schema:CreativeWork ;
+    rdfs:isDefinedBy <https://schema.org> ;
+    skos:definition "A set of defined rules that can be applied to data to check it against requirements."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Data Validation Rules"@en ;
+    skos:scopeNote "2026-03: This term is proposed to schema.org but not yet accepted, nevertheless it can be used within this vocabulary" ;
+.
+
 
 schema:Dataset
     a
@@ -171,7 +195,19 @@ schema:Article
     skos:definition "An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.\\n\\nSee also [blog post](http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html)."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Article"@en ;
-    schema:contributor <https://schema.org/docs/collab/rNews> ;
+.
+
+:semantic-web-resources
+    a skos:Collection ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Resources that accord with Semantic Web principles"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Semantic Web resources"@en ;
+    skos:scopeNote "Use this collection to contain ontologies, vocabularies and semantic spatial reference datasets" ;
+    skos:member
+        schema:DataModel ,
+        schema:DataValidationRules ,
+        schema:DefinedTermSet ;
 .
 
 cs:
@@ -181,6 +217,8 @@ cs:
         schema:Article ,
         schema:Book ,
         schema:Dataset ,
+        schema:DataModel ,
+        schema:DataValidationRules ,
         schema:DefinedTermSet ,
         schema:DigitalDocument ,
         schema:Map ,
