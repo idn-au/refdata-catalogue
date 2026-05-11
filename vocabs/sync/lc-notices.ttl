@@ -1,0 +1,255 @@
+PREFIX bccs: <https://data.idnau.org/pid/vocab/bc-labels>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX idn: <https://linked.data.gov.au/org/idn>
+PREFIX kai: <https://kurrawong.ai>
+PREFIX lcn: <https://data.idnau.org/pid/vocab/lc-notices/>
+PREFIX lcncs: <https://data.idnau.org/pid/vocab/lc-notices>
+PREFIX lcont: <https://data.idnau.org/pid/lc-ont#>
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+kai: a sdo:Organization ;
+sdo:name "KurrawongAI" ;
+sdo:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+idn: a sdo:Organization ;
+sdo:name "Indigenous Data Network" ;
+sdo:url "https://idnau.org"^^xsd:anyURI ;
+.
+
+lcn:collection-collections-care a skos:Collection ;
+    dcterms:created "2026-02-11"^^xsd:date ;
+    dcterms:modified "2026-04-28"^^xsd:date ;
+    dcterms:creator kai: ;
+    dcterms:publisher idn: ;
+    owl:versionInfo "0.1" ;
+    skos:definition "A collection of Local Contexts Collections Care notices"@en ;
+    skos:inScheme lcncs: ;
+    skos:member 
+        lcn:authorization ,
+        lcn:belonging ,
+        lcn:caring ,
+        lcn:gender-aware ,
+        lcn:leave-undisturbed ,
+        lcn:cc-overall-notice ,
+        lcn:safety ,
+        lcn:viewing ,
+        lcn:withholding ;
+    skos:prefLabel "Local Contexts Collections Care Notice collection"@en ;
+    sdo:citation "https://localcontexts.org/notices/cc-notices/"^^xsd:anyURI ;
+    sdo:dateCreated "2026-02-11"^^xsd:date ;
+    sdo:dateModified "2026-02-11"^^xsd:date .
+
+lcn:collection-disclosure a skos:Collection ;
+    dcterms:created "2026-02-11"^^xsd:date ;
+    dcterms:creator kai: ;
+    owl:versionInfo "0.1" ;
+    skos:definition "A collection of Local Contexts Disclosure notices"@en ;
+    skos:inScheme lcncs: ;
+    skos:member lcn:attribution-incomplete,
+        lcn:bc-notice,
+        lcn:tk-notice ;
+    skos:prefLabel "Local Contexts Discosulre Notice collection"@en ;
+    sdo:citation "https://localcontexts.org/notices/disclosure-notices/"^^xsd:anyURI ;
+    sdo:dateCreated "2026-02-11"^^xsd:date ;
+    sdo:dateModified "2026-02-11"^^xsd:date .
+
+lcn:collection-engage a skos:Collection ;
+    dcterms:created "2026-02-11"^^xsd:date ;
+    dcterms:creator kai: ;
+    owl:versionInfo "0.1" ;
+    skos:definition "A collection of Local Contexts Engagement notices"@en ;
+    skos:inScheme lcncs: ;
+    skos:member lcn:open-to-collaborate ;
+    skos:prefLabel "Local Contexts Engagement Notice collection"@en ;
+    sdo:citation "https://localcontexts.org/notice/open-to-collaborate/"^^xsd:anyURI ;
+    sdo:dateCreated "2026-02-11"^^xsd:date ;
+    sdo:dateModified "2026-02-12"^^xsd:date .
+
+lcn:cc-overall-notice a skos:Concept ,
+        lcont:LCNotice , sdo:Action ;
+    skos:definition "This is the overall Notice icon that can be used to indicate that some or all of the Collections Care Notices are being used."@en ;
+    skos:scopeNote "The Overall Notice may be applied to aggregation-level records, such as collection, catalogue or dataset records, and not to item level records." ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel "Overall Notice"@en ;
+    skos:topConceptOf lcncs: ;
+    odrl:obligation [ a odrl:Duty ;
+            odrl:action odrl:inform ;
+            odrl:informedParty odrl:public ] ;
+    lcont:followProtocol "You are entering a space where Collections Care Notices are in use. Be prepared to follow the protocols for access, use, handling, and viewing associated with certain items or collections. These are in place for the care of the collections and the communities to whom they belong. For more information about Collections Care Notices, see localcontexts.org."@en ;
+    dcterms:references 
+        lcn:authorization ,
+        lcn:belonging ,
+        lcn:caring ,
+        lcn:gender-aware ,
+        lcn:leave-undisturbed ,
+        lcn:safety ,
+        lcn:viewing ,
+        lcn:withholding ;
+    sdo:citation "https://localcontexts.org/notices/cc-notices/"^^xsd:anyURI .
+
+lcn:attribution-incomplete a skos:Concept ,
+        lcont:LCNotice , sdo:Action ;
+    dcterms:identifier "authorization-incomplete"^^xsd:token ;
+    skos:definition "The Attribution Incomplete Notice is attached to a collection or at an item level where there is incomplete, inaccurate, or missing attribution. This Notice indicates to the public that the record and/or metadata is incomplete. Visibly identifying missing attribution within collections is the first step towards correcting existing attribution to include: contributors, collaborators, other authors and/or communities of origin."@en ;
+    skos:example """Collections and items Welcome Collection have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution.
+
+If you know of (or think there may be) items among the collections here of relevance to your community, we activelty encourage you to get in touch."""@en ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel ""@en ;
+    skos:topConceptOf lcncs: ;
+    dcterms:isReferencedBy lcn:cc-overall-notice ;
+    lcont:templateText "Collections and items in our institution have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution."@en ;
+    sdo:citation "https://localcontexts.org/notice/attribution-incomplete/"^^xsd:anyURI .
+
+lcn:authorization a skos:Concept ,
+        lcont:LCNotice , sdo:Action ;
+    dcterms:identifier "authorization"^^xsd:token ;
+    skos:definition "The Authorization Notice recognizes that specific Tribal or community authorization through consultation is necessary prior to use of specific items or collections in all forms of publication and exhibits."@en ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel "Authorization"@en ;
+    skos:topConceptOf lcncs: ;
+    lcont:templateText "The Authorization Notice is being used to indicate that distinct Tribal or community authorization through consultation needs to be obtained for any reproduction of this item, including for the use in exhibitions and publications in print or online."@en ;
+    sdo:citation "https://localcontexts.org/notice/authorization/"^^xsd:anyURI .
+
+lcn:bc-notice a skos:Concept ,
+        lcont:LCNotice , sdo:Action ;
+    dcterms:identifier "bc-notice"^^xsd:token ;
+    dcterms:references bccs: ;
+    skos:definition "The BC Notice should be used to recognize the rights of Indigenous Peoples to permission the use of information, collections, data and digital sequence information generated from the biodiversity and genetic resources associated with their traditional lands, waters, and territories. It acknowledges the importance of cultural protocols and recognizes that appropriate permissions may need to be sought for future use of this material or data."@en ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel "BC Notice"@en ;
+    skos:topConceptOf lcncs: ;
+    lcont:templateText """The BC (Biocultural) Notice is a visible notification that there are accompanying cultural rights and responsibilities that need further attention for any future sharing and use of this material or data. The BC Notice recognizes the rights of Indigenous Peoples to permission the use of information, collections, data and digital sequence information (DSI) generated from the biodiversity or genetic resources associated with traditional lands, waters, and territories. The BC Notice may indicate that BC Labels are in development and their implementation is being negotiated.
+
+[Optional BC Notice use statement]"""@en ;
+    sdo:citation "https://localcontexts.org/notice/bc-notice/"^^xsd:anyURI .
+
+lcn:belonging a skos:Concept ,
+        lcont:LCNotice , sdo:Action ;
+    dcterms:identifier "belonging"^^xsd:token ;
+    skos:definition "The Belonging Notice recognizes the exclusive right of Indigenous communities, Tribes, Clans, or societies to access and handle items or collections."@en ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel "Belonging"@en ;
+    skos:topConceptOf lcncs: ;
+    dcterms:isReferencedBy lcn:cc-overall-notice ;
+    lcont:templateText "The Belonging Notice is being used to indicate that only specific persons belonging to communities, Tribes, Clans, and societies have the right to access and handle these specific items or collections."@en ;
+    sdo:citation "https://localcontexts.org/notice/belonging/"^^xsd:anyURI .
+
+lcn:caring a skos:Concept ,
+        lcont:LCNotice , sdo:Action ;
+    dcterms:identifier "caring"^^xsd:token ;
+    skos:definition "The Caring Notice recognizes cultural ways of caring for materials including specific ways of handling, storing, or managing specific items or collections. In all cases, care will be defined through community consultations."@en ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel "Caring"@en ;
+    skos:topConceptOf lcncs: ;
+    dcterms:isReferencedBy lcn:cc-overall-notice ;
+    lcont:templateText "The Caring Notice is being used to indicate that specialized cultural care is required. Care for items or collections will require specific community guidelines for storage and handling."@en ;
+    sdo:citation "https://localcontexts.org/notice/caring/"^^xsd:anyURI .
+
+lcn:gender-aware a skos:Concept ,
+        lcont:LCNotice , sdo:Action ;
+    dcterms:identifier "gender-aware"^^xsd:token ;
+    skos:definition "The Gender Aware Notice recognizes that gender influences access, handling, viewing, and interacting with items or collections. Specifically, this Notice calls attention to who should handle items or collections based on their self-identified gender."@en ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel "Gender Aware"@en ;
+    skos:topConceptOf lcncs: ;
+    dcterms:isReferencedBy lcn:cc-overall-notice ;
+    lcont:templateText "The Gender Aware Notice is being used to indicate there are specific gender responsibilities that affect who can access, view, and/or handle this item or collection."@en ;
+    sdo:citation "https://localcontexts.org/notice/gender-aware/"^^xsd:anyURI .
+
+lcn:leave-undisturbed a skos:Concept,
+        lcont:LCNotice , sdo:Action ;
+    dcterms:identifier "leave-undisturbed"^^xsd:token ;
+    skos:definition "The Leave Undisturbed Notice recognizes the cultural significance and necessity of not disturbing certain cultural materials."@en ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel "Leave Undisturbed"@en ;
+    skos:topConceptOf lcncs: ;
+    dcterms:isReferencedBy lcn:cc-overall-notice ;
+    lcont:templateText "The Leave Undisturbed Notice is being used to indicate that items in a collection should not be disturbed. They should only be moved or disturbed under very limited circumstances according to community guidance."@en ;
+    sdo:citation "https://localcontexts.org/notice/leave-undisturbed/"^^xsd:anyURI .
+
+lcn:open-to-collaborate a skos:Concept,
+        lcont:LCNotice , sdo:Action ;
+    dcterms:identifier "open-to-collaborate"^^xsd:token ;
+    skos:definition "The Open to Collaborate Notice indicates that an institution is committed to developing new modes of collaboration, engagement, and partnership over Indigenous collections and data that have colonial and/or problematic histories or unclear provenance. This Notice indicates an institutional commitment to change and to develop new processes for the care and stewardship of past and future heritage collections."@en ;
+    skos:example "Wise Ancestors is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous Peoples for the care and stewardship of past and future heritage collections."@en ;
+    skos:scopeNote "The Open to Collaborate notice may be applied to aggregation-level records, such as collection, catalogue or dataset records, and not to item level records." ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel "Open to Collaborate"@en ;
+    skos:topConceptOf lcncs: ;
+    lcont:templateText "Our institution is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous Peoples for the care and stewardship of past and future heritage collections."@en ;
+    sdo:citation "https://localcontexts.org/notice/open-to-collaborate/"^^xsd:anyURI .
+
+lcn:safety a skos:Concept ,
+        lcont:LCNotice , sdo:Action ;
+    dcterms:identifier "safety"^^xsd:token ;
+    skos:definition "The Safety Notice calls attention to the need for respectful safety precautions to avoid handling items in collections when one is menstruating and/or pregnant for the well-being and health of the individual and their family."@en ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel "Safety"@en ;
+    skos:topConceptOf lcncs: ;
+    dcterms:isReferencedBy lcn:cc-overall-notice ;
+    lcont:templateText "The Safety Notice is being used to indicate that extreme caution and care needs to be taken in viewing and handling this item or collection for individual or community well-being and health."@en ;
+    sdo:citation "https://localcontexts.org/notice/safety/"^^xsd:anyURI .
+
+lcn:tk-notice a skos:Concept ,
+        lcont:LCNotice , sdo:Action ;
+    dcterms:identifier "tk-notice"^^xsd:token ;
+    skos:definition "This Notice should be used to recognize that place-based knowledge carries accompanying cultural rights and responsibilities and that appropriate permissions may need to be sought for future use of this material."@en ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel "TK Notice"@en ;
+    skos:topConceptOf lcncs: ;
+    lcont:templateText "The TK Notice is a visible notification that there are accompanying cultural rights and responsibilities that need further attention for any future sharing and use of this material. The TK Notice may indicate that TK Labels are in development and their implementation is being negotiated."@en ;
+    sdo:citation "https://localcontexts.org/notice/tk-notice/"^^xsd:anyURI .
+
+lcn:viewing a skos:Concept ,
+        lcont:LCNotice , sdo:Action ;
+    dcterms:identifier "viewing"^^xsd:token ;
+    skos:definition "The Viewing Notice recognizes that there are limits to viewing or accessing current or deaccessioned items in a collection(s) or their representations."@en ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel "Viewing"@en ;
+    skos:topConceptOf lcncs: ;
+    dcterms:isReferencedBy lcn:cc-overall-notice ;
+    lcont:templateText "The Viewing Notice is being used to indicate that there are limits to who, how, and when an item/collection can be viewed, distributed, and circulated. This includes existing images or representations of an existing or deaccessioned item(s) within a collection(s)."@en ;
+    sdo:citation "https://localcontexts.org/notice/viewing/"^^xsd:anyURI .
+
+lcn:withholding a skos:Concept ,
+        lcont:LCNotice , sdo:Action ;
+    dcterms:identifier "withholding"^^xsd:token ;
+    skos:definition "The Withholding Notice recognizes the need to completely withhold certain items or collections from photography, reproduction, publications, and any type of exhibit in future modalities."@en ;
+    skos:inScheme lcncs: ;
+    skos:prefLabel "Withholding"@en ;
+    skos:topConceptOf lcncs: ;
+    dcterms:isReferencedBy lcn:cc-overall-notice ;
+    lcont:templateText "The Withholding Notice is being used to indicate that no reproductions of this item or collection should ever be made. If there are already existing photographs or reproductions, these should not be used in any exhibition or publication in print, online, or any other format."@en ;
+    sdo:citation "https://localcontexts.org/notice/withholding/"^^xsd:anyURI .
+
+lcncs: a skos:ConceptScheme ;
+    dcterms:created "2026-04-28"^^xsd:date ;
+    dcterms:creator kai: ;
+    dcterms:publisher idn: ;
+    owl:versionInfo "0.2" ;
+    skos:historyNote "Added lcont:followProtocol property to the Overall Notice, with dcterms:references to members of the Collections Care skos:Collection" ;
+    skos:definition "The Notices are tools for institutions and researchers to identify Indigenous collections and data and recognize Indigenous rights and interests. The Notices were developed to create pathways for partnership, collaboration, and support of Indigenous cultural authority."@en ;
+    skos:hasTopConcept lcn:attribution-incomplete,
+        lcn:authorization,
+        lcn:bc-notice,
+        lcn:belonging,
+        lcn:caring,
+        lcn:cc-overall-notice,
+        lcn:gender-aware,
+        lcn:leave-undisturbed,
+        lcn:open-to-collaborate,
+        lcn:safety,
+        lcn:tk-notice,
+        lcn:viewing,
+        lcn:withholding ;
+    skos:prefLabel "Local Contexts Notices"@en ;
+    sdo:citation "https://localcontexts.org/notices/about-the-notices/"^^xsd:anyURI ;
+    sdo:dateCreated "2026-02-11"^^xsd:date ;
+    sdo:dateModified "2026-02-11"^^xsd:date .
+
