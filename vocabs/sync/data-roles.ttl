@@ -6,6 +6,7 @@ PREFIX isovoc: <https://def.isotc211.org/common/RoleCode>
 PREFIX lingvoj: <https://w3id.org/vocab/lingvoj#>
 PREFIX lingvojcol: <https://linked.data.gov.au/def/data-roles/lingvojCol>
 PREFIX lingvojont: <https://w3id.org/vocab/lingvoj>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
@@ -327,7 +328,7 @@ iso:user a skos:Concept ;
     skos:topConceptOf cs: ;
     schema:status status:original .
 
-    lingvoj:interpreter a skos:Concept ;
+    lingvoj:interpreter a skos:Concept , owl:ObjectProperty ;
     rdfs:isDefinedBy lingvojont: ;
     skos:definition "An agent (person or software) responsible of a real-time oral translation" ;
     skos:historyNote "Presented in the Lingvoj Ontology"@en ;
@@ -343,7 +344,7 @@ iso:user a skos:Concept ;
     skos:broader lingvoj:translator ;
     schema:status status:addition .
 
-    lingvoj:translator a skos:Concept ;
+    lingvoj:translator a skos:Concept , owl:ObjectProperty ;
     rdfs:isDefinedBy lingvojont: ;
     skos:definition "An agent (person, organization or sofware) responsible of the translation" ;
     skos:historyNote "Presented in the Lingvoj Ontology"@en ;
