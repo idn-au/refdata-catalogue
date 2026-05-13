@@ -155,6 +155,7 @@ uat:2367 a skos:Concept ;
 
 :indigenous-demographics a skos:Concept ;
     dcterms:created "2025-05-21T00:00:00"^^xsd:dateTime ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "Demographics of indigenous peoples" ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous demographics"@en ;
@@ -162,6 +163,7 @@ uat:2367 a skos:Concept ;
 
 :place a skos:Concept ;
     dcterms:created "2025-05-21T00:00:00"^^xsd:dateTime ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "Relationship to place" ;
     skos:inScheme cs: ;
     skos:prefLabel "Place"@en ;
