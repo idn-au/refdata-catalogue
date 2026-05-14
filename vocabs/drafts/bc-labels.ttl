@@ -1,0 +1,27 @@
+bccs:
+    a skos:ConceptScheme ;
+    skos:prefLabel "Biocultural Labels"@en ;
+    dcterms:creator <https://kurrawong.ai> ;
+    skos:definition "The Biocultural (BC) Labels extend the TK Label initiative to genetic resources and within the biological and genomic data sciences. The BC Labels define community expectations about appropriate use of biocultural collections and data. The BC Labels focus on accurate provenance, transparency and integrity in research engagements with Indigenous communities. The BC Labels ensure Indigenous people are represented in the metadata and create opportunities for future researchers to connect and support appropriate benefit sharing."@en ;
+    dcterms:created "2025-09-23"^^xsd:date ;
+    schema:dateCreated "2025-09-23"^^xsd:date ;
+    schema:dateModified "2026-02-11"^^xsd:date ;
+    owl:versionInfo "0.1" ;
+    skos:hasTopConcept bc:provenance , bc:multipcomm , bc:clan , bc:concentverified , bc:conceptnonverified , bc:researchuse , bc:opentocollab , bc:opentocommercial , bc:outreach , bc:noncommercial
+.
+
+
+bc:provenance
+    a :BCLabel, skos:Concept , odrl:Policy ;
+    skos:prefLabel "Provenance"@en ;
+    dcterms:identifier "provenance"^^xsd:token ;
+    skos:notation "BC P" ;
+    schema:citation "https://localcontexts.org/label/bc-provenance/"^^xsd:anyURI ;
+    skos:definition "Indigenous peoples have the right to make decisions about the future use of information, biological collections, data, and digital sequence information (DSI) that derives from associated lands, waters and territories. This Label reflects a significant relationship and responsibility to the species or biological entity and associated scientific collections and data, and supports the practice of proper and appropriate acknowledgement into the future."@en ;
+    :templateText """This Label is being used to affirm an inherent interest Indigenous people have in the scientific collections and data about communities, peoples, and the biodiversity found within traditional lands, waters and territories. [Community name or authorizing party] retains the right to be named and associated with it into the future. This association reflects a significant relationship and responsibility to [the species or biological entity] and associated scientific collections and data.
+
+[Optional attribution statement]"""@en ;
+    skos:example "This Label is being used to affirm an inherent interest Te Roroa people have in the scientific collections and data (including Digital Sequence Information) about communities, peoples, and the biodiversity found within traditional lands, waters and territories. Te Roroa retains the right to be named and associated with it into the future. This association reflects a significant relationship and responsibility to biocultural materials from within the rohe of Te Roroa and associated scientific collections and data."@en ;
+    skos:inScheme bccs: ;
+    rdfs:isDefinedBy bccs:
+.

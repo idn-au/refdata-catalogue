@@ -320,7 +320,7 @@ cs:
     dcterms:created "2022-11-14"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/idn> ;
     dcterms:issued "2022-11-14"^^xsd:date ;
-    dcterms:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dcterms:modified "2025-08-26"^^xsd:date ;
     dcterms:provenance "This vocabulary was established in 2022 to relate Agents to other Agents within the Indigenous Data Network's Agents Database, however it it expected to be, and promoted to be, general-purpose in nature, i.e. for any Agent/Agent relations"@en ;
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;

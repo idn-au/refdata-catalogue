@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:provenance "Created for the IDN project, 2023"@en ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "An catalogue for a resource that is not the one that first published it" ;
+    skos:definition "A catalogue for a resource that is not the one that first published it" ;
     skos:inScheme cs: ;
     skos:prefLabel "Non-Original"@en ;
     skos:scopeNote "This classification is orthogonal to home/non-home" ;
@@ -41,7 +41,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     dcterms:provenance "Created for the IDN project, 2023"@en ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "An catalogue for a resource that is the one that first published it"@en ;
+    skos:definition "A catalogue for a resource that is the one that first published it"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Original"@en ;
     skos:scopeNote "This classification is orthogonal to home/non-home" ;
@@ -57,7 +57,7 @@ cs:
     a skos:ConceptScheme ;
     dcterms:created "2023-01-17"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/idn> ;
-    dcterms:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dcterms:modified "2025-08-26"^^xsd:date ;
     dcterms:provenance "This vocabulary was established to assist the IDN with differentiating resources' various catalogues. There seems to be no precedent for this form of catalogue classification elsewhere."@en ;
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;

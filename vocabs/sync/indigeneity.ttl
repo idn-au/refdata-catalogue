@@ -45,7 +45,7 @@ cs:
     a skos:ConceptScheme ;
     dcterms:created "2022-08-29"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/idn> ;
-    dcterms:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dcterms:modified "2025-08-26"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;
     dcterms:rights "(c) Indigenous Data Network, 2022" ;
