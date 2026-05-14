@@ -180,6 +180,7 @@ apo:940a5e39-a55c-488a-b72d-2b7eb01feee4 a skos:Concept ;
     skos:definition "First Peoples health" ;
     skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=12> ;
     skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
     skos:prefLabel "First Peoples health"@en .
 
 rdmt:indigenous-data a skos:Concept ;
@@ -286,6 +287,7 @@ apo:706dab90-492e-4638-b77b-81356b057723 a skos:Concept ;
     rdfs:isDefinedBy apocs: ;
     skos:definition "Aboriginal and Torres Strait Islander heritage and culture"@en ;
     skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
     skos:narrower apo:3f74d52e-2aec-4a8c-a643-34d43c2cbac7 ;
     skos:prefLabel "Aboriginal and Torres Strait Islander heritage and culture"@en .
 
@@ -794,6 +796,7 @@ apo:5c65abcf-1014-4e12-bcb8-7590f95ff012 a skos:Concept ;
     skos:definition "Aboriginal reconciliation in Australia is the process of improving relationships between Aboriginal and Torres Strait Islander peoples and non-Indigenous Australians. It involves acknowledging the past, working to reduce racism, and improving opportunities for Indigenous Australians."@en ;
     skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=21> ;
     skos:inScheme cs: ;
+    skos:topConceptOf cs: ;
     skos:narrower apo:0dd4edea-d719-472b-956c-f8b5a5db72b1,
         apo:4ef1f784-9f38-44f6-9505-ed9ba9c41a74,
         apo:d12b395f-0e2f-47d7-975a-431749f72f4d,
