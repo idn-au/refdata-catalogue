@@ -7,10 +7,8 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://linked.data.gov.au/org/idn>
-    a schema:Organization ;
-    schema:name "Indigenous Data Network" ;
-    schema:url "https://www.idnau.org"^^xsd:anyURI ;
+:0.0.1
+    schema:name "0.0.1" ;
 .
 
 :R
@@ -33,6 +31,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
+<https://linked.data.gov.au/org/idn>
+    a schema:Organization ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://www.idnau.org"^^xsd:anyURI ;
+.
+
 cs:
     a skos:ConceptScheme ;
     dcterms:created "2023-04-17"^^xsd:date ;
@@ -51,5 +55,3 @@ cs:
         :U ;
     skos:prefLabel "Urbanity"@en ;
 .
-
-:0.0.1 schema:name "0.0.1" .
