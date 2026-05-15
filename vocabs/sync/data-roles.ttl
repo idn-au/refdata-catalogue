@@ -3,6 +3,10 @@ PREFIX cs: <https://linked.data.gov.au/def/data-roles>
 PREFIX idn: <https://linked.data.gov.au/org/idn>
 PREFIX iso: <https://def.isotc211.org/common/RoleCode/>
 PREFIX isovoc: <https://def.isotc211.org/common/RoleCode>
+PREFIX lingvoj: <https://w3id.org/vocab/lingvoj#>
+PREFIX lingvojcol: <https://linked.data.gov.au/def/data-roles/lingvojCol>
+PREFIX lingvojont: <https://w3id.org/vocab/lingvoj>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
@@ -42,6 +46,18 @@ idn: a schema:Organization ;
         iso:user ;
     skos:prefLabel "ISO CI Role Code codes"@en ;
     prov:wasDerivedFrom isovoc: .
+
+lingvojcol: a skos:Collection ;
+    rdfs:isDefinedBy cs: ;
+    skos:inScheme cs: ;
+    skos:definition "Role Codes presented in the Lingvoj Ontology"@en ;
+    skos:historyNote "The list of Concepts from the Lingvoj Ontology"@en ;
+    skos:member 
+        lingvoj:interpreter ,
+        lingvoj:translator ;
+    skos:prefLabel "The Lingvoj Ontology datatype properties collection" ;
+    prov:wasDerivedFrom lingvojont:
+    .
 
 :datasteward a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -312,6 +328,38 @@ iso:user a skos:Concept ;
     skos:topConceptOf cs: ;
     schema:status status:original .
 
+    lingvoj:interpreter a skos:Concept , owl:ObjectProperty ;
+    rdfs:isDefinedBy lingvojont: ;
+    skos:definition "An agent (person or software) responsible of a real-time oral translation" ;
+    skos:historyNote "Presented in the Lingvoj Ontology"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "interpreter"@en ;
+    skos:altLabel 
+        "intérprete"@es ,
+        "interprète"@fr ,
+        "tolk"@nl ,
+        "通訳者"@ja ,
+        "interprete"@pt ;
+    skos:topConceptOf cs: ;
+    skos:broader lingvoj:translator ;
+    schema:status status:addition .
+
+    lingvoj:translator a skos:Concept , owl:ObjectProperty ;
+    rdfs:isDefinedBy lingvojont: ;
+    skos:definition "An agent (person, organization or sofware) responsible of the translation" ;
+    skos:historyNote "Presented in the Lingvoj Ontology"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "translator"@en ;
+    skos:altLabel 
+        "traductor"@es ,
+        "traducteur"@fr ,
+        "vertaler"@nl ,
+        "翻訳者"@ja ,
+        "tradutor"@pt ;
+    skos:topConceptOf cs: ;
+    schema:status status:addition .
+
+
 cs: a skos:ConceptScheme ;
     skos:definition "This vocabulary lists the roles that Agents - People and Organisations - play in relation to data. This is an extended and Semantic Web version of the International Organisation for Standardization's ISO19115-1 standard's Role Codes codelist."@en ;
     skos:hasTopConcept iso:author,
@@ -334,6 +382,7 @@ cs: a skos:ConceptScheme ;
         iso:sponsor,
         iso:stakeholder,
         iso:user,
+        lingvoj:translator,
         :datasteward,
         :projectLead,
         :projectParticipant,
@@ -346,12 +395,12 @@ cs: a skos:ConceptScheme ;
     prov:qualifiedDerivation [ a prov:Derivation ;
             prov:entity cs: ;
             prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ] ;
-    schema:citation "http://iso.kurrawong.net/vocab/CI_RoleCode"^^xsd:anyURI ;
+    schema:citation "https://def.isotc211.org/codeset/RoleCode"^^xsd:anyURI ;
     schema:copyrightNotice "(c) Australian Government Linked Data Working Group, 2024" ;
     schema:creator idn: ;
     schema:dateCreated "2024-02-28"^^xsd:date ;
     schema:dateIssued "2024-02-28"^^xsd:date ;
-    schema:dateModified "2025-08-26"^^xsd:date ;
+    schema:dateModified "2026-05-12"^^xsd:date ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;
     schema:status status:stable .
