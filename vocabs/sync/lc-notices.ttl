@@ -7,6 +7,7 @@ PREFIX lcncs: <https://data.idnau.org/pid/vocab/lc-notices>
 PREFIX lcont: <https://data.idnau.org/pid/lc-ont#>
 PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -74,6 +75,7 @@ lcn:attribution-incomplete
         schema:Action ;
     dcterms:identifier "authorization-incomplete"^^xsd:token ;
     dcterms:isReferencedBy lcn:cc-overall-notice ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "The Attribution Incomplete Notice is attached to a collection or at an item level where there is incomplete, inaccurate, or missing attribution. This Notice indicates to the public that the record and/or metadata is incomplete. Visibly identifying missing attribution within collections is the first step towards correcting existing attribution to include: contributors, collaborators, other authors and/or communities of origin."@en ;
     skos:example """Collections and items Welcome Collection have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution.
 
@@ -92,6 +94,7 @@ lcn:bc-notice
         schema:Action ;
     dcterms:identifier "bc-notice"^^xsd:token ;
     dcterms:references bccs: ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "The BC Notice should be used to recognize the rights of Indigenous Peoples to permission the use of information, collections, data and digital sequence information generated from the biodiversity and genetic resources associated with their traditional lands, waters, and territories. It acknowledges the importance of cultural protocols and recognizes that appropriate permissions may need to be sought for future use of this material or data."@en ;
     skos:inScheme lcncs: ;
     skos:prefLabel "BC Notice"@en ;
@@ -108,6 +111,7 @@ lcn:open-to-collaborate
         lcont:LCNotice ,
         schema:Action ;
     dcterms:identifier "open-to-collaborate"^^xsd:token ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "The Open to Collaborate Notice indicates that an institution is committed to developing new modes of collaboration, engagement, and partnership over Indigenous collections and data that have colonial and/or problematic histories or unclear provenance. This Notice indicates an institutional commitment to change and to develop new processes for the care and stewardship of past and future heritage collections."@en ;
     skos:example "Wise Ancestors is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous Peoples for the care and stewardship of past and future heritage collections."@en ;
     skos:inScheme lcncs: ;
@@ -124,6 +128,7 @@ lcn:tk-notice
         lcont:LCNotice ,
         schema:Action ;
     dcterms:identifier "tk-notice"^^xsd:token ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "This Notice should be used to recognize that place-based knowledge carries accompanying cultural rights and responsibilities and that appropriate permissions may need to be sought for future use of this material."@en ;
     skos:inScheme lcncs: ;
     skos:prefLabel "TK Notice"@en ;
@@ -144,6 +149,7 @@ lcn:authorization
         lcont:LCNotice ,
         schema:Action ;
     dcterms:identifier "authorization"^^xsd:token ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "The Authorization Notice recognizes that specific Tribal or community authorization through consultation is necessary prior to use of specific items or collections in all forms of publication and exhibits."@en ;
     skos:inScheme lcncs: ;
     skos:prefLabel "Authorization"@en ;
@@ -159,6 +165,7 @@ lcn:belonging
         schema:Action ;
     dcterms:identifier "belonging"^^xsd:token ;
     dcterms:isReferencedBy lcn:cc-overall-notice ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "The Belonging Notice recognizes the exclusive right of Indigenous communities, Tribes, Clans, or societies to access and handle items or collections."@en ;
     skos:inScheme lcncs: ;
     skos:prefLabel "Belonging"@en ;
@@ -174,6 +181,7 @@ lcn:caring
         schema:Action ;
     dcterms:identifier "caring"^^xsd:token ;
     dcterms:isReferencedBy lcn:cc-overall-notice ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "The Caring Notice recognizes cultural ways of caring for materials including specific ways of handling, storing, or managing specific items or collections. In all cases, care will be defined through community consultations."@en ;
     skos:inScheme lcncs: ;
     skos:prefLabel "Caring"@en ;
@@ -189,6 +197,7 @@ lcn:gender-aware
         schema:Action ;
     dcterms:identifier "gender-aware"^^xsd:token ;
     dcterms:isReferencedBy lcn:cc-overall-notice ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "The Gender Aware Notice recognizes that gender influences access, handling, viewing, and interacting with items or collections. Specifically, this Notice calls attention to who should handle items or collections based on their self-identified gender."@en ;
     skos:inScheme lcncs: ;
     skos:prefLabel "Gender Aware"@en ;
@@ -204,6 +213,7 @@ lcn:leave-undisturbed
         schema:Action ;
     dcterms:identifier "leave-undisturbed"^^xsd:token ;
     dcterms:isReferencedBy lcn:cc-overall-notice ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "The Leave Undisturbed Notice recognizes the cultural significance and necessity of not disturbing certain cultural materials."@en ;
     skos:inScheme lcncs: ;
     skos:prefLabel "Leave Undisturbed"@en ;
@@ -219,6 +229,7 @@ lcn:safety
         schema:Action ;
     dcterms:identifier "safety"^^xsd:token ;
     dcterms:isReferencedBy lcn:cc-overall-notice ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "The Safety Notice calls attention to the need for respectful safety precautions to avoid handling items in collections when one is menstruating and/or pregnant for the well-being and health of the individual and their family."@en ;
     skos:inScheme lcncs: ;
     skos:prefLabel "Safety"@en ;
@@ -234,6 +245,7 @@ lcn:viewing
         schema:Action ;
     dcterms:identifier "viewing"^^xsd:token ;
     dcterms:isReferencedBy lcn:cc-overall-notice ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "The Viewing Notice recognizes that there are limits to viewing or accessing current or deaccessioned items in a collection(s) or their representations."@en ;
     skos:inScheme lcncs: ;
     skos:prefLabel "Viewing"@en ;
@@ -249,6 +261,7 @@ lcn:withholding
         schema:Action ;
     dcterms:identifier "withholding"^^xsd:token ;
     dcterms:isReferencedBy lcn:cc-overall-notice ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "The Withholding Notice recognizes the need to completely withhold certain items or collections from photography, reproduction, publications, and any type of exhibit in future modalities."@en ;
     skos:inScheme lcncs: ;
     skos:prefLabel "Withholding"@en ;
@@ -277,6 +290,7 @@ lcn:cc-overall-notice
         lcn:safety ,
         lcn:viewing ,
         lcn:withholding ;
+    rdfs:isDefinedBy lcncs: ;
     skos:definition "This is the overall Notice icon that can be used to indicate that some or all of the Collections Care Notices are being used."@en ;
     skos:inScheme lcncs: ;
     skos:prefLabel "Overall Notice"@en ;
@@ -294,7 +308,6 @@ lcn:cc-overall-notice
 
 lcncs:
     a skos:ConceptScheme ;
-    dcterms:created "2026-04-28"^^xsd:date ;
     dcterms:creator kai: ;
     dcterms:publisher idn: ;
     owl:versionInfo "0.2" ;
@@ -316,6 +329,6 @@ lcncs:
     skos:historyNote "Added lcont:followProtocol property to the Overall Notice, with dcterms:references to members of the Collections Care skos:Collection" ;
     skos:prefLabel "Local Contexts Notices"@en ;
     schema:citation "https://localcontexts.org/notices/about-the-notices/"^^xsd:anyURI ;
-    schema:dateCreated "2026-02-11"^^xsd:date ;
-    schema:dateModified "2026-02-11"^^xsd:date ;
+    schema:dateCreated "2026-04-28"^^xsd:date ;
+    schema:dateModified "2026-04-28"^^xsd:date ;
 .
