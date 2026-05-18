@@ -1,5 +1,6 @@
 PREFIX : <https://linked.data.gov.au/def/data-access-rights/>
 PREFIX cs: <https://linked.data.gov.au/def/data-access-rights>
+PREFIX coarar: <http://vocabularies.coar-repositories.org/documentation/access_rights/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -39,6 +40,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "Access is limited to particular indigenous communities only"@en ;
     skos:historyNote "Created by the Indigenous Data Network, 2024" ;
     skos:inScheme cs: ;
+    rdfs:isDefinedBy cs: ;
     skos:prefLabel "Indigenous Communities Access"@en ;
     schema:status <https://linked.data.gov.au/def/reg-statuses/addition> ;
 .
@@ -49,6 +51,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "Embargoed access refers to a resource accessible as metadata only until released for open access on a specified date."@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
     skos:inScheme cs: ;
+    rdfs:isDefinedBy coarar: ;
     skos:prefLabel "Embargoed access"@en ;
 .
 
@@ -58,6 +61,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "Access is limited to particular communities only"@en ;
     skos:historyNote "Created by the Indigenous Data Network, 2024" ;
     skos:inScheme cs: ;
+    rdfs:isDefinedBy cs: ;
     skos:narrower :indigenous-communities-access ;
     skos:prefLabel "Limited Communities Access"@en ;
     schema:status <https://linked.data.gov.au/def/reg-statuses/addition> ;
@@ -65,10 +69,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :metadata-only
     a skos:Concept ;
-    skos:broader :conditional ;
+    skos:broader :restricted ;
     skos:definition "Metadata only access refers to a resource in which access is limited to metadata only. Access to the resource requires granting of access rights."@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
     skos:inScheme cs: ;
+    rdfs:isDefinedBy coarar: ;
     skos:prefLabel "Metadata only access"@en ;
 .
 
@@ -78,6 +83,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "Open access refers to a resource that is immediately and permanently online, and free for all on the Web, without financial and technical barriers."@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
     skos:inScheme cs: ;
+    rdfs:isDefinedBy coarar: ;
     skos:prefLabel "Open access"@en ;
     skos:topConceptOf cs: ;
 .
@@ -87,6 +93,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:broader :restricted ;
     skos:definition "Protected access refers to a resource that is stored in a system but is not freely accessible due to specific legal or policy decisions, such as active legal proceedings or ministerial discretion. Access is limited to specific personnel or user groups. "@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
+    rdfs:isDefinedBy coarar: ;
     skos:inScheme cs: ;
     skos:prefLabel "Protected access"@en ;
 .
@@ -103,7 +110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "Conditionally protected access refers to a resource that is stored in a system but is not freely accessible and remains protected based on the satisfaction of other specified criteria. Access is limited to specific personnel or user groups. "@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
     skos:inScheme cs: ;
-    skos:narrower :metadata-only ;
+    rdfs:isDefinedBy coarar: ;
     skos:prefLabel "Conditionally protected"@en ;
 .
 
@@ -112,6 +119,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "Restricted access refers to a resource that is stored in a system but is not freely accessible. Access is limited to specific personnel or user groups."@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
     skos:inScheme cs: ;
+    rdfs:isDefinedBy coarar: ;
     skos:narrower
         :conditional ,
         :embargoed ,
