@@ -36,13 +36,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :66c85faf-5624-45b9-ae7a-49f8fe7f1f84
     a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:broadMatch :57110a82-2f4a-4038-aa71-4bbbc888aac4 ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/data-roles> ;
+    skos:broader :57110a82-2f4a-4038-aa71-4bbbc888aac4 ;
     skos:definition "Person or organisation that the resource is about."@en ;
     skos:historyNote "This concept is taken from the Data roles vocabulary."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Subject agent"@en ;
-    prov:wasDerivedFrom drole:subjectAgent ;
 .
 
 :b6360ba0-c76d-4d47-85f6-1df8a475d7f7
