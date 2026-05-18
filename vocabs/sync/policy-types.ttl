@@ -53,16 +53,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:topConceptOf cs: ;
 .
 
-:indigenous-data-governance
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:definition "Refers to the right of Indigenous peoples to autonomously decide what, how and why Indigenous Data are collected, accessed and used. It ensures that data on or about Indigenous peoples reflects our priorities, values, cultures, worldviews and diversity."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "indigenous data governance"@en ;
-    skos:broader :data-governance ;
-    schema:citation "https://www.maiamnayriwingara.org/definitions"^^xsd:anyURI ;
-.
-
 :policy
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -97,6 +87,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         "https://www.business.qld.gov.au/running-business/planning/processes-procedures"^^xsd:anyURI ;
 .
 
+:indigenous-data-governance
+    a skos:Concept ;
+    skos:prefLabel "Indigenous data governance"@en ;
+    skos:definition "Indigenous data governance"@en ;
+    skos:inScheme cs: ;
+    skos:historyNote "Deprecated following creation of a Policy Roles vocabulary where 'Indigenous data governance' is a policy role." ;
+    owl:deprecated "true"^^xsd:boolean ;
+    rdfs:seeAlso <https://data.idnau.org/pid/vocab/policy-roles/indigenous-data-governance>
+.
+
 <https://kurrawong.ai>
     a schema:Organization ;
     schema:name "KurrawongAI" ;
@@ -109,22 +109,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
 .
 
-:0.1 rdfs:label "0.1" .
+:0.2 rdfs:label "0.2" .
 
 cs:
     a skos:ConceptScheme ;
     schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
-    owl:versionIRI :0.1 ;
+    owl:versionIRI :0.2 ;
     skos:definition "The types of principles, policies and procedures held by an organisation for the governance of that organisation."@en ;
     skos:hasTopConcept
         :governance ,
         :policy ,
         :principle ,
         :procedure ;
-    skos:historyNote "This vocab is for characterising policy documentation to improve the ability to apply FAIR and CARE scores."@en ;
     skos:prefLabel "Policy Types"@en ;
     prov:qualifiedAttribution
-        [
+        [   a prov:Attribution ;
             dcat:hadRole dataroles:custodian ;
             prov:agent
                 [
@@ -135,11 +134,13 @@ cs:
         ] ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2024-02-23"^^xsd:date ;
-    schema:dateModified "2025-08-26"^^xsd:date ;
+    schema:dateModified "2026-05-14"^^xsd:date ;
     dcat:keyword
         "data governance" ,
         "data management" ,
         "policy" ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
-    schema:version "0.1" ;
+    schema:version "0.2" ;
 .
+
+
