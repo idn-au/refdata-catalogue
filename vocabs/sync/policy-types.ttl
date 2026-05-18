@@ -91,10 +91,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :indigenous-data-governance
     a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
     skos:prefLabel "Indigenous data governance"@en ;
     skos:definition "Indigenous data governance"@en ;
     skos:inScheme cs: ;
-    skos:historyNote "Deprecated following creation of a Policy Roles vocabulary where 'Indigenous data governance' is a policy role." ;
+    skos:historyNote "Deprecated following creation of a Policy Roles vocabulary where 'Indigenous data governance' is a policy role, used in FAIR and CARE scoring." ;
     owl:deprecated "true"^^xsd:boolean ;
     reg:status regstatus::deprecated ;
     rdfs:seeAlso <https://data.idnau.org/pid/vocab/policy-roles/indigenous-data-governance>
