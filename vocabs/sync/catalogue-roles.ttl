@@ -62,7 +62,6 @@ cs:
     dcterms:provenance "This vocabulary was established to assist the IDN with differentiating resources' various catalogues. There seems to be no precedent for this form of catalogue classification elsewhere."@en ;
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;
     dcterms:rights "(c) Indigenous Data Network, 2022" ;
-    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     skos:definition "The Indigenous Data Network's classifications of the roles that Catalogs may play with respect to Resources catalogued within them"@en ;
     skos:hasTopConcept
         :home ,
@@ -78,9 +77,11 @@ cs:
         prov:entity {CATALOG} ;
     ] ;
     """ ;
-    prov:qualifiedDerivation [
-       a prov:Derivation ;
-        prov:entity cs: ;
-        prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
-    ] ;
+    prov:qualifiedDerivation
+        [
+            a prov:Derivation ;
+            prov:entity cs: ;
+            prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
+        ] ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
 .

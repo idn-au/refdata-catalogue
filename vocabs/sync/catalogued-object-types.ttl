@@ -18,6 +18,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:scopeNote "Use this collection to contain ontologies, vocabularies and semantic spatial reference datasets" ;
 .
 
+:DataValidationRules
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Supplies instructions about how to verify conformance of data to the profile"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Data Validation Rules"@en ;
+    skos:historyNote "Definition taken from the Validation concept in the Profiles Vocabulary - Resource Roles vocabulary" ;
+    skos:topConceptOf cs: ;
+.
+
 :ShapesGraph
     a skos:Concept ;
     rdfs:isDefinedBy <https://schema.org> ;
@@ -205,12 +215,12 @@ cs:
     a skos:ConceptScheme ;
     skos:definition "The types of things in a catalogue"@en ;
     skos:hasTopConcept
+        :DataValidationRules ,
         :ShapesGraph ,
         :SpatialDataset ,
         schema:Article ,
         schema:Book ,
         schema:DataModel ,
-        schema:DataValidationRules ,
         schema:Dataset ,
         schema:DefinedTermSet ,
         schema:DigitalDocument ,
