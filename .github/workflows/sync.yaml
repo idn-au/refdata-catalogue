@@ -21,4 +21,4 @@ jobs:
       - name: Install prezmanifest
         run: uv tool install prezmanifest
       - name: Validate manifest
-        run: pm sync -u $FUSEKI_USERNAME -p $FUSEKI_PASSWORD manifest.ttl $FUESKI_URL True False True False
+        run: pm sync -u $FUSEKI_USERNAME -p $FUSEKI_PASSWORD manifest.ttl $FUSEKI_URL True False True False
