@@ -36,11 +36,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     prov:qualifiedAttribution 
         [
             a prov:Attribution ;
-            dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/custodian> ;
-            schema:agent <https://linked.data.gov.au/org/dcceew> ;
-        ] ,
-        [
-            a prov:Attribution ;
             dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/originator> ;
             schema:agent <https://linked.data.gov.au/org/dcceew> ;
         ] ,
@@ -48,6 +43,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a prov:Attribution ;
             dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/contributor> ;
             schema:agent <https://linked.data.gov.au/org/idn> ;
+        ] ,
+        [
+            a prov:Attribution ;
+            dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/custodian> ;
+            schema:agent <https://linked.data.gov.au/org/dcceew> ;
         ] ;
     schema:description "Indigenous Protected Area features from the CAPAD2020 Dataset"@en ;
     schema:name "Indigenous Protected Areas"@en ;
@@ -68,13 +68,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ,
         [
             a prov:Attribution ;
-            dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/custodian> ;
-            schema:agent <https://linked.data.gov.au/org/dcceew> ;
+            dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/contributor> ;
+            schema:agent <https://linked.data.gov.au/org/idn> ;
         ] ,
         [
             a prov:Attribution ;
-            dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/contributor> ;
-            schema:agent <https://linked.data.gov.au/org/idn> ;
+            dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/custodian> ;
+            schema:agent <https://linked.data.gov.au/org/dcceew> ;
         ] ;
     schema:description "National Park Aboriginal features from the CAPAD2020 Dataset"@en ;
     schema:name "National Park Aboriginal Areas"@en ;

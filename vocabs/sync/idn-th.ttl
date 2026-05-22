@@ -173,7 +173,7 @@ uat:2367
     skos:definition "The use and study of astronomical subjects and their movements by indigenous groups. This field encompasses culture, traditional knowledge, and astronomy." ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous astronomy"@en ;
-    schema:dateCreated "2022-06-22T19:49:16.856000+00:00"^^xsd:dateTime ;
+    schema:dateCreated "2022-06-22"^^xsd:date ;
 .
 
 gaPlacecs:
@@ -187,7 +187,7 @@ gaPlacecs:
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous demographics"@en ;
     skos:topConceptOf cs: ;
-    schema:dateCreated "2025-05-21T00:00:00"^^xsd:dateTime ;
+    schema:dateCreated "2025-05-21"^^xsd:date ;
 .
 
 :place
@@ -198,7 +198,7 @@ gaPlacecs:
     skos:prefLabel "Place"@en ;
     skos:topConceptOf cs: ;
     schema:citation "https://aiatsis.gov.au/thesaurus/topical/XX101477"^^xsd:anyURI ;
-    schema:dateCreated "2025-05-21T00:00:00"^^xsd:dateTime ;
+    schema:dateCreated "2025-05-21"^^xsd:date ;
 .
 
 alumcs:
@@ -293,7 +293,7 @@ gaPlace:INDIGENOUS_PROTECTED_AREA
     skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-owned land or sea where Traditional Owners have entered into an agreement with the Australian Government to promote biodiversity and cultural resource conservation"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous protected area"@en ;
-    schema:dateCreated "2019-08-23T01:15:53.242000+00:00"^^xsd:dateTime ;
+    schema:dateCreated "2019-08-23"^^xsd:date ;
 .
 
 alum:1.2.5

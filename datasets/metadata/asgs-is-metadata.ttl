@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     prov:qualifiedAttribution 
         [
             a prov:Attribution ;
-            dcat:hadRole <https://linked.data.gov.au/def/data-roles/rightsHolder> ;
+            dcat:hadRole <https://linked.data.gov.au/def/data-roles/custodian> ;
             schema:agent <https://linked.data.gov.au/org/abs> ;
         ] ,
         [
@@ -29,7 +29,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ,
         [
             a prov:Attribution ;
-            dcat:hadRole <https://linked.data.gov.au/def/data-roles/custodian> ;
+            dcat:hadRole <https://linked.data.gov.au/def/data-roles/rightsHolder> ;
             schema:agent <https://linked.data.gov.au/org/abs> ;
         ] ;
     schema:citation "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/indigenous-structure"^^xsd:token ;

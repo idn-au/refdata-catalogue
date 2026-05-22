@@ -2,7 +2,7 @@
 
 This repository contains the reference data - background vocabularies, spatial datasets and models - part of the data of the Indigenous Data Network (IDN)'s Knowledge Graph. This information is available online at:
 
-- https://data.idnau.org/catalogs
+- https://data.idnau.org/catalogs/pid:refdata-catalogue
 
 All the resources in this catalogue are listed in the _Prez resources section_ below. These resources are automatically validated and (re)loaded into the catalogue online using the [Prez Manifest](https://pypi.org/project/prezmanifest/) tool.
 
@@ -47,10 +47,12 @@ https://idnau.org
 
 ## Prez resources
 
-Resource | Role | Description
---- | --- | ---
-Catalogue Definition:<br />[`catalogue.ttl`](catalogue.ttl) | [Catalogue Data](https://prez.dev/ManifestResourceRoles/CatalogueData) | The definition of, and metadata for, the container which here is a schema:DataCatalog object
-Syncable Resource Data:<br />[`vocabs/sync/*.ttl`](vocabs/sync/*.ttl) | [Resource Data](https://prez.dev/ManifestResourceRoles/ResourceData) | skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/sync/ folder for syncing
-Non-syncable Resource Data:<br />[`vocabs/non-sync/*.ttl`](vocabs/non-sync/*.ttl) | [Resource Data](https://prez.dev/ManifestResourceRoles/ResourceData) | skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/non-sync/ folder, to be synced externally
-Profile Definition:<br />[`ogc_records_profile.ttl`](https://github.com/RDFLib/prez/blob/main/prez/reference_data/profiles/ogc_records_profile.ttl) | [Catalogue & Resource Model](https://prez.dev/ManifestResourceRoles/CatalogueAndResourceModel) | The default Prez profile for Records API
-Labels:<br />[`labels.ttl`](labels.ttl) | [Complete Catalogue and Resource Labels](https://prez.dev/ManifestResourceRoles/CompleteCatalogueAndResourceLabels) | An RDF file containing all the labels for the container content
+| Resource                                                                                                                                            | Role                                                                                                                | Description                                                                                              |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| Catalogue Definition:<br />[`catalogue.ttl`](catalogue.ttl)                                                                                         | [Catalogue Data](https://prez.dev/ManifestResourceRoles/CatalogueData)                                              | The definition of, and metadata for, the container which here is a schema:DataCatalog object             |
+| Syncable Vocabularies:<br />[`vocabs/sync/*.ttl`](vocabs/sync/*.ttl)                                                                                | [Resource Data](https://prez.dev/ManifestResourceRoles/ResourceData)                                                | skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/sync/ folder for syncing                  |
+| Non-syncable Vocabularies:<br />[`vocabs/non-sync/*.ttl`](vocabs/non-sync/*.ttl)                                                                    | [Resource Data](https://prez.dev/ManifestResourceRoles/ResourceData)                                                | skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/non-sync/ folder, to be synced externally |
+| Syncable Spatial Datasets:<br />[`datasets/metadata/*.ttl`](datasets/metadata/*.ttl)                                                                | [Resource Data](https://prez.dev/ManifestResourceRoles/ResourceData)                                                | schema:Dataset objects in RDF (Turtle) files in the datasets/metadata/ folder for syncing                |
+| Profile Definition:<br />[`ogc_records_profile.ttl`](https://github.com/RDFLib/prez/blob/main/prez/reference_data/profiles/ogc_records_profile.ttl) | [Catalogue & Resource Model](https://prez.dev/ManifestResourceRoles/CatalogueAndResourceModel)                      | The default Prez profile for Records API                                                                 |
+| Labels:<br />[`labels.ttl`](labels.ttl)                                                                                                             | [Complete Catalogue and Resource Labels](https://prez.dev/ManifestResourceRoles/CompleteCatalogueAndResourceLabels) | An RDF file containing all the labels for the container content                                          |
+| Syncable Ontologies:<br />[`onts/*.ttl`](onts/*.ttl)                                                                                                | [Resource Data](https://prez.dev/ManifestResourceRoles/ResourceData)                                                | Ontologies for syncing                                                                                   |
