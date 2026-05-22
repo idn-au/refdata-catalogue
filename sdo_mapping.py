@@ -8,13 +8,14 @@ from utils import serialize_longtrig
 
 REG = Namespace("http://purl.org/linked-data/registry#")
 
-# DIRECTORY = Path(__file__).parent / "vocabs/sync"
+DIRECTORY = Path(__file__).parent / "vocabs/sync"
 # DIRECTORY = Path(__file__).parent / "datasets/metadata"
-DIRECTORY = Path(__file__).parent / "datasets/features"
+# DIRECTORY = Path(__file__).parent / "datasets/features"
 # DIRECTORY = Path(__file__).parent.parent / "isu-catalogue/resources"
 # DIRECTORY = Path(__file__).parent.parent / "kp-catalogue/resources"
+# DIRECTORY = Path(__file__).parent.parent / "external-catalogue/datasets"
 
-TRIG = True # for parsing TriG files
+TRIG = False # for parsing TriG files
 
 
 class Mapping(TypedDict):
@@ -67,7 +68,7 @@ predicate_mappings: list[Mapping] = [
         "to": SDO.spatialCoverage,
     },
     {
-        "key": [DCTERMS.temporal],
+        "key": [DCTERMS.temporal, SDO.temporal],  # sdo:temporal found in kp-catalogue
         "to": SDO.temporalCoverage,
     },
     {
@@ -140,6 +141,7 @@ predicate_mappings: list[Mapping] = [
     # },
 
     # TODO: unmapped predicates (generated from script) - non geo, sdo & skos
+    # dcat:accessURL
     # dcat:contactPoint
     # dcat:hadRole
     # dcat:qualifiedRelation

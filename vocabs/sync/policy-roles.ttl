@@ -1,8 +1,8 @@
 PREFIX : <https://data.idnau.org/pid/vocab/policy-roles/>
 PREFIX cs: <https://data.idnau.org/pid/vocab/policy-roles>
+PREFIX dataroles: <https://linked.data.gov.au/def/data-roles/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX dataroles: <https://linked.data.gov.au/def/data-roles/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -10,25 +10,29 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+:0.1
+    schema:name "0.1" ;
+.
+
 :indigenous-data-governance
     a skos:Concept ;
+    dcterms:replaces <https://data.idnau.org/pid/vocab/policy-types/indigenous-data-governance> ;
     rdfs:isDefinedBy cs: ;
     skos:definition "A creative work or resource has a policy that improves the right of Indigenous Peoples to autonomously decide what, how, and why Indigenous Data are collected and accessed, whether a data policy, procedure, principle etc."@en ;
-    skos:scopeNote "Use to indicate that a creative work or resource has a policy that improves the right of Indigenous Peoples to autonomously decide what, how, and why Indigenous Data are collected and accessed, whether a data policy, procedure, principle etc."@en ;
-    dcterms:source "https://www.maiamnayriwingara.org"^^xsd:anyURI ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous data governance"@en ;
-    dcterms:replaces <https://data.idnau.org/pid/vocab/policy-types/indigenous-data-governance>
+    skos:scopeNote "Use to indicate that a creative work or resource has a policy that improves the right of Indigenous Peoples to autonomously decide what, how, and why Indigenous Data are collected and accessed, whether a data policy, procedure, principle etc."@en ;
+    schema:citation "https://www.maiamnayriwingara.org"^^xsd:anyURI ;
 .
 
 :non-indigenous-data-governance
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "A creative work or resource has a policy that improves data governance"@en ;
-    skos:scopeNote "Use to indicate a creative work or resource has a policy that improves data governance. For creative works or resources that have a policy that improves the right of Indigenous Peoples to autonomously decide what, how, and why Indigenous Data are collected and accessed, whether a data policy, procedure, principle etc, USE Indigenous Data Governance"@en ;
     skos:historyNote "DAMA-DMBOK Guide, 1st edition, pg.47" ;
     skos:inScheme cs: ;
     skos:prefLabel "Non-Indigenous data governance"@en ;
+    skos:scopeNote "Use to indicate a creative work or resource has a policy that improves data governance. For creative works or resources that have a policy that improves the right of Indigenous Peoples to autonomously decide what, how, and why Indigenous Data are collected and accessed, whether a data policy, procedure, principle etc, USE Indigenous Data Governance"@en ;
 .
 
 <https://kurrawong.ai>
@@ -43,31 +47,30 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
 .
 
-:0.1 rdfs:label "0.1" .
-
 cs:
     a skos:ConceptScheme ;
-    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     owl:versionIRI :0.1 ;
     skos:definition "This vocab is for characterising policy documentation to improve the ability to apply FAIR and CARE scores."@en ;
     skos:hasTopConcept
         :indigenous-data-governance ,
         :non-indigenous-data-governance ;
-    skos:historyNote """This vocab is for characterising the role of policy documentation, linked to a creative work or resources, to improve the ability to apply FAIR and CARE scores. This vocabulary displaces the Policy Types vocabulary for the purpose of CARE and FAIR scoring and metrics"""@en ;
+    skos:historyNote "This vocab is for characterising the role of policy documentation, linked to a creative work or resources, to improve the ability to apply FAIR and CARE scores. This vocabulary displaces the Policy Types vocabulary for the purpose of CARE and FAIR scoring and metrics"@en ;
     skos:prefLabel "Policy Roles"@en ;
     prov:qualifiedAttribution
         [
+            a prov:Attribution ;
             dcat:hadRole dataroles:custodian ;
-            prov:agent
+            schema:agent
                 [
                     a schema:Person ;
-                    schema:name "Les Kneebone" ;
                     schema:email "les@kurrawong.ai"^^xsd:anyURI ;
+                    schema:name "Les Kneebone" ;
                 ] ;
         ] ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2026-05-14"^^xsd:date ;
     schema:dateModified "2026-05-14"^^xsd:date ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     schema:version "0.1" ;
 .

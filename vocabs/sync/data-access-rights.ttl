@@ -1,4 +1,5 @@
 PREFIX : <https://linked.data.gov.au/def/data-access-rights/>
+PREFIX coarar: <http://vocabularies.coar-repositories.org/documentation/access_rights/>
 PREFIX cs: <https://linked.data.gov.au/def/data-access-rights>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -34,6 +35,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :indigenous-communities-access
     a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
     skos:broader :limited-communities-access ;
     skos:definition "Access is limited to particular indigenous communities only"@en ;
     skos:historyNote "Created by the Indigenous Data Network, 2024" ;
@@ -42,8 +44,29 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:status <https://linked.data.gov.au/def/reg-statuses/addition> ;
 .
 
+:metadata-only
+    a skos:Concept ;
+    rdfs:isDefinedBy coarar: ;
+    skos:broader :restricted ;
+    skos:definition "Metadata only access refers to a resource in which access is limited to metadata only. Access to the resource requires granting of access rights."@en ;
+    skos:historyNote "Original term in the COAR vocabulary" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Metadata only access"@en ;
+.
+
+:conditional
+    a skos:Concept ;
+    rdfs:isDefinedBy coarar: ;
+    skos:broader :restricted ;
+    skos:definition "Conditionally protected access refers to a resource that is stored in a system but is not freely accessible and remains protected based on the satisfaction of other specified criteria. Access is limited to specific personnel or user groups. "@en ;
+    skos:historyNote "Original term in the COAR vocabulary" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Conditionally protected"@en ;
+.
+
 :embargoed
     a skos:Concept ;
+    rdfs:isDefinedBy coarar: ;
     skos:broader :restricted ;
     skos:definition "Embargoed access refers to a resource accessible as metadata only until released for open access on a specified date."@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
@@ -53,6 +76,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :limited-communities-access
     a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
     skos:broader :restricted ;
     skos:definition "Access is limited to particular communities only"@en ;
     skos:historyNote "Created by the Indigenous Data Network, 2024" ;
@@ -62,17 +86,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:status <https://linked.data.gov.au/def/reg-statuses/addition> ;
 .
 
-:metadata-only
-    a skos:Concept ;
-    skos:broader :conditional ;
-    skos:definition "Metadata only access refers to a resource in which access is limited to metadata only. Access to the resource requires granting of access rights."@en ;
-    skos:historyNote "Original term in the COAR vocabulary" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Metadata only access"@en ;
-.
-
 :open
     a skos:Concept ;
+    rdfs:isDefinedBy coarar: ;
     skos:altLabel "Open file"@en ;
     skos:definition "Open access refers to a resource that is immediately and permanently online, and free for all on the Web, without financial and technical barriers."@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
@@ -83,6 +99,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :protected
     a skos:Concept ;
+    rdfs:isDefinedBy coarar: ;
     skos:broader :restricted ;
     skos:definition "Protected access refers to a resource that is stored in a system but is not freely accessible due to specific legal or policy decisions, such as active legal proceedings or ministerial discretion. Access is limited to specific personnel or user groups. "@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
@@ -96,18 +113,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "http://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
 .
 
-:conditional
-    a skos:Concept ;
-    skos:broader :restricted ;
-    skos:definition "Conditionally protected access refers to a resource that is stored in a system but is not freely accessible and remains protected based on the satisfaction of other specified criteria. Access is limited to specific personnel or user groups. "@en ;
-    skos:historyNote "Original term in the COAR vocabulary" ;
-    skos:inScheme cs: ;
-    skos:narrower :metadata-only ;
-    skos:prefLabel "Conditionally protected"@en ;
-.
-
 :restricted
     a skos:Concept ;
+    rdfs:isDefinedBy coarar: ;
     skos:definition "Restricted access refers to a resource that is stored in a system but is not freely accessible. Access is limited to specific personnel or user groups."@en ;
     skos:historyNote "Original term in the COAR vocabulary" ;
     skos:inScheme cs: ;

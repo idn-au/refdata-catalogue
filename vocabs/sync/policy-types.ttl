@@ -9,8 +9,19 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-:0.1
-    schema:name "0.1" ;
+:0.2
+    schema:name "0.2" ;
+.
+
+:data-governance
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :governance ;
+    skos:definition "The process of setting and enforcing policies for managing and using data as a strategic asset. This is achieved through the definition of roles and responsibilities for the governance of data acquired, used and released."@en ;
+    skos:inScheme cs: ;
+    skos:narrower :indigenous-data-governance ;
+    skos:prefLabel "data governance"@en ;
+    schema:citation "https://resources.data.gov/assets/documents/fds-data-governance-playbook.pdf"^^xsd:anyURI ;
 .
 
 :data-management
@@ -36,11 +47,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :indigenous-data-governance
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:broader :data-governance ;
-    skos:definition "Refers to the right of Indigenous peoples to autonomously decide what, how and why Indigenous Data are collected, accessed and used. It ensures that data on or about Indigenous peoples reflects our priorities, values, cultures, worldviews and diversity."@en ;
+    rdfs:seeAlso <https://data.idnau.org/pid/vocab/policy-roles/indigenous-data-governance> ;
+    owl:deprecated true ;
+    skos:definition "Indigenous data governance"@en ;
+    skos:historyNote "Deprecated following creation of a Policy Roles vocabulary where 'Indigenous data governance' is a policy role, used in FAIR and CARE scoring." ;
     skos:inScheme cs: ;
-    skos:prefLabel "indigenous data governance"@en ;
-    schema:citation "https://www.maiamnayriwingara.org/definitions"^^xsd:anyURI ;
+    skos:prefLabel "Indigenous data governance"@en ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses:deprecated> ;
 .
 
 :principle
@@ -78,17 +91,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
 .
 
-:data-governance
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:broader :governance ;
-    skos:definition "The process of setting and enforcing policies for managing and using data as a strategic asset. This is achieved through the definition of roles and responsibilities for the governance of data acquired, used and released."@en ;
-    skos:inScheme cs: ;
-    skos:narrower :indigenous-data-governance ;
-    skos:prefLabel "data governance"@en ;
-    schema:citation "https://resources.data.gov/assets/documents/fds-data-governance-playbook.pdf"^^xsd:anyURI ;
-.
-
 :policy
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -115,14 +117,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
-    owl:versionIRI :0.1 ;
+    owl:versionIRI :0.2 ;
     skos:definition "The types of principles, policies and procedures held by an organisation for the governance of that organisation."@en ;
     skos:hasTopConcept
         :governance ,
         :policy ,
         :principle ,
         :procedure ;
-    skos:historyNote "This vocab is for characterising policy documentation to improve the ability to apply FAIR and CARE scores."@en ;
     skos:prefLabel "Policy Types"@en ;
     prov:qualifiedAttribution
         [
@@ -137,12 +138,12 @@ cs:
         ] ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2024-02-23"^^xsd:date ;
-    schema:dateModified "2025-08-26"^^xsd:date ;
+    schema:dateModified "2026-05-14"^^xsd:date ;
     schema:keywords
         "data governance" ,
         "data management" ,
         "policy" ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
     schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
-    schema:version "0.1" ;
+    schema:version "0.2" ;
 .

@@ -1,96 +1,109 @@
 PREFIX : <https://data.idnau.org/pid/vocab/idn-th/>
+PREFIX alum: <https://linked.data.gov.au/def/alum/>
+PREFIX alumcs: <https://linked.data.gov.au/def/alum>
+PREFIX apaiscs: <https://vocabularyserver.com/apais/>
+PREFIX apo: <https://linked.data.gov.au/def/policy/>
+PREFIX apocs: <https://linked.data.gov.au/def/policy/Subject>
 PREFIX cs: <https://data.idnau.org/pid/vocab/idn-th>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX fast: <http://id.worldcat.org/fast/>
+PREFIX gaPlace: <http://pid.geoscience.gov.au/def/voc/ga/PlaceType/>
+PREFIX gaPlacecs: <http://pid.geoscience.gov.au/def/voc/ga/PlaceType>
+PREFIX idn: <https://linked.data.gov.au/org/idn>
+PREFIX nrm: <https://linked.data.gov.au/def/nrm/>
+PREFIX nrmcs: <https://linked.data.gov.au/def/nrm>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdmt: <https://terms.codata.org/rdmt/>
+PREFIX rdmtcs: <https://terms.codata.org/rdmt>
+PREFIX regstat: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX uat: <http://astrothesaurus.org/uat/>
+PREFIX uatcs: <http://astrothesaurus.org/uat/1>
+PREFIX vocdermods: <https://linked.data.gov.au/def/vocdermods/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-:AustralianLandUseandManagementClassification
+:AusLandUseManagementClassCollection
     a skos:Collection ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from the Australian Land Use and Management Classification" ;
     skos:inScheme cs: ;
-    skos:member <https://linked.data.gov.au/def/alum/1.2.5> ;
+    skos:member alum:1.2.5 ;
     skos:prefLabel "Australian Land Use and Management Classification"@en ;
-    prov:wasDerivedFrom <https://linked.data.gov.au/def/alum> ;
     schema:citation "https://linked.data.gov.au/def/alum"^^xsd:anyURI ;
 .
 
-:CODATAResearchDataManagementTerminology
+:CODATAResearchDataManagementTermCollection
     a skos:Collection ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from the CODATA Research Data Management Terminology" ;
     skos:inScheme cs: ;
     skos:member
-        <https://terms.codata.org/rdmt/indigenous-data> ,
-        <https://terms.codata.org/rdmt/indigenous-data-sovereignty> ;
+        rdmt:indigenous-data ,
+        rdmt:indigenous-data-sovereignty ;
     skos:prefLabel "CODATA Research Data Management Terminology"@en ;
-    prov:wasDerivedFrom <https://terms.codata.org/rdmt> ;
     schema:citation "https://terms.codata.org/rdmt"^^xsd:anyURI ;
 .
 
-:EMSAmodulesCollectionsofCategoricalValues
+:EMSAmodulesCategoricalValuesCollection
     a skos:Collection ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from EMSA modules: Collections of Categorical Values" ;
     skos:inScheme cs: ;
-    skos:member <https://linked.data.gov.au/def/nrm/c9f1f747-3677-5e72-aac0-b49733ea4629> ;
+    skos:member nrm:c9f1f747-3677-5e72-aac0-b49733ea4629 ;
     skos:prefLabel "Ecological Monitoring System Australia (EMSA) modules: Collections of Categorical Values"@en ;
-    prov:wasDerivedFrom <https://linked.data.gov.au/def/nrm> ;
     schema:citation "https://core.vocabs.paratoo.tern.org.au/api/lut-intervention-fire-management-types"^^xsd:anyURI ;
-    schema:dateIssued "2024-12-02"^^xsd:date ;
+    schema:dateIssued "2024-12-02" ;
 .
 
-:PlaceType
-    a skos:Collection ;
-    rdfs:isDefinedBy cs: ;
-    owl:versionInfo "V1.0" ;
-    skos:definition "Indigenous keywords from the Place Type vocabulary" ;
-    skos:inScheme cs: ;
-    skos:member <http://pid.geoscience.gov.au/def/voc/ga/PlaceType/INDIGENOUS_PROTECTED_AREA> ;
-    skos:prefLabel "Place Type"@en ;
-    prov:wasDerivedFrom <http://pid.geoscience.gov.au/def/voc/ga/PlaceType> ;
-    schema:citation "http://pid.geoscience.gov.au/def/voc/ga/PlaceType"^^xsd:anyURI ;
-    schema:dateIssued "2019-08-23"^^xsd:date ;
-.
-
-:PublicPolicyTaxonomy-vocabulary
+:PPTcollection
     a skos:Collection ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from the Public Policy Taxonomy" ;
     skos:inScheme cs: ;
     skos:member
-        <https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> ,
-        <https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7> ,
-        <https://linked.data.gov.au/def/policy/4ef1f784-9f38-44f6-9505-ed9ba9c41a74> ,
-        <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ,
-        <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ,
-        <https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723> ,
-        <https://linked.data.gov.au/def/policy/755e3b92-6ac3-4d92-96fa-5bf903640668> ,
-        <https://linked.data.gov.au/def/policy/940a5e39-a55c-488a-b72d-2b7eb01feee4> ,
-        <https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d> ,
-        <https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025> ;
+        apo:0dd4edea-d719-472b-956c-f8b5a5db72b1 ,
+        apo:3f74d52e-2aec-4a8c-a643-34d43c2cbac7 ,
+        apo:4ef1f784-9f38-44f6-9505-ed9ba9c41a74 ,
+        apo:5c65abcf-1014-4e12-bcb8-7590f95ff012 ,
+        apo:5cc52a34-77c0-4589-91c6-7dabb6b65761 ,
+        apo:706dab90-492e-4638-b77b-81356b057723 ,
+        apo:755e3b92-6ac3-4d92-96fa-5bf903640668 ,
+        apo:940a5e39-a55c-488a-b72d-2b7eb01feee4 ,
+        apo:d12b395f-0e2f-47d7-975a-431749f72f4d ,
+        apo:e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025 ;
     skos:prefLabel "Public Policy Taxonomy concepts"@en ;
-    prov:wasDerivedFrom <https://linked.data.gov.au/def/policy> ;
+    schema:citation "https://linked.data.gov.au/def/policy/Subject"^^xsd:anyURI ;
 .
 
-:TheUnifiedAstronomyThesaurus
+:PlaceTypecollection
+    a skos:Collection ;
+    rdfs:isDefinedBy cs: ;
+    owl:versionInfo "V1.0" ;
+    skos:definition "Indigenous keywords from the Place Type vocabulary" ;
+    skos:inScheme cs: ;
+    skos:member gaPlace:INDIGENOUS_PROTECTED_AREA ;
+    skos:prefLabel "Place Type"@en ;
+    schema:citation "http://pid.geoscience.gov.au/def/voc/ga/PlaceType"^^xsd:anyURI ;
+    schema:dateIssued "2019-08-23" ;
+.
+
+:UnifiedAstronomyThesaurusCollection
     a skos:Collection ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from The Unified Astronomy Thesaurus" ;
     skos:inScheme cs: ;
-    skos:member <http://astrothesaurus.org/uat/2367> ;
+    skos:member uat:2367 ;
     skos:prefLabel "The Unified Astronomy Thesaurus"@en ;
-    prov:wasDerivedFrom <http://astrothesaurus.org/uat/1> ;
     schema:citation "http://astrothesaurus.org/uat/1"^^xsd:anyURI ;
-    schema:dateIssued "2024-06-20"^^xsd:date ;
+    schema:dateIssued "2024-06-20" ;
 .
 
-:apais-vocabulary
+:apaisCollection
     a skos:Collection ;
+    dcterms:provenance "Determined for this Concept Scheme" ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Indigenous keywords from the APAIS vocabulary" ;
     skos:inScheme cs: ;
@@ -102,7 +115,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://vocabularyserver.com/apais/xml.php?skosTema=11> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=12> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=1246> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=1251> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=1291> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=13> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=132> ,
@@ -125,7 +137,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://vocabularyserver.com/apais/xml.php?skosTema=2179> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=22> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=23> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=2320> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=2355> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=24> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=25> ,
@@ -138,7 +149,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://vocabularyserver.com/apais/xml.php?skosTema=4> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=5> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=553> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=559> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=6> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=691> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=7> ,
@@ -147,85 +157,62 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://vocabularyserver.com/apais/xml.php?skosTema=8> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=805> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=9> ;
-    skos:prefLabel "APAIS Concepts"@en ;
-    prov:wasDerivedFrom <https://vocabularyserver.com/apais/> ;
+    skos:prefLabel "APAIS Indigenous Concepts"@en ;
     schema:citation "https://vocabularyserver.com/apais/"^^xsd:anyURI ;
 .
 
-:indigeneity-concepts
-    a skos:Collection ;
-    dcterms:provenance "Determined for this Concept Scheme" ;
-    rdfs:isDefinedBy cs: ;
-    skos:definition "Concepts that indicate indigeneity" ;
-    skos:inScheme cs: ;
-    skos:member
-        <https://vocabularyserver.com/apais/xml.php?skosTema=10> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=1096> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=11> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=12> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=13> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=14> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=1483> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=15> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=16> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=17> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=18> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=21> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=2178> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=2179> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=22> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=23> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=24> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=25> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=26> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=27> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=28> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=29> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=3> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=4> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=5> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=6> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=7> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=765> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=8> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=9> ;
-    skos:prefLabel "Indigeneity Concepts" ;
+uatcs:
+    schema:name "The Unified Astronomy Thesaurus" ;
 .
 
-<http://astrothesaurus.org/uat/2367>
+uat:2367
     a skos:Concept ;
     dcterms:provenance "Taken directly from The Unified Astronomy Thesaurus" ;
-    rdfs:isDefinedBy <http://astrothesaurus.org/uat/1> ;
+    rdfs:isDefinedBy uatcs: ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=2> ;
     skos:definition "The use and study of astronomical subjects and their movements by indigenous groups. This field encompasses culture, traditional knowledge, and astronomy." ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous astronomy"@en ;
-    schema:dateCreated "2022-06-22"^^xsd:date ;
+    schema:dateCreated "2022-06-22T19:49:16.856000+00:00"^^xsd:dateTime ;
+.
+
+gaPlacecs:
+    schema:name "Place Type" ;
 .
 
 :indigenous-demographics
     a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "Demographics of indigenous peoples" ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous demographics"@en ;
     skos:topConceptOf cs: ;
-    schema:dateCreated "2025-05-21"^^xsd:date ;
+    schema:dateCreated "2025-05-21T00:00:00"^^xsd:dateTime ;
 .
 
 :place
     a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
     skos:definition "Relationship to place" ;
     skos:inScheme cs: ;
     skos:prefLabel "Place"@en ;
     skos:topConceptOf cs: ;
     schema:citation "https://aiatsis.gov.au/thesaurus/topical/XX101477"^^xsd:anyURI ;
-    schema:dateCreated "2025-05-21"^^xsd:date ;
+    schema:dateCreated "2025-05-21T00:00:00"^^xsd:dateTime ;
 .
 
-<https://linked.data.gov.au/def/policy/940a5e39-a55c-488a-b72d-2b7eb01feee4>
+alumcs:
+    schema:name "Australian Land Use and Management Classification" ;
+.
+
+nrmcs:
+    schema:name "Natural Resource Management Controlled Vocabularies" ;
+.
+
+apo:940a5e39-a55c-488a-b72d-2b7eb01feee4
     a skos:Concept ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
+    rdfs:isDefinedBy apocs: ;
     skos:altLabel
         "Aboriginal health"@en ,
         "Indigenous health"@en ,
@@ -234,166 +221,34 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=12> ;
     skos:inScheme cs: ;
     skos:prefLabel "First Peoples health"@en ;
+    skos:topConceptOf cs: ;
     schema:dateCreated "2020-09-15"^^xsd:date ;
 .
 
-<https://terms.codata.org/rdmt/indigenous-data>
+rdmt:indigenous-data
     a skos:Concept ;
     dcterms:provenance "Taken directly from CODATA Research Data Management Terminology" ;
-    rdfs:isDefinedBy <https://terms.codata.org/rdmt> ;
+    rdfs:isDefinedBy rdmtcs: ;
     skos:definition "Data that pertains to (is created or gathered by, or is about) Indigenous peoples."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous data"@en ;
     skos:topConceptOf cs: ;
 .
 
-<https://terms.codata.org/rdmt/indigenous-data-sovereignty>
+rdmt:indigenous-data-sovereignty
     a skos:Concept ;
     dcterms:provenance "Taken directly from CODATA Research Data Management Terminology" ;
-    rdfs:isDefinedBy <https://terms.codata.org/rdmt> ;
+    rdfs:isDefinedBy rdmtcs: ;
     skos:definition "Data that pertains to (is created or gathered by, or is about) Indigenous peoples."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous data sovereignty"@en ;
     skos:topConceptOf cs: ;
 .
 
-<http://pid.geoscience.gov.au/def/voc/ga/PlaceType/INDIGENOUS_PROTECTED_AREA>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from Place Type vocabulary" ;
-    rdfs:isDefinedBy <http://pid.geoscience.gov.au/def/voc/ga/PlaceType> ;
-    skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
-    skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-owned land or sea where Traditional Owners have entered into an agreement with the Australian Government to promote biodiversity and cultural resource conservation"@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Indigenous protected area"@en ;
-    schema:dateCreated "2019-08-23"^^xsd:date ;
-.
-
-<https://linked.data.gov.au/def/alum/1.2.5>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from Australian Land Use and Management Classification" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/alum> ;
-    skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
-    skos:definition "Area managed primarily for traditional Indigenous uses. This class should only be applied where traditional Indigenous uses are the current prime use."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Traditional Indigenous uses"@en ;
-    skos:topConceptOf cs: ;
-.
-
-<https://linked.data.gov.au/def/nrm/c9f1f747-3677-5e72-aac0-b49733ea4629>
-    a skos:Concept ;
-    dcterms:provenance "Ecological Monitoring System Australia (EMSA) modules: Collections of Categorical Values" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm> ;
-    skos:altLabel
-        "Cool burning"@en ,
-        "Fire-stick farming"@en ;
-    skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
-    skos:definition "Cultural burning is a traditional Aboriginal land management practice that involves using fire to care for the land. It's also known as cool burning or fire-stick farming."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Cultural burn"@en ;
-.
-
-<https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
-    skos:altLabel "Repatriation and reburial of human remains"@en ;
-    skos:broader <https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723> ;
-    skos:definition "The process of returning human remains to their communities of origin. This process can help create healing and reconciliation for the descendants of those remains."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Repatriation of historic human remains"@en ;
-    schema:dateCreated "2020-09-15"^^xsd:date ;
-.
-
-<https://linked.data.gov.au/def/policy/4ef1f784-9f38-44f6-9505-ed9ba9c41a74>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
-    skos:altLabel "Aboriginal Australians government relations"@en ;
-    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
-    skos:definition "Relations between Aboriginal Australins and Australian governments"@en ;
-    skos:exactMatch <http://id.worldcat.org/fast/794522> ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Government relations with First Peoples"@en ;
-    schema:dateCreated "2020-09-15"^^xsd:date ;
-.
-
-<https://linked.data.gov.au/def/policy/706dab90-492e-4638-b77b-81356b057723>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
-    skos:definition "Aboriginal and Torres Strait Islander heritage and culture"@en ;
-    skos:inScheme cs: ;
-    skos:narrower <https://linked.data.gov.au/def/policy/3f74d52e-2aec-4a8c-a643-34d43c2cbac7> ;
-    skos:prefLabel "Aboriginal and Torres Strait Islander heritage and culture"@en ;
-    schema:dateCreated "2020-09-15"^^xsd:date ;
-.
-
-<https://linked.data.gov.au/def/policy/755e3b92-6ac3-4d92-96fa-5bf903640668>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
-    skos:broader <https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761> ;
-    skos:definition "Aboriginal water use."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Aboriginal water use"@en ;
-    schema:dateCreated "2020-09-15"^^xsd:date ;
-.
-
-<https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
-    skos:altLabel "Uluru Statement from the Heart"@en ;
-    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
-    skos:definition "A 2017 petition to the people of Australia, written and endorsed by the Australian Aboriginal and Torres Strait Islander leaders selected as delegates to the First Nations National Constitutional Convention. The document calls for substantive constitutional change and structural reform through the creation of two new institutions; a constitutionally protected First Nations Voice and a Makarrata Commission[a], to oversee agreement-making and truth-telling between governments and First Nations."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Uluru Statement"@en ;
-    schema:dateCreated "2020-09-15"^^xsd:date ;
-.
-
-<https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
-    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
-    skos:definition "Practical and structured plans for action within a workplace, based on relationships, respect and opportunities. They help people in the workplace to understand important issues relating to Indigenous Australians, and further meaningful engagement among groups. They also aim to increase equality in the workplace, and help to create sustainable employment opportunities."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Reconciliation Action Plans"@en ;
-    schema:dateCreated "2020-09-15"^^xsd:date ;
-.
-
-<https://linked.data.gov.au/org/idn>
-    a schema:Organization ;
-    schema:name "Indigenous Data Network" ;
-    schema:url "https://www.idnau.org"^^xsd:anyURI ;
-.
-
-<https://vocabularyserver.com/apais/xml.php?skosTema=1291>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1251> ;
-    skos:definition "Legal rights" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Legal rights" ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
-<https://vocabularyserver.com/apais/xml.php?skosTema=1774>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=181> ;
-    skos:definition "Queensland" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Queensland" ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
 <https://vocabularyserver.com/apais/xml.php?skosTema=2179>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1774> ;
     skos:definition "Torres Strait Islands"@en ;
     skos:inScheme cs: ;
@@ -408,11 +263,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=22>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:altLabel "Dreaming stories"@en ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1824> ;
     skos:definition "Aboriginal religion"@en ;
-    skos:exactMatch <http://id.worldcat.org/fast/897914> ;
+    skos:exactMatch fast:897914 ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal religion"@en ;
     skos:scopeNote "Includes Torres Strait Islander religion"@en ;
@@ -422,7 +277,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=559>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1251> ;
     skos:definition "Customary law" ;
     skos:inScheme cs: ;
@@ -430,24 +285,126 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1>
+gaPlace:INDIGENOUS_PROTECTED_AREA
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from Place Type vocabulary" ;
+    rdfs:isDefinedBy gaPlacecs: ;
+    skos:broader apo:5cc52a34-77c0-4589-91c6-7dabb6b65761 ;
+    skos:definition "An Indigenous Protected Area (IPA) is an area of Indigenous-owned land or sea where Traditional Owners have entered into an agreement with the Australian Government to promote biodiversity and cultural resource conservation"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Indigenous protected area"@en ;
+    schema:dateCreated "2019-08-23T01:15:53.242000+00:00"^^xsd:dateTime ;
+.
+
+alum:1.2.5
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from Australian Land Use and Management Classification" ;
+    rdfs:isDefinedBy alumcs: ;
+    skos:broader apo:5cc52a34-77c0-4589-91c6-7dabb6b65761 ;
+    skos:definition "Area managed primarily for traditional Indigenous uses. This class should only be applied where traditional Indigenous uses are the current prime use."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Traditional Indigenous uses"@en ;
+    skos:topConceptOf cs: ;
+.
+
+nrm:c9f1f747-3677-5e72-aac0-b49733ea4629
+    a skos:Concept ;
+    dcterms:provenance "Ecological Monitoring System Australia (EMSA) modules: Collections of Categorical Values" ;
+    rdfs:isDefinedBy nrmcs: ;
+    skos:altLabel
+        "Cool burning"@en ,
+        "Fire-stick farming"@en ;
+    skos:broader apo:5cc52a34-77c0-4589-91c6-7dabb6b65761 ;
+    skos:definition "Cultural burning is a traditional Aboriginal land management practice that involves using fire to care for the land. It's also known as cool burning or fire-stick farming."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Cultural burn"@en ;
+.
+
+apo:3f74d52e-2aec-4a8c-a643-34d43c2cbac7
     a skos:Concept ;
     dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
-    skos:broader <https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012> ;
-    skos:definition "Native title is the recognition in Australian law that some Aboriginal and Torres Strait Islander people continue to hold rights and interests in land and water."@en ;
-    skos:exactMatch
-        <http://id.worldcat.org/fast/1033935> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=1483> ;
+    rdfs:isDefinedBy apocs: ;
+    skos:altLabel "Repatriation and reburial of human remains"@en ;
+    skos:broader apo:706dab90-492e-4638-b77b-81356b057723 ;
+    skos:definition "The process of returning human remains to their communities of origin. This process can help create healing and reconciliation for the descendants of those remains."@en ;
     skos:inScheme cs: ;
-    skos:prefLabel "Native Title"@en ;
+    skos:prefLabel "Repatriation of historic human remains"@en ;
     schema:dateCreated "2020-09-15"^^xsd:date ;
+.
+
+apo:4ef1f784-9f38-44f6-9505-ed9ba9c41a74
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy apocs: ;
+    skos:altLabel "Aboriginal Australians government relations"@en ;
+    skos:broader apo:5c65abcf-1014-4e12-bcb8-7590f95ff012 ;
+    skos:definition "Relations between Aboriginal Australins and Australian governments"@en ;
+    skos:exactMatch fast:794522 ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Government relations with First Peoples"@en ;
+    schema:dateCreated "2020-09-15"^^xsd:date ;
+.
+
+apo:706dab90-492e-4638-b77b-81356b057723
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy apocs: ;
+    skos:definition "Aboriginal and Torres Strait Islander heritage and culture"@en ;
+    skos:inScheme cs: ;
+    skos:narrower apo:3f74d52e-2aec-4a8c-a643-34d43c2cbac7 ;
+    skos:prefLabel "Aboriginal and Torres Strait Islander heritage and culture"@en ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2020-09-15"^^xsd:date ;
+.
+
+apo:755e3b92-6ac3-4d92-96fa-5bf903640668
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy apocs: ;
+    skos:broader apo:5cc52a34-77c0-4589-91c6-7dabb6b65761 ;
+    skos:definition "Aboriginal water use."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Aboriginal water use"@en ;
+    schema:dateCreated "2020-09-15"^^xsd:date ;
+.
+
+apo:d12b395f-0e2f-47d7-975a-431749f72f4d
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy apocs: ;
+    skos:altLabel "Uluru Statement from the Heart"@en ;
+    skos:broader apo:5c65abcf-1014-4e12-bcb8-7590f95ff012 ;
+    skos:definition "A 2017 petition to the people of Australia, written and endorsed by the Australian Aboriginal and Torres Strait Islander leaders selected as delegates to the First Nations National Constitutional Convention. The document calls for substantive constitutional change and structural reform through the creation of two new institutions; a constitutionally protected First Nations Voice and a Makarrata Commission[a], to oversee agreement-making and truth-telling between governments and First Nations."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Uluru Statement"@en ;
+    schema:dateCreated "2020-09-15"^^xsd:date ;
+.
+
+apo:e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy apocs: ;
+    skos:broader apo:5c65abcf-1014-4e12-bcb8-7590f95ff012 ;
+    skos:definition "Practical and structured plans for action within a workplace, based on relationships, respect and opportunities. They help people in the workplace to understand important issues relating to Indigenous Australians, and further meaningful engagement among groups. They also aim to increase equality in the workplace, and help to create sustainable employment opportunities."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Reconciliation Action Plans"@en ;
+    schema:dateCreated "2020-09-15"^^xsd:date ;
+.
+
+idn:
+    a schema:Organization ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://www.idnau.org"^^xsd:anyURI ;
+.
+
+rdmtcs:
+    schema:name "RDM Terminology" ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=10>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:altLabel "Education, Aboriginal"@en ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=691> ;
     skos:definition "Aboriginal education"@en ;
@@ -457,32 +414,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=1004>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Health" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Health" ;
-    skos:topConceptOf cs: ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
-<https://vocabularyserver.com/apais/xml.php?skosTema=1029>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "History" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "History" ;
-    skos:topConceptOf cs: ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
 <https://vocabularyserver.com/apais/xml.php?skosTema=11>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:altLabel "Employment of Aborigines"@en ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=762> ;
     skos:definition "Aboriginal employment"@en ;
@@ -492,21 +427,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=1246>
+<https://vocabularyserver.com/apais/xml.php?skosTema=1291>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Languages" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1251> ;
+    skos:definition "Legal rights" ;
     skos:inScheme cs: ;
-    skos:prefLabel "Languages" ;
-    skos:topConceptOf cs: ;
+    skos:prefLabel "Legal rights" ;
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=13>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:altLabel
         "Aborigines in history"@en ,
         "History, Aboriginal"@en ;
@@ -518,59 +453,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=132>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Archaeology" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Archaeology" ;
-    skos:topConceptOf cs: ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
-<https://vocabularyserver.com/apais/xml.php?skosTema=1326>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Literature" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Literature" ;
-    skos:topConceptOf cs: ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
-<https://vocabularyserver.com/apais/xml.php?skosTema=1391>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Men" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Men" ;
-    skos:topConceptOf cs: ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
-<https://vocabularyserver.com/apais/xml.php?skosTema=147>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Art" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Art" ;
-    skos:topConceptOf cs: ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
 <https://vocabularyserver.com/apais/xml.php?skosTema=15>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader
         <https://vocabularyserver.com/apais/xml.php?skosTema=1246> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=8> ;
     skos:definition "Aboriginal languages"@en ;
-    skos:exactMatch <http://id.worldcat.org/fast/794531> ;
+    skos:exactMatch fast:794531 ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal languages"@en ;
     skos:scopeNote "Includes Torres Strait Islander languages"@en ;
@@ -580,7 +471,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=16>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader
         <https://vocabularyserver.com/apais/xml.php?skosTema=1326> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=5> ;
@@ -594,7 +485,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=17>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader
         <https://vocabularyserver.com/apais/xml.php?skosTema=1391> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
@@ -605,10 +496,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
+<https://vocabularyserver.com/apais/xml.php?skosTema=1774>
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=181> ;
+    skos:definition "Queensland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Queensland" ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
+.
+
 <https://vocabularyserver.com/apais/xml.php?skosTema=18>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=8> ;
     skos:definition "Aboriginal music"@en ;
     skos:inScheme cs: ;
@@ -617,34 +519,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=1824>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Religion" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Religion" ;
-    skos:topConceptOf cs: ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
-<https://vocabularyserver.com/apais/xml.php?skosTema=2>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:broader
-        <https://vocabularyserver.com/apais/xml.php?skosTema=132> ,
-        <https://vocabularyserver.com/apais/xml.php?skosTema=29> ;
-    skos:definition "Aboriginal archaeology"@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Aboriginal archaeology"@en ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
 <https://vocabularyserver.com/apais/xml.php?skosTema=23>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader
         <https://vocabularyserver.com/apais/xml.php?skosTema=1251> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=181> ;
@@ -657,7 +535,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=2320>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:definition "Women" ;
     skos:inScheme cs: ;
     skos:prefLabel "Women" ;
@@ -665,21 +543,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=2355>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Youth" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Youth" ;
-    skos:topConceptOf cs: ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
 <https://vocabularyserver.com/apais/xml.php?skosTema=24>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1483> ;
     skos:definition "Aboriginal title"@en ;
     skos:inScheme cs: ;
@@ -690,12 +557,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=25>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader
         <https://vocabularyserver.com/apais/xml.php?skosTema=2320> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
     skos:definition "Aboriginal women"@en ;
-    skos:exactMatch <http://id.worldcat.org/fast/970270> ;
+    skos:exactMatch fast:970270 ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal women"@en ;
     skos:scopeNote "Includes Torres Strait Islander women"@en ;
@@ -705,12 +572,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=26>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader
         <https://vocabularyserver.com/apais/xml.php?skosTema=2355> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=27> ;
     skos:definition "Aboriginal youth"@en ;
-    skos:exactMatch <http://id.worldcat.org/fast/1183678> ;
+    skos:exactMatch fast:1183678 ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal youth"@en ;
     skos:scopeNote "Includes Torres Strait Islander youth"@en ;
@@ -720,7 +587,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=28>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1251> ;
     skos:definition "Aborigines and the law"@en ;
     skos:inScheme cs: ;
@@ -729,21 +596,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=359>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Children" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Children" ;
-    skos:topConceptOf cs: ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
 <https://vocabularyserver.com/apais/xml.php?skosTema=4>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=3> ;
     skos:definition "Aboriginal artists"@en ;
     skos:inScheme cs: ;
@@ -751,62 +607,65 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=553>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Culture" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Culture" ;
-    skos:topConceptOf cs: ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
 <https://vocabularyserver.com/apais/xml.php?skosTema=6>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader
         <https://vocabularyserver.com/apais/xml.php?skosTema=27> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=359> ;
     skos:definition "Aboriginal children"@en ;
-    skos:exactMatch <http://id.worldcat.org/fast/856898> ;
+    skos:exactMatch fast:856898 ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal children"@en ;
     skos:scopeNote "Includes Torres Strait Islander children"@en ;
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=691>
-    a skos:Concept ;
-    dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Education" ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Education" ;
-    skos:topConceptOf cs: ;
-    schema:dateCreated "2011-04-29"^^xsd:date ;
-.
-
 <https://vocabularyserver.com/apais/xml.php?skosTema=765>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=762> ;
     skos:definition "Employment of Aborigines"@en ;
-    skos:exactMatch <http://id.worldcat.org/fast/794515> ;
+    skos:exactMatch fast:794515 ;
     skos:inScheme cs: ;
     skos:prefLabel "Employment of Aborigines"@en ;
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=805>
+apo:0dd4edea-d719-472b-956c-f8b5a5db72b1
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy apocs: ;
+    skos:broader apo:5c65abcf-1014-4e12-bcb8-7590f95ff012 ;
+    skos:definition "Native title is the recognition in Australian law that some Aboriginal and Torres Strait Islander people continue to hold rights and interests in land and water."@en ;
+    skos:exactMatch
+        fast:1033935 ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=1483> ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Native Title"@en ;
+    schema:dateCreated "2020-09-15"^^xsd:date ;
+.
+
+<https://vocabularyserver.com/apais/xml.php?skosTema=1004>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Ethnic groups" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Health" ;
     skos:inScheme cs: ;
-    skos:prefLabel "Ethnic groups" ;
+    skos:prefLabel "Health" ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
+.
+
+<https://vocabularyserver.com/apais/xml.php?skosTema=1029>
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "History" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "History" ;
     skos:topConceptOf cs: ;
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
@@ -814,7 +673,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=1096>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=805> ;
     skos:definition "Indigenous peoples"@en ;
     skos:inScheme cs: ;
@@ -829,7 +688,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=12>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1004> ;
     skos:definition "Aboriginal health"@en ;
     skos:inScheme cs: ;
@@ -838,10 +697,54 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
+<https://vocabularyserver.com/apais/xml.php?skosTema=1246>
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Languages" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Languages" ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
+.
+
+<https://vocabularyserver.com/apais/xml.php?skosTema=132>
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Archaeology" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Archaeology" ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
+.
+
+<https://vocabularyserver.com/apais/xml.php?skosTema=1326>
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Literature" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Literature" ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
+.
+
+<https://vocabularyserver.com/apais/xml.php?skosTema=1391>
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Men" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Men" ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
+.
+
 <https://vocabularyserver.com/apais/xml.php?skosTema=14>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:altLabel "Land rights, Aboriginal"@en ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=1291> ;
     skos:definition "Aboriginal land rights"@en ;
@@ -852,24 +755,48 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=181>
+<https://vocabularyserver.com/apais/xml.php?skosTema=147>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Australia" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Art" ;
     skos:inScheme cs: ;
-    skos:prefLabel "Australia" ;
+    skos:prefLabel "Art" ;
     skos:topConceptOf cs: ;
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=189>
+<https://vocabularyserver.com/apais/xml.php?skosTema=1824>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Australians" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Religion" ;
     skos:inScheme cs: ;
-    skos:prefLabel "Australians" ;
+    skos:prefLabel "Religion" ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
+.
+
+<https://vocabularyserver.com/apais/xml.php?skosTema=2>
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:broader
+        <https://vocabularyserver.com/apais/xml.php?skosTema=132> ,
+        <https://vocabularyserver.com/apais/xml.php?skosTema=29> ;
+    skos:definition "Aboriginal archaeology"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Aboriginal archaeology"@en ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
+.
+
+<https://vocabularyserver.com/apais/xml.php?skosTema=2355>
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Youth" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Youth" ;
     skos:topConceptOf cs: ;
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
@@ -877,7 +804,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=29>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:definition "Aborigines in history"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Aborigines in history"@en ;
@@ -887,7 +814,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=3>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:altLabel "Aboriginal paintings"@en ;
     skos:broader
         <https://vocabularyserver.com/apais/xml.php?skosTema=147> ,
@@ -900,13 +827,46 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
+<https://vocabularyserver.com/apais/xml.php?skosTema=359>
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Children" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Children" ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
+.
+
+<https://vocabularyserver.com/apais/xml.php?skosTema=553>
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Culture" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Culture" ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
+.
+
+<https://vocabularyserver.com/apais/xml.php?skosTema=691>
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Education" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Education" ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
+.
+
 <https://vocabularyserver.com/apais/xml.php?skosTema=7>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:altLabel "Aboriginal reserves"@en ;
     skos:definition "Aboriginal communities"@en ;
-    skos:exactMatch <http://id.worldcat.org/fast/794557> ;
+    skos:exactMatch fast:794557 ;
     skos:inScheme cs: ;
     skos:prefLabel "Aboriginal communities"@en ;
     skos:scopeNote "Includes Torres Strait Islander communities"@en ;
@@ -914,13 +874,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/xml.php?skosTema=762>
+<https://vocabularyserver.com/apais/xml.php?skosTema=805>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
-    skos:definition "Employment" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Ethnic groups" ;
     skos:inScheme cs: ;
-    skos:prefLabel "Employment" ;
+    skos:prefLabel "Ethnic groups" ;
     skos:topConceptOf cs: ;
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
@@ -928,7 +888,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=9>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader
         <https://vocabularyserver.com/apais/xml.php?skosTema=559> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=8> ;
@@ -939,50 +899,32 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://linked.data.gov.au/def/policy/5c65abcf-1014-4e12-bcb8-7590f95ff012>
+<https://vocabularyserver.com/apais/xml.php?skosTema=181>
     a skos:Concept ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
-    skos:altLabel "Aboriginal reconciliation"@en ;
-    skos:definition "Aboriginal reconciliation in Australia is the process of improving relationships between Aboriginal and Torres Strait Islander peoples and non-Indigenous Australians. It involves acknowledging the past, working to reduce racism, and improving opportunities for Indigenous Australians."@en ;
-    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=21> ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Australia" ;
     skos:inScheme cs: ;
-    skos:narrower
-        <https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> ,
-        <https://linked.data.gov.au/def/policy/4ef1f784-9f38-44f6-9505-ed9ba9c41a74> ,
-        <https://linked.data.gov.au/def/policy/d12b395f-0e2f-47d7-975a-431749f72f4d> ,
-        <https://linked.data.gov.au/def/policy/e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025> ;
-    skos:prefLabel "Reconciliation"@en ;
-    schema:dateCreated "2020-09-15"^^xsd:date ;
+    skos:prefLabel "Australia" ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://linked.data.gov.au/def/policy/5cc52a34-77c0-4589-91c6-7dabb6b65761>
+<https://vocabularyserver.com/apais/xml.php?skosTema=189>
     a skos:Concept ;
-    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/policy> ;
-    skos:altLabel
-        "Aboriginal land councils"@en ,
-        "First Peoples land management"@en ,
-        "Indigenous land management"@en ,
-        "Land and sea councils"@en ,
-        "Land councils"@en ;
-    skos:definition "Refers to the traditional practices used by Indigenous communities to care for and sustainably manage their land, often incorporating deep cultural knowledge about the environment, including practices like controlled burning, seasonal harvesting, and managing animal populations to maintain ecosystem balance; essentially, it's a holistic approach to land stewardship based on the principle of caring for country."@en ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Australians" ;
     skos:inScheme cs: ;
-    skos:narrower
-        <http://pid.geoscience.gov.au/def/voc/ga/PlaceType/INDIGENOUS_PROTECTED_AREA> ,
-        <https://linked.data.gov.au/def/alum/1.2.5> ,
-        <https://linked.data.gov.au/def/nrm/c9f1f747-3677-5e72-aac0-b49733ea4629> ,
-        <https://linked.data.gov.au/def/policy/755e3b92-6ac3-4d92-96fa-5bf903640668> ;
-    skos:prefLabel "First Peoples land management"@en ;
-    skos:related <https://linked.data.gov.au/def/policy/0dd4edea-d719-472b-956c-f8b5a5db72b1> ;
+    skos:prefLabel "Australians" ;
     skos:topConceptOf cs: ;
-    schema:dateCreated "2020-09-15"^^xsd:date ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
 <https://vocabularyserver.com/apais/xml.php?skosTema=21>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:altLabel "Racial reconciliation"@en ;
     skos:definition "Aboriginal reconciliation"@en ;
     skos:inScheme cs: ;
@@ -994,7 +936,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=2178>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader
         <https://vocabularyserver.com/apais/xml.php?skosTema=1096> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=189> ;
@@ -1008,7 +950,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=5>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=8> ;
     skos:definition "Aboriginal arts"@en ;
     skos:inScheme cs: ;
@@ -1020,10 +962,62 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
+<https://vocabularyserver.com/apais/xml.php?skosTema=762>
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from APAIS online" ;
+    rdfs:isDefinedBy apaiscs: ;
+    skos:definition "Employment" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Employment" ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2011-04-29"^^xsd:date ;
+.
+
+apo:5c65abcf-1014-4e12-bcb8-7590f95ff012
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy apocs: ;
+    skos:altLabel "Aboriginal reconciliation"@en ;
+    skos:definition "Aboriginal reconciliation in Australia is the process of improving relationships between Aboriginal and Torres Strait Islander peoples and non-Indigenous Australians. It involves acknowledging the past, working to reduce racism, and improving opportunities for Indigenous Australians."@en ;
+    skos:exactMatch <https://vocabularyserver.com/apais/xml.php?skosTema=21> ;
+    skos:inScheme cs: ;
+    skos:narrower
+        apo:0dd4edea-d719-472b-956c-f8b5a5db72b1 ,
+        apo:4ef1f784-9f38-44f6-9505-ed9ba9c41a74 ,
+        apo:d12b395f-0e2f-47d7-975a-431749f72f4d ,
+        apo:e6d90a8f-eeeb-47eb-b61c-5c9cbab9f025 ;
+    skos:prefLabel "Reconciliation"@en ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2020-09-15"^^xsd:date ;
+.
+
+apo:5cc52a34-77c0-4589-91c6-7dabb6b65761
+    a skos:Concept ;
+    dcterms:provenance "Taken directly from Public Policy Taxonomy" ;
+    rdfs:isDefinedBy apocs: ;
+    skos:altLabel
+        "Aboriginal land councils"@en ,
+        "First Peoples land management"@en ,
+        "Indigenous land management"@en ,
+        "Land and sea councils"@en ,
+        "Land councils"@en ;
+    skos:definition "Refers to the traditional practices used by Indigenous communities to care for and sustainably manage their land, often incorporating deep cultural knowledge about the environment, including practices like controlled burning, seasonal harvesting, and managing animal populations to maintain ecosystem balance; essentially, it's a holistic approach to land stewardship based on the principle of caring for country."@en ;
+    skos:inScheme cs: ;
+    skos:narrower
+        gaPlace:INDIGENOUS_PROTECTED_AREA ,
+        alum:1.2.5 ,
+        nrm:c9f1f747-3677-5e72-aac0-b49733ea4629 ,
+        apo:755e3b92-6ac3-4d92-96fa-5bf903640668 ;
+    skos:prefLabel "First Peoples land management"@en ;
+    skos:related apo:0dd4edea-d719-472b-956c-f8b5a5db72b1 ;
+    skos:topConceptOf cs: ;
+    schema:dateCreated "2020-09-15"^^xsd:date ;
+.
+
 <https://vocabularyserver.com/apais/xml.php?skosTema=1251>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:definition "Law" ;
     skos:inScheme cs: ;
     skos:prefLabel "Law" ;
@@ -1034,7 +1028,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=8>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=553> ;
     skos:definition "Aboriginal culture"@en ;
     skos:inScheme cs: ;
@@ -1050,7 +1044,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=1483>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:altLabel "Aboriginal title"@en ;
     skos:broader <https://vocabularyserver.com/apais/xml.php?skosTema=14> ;
     skos:definition "Native title"@en ;
@@ -1066,7 +1060,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://vocabularyserver.com/apais/xml.php?skosTema=27>
     a skos:Concept ;
     dcterms:provenance "Taken directly from APAIS online" ;
-    rdfs:isDefinedBy <https://vocabularyserver.com/apais/> ;
+    rdfs:isDefinedBy apaiscs: ;
     skos:altLabel
         "Australian Aborigines"@en ,
         "Koori peoples"@en ,
@@ -1098,7 +1092,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:dateCreated "2011-04-29"^^xsd:date ;
 .
 
-<https://vocabularyserver.com/apais/>
+apocs:
+    schema:name "Public Policy Taxonomy" ;
+.
+
+apaiscs:
     schema:name "APAIS Thesaurus" ;
 .
 
@@ -1133,18 +1131,21 @@ cs:
         <https://vocabularyserver.com/apais/xml.php?skosTema=762> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=765> ,
         <https://vocabularyserver.com/apais/xml.php?skosTema=805> ;
+    skos:historyNote "This vocabulary was established with a few, broad, themes early in the IDN's 2022 project and will be expanded to incorporate indigenous terms from other data holders, acting as an overarching vocabulary"@en ;
     skos:prefLabel "IDN Themes"@en ;
     prov:qualifiedDerivation
         [
             a prov:Derivation ;
-            prov:entity <https://vocabularyserver.com/apais/> ;
-            prov:hadRole <https://linked.data.gov.au/def/vocdermods/subsetting-and-extension> ;
+            prov:entity apaiscs: ;
+            prov:hadRole vocdermods:subsetting-and-extension ;
         ] ;
     schema:copyrightNotice "(c) Indigenous Data Network, 2022" ;
-    schema:creator <https://linked.data.gov.au/org/idn> ;
+    schema:creator idn: ;
     schema:dateCreated "2022-07-15"^^xsd:date ;
     schema:dateModified "2025-08-26"^^xsd:date ;
-    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:publisher <https://linked.data.gov.au/org/idn> ;
-    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
+    schema:license
+        <http://purl.org/NET/rdflicense/cc-by4.0> ,
+        "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    schema:publisher idn: ;
+    schema:status regstat:experimental ;
 .
