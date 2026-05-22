@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync:
+  tdb_load:
     runs-on: self-hosted
     env:
       ADMIN_PASSWORD: ${{ secrets.FUSEKI_PASSWORD }}

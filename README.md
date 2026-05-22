@@ -15,7 +15,9 @@ If a new resource is added to the catalogue, ensure its IRI is added to `schema:
 Pull requests will trigger validation of the manifest, which is required to pass before merging.
 
 ## Spatial Datasets
-Due to the limit of 100MiB per file on GitHub, a script is provided to split nquads files into ttl & trig files to store in git.
+Metadata for spatial datasets & feature collections are located in [`datasets/metadata/`](./datasets/metadata) in Turtle files, and the features per feature collection are located in [`datasets/features/`](./datasets/features) in TriG files. Due to the limit of 100MiB per file on GitHub, some features files are split into parts.
+
+A script is provided ([`extract_features.py`](./extract_features.py)) to split N-quads files from raw data (stored in the IDN cloud's object storage) into Turtle & TriG files to store in git.
 
 ## License & Rights
 
