@@ -1,6 +1,5 @@
 PREFIX : <https://data.idnau.org/pid/austlang/>
 PREFIX cs: <https://data.idnau.org/pid/austlang>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -10,9 +9,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :AustLangCode
     a rdfs:Datatype ;
-    rdfs:label "AustLang Code" ;
     rdfs:comment "Codes assigned to Australian Aboriginal languages within the AIATSIS AustLang dataset" ;
     schema:citation "https://collection.aiatsis.gov.au/austlang"^^xsd:anyURI ;
+    schema:name "AustLang Code" ;
 .
 
 :0.1
@@ -34326,14 +34325,14 @@ cs:
         :Y99 ;
     skos:historyNote "Extracted from the AustLang datasets on data.gov.au, 2024-03-27" ;
     skos:prefLabel "AustLang"@en ;
-    dcat:keyword
-        "Aboriginal" ,
-        "Indigenous languages" ;
     schema:citation "https://collection.aiatsis.gov.au/austlang"^^xsd:anyURI ;
     schema:contributor <https://linked.data.gov.au/org/idn> ;
     schema:creator <https://linked.data.gov.au/org/aiatsis> ;
     schema:dateCreated "2024-03-27"^^xsd:date ;
     schema:dateModified "2025-08-26"^^xsd:date ;
+    schema:keywords
+        "Aboriginal" ,
+        "Indigenous languages" ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
     schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
     schema:version "0.1" ;

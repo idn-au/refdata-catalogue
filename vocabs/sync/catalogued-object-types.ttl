@@ -22,9 +22,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:definition "Supplies instructions about how to verify conformance of data to the profile"@en ;
+    skos:historyNote "Definition taken from the Validation concept in the Profiles Vocabulary - Resource Roles vocabulary" ;
     skos:inScheme cs: ;
     skos:prefLabel "Data Validation Rules"@en ;
-    skos:historyNote "Definition taken from the Validation concept in the Profiles Vocabulary - Resource Roles vocabulary" ;
     skos:topConceptOf cs: ;
 .
 

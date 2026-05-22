@@ -39,14 +39,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 cs:
     a skos:ConceptScheme ;
-    dcterms:created "2023-04-17"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/idn> ;
-    dcterms:issued "2023-04-17"^^xsd:date ;
-    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    dcterms:modified "2023-04-17"^^xsd:date ;
     dcterms:provenance "This vocabulary was established in 2023 to support the NSW Administrative Boundaries spatial dataset, as reproduced by the Indigenous Data Network"@en ;
-    dcterms:publisher <https://linked.data.gov.au/org/idn> ;
-    dcterms:rights "(c) Indigenous Data Network, 2023" ;
     owl:versionIRI :0.0.1 ;
     owl:versionInfo "0.0.1" ;
     skos:definition "Indicates whether something such as a local council area is Rural (R) or Urban (U)."@en ;
@@ -54,4 +47,11 @@ cs:
         :R ,
         :U ;
     skos:prefLabel "Urbanity"@en ;
+    schema:copyrightNotice "(c) Indigenous Data Network, 2023" ;
+    schema:creator <https://linked.data.gov.au/org/idn> ;
+    schema:dateCreated "2023-04-17"^^xsd:date ;
+    schema:dateIssued "2023-04-17"^^xsd:date ;
+    schema:dateModified "2023-04-17"^^xsd:date ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:publisher <https://linked.data.gov.au/org/idn> ;
 .

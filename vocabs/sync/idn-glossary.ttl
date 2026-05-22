@@ -1,6 +1,6 @@
 PREFIX : <https://data.idnau.org/pid/glossary/>
-PREFIX dataroles: <https://linked.data.gov.au/def/data-roles/>
 PREFIX cs: <https://data.idnau.org/pid/glossary>
+PREFIX dataroles: <https://linked.data.gov.au/def/data-roles/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -197,12 +197,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :68a5e7a4-0158-4120-8a41-1b2c1e19d6cd
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
+    skos:altLabel
+        "Data Custodian"@en ,
+        "Data Steward"@en ;
     skos:definition "Responsible for the safekeeping and stewardship of data assets and metadata"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Data Custodian/Steward"@en ;
-    skos:altLabel 
-        "Data Custodian"@en , 
-        "Data Steward"@en ;
     skos:topConceptOf cs: ;
 .
 
@@ -225,8 +225,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "Data Catalogue Vocabulary is the international standard for interoperability between data catalogues published on the Web."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Data Catalogue Vocabulary"@en ;
-    schema:citation "https://www.w3.org/ns/dcat#"^^xsd:anyURI ;
     skos:topConceptOf cs: ;
+    schema:citation "https://www.w3.org/ns/dcat#"^^xsd:anyURI ;
 .
 
 :6fcf449e-c215-4532-8a56-fc6a44c6a08a
@@ -236,8 +236,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "The Improving Indigenous Research Capabilities is a two-phase project that (phase 1) reviews and refines national and international frameworks of Indigenous Data Governance and Indigenous Data Sovereignty to collectively strengthen the foundations of Aboriginal and Torres Strait Islander data governance principles, which are being translated and applied to Indigenous research data tools and infrastructure, and (phase 2) builds the Indigenous research capability program to enable Aboriginal and Torres Strait Islander peoples and researchers at the interface of research data science and Indigenous knowledge systems to have access to effective research data tools."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Improving Indigenous Research Capabilities project"@en ;
-    schema:citation "https://ardc.edu.au/project/improving-indigenous-research-capabilities/"^^xsd:anyURI ;
     skos:topConceptOf cs: ;
+    schema:citation "https://ardc.edu.au/project/improving-indigenous-research-capabilities/"^^xsd:anyURI ;
 .
 
 :7e5ad15d-b108-42ad-a162-48b510d81695
@@ -307,15 +307,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:citation "https://orcid.org/"^^xsd:anyURI ;
 .
 
-:9477ce3a-6ac5-41ec-8f0a-0c662d93f909
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:definition "A cloud-based digital infrastructure that coupled with governance strateies that allow a community to use, share, manage and analysee its data"@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Data Commons"@en ;
-    skos:topConceptOf cs: ;
-.
-
 :9a1b7bf7-13b3-437a-9892-b4acfd6fc990
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -366,17 +357,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "Universally Unique Identifier"@en ;
 .
 
-:a877b16b-2581-4339-9da4-87774b14980a
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:altLabel "LC labels"@en ;
-    skos:definition "Concepts that express local and specific conditions such as community rules, governance and protocols for using and sharing knowledge."@en ;
-    skos:inScheme cs: ;
-    skos:prefLabel "Local context labels"@en ;
-    skos:topConceptOf cs: ;
-    schema:citation "https://localcontexts.org/labels/about-the-labels/"^^xsd:anyURI ;
-.
-
 :ac5eba92-55dc-494c-9d9f-b331e05e7c8d
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -394,8 +374,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "Indigenous Cultural and Intellectual Property refers to the traditoional knowledge, traditional cultural expression and cultural heritage of Indigenous peoples"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous Cultural and Intellectual Property"@en ;
-    schema:citation "https://www.library.gov.au/first-australians/indigenous-cultural-and-intellectual-property"^^xsd:anyURI ;
     skos:topConceptOf cs: ;
+    schema:citation "https://www.library.gov.au/first-australians/indigenous-cultural-and-intellectual-property"^^xsd:anyURI ;
 .
 
 :b3efeb87-8b83-489f-86b4-a47b36e5ed2f
@@ -420,8 +400,8 @@ Islander peoples, communities, cultures, lands, or knowledges, including:
 (5) Private sector (including not-for-profit)."""@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Indigenous Data Custodian"@en ;
-    schema:citation "https://ardc.edu.au/wp-content/uploads/2024/08/iirc-2024-stage-2-ardc-project-plan-redacted-1.pdf"^^xsd:anyURI ;
     skos:topConceptOf cs: ;
+    schema:citation "https://ardc.edu.au/wp-content/uploads/2024/08/iirc-2024-stage-2-ardc-project-plan-redacted-1.pdf"^^xsd:anyURI ;
 .
 
 :bd5028a2-8536-4ca3-bef8-1525790271f7
@@ -479,19 +459,19 @@ Islander peoples, communities, cultures, lands, or knowledges, including:
     skos:definition "An extension of the World Wide Web, developed by W3C to make web content machine-readable and understandable. This process structures data with semantic metadata transforming the web from a collection of documents into an interopable database"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Semantic Web"@en ;
-    schema:citation "https://www.w3.org/2001/sw/wiki/Main_Page"^^xsd:anyURI ;
     skos:topConceptOf cs: ;
+    schema:citation "https://www.w3.org/2001/sw/wiki/Main_Page"^^xsd:anyURI ;
 .
 
 :d9c130fc-facb-448b-90df-4f4aa68eb206
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:altLabel "BC Labels"@en ;
+    skos:broader :a877b16b-2581-4339-9da4-87774b14980a ;
     skos:definition "Biocultural Labels are tools developed by the North American organisation Local Contexts to acknowledge Indigenous rights and interests in data, particularly in relation to genetic resources and associated information. These labels are designed to be customised by Indigenous communities to articulate expectations and conditions for the appropriate use of collections and data. While intended to support Indigenous authority over biocultural knowledge, their applicability and effectiveness outside North American contexts—such as in Australia—require careful consideration."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Biocultural Labels"@en ;
     schema:citation "https://localcontexts.org/labels/biocultural-labels/"^^xsd:anyURI ;
-    skos:broader :a877b16b-2581-4339-9da4-87774b14980a ;
 .
 
 :ddf05cc9-267b-4d1a-81dd-896e3d6d0816
@@ -500,8 +480,8 @@ Islander peoples, communities, cultures, lands, or knowledges, including:
     skos:definition "Linked data is structured data which is associated to other data"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Linked Data"@en ;
-    schema:citation "https://www.w3.org/DesignIssues/LinkedData.html"^^xsd:anyURI ;
     skos:topConceptOf cs: ;
+    schema:citation "https://www.w3.org/DesignIssues/LinkedData.html"^^xsd:anyURI ;
 .
 
 :de93757d-c96e-4d45-b56d-aafd4d607fd4
@@ -530,18 +510,18 @@ Islander peoples, communities, cultures, lands, or knowledges, including:
     skos:definition "Commonwealth of Australia, Framework for Governance of Indigenous Data, was published 2024 and aims to provide “guidance to the APS in improving governance practices for data related to Aboriginal and Torres Strait Islander people. It seeks to move the APS beyond traditional methods of consultation, to ensure Aboriginal and Torres Strait Islander people have an equal position at the decision-making table on matters affecting them."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Framework for Governance of Indigenous Data"@en ;
-    schema:citation "https://www.niaa.gov.au/our-work/data-evaluation-and-research/framework-governance-indigenous-data-gid"^^xsd:anyURI ;
     skos:topConceptOf cs: ;
+    schema:citation "https://www.niaa.gov.au/our-work/data-evaluation-and-research/framework-governance-indigenous-data-gid"^^xsd:anyURI ;
 .
 
 :e66f4ec8-c59c-401a-bd53-a33ca206cd61
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:altLabel "RDC"@en ;
+    skos:broader :9477ce3a-6ac5-41ec-8f0a-0c662d93f909 ;
     skos:definition "Research Data Commons"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Research Data Commons"@en ;
-    skos:broader :9477ce3a-6ac5-41ec-8f0a-0c662d93f909 ;
 .
 
 :f017c7f2-a312-4ae9-9efe-1eb25a232c95
@@ -557,11 +537,11 @@ Islander peoples, communities, cultures, lands, or knowledges, including:
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
     skos:altLabel "TK Labels"@en ;
+    skos:broader :a877b16b-2581-4339-9da4-87774b14980a ;
     skos:definition "Traditional Knowledge Labels, also developed by Local Contexts, enable communities to express local and specific conditions for sharing and engaging in research and relationships in ways that align with existing community rules, governance, and protocols for using, sharing, and circulating knowledge and data. These labels seek to provide a normative framework in signalling provenance and permissions; however, their relevance and practical integration within Australian Indigenous data governance frameworks remain contested and warrant critical engagement."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "Traditional Knowledge Labels"@en ;
     schema:citation "https://localcontexts.org/labels/traditional-knowledge-labels/"^^xsd:anyURI ;
-    skos:broader :a877b16b-2581-4339-9da4-87774b14980a ;
 .
 
 :f962d3c0-b94d-4306-9c47-f1c430509101
@@ -579,8 +559,8 @@ Islander peoples, communities, cultures, lands, or knowledges, including:
     skos:definition "The Humanities, Arts, Social Sciences and Indigenous Research Data Commons is an initiative of the ARDC. It resources projects in partnership with research institutions, non-governmental organisations and government"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "HASS&I RDC"@en ;
-    schema:citation "https://ardc.edu.au/hass-and-indigenous-research-data-commons/"^^xsd:anyURI ;
     skos:topConceptOf cs: ;
+    schema:citation "https://ardc.edu.au/hass-and-indigenous-research-data-commons/"^^xsd:anyURI ;
 .
 
 <https://data.idnau.org/pid/org/aiatsis>
@@ -692,6 +672,15 @@ Islander peoples, communities, cultures, lands, or knowledges, including:
     skos:topConceptOf cs: ;
 .
 
+:9477ce3a-6ac5-41ec-8f0a-0c662d93f909
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A cloud-based digital infrastructure that coupled with governance strateies that allow a community to use, share, manage and analysee its data"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Data Commons"@en ;
+    skos:topConceptOf cs: ;
+.
+
 dataroles:subjectAgent
     a skos:Concept ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/data-roles> ;
@@ -700,6 +689,17 @@ dataroles:subjectAgent
     skos:historyNote "This concept is taken from the Data roles vocabulary." ;
     skos:inScheme cs: ;
     skos:prefLabel "Subject agent"@en ;
+.
+
+:a877b16b-2581-4339-9da4-87774b14980a
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "LC labels"@en ;
+    skos:definition "Concepts that express local and specific conditions such as community rules, governance and protocols for using and sharing knowledge."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Local context labels"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://localcontexts.org/labels/about-the-labels/"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/idn>
@@ -816,8 +816,9 @@ cs:
     skos:prefLabel "Indigenous Data Network Glossary"@en ;
     prov:qualifiedAttribution
         [
-            prov:agent <https://linked.data.gov.au/org/idn> ;
+            a prov:Attribution ;
             prov:hadRole dataroles:custodian ;
+            schema:agent <https://linked.data.gov.au/org/idn> ;
         ] ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2024-11-25"^^xsd:date ;

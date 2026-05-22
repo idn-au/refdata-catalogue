@@ -1,0 +1,39 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://data.idnau.org/pid/atns>
+    a schema:Dataset ;
+    dcterms:provenance "This dataset is a direct extraction of the spatial elements of the ATNS with no additional information added other than spatial relations to other published Linked Data objects, such as States & Territories in the ASGS" ;
+    geo:hasBoundingBox
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((96 -45, 96 -9, 168 -9, 168 -45, 96 -45))"^^geo:wktLiteral ;
+        ] ;
+    rdfs:member <https://data.idnau.org/pid/atns/entity-areas> ;
+    schema:citation "https://www.atns.net.au"^^xsd:anyURI ;
+    schema:creator <https://linked.data.gov.au/org/idn> ;
+    schema:dateCreated "2023-05-08"^^xsd:date ;
+    schema:dateModified "2023-05-08"^^xsd:date ;
+    schema:description "Spatial features of the Agreements, Treaties and Negotiated Settlements (ATNS) database" ;
+    schema:keywords
+        "ATNS" ,
+        "Agreements" ,
+        "Negotiated Settlements" ,
+        "Treaties" ;
+    schema:name "ATNS Spatial Features" ;
+    schema:publisher <https://linked.data.gov.au/org/idn> ;
+.
+
+<https://data.idnau.org/pid/atns/entity-areas>
+    a geo:FeatureCollection ;
+    geo:hasBoundingBox
+        [
+            a geo:Geometry ;
+            geo:asWKT "POLYGON ((140.999265 -37.5050183, 153.6388317 -37.5050183, 153.6388317 -28.1570205, 140.999265 -28.1570205, 140.999265 -37.5050183))"^^geo:wktLiteral ;
+        ] ;
+    schema:description "Bounding Box areas for all of the Entities - Agreements, Treaties etc., in the ATNS database"@en ;
+    schema:name "ATNS Entity Areas"@en ;
+.

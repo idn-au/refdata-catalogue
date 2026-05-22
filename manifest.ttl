@@ -17,16 +17,23 @@ PREFIX schema: <https://schema.org/>
             prof:hasArtifact "vocabs/sync/*.ttl" ;
             prof:hasRole mrr:ResourceData ;
             schema:description "skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/sync/ folder for syncing" ;
-            schema:name "Syncable Resource Data" ;
+            schema:name "Syncable Vocabularies" ;
             dcterms:conformsTo <https://linked.data.gov.au/def/vocpub/validator> ;
         ] ,
         [
             prof:hasArtifact "vocabs/non-sync/*.ttl" ;
             prof:hasRole mrr:ResourceData ;
             schema:description "skos:ConceptScheme objects in RDF (Turtle) files in the vocabs/non-sync/ folder, to be synced externally" ;
-            schema:name "Non-syncable Resource Data" ;
+            schema:name "Non-syncable Vocabularies" ;
             dcterms:conformsTo <https://linked.data.gov.au/def/vocpub/validator> ;
             prez:sync false ;
+        ] ,
+        [
+            prof:hasArtifact "datasets/metadata/*.ttl" ;
+            prof:hasRole mrr:ResourceData ;
+            schema:description "schema:Dataset objects in RDF (Turtle) files in the datasets/metadata/ folder for syncing" ;
+            schema:name "Syncable Spatial Datasets" ;
+            schema:additionalType schema:Dataset ;
         ] ,
         [
             prof:hasArtifact "https://github.com/RDFLib/prez/blob/main/prez/reference_data/profiles/ogc_records_profile.ttl" ;

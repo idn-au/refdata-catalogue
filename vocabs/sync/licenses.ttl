@@ -147,7 +147,7 @@ cs:
         [
             a prov:Attribution ;
             dcat:hadRole dataroles:custodian ;
-            prov:agent
+            schema:agent
                 [
                     a schema:Person ;
                     schema:email "margie@kurrawong.ai"^^xsd:anyURI ;

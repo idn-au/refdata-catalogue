@@ -1,69 +1,59 @@
 PREFIX : <https://data.idnau.org/pid/vocab/policy-types/>
 PREFIX cs: <https://data.idnau.org/pid/vocab/policy-types>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dataroles: <https://linked.data.gov.au/def/data-roles/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX reg:  <http://purl.org/linked-data/registry#>
-PREFIX regstatus: <https://linked.data.gov.au/def/reg-statuses>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+:0.2
+    schema:name "0.2" ;
+.
+
 :data-governance
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
+    skos:broader :governance ;
     skos:definition "The process of setting and enforcing policies for managing and using data as a strategic asset. This is achieved through the definition of roles and responsibilities for the governance of data acquired, used and released."@en ;
     skos:inScheme cs: ;
     skos:narrower :indigenous-data-governance ;
     skos:prefLabel "data governance"@en ;
-    skos:broader :governance ;
     schema:citation "https://resources.data.gov/assets/documents/fds-data-governance-playbook.pdf"^^xsd:anyURI ;
 .
 
 :data-management
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
+    skos:broader :governance ;
     skos:definition "The process of setting, controlling, administering and monitoring in conformance with data policy."@en ;
     skos:inScheme cs: ;
     skos:prefLabel "data management"@en ;
-    skos:broader :governance ;
     schema:citation "https://resources.data.gov/assets/documents/fds-data-governance-playbook.pdf"^^xsd:anyURI ;
 .
 
 :data-policy
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
+    skos:broader :policy ;
     skos:definition "Short statements of management intent and fundamental rules governing the creation, acquisition, integrity, security, quality and use of data and information."@en ;
     skos:historyNote "DAMA-DMBOK Guide, 1st edition, pg.47" ;
     skos:inScheme cs: ;
     skos:prefLabel "data policy"@en ;
-    skos:broader :policy ;
 .
 
-:governance
+:indigenous-data-governance
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
-    skos:definition "The exercise of authority and control over a process, organisation or geopolitical area."@en ;
-    skos:historyNote "DAMA Dictionary of Data Management ed.2" ;
+    rdfs:seeAlso <https://data.idnau.org/pid/vocab/policy-roles/indigenous-data-governance> ;
+    owl:deprecated true ;
+    skos:definition "Indigenous data governance"@en ;
+    skos:historyNote "Deprecated following creation of a Policy Roles vocabulary where 'Indigenous data governance' is a policy role, used in FAIR and CARE scoring." ;
     skos:inScheme cs: ;
-    skos:narrower
-        :data-governance ,
-        :data-management ;
-    skos:prefLabel "governance"@en ;
-    skos:topConceptOf cs: ;
-.
-
-:policy
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:definition "A strategic directive and high-level description of desired behaviour developed by an organisation to help govern how it functions. It is usually principle based. A policy is operationalised through procedures that give instructions and set out processes to implement a policy."@en ;
-    skos:inScheme cs: ;
-    skos:narrower :data-policy ;
-    skos:prefLabel "policy"@en ;
-    skos:topConceptOf cs: ;
-    schema:citation "https://policy.usq.edu.au/documents/14266PL"^^xsd:anyURI ;
+    skos:prefLabel "Indigenous data governance"@en ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses:deprecated> ;
 .
 
 :principle
@@ -89,18 +79,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         "https://www.business.qld.gov.au/running-business/planning/processes-procedures"^^xsd:anyURI ;
 .
 
-:indigenous-data-governance
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:prefLabel "Indigenous data governance"@en ;
-    skos:definition "Indigenous data governance"@en ;
-    skos:inScheme cs: ;
-    skos:historyNote "Deprecated following creation of a Policy Roles vocabulary where 'Indigenous data governance' is a policy role, used in FAIR and CARE scoring." ;
-    owl:deprecated "true"^^xsd:boolean ;
-    reg:status regstatus::deprecated ;
-    rdfs:seeAlso <https://data.idnau.org/pid/vocab/policy-roles/indigenous-data-governance>
-.
-
 <https://kurrawong.ai>
     a schema:Organization ;
     schema:name "KurrawongAI" ;
@@ -113,11 +91,32 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
 .
 
-:0.2 rdfs:label "0.2" .
+:policy
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A strategic directive and high-level description of desired behaviour developed by an organisation to help govern how it functions. It is usually principle based. A policy is operationalised through procedures that give instructions and set out processes to implement a policy."@en ;
+    skos:inScheme cs: ;
+    skos:narrower :data-policy ;
+    skos:prefLabel "policy"@en ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://policy.usq.edu.au/documents/14266PL"^^xsd:anyURI ;
+.
+
+:governance
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The exercise of authority and control over a process, organisation or geopolitical area."@en ;
+    skos:historyNote "DAMA Dictionary of Data Management ed.2" ;
+    skos:inScheme cs: ;
+    skos:narrower
+        :data-governance ,
+        :data-management ;
+    skos:prefLabel "governance"@en ;
+    skos:topConceptOf cs: ;
+.
 
 cs:
     a skos:ConceptScheme ;
-    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     owl:versionIRI :0.2 ;
     skos:definition "The types of principles, policies and procedures held by an organisation for the governance of that organisation."@en ;
     skos:hasTopConcept
@@ -127,23 +126,24 @@ cs:
         :procedure ;
     skos:prefLabel "Policy Types"@en ;
     prov:qualifiedAttribution
-        [   a prov:Attribution ;
+        [
+            a prov:Attribution ;
             dcat:hadRole dataroles:custodian ;
-            prov:agent
+            schema:agent
                 [
                     a schema:Person ;
-                    schema:name "M Smith" ;
                     schema:email "margie@kurrawong.ai"^^xsd:anyURI ;
+                    schema:name "M Smith" ;
                 ] ;
         ] ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2024-02-23"^^xsd:date ;
     schema:dateModified "2026-05-14"^^xsd:date ;
-    dcat:keyword
+    schema:keywords
         "data governance" ,
         "data management" ,
         "policy" ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     schema:version "0.2" ;
 .
-

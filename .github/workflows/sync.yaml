@@ -20,5 +20,5 @@ jobs:
         uses: astral-sh/setup-uv@v5
       - name: Install prezmanifest
         run: uv tool install prezmanifest
-      - name: Validate manifest
+      - name: Run sync
         run: pm sync -u $FUSEKI_USERNAME -p $FUSEKI_PASSWORD manifest.ttl $FUSEKI_URL True False True False
