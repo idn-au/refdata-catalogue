@@ -1,7 +1,6 @@
 PREFIX bc: <https://data.idnau.org/pid/vocab/bc-labels/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX care: <http://linked.data.gov.au/def/care/>
-PREFIX lcn: <https://data.idnau.org/pid/vocab/lc-notices/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX regstat: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX sdo: <https://schema.org/>
@@ -13,20 +12,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://data.idnau.org/def/care-lc-mapping>
     a void:Linkset ;
     sdo:dateCreated "2026-03-04"^^xsd:date ;
+    sdo:dateModified "2026-07-01"^^xsd:date ;
     sdo:creator <https://linked.data.gov.au/org/idn> ;
     sdo:publisher <https://linked.data.gov.au/org/idn> ;
-    skos:prefLabel "CARE --> Local Contexts label mappings"@en ;
-    skos:definition "Standalone semantic mapping of CARE principles to Local Contexts labels and notices"@en ;
+    skos:prefLabel "CARE to Local Contexts label mappings"@en ;
+    skos:definition "Standalone semantic mapping of CARE Principles to Traditional Knowledge and Biocultural labels."@en ;
     skos:historyNote "Created for scoring, inference and cataloguing support"@en ;
     owl:versionInfo "0.1.0" ;
     owl:versionIRI <https://data.idnau.org/def/care-lc-mapping/0.1.0> ;
-    void:subjectsTarget <http://linked.data.gov.au/def/care/> ;
+    void:subjectsTarget care: ;
     void:objectsTarget  tk: , bc: ;
     void:linkPredicate  skos:relatedMatch ;
     dcterms:identifier "carelcmap"^^xsd:token ;
     sdo:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
-    sdo:dateModified "2026-07-01"^^xsd:date ;
-    sdo:dateIssued "2099-12-12"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;
     sdo:copyrightHolder <https://linked.data.gov.au/org/idn> ;
     sdo:copyrightNotice "(c) Indigenous Data Network, 2026" ;
