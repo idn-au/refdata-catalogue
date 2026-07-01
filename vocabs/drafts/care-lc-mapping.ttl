@@ -19,8 +19,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sdo:dateCreated "2026-03-04"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/idn> ;
     skos:prefLabel "CARE --> Local Contexts label mappings"@en ;
-    skos:definition "Standalone mapping assertions linking CARE principles to Local Contexts TK and BC labels"@en ;
-    skos:historyNote "Created for scoring and inference use"@en ;
+    skos:definition "Standalone semantic mapping of CARE principles to Local Contexts labels and notices"@en ;
+    skos:historyNote "Created for scoring, inference and cataloguing support"@en ;
     owl:versionInfo "0.1.0" ;
     owl:versionIRI <https://data.idnau.org/def/care-lc-mapping/0.1.0> ;
     void:subjectsTarget <http://linked.data.gov.au/def/care/> ;
@@ -28,7 +28,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     void:linkPredicate  skos:relatedMatch ;
     dcterms:identifier "carelcmap"^^xsd:token ;
     sdo:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
-    sdo:dateModified "2026-03-04"^^xsd:date ;
+    sdo:dateModified "2026-07-01"^^xsd:date ;
     sdo:dateIssued "2099-12-12"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/idn> ;
     sdo:copyrightHolder <https://linked.data.gov.au/org/idn> ;
@@ -58,7 +58,7 @@ care:C1
 care:C2
     skos:definition "For improved governance and citizen engagement"@en ;
     skos:scopeNote "Data enrich the planning, implementation, and evaluation processes that support the service and policy needs of Indigenous communities. Data also enable better engagement between citizens, institutions, and governments to improve decision-making. Ethical use of open data has the capacity to improve transparency and decision-making by providing Indigenous nations and communities with a better understanding of their peoples, territories, and resources. It similarly can provide greater insight into third-party policies and programs affecting Indigenous Peoples"@en ;
-    skos:realated tk:outreach , bc:outreach ; 
+    skos:realatedMatch tk:outreach , bc:outreach ; 
 .
 
 care:C3
