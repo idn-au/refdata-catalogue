@@ -17,7 +17,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://data.idnau.org/def/care-lc-mapping>
     a owl:Ontology, void:Linkset ;
     sdo:dateCreated "2026-03-04"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/idn> ;
+    sdo:creator <https://linked.data.gov.au/org/idn> ;
+    sdo:publisher <https://linked.data.gov.au/org/idn> ;
     skos:prefLabel "CARE --> Local Contexts label mappings"@en ;
     skos:definition "Standalone semantic mapping of CARE principles to Local Contexts labels and notices"@en ;
     skos:historyNote "Created for scoring, inference and cataloguing support"@en ;
