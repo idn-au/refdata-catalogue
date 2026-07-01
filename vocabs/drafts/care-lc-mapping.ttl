@@ -1,13 +1,9 @@
-# provisionally, skos:relatedMatch is assigned only to narrower principles (i.e. "care:C1", NOT "care:C"). Assuming the Care top concepts would inherit the skos:relatedMatch semantics.
-# additional metadata, skos:definition and skos:scopeNote etc are retained only for draft work - will be removed in OntoPub validated file.
-
-PREFIX cs: <http://linked.data.gov.au/def/care>
 PREFIX bc: <https://data.idnau.org/pid/vocab/bc-labels/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX care: <http://linked.data.gov.au/def/care/>
 PREFIX lcn: <https://data.idnau.org/pid/vocab/lc-notices/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX regstat: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX sdo: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX tk: <https://data.idnau.org/pid/vocab/tk-labels/>
@@ -36,6 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sdo:copyrightNotice "(c) Indigenous Data Network, 2026" ;
     sdo:copyrightYear "2026"^^xsd:gYear ;
     sdo:codeRepository "https://github.com/idn-au/refdata-catalogue"^^xsd:anyURI ;
+    sdo:status regstat:experimental ;
 .
 
 <https://linked.data.gov.au/org/idn>
