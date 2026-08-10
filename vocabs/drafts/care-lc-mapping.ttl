@@ -1,0 +1,68 @@
+PREFIX bc: <https://data.idnau.org/pid/vocab/bc-labels/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX care: <http://linked.data.gov.au/def/care/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX regstat: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX tk: <https://data.idnau.org/pid/vocab/tk-labels/>
+PREFIX void:  <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://data.idnau.org/def/care-lc-mapping>
+    a void:Linkset ;
+    sdo:dateCreated "2026-03-04"^^xsd:date ;
+    sdo:dateModified "2026-07-01"^^xsd:date ;
+    sdo:creator <https://linked.data.gov.au/org/idn> ;
+    sdo:publisher <https://linked.data.gov.au/org/idn> ;
+    skos:prefLabel "CARE to Local Contexts label mappings"@en ;
+    skos:definition "Standalone semantic mapping of CARE Principles to Traditional Knowledge and Biocultural labels."@en ;
+    skos:historyNote "Created for scoring, inference and cataloguing support"@en ;
+    owl:versionInfo "0.1.0" ;
+    owl:versionIRI <https://data.idnau.org/def/care-lc-mapping/0.1.0> ;
+    void:subjectsTarget care: ;
+    void:objectsTarget  tk: , bc: ;
+    void:linkPredicate  skos:relatedMatch ;
+    dcterms:identifier "carelcmap"^^xsd:token ;
+    sdo:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    dcterms:publisher <https://linked.data.gov.au/org/idn> ;
+    sdo:copyrightHolder <https://linked.data.gov.au/org/idn> ;
+    sdo:copyrightNotice "(c) Indigenous Data Network, 2026" ;
+    sdo:copyrightYear "2026"^^xsd:gYear ;
+    sdo:codeRepository "https://github.com/idn-au/refdata-catalogue"^^xsd:anyURI ;
+    sdo:status regstat:experimental ;
+.
+
+<https://linked.data.gov.au/org/idn>
+    a sdo:Organization ;
+    sdo:name "Indigenous Data Network" ;
+    sdo:url "https://www.idnau.org"^^xsd:anyURI ;
+.
+
+care:C1
+    skos:relatedMatch tk:commercial , tk:non-commercial , tk:open-to-collaboration , bc:non-commercial , bc:open-to-commercialization , bc:open-to-collaboration , bc:research-use ;
+.
+
+care:C2
+    skos:relatedMatch tk:outreach , bc:outreach ; 
+.
+
+care:C3
+    skos:relatedMatch tk:commercial ;
+.
+
+care:A1
+    skos:relatedMatch tk:attribution , tk:multiple-communities , bc:provenance ;
+.
+
+care:A2
+    skos:relatedMatch tk:attribution , tk:multiple-communities , bc:provenance ;
+.
+
+care:E1
+    skos:relatedMatch  tk:verified , tk:non-verified ;
+.
+
+care:E3
+    skos:relatedMatch tk:attribution , bc:provenance , tk:culturally-sensitive ;
+.
