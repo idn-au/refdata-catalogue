@@ -1,0 +1,19 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT {
+    ?term schema:name ?label .
+    ?term schema:description ?definition .
+}
+WHERE {
+    ?term rdfs:label ?label .
+    FILTER (
+        STRSTARTS(STR(?term), "http://www.w3.org/ns/odrl/2/")
+        && LANGMATCHES(LANG(?label), "en")
+    )
+    OPTIONAL {
+        ?term skos:definition ?definition .
+        FILTER (LANGMATCHES(LANG(?definition), "en"))
+    }
+}

@@ -48,6 +48,12 @@ PREFIX schema: <https://schema.org/>
             schema:name "Labels" ;
         ] ,
         [
+            prof:hasArtifact "odrl-labels.ttl" ;
+            prof:hasRole mrr:IncompleteCatalogueAndResourceLabels ;
+            schema:description "Canonical English labels and definitions for ODRL Version 2.2 terms" ;
+            schema:name "ODRL Labels" ;
+        ] ,
+        [
             prof:hasArtifact "onts/*.ttl" ;
             prof:hasRole mrr:ResourceData ;
             schema:description "Ontologies for syncing" ;
