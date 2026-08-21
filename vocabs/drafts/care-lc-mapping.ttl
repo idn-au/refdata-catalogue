@@ -29,7 +29,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sdo:copyrightHolder <https://linked.data.gov.au/org/idn> ;
     sdo:copyrightNotice "(c) Indigenous Data Network, 2026" ;
     sdo:copyrightYear "2026"^^xsd:gYear ;
-    sdo:codeRepository "https://github.com/idn-au/refdata-catalogue"^^xsd:anyURI ;
+    sdo:codeRepository "https://github.com/idn-au/reference-resource-register"^^xsd:anyURI ;
     sdo:status regstat:experimental ;
 .
 

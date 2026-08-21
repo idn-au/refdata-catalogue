@@ -34,11 +34,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                     vcard:hasValue <tel:+61733075000> ;
                 ] ;
         ] ;
+    schema:additionalType <https://data.idnau.org/pid/vocab/cat-obj-types/SpatialDataset> ;
     schema:citation "http://www.nntt.gov.au/assistance/Geospatial/Pages/DataDownload.aspx"^^xsd:anyURI ;
     schema:copyrightNotice "National Native Title Tribunal, (c) Commonwealth of Australia" ;
     schema:creator <https://linked.data.gov.au/org/nntt> ;
     schema:dateCreated "2023-02-09"^^xsd:date ;
-    schema:dateModified "2023-02-09"^^xsd:date ;
+    schema:dateModified "2026-08-21"^^xsd:date ;
     schema:description """The following native title information is available as spatial data:
 
 * Boundaries of native title claimant applications as per the Register of Native Title Claims.
@@ -50,6 +51,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 * Historical native title determination applications and NTDA transaction records.
 * Registered Native Title Bodies Corporate (RNTBCs)
 * Future Act Notices, Objections, and Determination Applications."""@en ;
+    schema:keywords "Reference" ;
     schema:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "National Native Title Tribunal Databases"@en ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;

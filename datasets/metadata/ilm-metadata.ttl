@@ -15,10 +15,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             geo:asWKT "POLYGON ((96.0 -45.0, 168.0 -45.0, 168.0 -9.0, 96.0 -9.0, 96.0 -45.0))"^^geo:wktLiteral ;
         ] ;
     rdfs:member <https://data.idnau.org/pid/ilm/austlang> ;
+    schema:additionalType <https://data.idnau.org/pid/vocab/cat-obj-types/SpatialDataset> ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2023-04-18"^^xsd:date ;
-    schema:dateModified "2023-04-18"^^xsd:date ;
+    schema:dateModified "2026-08-21"^^xsd:date ;
     schema:description "Multiple indigenous language maps aggregated into one dataset by the IDN" ;
+    schema:keywords "Reference" ;
     schema:name "Indigenous Languages Multi-map" ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
 .
@@ -34,17 +36,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     prov:qualifiedAttribution 
         [
             a prov:Attribution ;
-            dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/originator> ;
+            prov:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/originator> ;
             schema:agent <https://linked.data.gov.au/org/aiatsis> ;
         ] ,
         [
             a prov:Attribution ;
-            dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/contributor> ;
+            prov:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/contributor> ;
             schema:agent <https://linked.data.gov.au/org/idn> ;
         ] ,
         [
             a prov:Attribution ;
-            dcat:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/custodian> ;
+            prov:hadRole <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/custodian> ;
             schema:agent <https://linked.data.gov.au/org/aiatsis> ;
         ] ;
     schema:citation "https://collection.aiatsis.gov.au/austlang"^^xsd:anyURI ;

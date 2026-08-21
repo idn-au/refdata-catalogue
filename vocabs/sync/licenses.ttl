@@ -146,7 +146,7 @@ cs:
     prov:qualifiedAttribution
         [
             a prov:Attribution ;
-            dcat:hadRole dataroles:custodian ;
+            prov:hadRole dataroles:custodian ;
             schema:agent
                 [
                     a schema:Person ;
@@ -160,9 +160,11 @@ cs:
             prov:entity cs: ;
             prov:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
         ] ;
+    schema:additionalType <https://schema.org/DefinedTermSet> ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2023-10-30"^^xsd:date ;
-    schema:dateModified "2025-08-26"^^xsd:date ;
+    schema:dateModified "2026-08-21"^^xsd:date ;
+    schema:keywords "Reference" ;
     schema:license rdflicense:cc-by4.0 ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
     schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;

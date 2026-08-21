@@ -2,15 +2,15 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://data.idnau.org/pid/refdata-catalogue>
+<https://data.idnau.org/pid/reference-resource-register>
     a schema:DataCatalog ;
     skos:historyNote "This catalogue was was created in 2024 from the listing of IDN vocabs published since 2022"@en ;
-    schema:codeRepository "https://github.com/idn-au/refdata-catalogue/" ;
+    schema:codeRepository "https://github.com/idn-au/reference-resource-register/" ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateCreated "2022"^^xsd:gYear ;
-    schema:dateModified "2026-06-17"^^xsd:date ;
-    schema:description "The Indigenous Data Network's catalogue of reference data" ;
+    schema:dateModified "2026-08-21"^^xsd:date ;
+    schema:description "The Indigenous Data Network's register of reference resources" ;
     schema:hasPart
         <https://data.idnau.org/pid/agent-systems> ,
         <https://data.idnau.org/pid/agil> ,
@@ -47,6 +47,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         "Indigenous" ,
         "Indigenous Data Network" ,
         "SKOS" ;
-    schema:name "IDN Reference Data Catalogue" ;
+    schema:name "IDN Reference Resource Register" ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
 .

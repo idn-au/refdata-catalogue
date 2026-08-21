@@ -1139,10 +1139,12 @@ cs:
             prov:entity apaiscs: ;
             prov:hadRole vocdermods:subsetting-and-extension ;
         ] ;
+    schema:additionalType <https://schema.org/DefinedTermSet> ;
     schema:copyrightNotice "(c) Indigenous Data Network, 2022" ;
     schema:creator idn: ;
     schema:dateCreated "2022-07-15"^^xsd:date ;
-    schema:dateModified "2025-08-26"^^xsd:date ;
+    schema:dateModified "2026-08-21"^^xsd:date ;
+    schema:keywords "Reference" ;
     schema:license
         <http://purl.org/NET/rdflicense/cc-by4.0> ,
         "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;

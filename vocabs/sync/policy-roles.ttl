@@ -59,7 +59,7 @@ cs:
     prov:qualifiedAttribution
         [
             a prov:Attribution ;
-            dcat:hadRole dataroles:custodian ;
+            prov:hadRole dataroles:custodian ;
             schema:agent
                 [
                     a schema:Person ;
@@ -67,9 +67,11 @@ cs:
                     schema:name "Les Kneebone" ;
                 ] ;
         ] ;
+    schema:additionalType <https://schema.org/DefinedTermSet> ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2026-05-14"^^xsd:date ;
-    schema:dateModified "2026-05-14"^^xsd:date ;
+    schema:dateModified "2026-08-21"^^xsd:date ;
+    schema:keywords "Reference" ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
     schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
     schema:version "0.1" ;
