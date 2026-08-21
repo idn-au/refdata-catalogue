@@ -19,24 +19,25 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     prov:qualifiedAttribution 
         [
             a prov:Attribution ;
-            dcat:hadRole <https://linked.data.gov.au/def/data-roles/custodian> ;
+            prov:hadRole <https://linked.data.gov.au/def/data-roles/custodian> ;
             schema:agent <https://linked.data.gov.au/org/abs> ;
         ] ,
         [
             a prov:Attribution ;
-            dcat:hadRole <https://linked.data.gov.au/def/data-roles/subjectAgentRepresentative> ;
+            prov:hadRole <https://linked.data.gov.au/def/data-roles/subjectAgentRepresentative> ;
             schema:agent <https://data.idnau.org/pid/org/abs-coatsis> ;
         ] ,
         [
             a prov:Attribution ;
-            dcat:hadRole <https://linked.data.gov.au/def/data-roles/rightsHolder> ;
+            prov:hadRole <https://linked.data.gov.au/def/data-roles/rightsHolder> ;
             schema:agent <https://linked.data.gov.au/org/abs> ;
         ] ;
+    schema:additionalType <https://data.idnau.org/pid/vocab/cat-obj-types/SpatialDataset> ;
     schema:citation "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/indigenous-structure"^^xsd:token ;
     schema:copyrightNotice "Copyright © Commonwealth of Australia (Australian Bureau of Statistics) 2021" ;
     schema:dateCreated "2021-10-06"^^xsd:date ;
     schema:dateIssued "2021-10-06"^^xsd:date ;
-    schema:dateModified "2021-10-06"^^xsd:date ;
+    schema:dateModified "2026-08-21"^^xsd:date ;
     schema:description """The Indigenous Structure is a geographical standard for the publication and analysis of statistics about the Aboriginal and/or Torres Strait Islander peoples of Australia.
 
 This dataset is a subset of the total ASGS dataset (https://linked.data.gov.au/dataset/asgsed3).
@@ -54,7 +55,8 @@ Statistical Areas Level 1 (SA1s) aggregate to Indigenous Locations which aggrega
 The boundaries in the Indigenous Structure are built from whole SA1s. SA1s are designed with reference to language groups, information from people with local knowledge of certain communities, and transport networks to identify both remote and non-remote discrete communities and urban areas with a high usual resident Aboriginal and Torres Strait Islander population. In some cases, Aboriginal and Torres Strait Islander communities that are too small to be identified separately have been combined with other nearby and associated communities."""@en ;
     schema:keywords
         <https://data.idnau.org/pid/vocab/idn-th/indigenous-demographics> ,
-        <https://data.idnau.org/pid/vocab/idn-th/place> ;
+        <https://data.idnau.org/pid/vocab/idn-th/place> ,
+        "Reference" ;
     schema:license <https://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Indigenous Structures within the ASGS Ed. 3"@en ;
     schema:temporalCoverage

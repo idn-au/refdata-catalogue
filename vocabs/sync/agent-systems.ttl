@@ -4,6 +4,7 @@ PREFIX cs: <https://data.idnau.org/pid/agent-systems>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -82,7 +83,7 @@ id:ror
     dcat:qualifiedRelation
         [
             a dcat:Relationship ;
-            dcat:hadRole aarr:partOf ;
+            prov:hadRole aarr:partOf ;
             schema:agent <https://linked.data.gov.au/org/isu> ;
         ] ;
     schema:description "The IDN is within the University of Melbourne. It was established in 2018 to support and coordinate the governance of Indigenous data for Aboriginal and Torres Strait Islander peoples and empower Aboriginal and Torres Strait Islander communities to decide their own local data priorities." ;
@@ -102,8 +103,10 @@ cs:
     skos:historyNote "Created by hand for the IDN agents database." ;
     skos:prefLabel "External Agentic systems" ;
     skos:scopeNote "The aim of this vocabulary is to aid and inform the discovery of Indigenous agents from external systems." ;
+    schema:additionalType <https://schema.org/DefinedTermSet> ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2024-11-01"^^xsd:date ;
-    schema:dateModified "2026-05-19"^^xsd:date ;
+    schema:dateModified "2026-08-21"^^xsd:date ;
+    schema:keywords "Reference" ;
     schema:publisher <https://linked.data.gov.au/org/idn> ;
 .
