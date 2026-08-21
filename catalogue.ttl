@@ -21,6 +21,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://data.idnau.org/pid/capad2020> ,
         <https://data.idnau.org/pid/glossary> ,
         <https://data.idnau.org/pid/ilm> ,
+        <https://data.idnau.org/pid/lc-ont> ,
         <https://data.idnau.org/pid/licenses> ,
         <https://data.idnau.org/pid/nntt> ,
         <https://data.idnau.org/pid/nsw-ab> ,

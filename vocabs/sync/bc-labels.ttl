@@ -291,6 +291,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:identifier "research-use"^^xsd:token ;
 .
 
+idn:
+    a schema:Organization ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
+.
+
 cs:
     a skos:ConceptScheme ;
     dcterms:provenance "This vocabulary was generated from the https://localcontexts.org website's content: https://localcontexts.org/labels/biocultural-labels/" ;
